@@ -1,0 +1,50 @@
+block,configuration,population,n,cand_recall_100,cand_recall_250,cand_recall_500,oracle_median_m,p1_hit_100,p1_hit_250,p1_hit_500,p1_median_m
+retrieval,retrieval-v1 + rule,S-TRAIN (fit),223,0.1749,0.5426,0.8789,222.2,0.148,0.4753,0.8386,260.8
+retrieval,retrieval-v1 + rule,S-VAL (selection),69,0.1884,0.5942,0.8696,200.4,0.1739,0.5072,0.8406,248.9
+retrieval,retrieval-v1 + rule,pool,292,0.1781,0.5548,0.8767,214.1,0.1541,0.4829,0.839,259.8
+retrieval,retrieval-v2 + rule,S-TRAIN (fit),223,0.1883,0.5695,0.9193,204.4,0.148,0.4753,0.8386,260.8
+retrieval,retrieval-v2 + rule,S-VAL (selection),69,0.2029,0.6522,0.8986,184.7,0.1739,0.5072,0.8406,248.9
+retrieval,retrieval-v2 + rule,pool,292,0.1918,0.589,0.9144,196.1,0.1541,0.4829,0.839,259.8
+selection,RULE (shipped),S-TRAIN (fit),223,,,,,0.148,0.4753,0.8386,260.8
+selection,RULE (shipped),S-VAL (selection),69,,,,,0.1739,0.5072,0.8406,248.9
+selection,RULE (shipped),pool,292,,,,,0.1541,0.4829,0.839,259.8
+selection,medoid / agreement-first,S-TRAIN (fit),223,,,,,0.139,0.4529,0.8341,271.2
+selection,medoid / agreement-first,S-VAL (selection),69,,,,,0.1739,0.4928,0.8406,255.7
+selection,medoid / agreement-first,pool,292,,,,,0.1473,0.4623,0.8356,265.4
+selection,coarse-pin demotion,S-TRAIN (fit),223,,,,,0.148,0.4753,0.8296,260.8
+selection,coarse-pin demotion,S-VAL (selection),69,,,,,0.1739,0.4928,0.8116,265.4
+selection,coarse-pin demotion,pool,292,,,,,0.1541,0.4795,0.8253,260.8
+selection,medoid on retrieval-v1,S-TRAIN (fit),223,,,,,0.139,0.4081,0.7444,304.4
+selection,medoid on retrieval-v1,S-VAL (selection),69,,,,,0.1739,0.4638,0.7826,268.5
+selection,medoid on retrieval-v1,pool,292,,,,,0.1473,0.4212,0.7534,289.1
+ranker,logistic,S-VAL (selection),69,,,,,0.1449,0.5507,0.8261,224.7
+ranker,lambdamart,S-VAL (selection),69,,,,,0.1739,0.5072,0.8406,248.9
+ranker,pairwise,S-VAL (selection),69,,,,,0.0435,0.3333,0.5942,397.1
+temporal,cold (T0=2026-05-15),pool-with-future-label,229,,,,,0.1223,0.4672,0.8472,271.2
+temporal,warm (T0=2026-05-15),pool-with-future-label,225,,,,,0.8578,0.9333,0.9867,7.5
+temporal,product (T0=2026-05-15),pool-with-future-label,229,,,,,0.8515,0.9301,0.9869,7.9
+temporal,promoted_only (T0=2026-05-15),pool-with-future-label,96,,,,,0.9479,0.9688,1.0,6.1
+temporal,cold (T0=2026-05-01),pool-with-future-label,269,,,,,0.1487,0.487,0.8476,260.8
+temporal,warm (T0=2026-05-01),pool-with-future-label,243,,,,,0.8477,0.9177,0.9877,8.1
+temporal,product (T0=2026-05-01),pool-with-future-label,269,,,,,0.7881,0.9071,0.9888,8.6
+temporal,promoted_only (T0=2026-05-01),pool-with-future-label,61,,,,,0.8525,0.918,1.0,6.6
+sealed-S-Eval,cold,S-EVAL (locked check),100,,,,,0.09,0.35,0.71,375.8
+sealed-S-Eval,warm,S-EVAL (locked check),31,,,,,0.8387,0.9355,0.9677,12.4
+sealed-S-Eval,product,S-EVAL (locked check),100,,,,,0.33,0.55,0.76,202.2
+coordinate_policy,"checkin label, cold lane",pool,292,,,,,0.1473,0.4966,0.8459,253.3
+coordinate_policy,"checkin label, warm lane",pool,292,,,,,0.863,0.9521,0.9829,16.9
+coordinate_policy,"tail3 label, cold lane",pool,292,,,,,0.161,0.4863,0.8459,258.3
+coordinate_policy,"tail3 label, warm lane",pool,292,,,,,0.8904,0.9521,0.9829,2.1
+coordinate_policy,pre checkin vs post tail3,pool (T0=2026-05-15),233,,,,,0.7639,0.927,0.9742,28.7
+coordinate_policy,pre tail3 vs post tail3,pool (T0=2026-05-15),233,,,,,0.8627,0.9399,0.9742,7.6
+extra_generator,address-book near-duplicate,pool,125,,,,,,0.52,0.84,247.0
+extra_generator,pincode-consistent locality,pool,248,,,,,,0.3173,0.8715,321.9
+archetype_routing,archetype router (table fitted on S-TRAIN),S-VAL (selection),69,,,,,0.1739,0.5072,0.8406,248.9
+place_neighbour,re-derived construction (gate: see receipt),pool,41,,,,,,0.9268,1.0,61.9
+bound,absolute official-point bound (not a method),pool,292,,,,38.4,,,1.0,
+final_table,ORACLE (perfect chooser over the candidates that exist),S-VAL,69,0.2029,0.6522,0.8986,184.7,,,,
+final_table,BEST RETRIEVAL-ONLY (retrieval-v2 candidates),S-VAL,69,0.2029,0.6522,0.8986,184.7,,,,
+final_table,CURRENT SUTRA (rule over the shipped candidate set),S-VAL,69,,,,,0.1739,0.5072,0.8406,248.9
+final_table,BEST RANKING-ONLY (coarse-pin demotion),S-VAL,69,,,,,0.1739,0.4928,0.8116,265.4
+final_table,"BEST FULL PIPELINE (warm -> cold, S-VAL temporal holdout, trace-tail coordinates)",pool-with-future-label,229,,,,,0.8515,0.9301,0.9869,7.9
+final_table,"BEST FULL PIPELINE (warm -> cold, S-EVAL)",S-EVAL,100,,,,,0.33,0.55,0.76,202.2

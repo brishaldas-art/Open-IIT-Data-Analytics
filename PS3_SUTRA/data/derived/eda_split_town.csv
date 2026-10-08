@@ -1,0 +1,13 @@
+split,town_id,n
+test,OUT,32
+test,T1,139
+test,T2,150
+test,T3,138
+train,OUT,165
+train,T1,664
+train,T2,639
+train,T3,707
+validation,OUT,40
+validation,T1,139
+validation,T2,163
+validation,T3,141

@@ -1,0 +1,9 @@
+**/node_modules
+**/site
+**/__pycache__
+**/*.pyc
+.git
+90_Archive
+research
+data/derived/runtime/sutra_store.sqlite-wal
+data/derived/runtime/sutra_store.sqlite-shm

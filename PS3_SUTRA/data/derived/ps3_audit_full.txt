@@ -1,0 +1,466 @@
+
+====================================================================================================
+0. INVENTORY — every table, shape, key, coordinate columns
+====================================================================================================
+                  file   rows  cols         key  key_unique  key_is_pk  full_row_dupes  null_cells  null_cell_pct
+          accounts.csv   2400    20  account_id        2400       True               0        2365           4.93
+         addresses.csv   3117     7  address_id        3117       True               0           0           0.00
+            agents.csv     30     6    agent_id          30       True               0          22          12.22
+ baseline_geocodes.csv   2880     4  address_id        2880       True               0           0           0.00
+      field_visits.csv   5578    15    visit_id        5578       True               0        4973           5.94
+     landmarks_poi.csv    240     6      poi_id         240       True               0           0           0.00
+        localities.csv     36     6 locality_id          36       True               0           0           0.00
+            splits.csv   2400     2  account_id        2400       True               0           0           0.00
+surveyed_addresses.csv    100     3  address_id         100       True               0           0           0.00
+             towns.csv      3     4     town_id           3       True               0           0           0.00
+  visit_gps_points.csv 160406     6    visit_id        5578      False               0           0           0.00
+
+PER-COLUMN PROFILE (nulls / cardinality) — full table written to data/derived/ps3_column_profile.csv
+            file                  column   dtype  n_null  pct_null  n_unique  pct_unique  min  max    mean                                       top3
+    accounts.csv       salary_credit_day float64    1638     68.25         8        0.33  1.0 30.0 11.1417                                        NaN
+    accounts.csv ability_to_pay_estimate float64     727     30.29       101        4.21  0.0  1.0  0.5327                                        NaN
+      agents.csv                 town_id  object      21     70.00         3       10.00  NaN  NaN     NaN                      T1(3) | T2(3) | T3(3)
+      agents.csv           tenure_months float64       1      3.33        25       83.33  1.0 64.0 30.5172                                        NaN
+field_visits.csv                  ptp_id  object    4973     89.15       605       10.85  NaN  NaN     NaN PTP000042(1) | PTP000043(1) | PTP000044(1)
+
+HIGH-CARDINALITY TEXT COLUMNS (>=90% unique):
+                  file        column  n_unique  pct_unique
+          accounts.csv    account_id      2400      100.00
+         addresses.csv    address_id      3117      100.00
+         addresses.csv  address_text      3114       99.90
+            agents.csv      agent_id        30      100.00
+ baseline_geocodes.csv    address_id      2880      100.00
+      field_visits.csv      visit_id      5578      100.00
+      field_visits.csv      start_ts      5564       99.75
+      field_visits.csv    checkin_ts      5569       99.84
+      field_visits.csv    photo_hash      5417       97.11
+     landmarks_poi.csv        poi_id       240      100.00
+        localities.csv   locality_id        36      100.00
+        localities.csv locality_name        35       97.22
+            splits.csv    account_id      2400      100.00
+surveyed_addresses.csv    address_id       100      100.00
+             towns.csv       town_id         3      100.00
+             towns.csv     town_name         3      100.00
+             towns.csv address_style         3      100.00
+  visit_gps_points.csv      point_ts    146732       91.48
+
+CONSTANT / NEAR-CONSTANT COLUMNS (<=5 distinct values):
+                 file                 column  n_unique                                                          top3
+         accounts.csv            income_type         3         salaried(1283) | self_employed(792) | daily_wage(325)
+         accounts.csv                town_id         3                                   T3(826) | T1(787) | T2(787)
+         accounts.csv     preferred_language         3                 hinglish(1217) | kanglish(640) | english(543)
+         accounts.csv           bucket_start         5                             1-30(664) | 31-60(528) | 90+(470)
+         accounts.csv      bureau_score_band         5                   300-549(1508) | 550-649(609) | 650-699(185)
+         accounts.csv paid_other_lenders_30d         2                                                           NaN
+         accounts.csv     last_bounce_reason         4 insufficient_funds(2019) | technical(158) | stop_payment(118)
+         accounts.csv           dialling_arm         2                  rule_based(2277) | random_contact_point(123)
+        addresses.csv           address_type         3         residence(2427) | office(464) | permanent_native(226)
+        addresses.csv                 source         2                        kyc_origination(3090) | skip_trace(27)
+        addresses.csv                town_id         4                                   T3(986) | T2(952) | T1(942)
+           agents.csv                channel         3                            tele(20) | field(9) | voice_bot(1)
+           agents.csv          language_team         4                       hinglish(14) | kanglish(8) | english(7)
+           agents.csv                town_id         3                                         T1(3) | T2(3) | T3(3)
+           agents.csv                  shift         2                                              day(29) | all(1)
+baseline_geocodes.csv              precision         4                   locality(2052) | street(504) | pincode(274)
+    landmarks_poi.csv                town_id         3                                      T1(82) | T3(81) | T2(77)
+       localities.csv                town_id         3                                      T1(12) | T2(12) | T3(12)
+           splits.csv                  split         3                     train(1680) | validation(360) | test(360)
+            towns.csv                town_id         3                                         T1(1) | T2(1) | T3(1)
+            towns.csv              town_name         3         Kaveripura(1) | Devgarh Nagar(1) | Navanagara East(1)
+            towns.csv          address_style         3                            karnataka(1) | hindi(1) | metro(1)
+            towns.csv        approx_radius_m         3                                                           NaN
+
+COORDINATE + TIME COLUMNS FOUND:
+  accounts.csv               coords=[] time=['outstanding']
+  addresses.csv              coords=[] time=['added_date']
+  baseline_geocodes.csv      coords=['geocoder_x', 'geocoder_y'] time=[]
+  field_visits.csv           coords=['checkin_x', 'checkin_y'] time=['visit_date', 'start_ts', 'checkin_ts']
+  landmarks_poi.csv          coords=['x', 'y'] time=[]
+  localities.csv             coords=['centroid_x', 'centroid_y'] time=[]
+  surveyed_addresses.csv     coords=['surveyed_x', 'surveyed_y'] time=[]
+  visit_gps_points.csv       coords=['x', 'y'] time=['point_ts']
+
+-> /home/user/PS3_SUTRA/data/derived/ps3_table_profile.csv, ps3_column_profile.csv
+
+====================================================================================================
+1. KEYS, FOREIGN KEYS, ORPHANS
+====================================================================================================
+  addresses.account_id -> accounts.account_id          left=  2400 right=  2400 orphans=    0 ( 0.0%) unmatched_right=    0
+  addresses.town_id -> towns.town_id                   left=     4 right=     3 orphans=    1 (25.0%) unmatched_right=    0
+  field_visits.address_id -> addresses.address_id      left=  1477 right=  3117 orphans=    0 ( 0.0%) unmatched_right= 1640
+  field_visits.account_id -> accounts.account_id       left=  1339 right=  2400 orphans=    0 ( 0.0%) unmatched_right= 1061
+  field_visits.agent_id -> agents.agent_id             left=     9 right=    30 orphans=    0 ( 0.0%) unmatched_right=   21
+  baseline_geocodes.address_id -> addresses.address_id left=  2880 right=  3117 orphans=    0 ( 0.0%) unmatched_right=  237
+  surveyed_addresses.address_id -> addresses.address_id left=   100 right=  3117 orphans=    0 ( 0.0%) unmatched_right= 3017
+  visit_gps_points.visit_id -> field_visits.visit_id   left=  5578 right=  5578 orphans=    0 ( 0.0%) unmatched_right=    0
+  localities.town_id -> towns.town_id                  left=     3 right=     3 orphans=    0 ( 0.0%) unmatched_right=    0
+  landmarks_poi.town_id -> towns.town_id               left=     3 right=     3 orphans=    0 ( 0.0%) unmatched_right=    0
+  splits.account_id -> accounts.account_id             left=  2400 right=  2400 orphans=    0 ( 0.0%) unmatched_right=    0
+
+  accounts without any address: 0
+  accounts with >1 address:     706 (max 3)
+  addresses with no geocode:    237 of 3117 (7.6%)
+  addresses with no visit:      1640 (52.6%)
+  visits with no GPS trail:     0 of 5578
+  duplicate visit_id in gps:    0 (visit_id+seq must be unique)
+  address_type distribution:    {'residence': 2427, 'office': 464, 'permanent_native': 226}
+  address source distribution:  {'kyc_origination': 3090, 'skip_trace': 27}
+  splits:                       {'train': 1680, 'validation': 360, 'test': 360}  covers all accounts: True
+
+====================================================================================================
+2. COORDINATE SANITY — ranges, zeros, precision, piles, town plausibility
+====================================================================================================
+  towns                    centroid_x: [-3766.2, 3653.7] zeros=0 nulls=0 | centroid_y: [-3613.0, 3208.9] zeros=0 nulls=0
+  localities               centroid_x: [-3766.2, 3653.7] zeros=0 nulls=0 | centroid_y: [-3613.0, 3208.9] zeros=0 nulls=0
+  landmarks                x: [-4072.0, 3788.5] zeros=0 nulls=0 | y: [-4085.8, 3568.5] zeros=0 nulls=0
+  baseline_geocodes        geocoder_x: [-4061.5, 4327.2] zeros=0 nulls=0 | geocoder_y: [-4088.6, 3403.4] zeros=0 nulls=0
+  surveyed_addresses       surveyed_x: [-4039.0, 4177.6] zeros=0 nulls=0 | surveyed_y: [-4013.1, 3429.9] zeros=0 nulls=0
+  field_visits(checkin)    checkin_x: [-4410.0, 4311.0] zeros=0 nulls=0 | checkin_y: [-4122.6, 3627.0] zeros=0 nulls=0
+  gps_points               x: [-4420.0, 4346.0] zeros=4 nulls=0 | y: [-4108.0, 3648.0] zeros=30 nulls=0
+
+  DECIMAL PRECISION OF PUBLISHED COORDINATES (a rounding signal):
+    geocoder_x   median decimals=1  distinct coords=2806 of 2880
+    geocoder_y   median decimals=1  distinct coords=2814 of 2880
+    centroid_x   median decimals=1  distinct coords=36 of 36
+    centroid_y   median decimals=1  distinct coords=36 of 36
+    x            median decimals=1  distinct coords=238 of 240
+    checkin_x    median decimals=1  distinct coords=5263 of 5578
+
+  DUPLICATE PIN PILES (many addresses sharing one geocode = vendor degradation):
+    distinct pins=2880 for 2880 geocodes; largest pile=1 addresses; piles>=10: 0 covering 0 addresses (0.0%)
+
+  TOWN PLAUSIBILITY (address geocode vs its own town's locality centroids):
+         count    mean     std    min     50%     90%     99%     max
+town_id                                                              
+OUT        0.0     NaN     NaN    NaN     NaN     NaN     NaN     NaN
+T1       942.0  2574.2   774.0  349.4  2820.6  3359.9  3576.4  3835.3
+T2       952.0  2198.9   862.5   52.7  2261.5  3246.3  3956.3  4378.7
+T3       986.0  2690.1  1094.1  302.9  2998.6  3894.6  4219.2  4607.8
+
+  WITHIN-TOWN CONTAINMENT: are all check-ins inside their town's 99th-percentile envelope?
+    T1: visits=1906 median=2949 m p99=3751 m max=3924 m
+    T2: visits=1825 median=2316 m p99=3975 m max=4375 m
+    T3: visits=1847 median=2932 m p99=4349 m max=4544 m
+
+====================================================================================================
+3. ADDRESS TEXT — length, house numbers, pincode, script, duplicates, hierarchy conflicts
+====================================================================================================
+  LENGTH / SHAPE:
+    txt_len      {'p50': 67.0, 'p75': 78.0, 'p90': 84.0, 'p95': 88.0, 'mean': 66.83, 'max': 113.0, 'n': 3117}
+    n_tokens     {'p50': 12.0, 'p75': 14.0, 'p90': 15.0, 'p95': 16.0, 'mean': 11.88, 'max': 20.0, 'n': 3117}
+    n_digits     {'p50': 9.0, 'p75': 11.0, 'p90': 11.0, 'p95': 12.0, 'mean': 8.86, 'max': 14.0, 'n': 3117}
+    n_commas     {'p50': 3.0, 'p75': 4.0, 'p90': 5.0, 'p95': 5.0, 'mean': 2.77, 'max': 6.0, 'n': 3117}
+    n_upper      {'p50': 7.0, 'p75': 10.0, 'p90': 41.0, 'p95': 49.0, 'mean': 11.99, 'max': 71.0, 'n': 3117}
+    n_nonascii   {'p50': 0.0, 'p75': 0.0, 'p90': 0.0, 'p95': 15.0, 'mean': 1.27, 'max': 24.0, 'n': 3117}
+    has_house_no   true=2394 (76.8%)
+    has_pincode    true=2907 (93.3%)
+    has_slash      true=2995 (96.1%)
+    has_hash       true=399 (12.8%)
+
+  MALFORMED / DEGENERATE:
+    empty or <5 chars:  0
+    no digits at all:   9 (0.3%)  <- no house number possible
+    no comma:           777 (24.9%)  <- unpunctuated single blob
+    contains 'NA'/'na': 0
+    non-ASCII rows:     262; sample: ['6th Cross, 5th Main, ಚರ್ಚ್ ಹತ್ತಿರ, Kuvempu Layt, Kaveripura - 960102', 'गली नं. 3, राशन की दुकान के बगल में, Tilak Ngr, Devgarh Nagar - 970204', 'house 52 gali no. 5 ward 9 मस्जिद के पास shastri nagar devgarh nagar - 970201']
+    exact duplicate texts: 3 on 3117 addresses
+    duplicates after aggressive normalisation (case/punct/space): 9
+      -> of those, rows on a DIFFERENT address_id but SAME account: 0
+
+  TOKEN VOCABULARY (top 15) — is 'locality' even in the text?
+    NO:812 | NAGAR:810 | EAST:638 | DEVGARH:610 | NAVANAGARA:591 | KAVERIPURA:589 | GALI:457 | RD:453 | MAIN:404 | BLK:378 | CROSS:328 | H:304 | COLONY:295 | 960102:275 | HOUSE:261
+
+  HIERARCHY CONSISTENCY (pincode ← locality ← town):
+    localities per town: {'T1': 12, 'T2': 12, 'T3': 12}
+    pincodes per town:   {'T1': 4, 'T2': 4, 'T3': 4}
+    pincodes serving >1 town: 0 of 12
+    addresses containing a 6-digit number: 2907 (93.3%)
+    ...of those, matching ANY known pincode: 2647 (91.1%)  <- pincode evidence is rarely usable
+    town_id in text?  {'Kaveripura': 922, 'Devgarh Nagar': 649, 'Navanagara East': 927}
+
+  TOWN ADDRESS STYLES:
+town_id       town_name address_style  approx_radius_m
+     T1      Kaveripura     karnataka             4200
+     T2   Devgarh Nagar         hindi             3800
+     T3 Navanagara East         metro             4800
+
+====================================================================================================
+4. BASELINE GEOCODER + THE ONLY GROUND TRUTH (100 surveyed addresses)
+====================================================================================================
+  PRECISION STRATA (the vendor's own uncertainty vocabulary):
+precision
+locality    2052
+street       504
+pincode      274
+rooftop       50
+    geocode rows=2880 addresses=2880 missing=237
+
+  SURVEY SAMPLE (the only true coordinates in the package): n=100 towns={'T3': 38, 'T1': 33, 'T2': 29}  missing geocode=0
+    error vs baseline geocode: {'p50': 376.4, 'p75': 539.42, 'p90': 839.18, 'mean': 532.67, 'max': 4807.68, 'n': 100}
+      within  50 m:   5.0%
+      within 100 m:   9.0%
+      within 250 m:  35.0%
+      within 500 m:  71.0%
+
+    BY STRATUM (the radius table must be per-stratum, not global):
+            n  median     p75     p90  hit_100m
+precision                                      
+locality   73   385.9   504.5   626.5       1.4
+pincode    10  1375.8  2658.5  3820.1       0.0
+rooftop     1    25.6    25.6    25.6     100.0
+street     16   108.6   129.6   166.3      43.8
+
+  FREE-DATA CEILING (candidates a licence-clean system can build from text + gazetteer):
+    locality-centroid candidate: median 2740 m, <100 m 0%, <500 m 1%
+    town-centroid candidate:     median 2740 m (same order as locality in this dataset)
+    naive POI snapping was measured at 4,093 m median in the previous pass -> DO NOT snap to landmarks
+
+  STRATUM IS INFORMATIVE ABOUT ERROR, NOT ABOUT TRUTH:
+           count     50%     90%     max
+precision                               
+locality    73.0   385.9   626.5  1838.2
+pincode     10.0  1375.8  3820.1  4807.7
+rooftop      1.0    25.6    25.6    25.6
+street      16.0   108.6   166.3   170.9
+
+  HOW MANY ADDRESSES HAVE *ANY* FIELD EVIDENCE?
+    addresses visited at least once: 1477 of 3117 (47.4%)   visits/address {'p50': 3.0, 'p90': 8.0, 'mean': 3.78, 'max': 9.0, 'n': 1477}
+    addresses with at least one met-someone visit: 900 (28.9%)  <- the entire learning signal
+
+====================================================================================================
+5. FIELD VISITS — outcomes, dwell, distance, duplicates, integrity signals
+====================================================================================================
+  OUTCOME VOCABULARY:
+                           n   pct
+outcome                           
+address_not_traceable   1400  25.1
+locked_premises         1249  22.4
+met_borrower            1114  20.0
+met_family              1062  19.0
+neighbour_says_shifted   455   8.2
+no_such_person           206   3.7
+cash_collected            92   1.6
+    MET (met_borrower/met_family/cash): 40.7%   NEGATIVE (not traceable/no such person/shifted): 36.9%
+
+  DWELL: {'p50': 3.45, 'p75': 7.68, 'p90': 15.54, 'mean': 5.75, 'max': 24.92, 'n': 5578} minutes  · total 535 h
+  TRAVEL (start->check-in): {'p50': 12.1, 'p90': 29.14, 'mean': 14.25, 'max': 85.28, 'n': 5578} minutes; negative travel: 0
+
+  DWELL BY OUTCOME (does a 'not traceable' visit look different?):
+                           n  median_min  p90_min  med_acc_m
+outcome                                                     
+address_not_traceable   1400         1.3      1.9        9.8
+locked_premises         1249         2.5      3.7       10.1
+met_borrower            1114        14.8     22.8        9.7
+met_family              1062         6.6      9.4        9.8
+neighbour_says_shifted   455         4.3      6.1        9.3
+no_such_person           206         3.2      4.8       10.2
+cash_collected            92        14.5     20.9        9.8
+
+  CHECK-IN vs BASELINE PIN, BY OUTCOME (negative outcomes are NOT closer to truth):
+                           n  median     p90  pct_under_100m
+outcome                                                     
+address_not_traceable   1400   194.7   483.9            17.6
+cash_collected            92   275.4   566.8             9.8
+locked_premises         1249   328.7  1571.6            11.0
+met_borrower            1114   345.5   954.9             9.2
+met_family              1062   322.7  1038.4            11.6
+neighbour_says_shifted   455   298.0  1259.0            14.3
+no_such_person           206   233.0   541.9            12.1
+
+  ...AND AGAINST SURVEYED TRUTH for the 100-address subset (the load-bearing number for evidence weighting):
+                         n  median
+outcome                           
+address_not_traceable   53  1603.2
+cash_collected           3    71.2
+locked_premises         45    20.2
+met_borrower            60    34.3
+met_family              30    15.9
+neighbour_says_shifted  19    20.1
+no_such_person           3    72.3
+    met visits vs negative visits on the same sample: 29 m vs 493 m
+
+  DUPLICATE EVIDENCE:
+    duplicate photo hashes (all agents): 161 of 5578 (2.9%)
+          visits  dup_photo  uniq_photo  med_dwell_min  med_acc  met_rate  distinct_checkins  dup_photo_rate
+agent_id                                                                                                    
+FA009        610        156         454            3.1     9.80      36.2                580            25.6
+FA008        611          2         609            3.1     9.80      38.0                605             0.3
+FA002        633          2         631            3.3    10.20      39.5                627             0.3
+FA005        606          1         605            3.7     9.65      41.6                596             0.2
+FA001        628          0         628            3.4     9.70      40.6                618             0.0
+FA004        636          0         636            3.7     9.80      41.0                628             0.0
+FA003        645          0         645            3.7    10.00      45.9                638             0.0
+FA007        626          0         626            3.5     9.90      41.7                621             0.0
+    agents with duplicate-photo rate >20%: 1 of 9
+    ^ this is the planted bad actor; the integrity gate must catch it WITHOUT being told which agent
+
+  REPEATED CHECK-IN COORDINATES (same x,y reused across visits by one agent):
+    (agent,coord) pairs used >=3 times: 0 covering 0 visits (0.0%)
+
+  TEMPORAL COVERAGE:
+    visit_date: 2026-04-01 -> 2026-06-29  days=77  weekday mix={0: 949, 1: 866, 2: 942, 3: 968, 4: 928, 5: 925}
+    hour of check-in: {9: 165, 10: 1613, 11: 1729, 12: 1306, 13: 588, 14: 162, 15: 15}
+
+  RELATIONSHIPS: visits per address / account / agent
+    per address {'p50': 3.0, 'p75': 6.0, 'p90': 8.0, 'p95': 9.0, 'mean': 3.78, 'max': 9.0, 'n': 1477} | per account {'p50': 4.0, 'p75': 7.0, 'p90': 8.0, 'p95': 9.0, 'mean': 4.17, 'max': 9.0, 'n': 1339} | per agent {'p50': 626.0, 'p75': 633.0, 'p90': 637.8, 'p95': 641.4, 'mean': 619.78, 'max': 645.0, 'n': 9}
+    addresses visited by >1 agent: 957 (64.8%)  <- independent confirmations exist
+
+====================================================================================================
+6. GPS TRAJECTORIES — validity, accuracy, speed, coverage
+====================================================================================================
+  points=160406 visits=5578 of 5578 field visits (100.0% instrumented)
+  points per visit: {'p50': 26.0, 'p90': 57.0, 'mean': 28.76, 'max': 80.0, 'n': 5578}
+  accuracy_m: {'p50': 10.0, 'p90': 21.0, 'mean': 11.74, 'max': 111.0, 'n': 160406}  (Android convention: ~68% radial confidence, not a bound)
+  visits with <5 points: 68  |  visits with span 0 s: 0
+  point_ts range: 2026-04-01 09:39:07 -> 2026-06-29 13:43:44
+
+  SEQ MONOTONICITY (is the trail ordered?)
+    visits whose points are non-decreasing in time by seq: 5578 of 5578
+
+  IMPLIED SPEED BETWEEN CONSECUTIVE POINTS (teleport detection baseline):
+    steps=149986 median step=41.1 m   km/h {'p50': 4.84, 'p90': 20.08, 'p99': 23.06, 'mean': 7.17, 'max': 32.21, 'n': 149986}
+    steps >60 km/h: 0 (0.00%)  >120 km/h: 0 (0.00%)  <- teleport candidates
+    zero-distance repeated points: 82 (0.1%)
+
+  DOES THE CHECK-IN LIE ON ITS OWN TRAIL?
+    min distance from check-in to its own trail: {'p50': 7.57, 'p90': 19.45, 'mean': 9.74, 'max': 90.79, 'n': 5578}
+    visits whose check-in is >500 m from every one of its own GPS points: 0 (0.0%)  <- instrument noise or staged check-ins
+
+  ACCURACY AS A TRUST SIGNAL:
+          visits  met_rate  med_dwell
+acc_band                             
+<=20 m      5119      40.5        3.4
+20-50 m      454      42.7        3.6
+50-100 m       5      40.0        4.5
+    (a trustworthy system must decide the weight of a check-in from accuracy + trail agreement, not outcome)
+
+====================================================================================================
+7. COLLECTORS — capacity, coverage, behavioural baselines
+====================================================================================================
+  agents=30  channels={'tele': 20, 'field': 9, 'voice_bot': 1}
+  language teams={'hinglish': 14, 'kanglish': 8, 'english': 7, 'all': 1}
+  towns={nan: 21, 'T1': 3, 'T2': 3, 'T3': 3}  tenure_months {'p50': 33.0, 'p75': 43.0, 'p90': 53.2, 'p95': 57.0, 'mean': 30.52, 'max': 64.0, 'n': 29}
+  shifts={'day': 29, 'all': 1}
+
+  visits per channel:
+         visits  addresses  met_rate  med_dwell
+channel                                        
+field      5578       1477      40.7        3.4
+
+  are agents town-local? (a field agent travelling between towns is an integrity signal)
+    visits where visit town != agent's home town: 0 (0.0%) across 0 agents
+
+====================================================================================================
+8. ACCOUNTS / SPLITS — the demand side and the split protocol
+====================================================================================================
+  accounts=2400  lenders=6  portfolios={'pl_salaried': 682, 'two_wheeler': 502, 'mfi_jlg': 358, 'credit_card': 319, 'consumer_durable': 296, 'msme': 243}
+  dpd_start bands: {'count': 2400.0, 'mean': 66.0, 'std': 88.0, 'min': 0.0, '50%': 41.0, '90%': 171.0, 'max': 720.0}
+  outstanding: {'p50': 122925.0, 'p90': 511340.0, 'mean': 217014.71, 'max': 2117000.0, 'n': 2400}  emi: {'p50': 4300.0, 'p90': 16305.0, 'mean': 7500.04, 'max': 39950.0, 'n': 2400}
+  splits: {'train': 1680, 'validation': 360, 'test': 360}
+
+  coverage of the learning signal BY SPLIT (visits are not distributed evenly):
+            accounts  addresses  with_visit  pct_with_visit
+split                                                      
+test             459        459         211            46.0
+train           2175       2175        1038            47.7
+validation       483        483         228            47.2
+
+  DPD BAND vs VISIT RATE (are harder cases visited more? -> selection bias in the evidence):
+          accounts  pct_visited  mean_visits
+dpd_band                                    
+0-30          1345         19.9         1.64
+31-60          678         51.9         2.98
+61-90          482         73.4         4.12
+91-180         335         80.0         5.07
+180+           277         84.8         5.41
+
+  SELECTION BIAS — the operational question the system must answer honestly:
+    visited addresses: vendor-error-proxy median 2614 m
+    never visited:     vendor-error-proxy median 2560 m
+    -> if the operands differ, field evidence is NOT a random sample of addresses (the loop must be propensity-aware, not naive)
+
+====================================================================================================
+9. LEAKAGE & TIME-TO-AVAILABILITY MAP (T0 pre-query · T1 candidates · T2 in-visit · T3 post-visit · T4 later)
+====================================================================================================
+                  file                         column stage available_at_inference                                                             why_it_matters
+         addresses.csv                   address_text    T0                    yes                                                           the query itself
+         addresses.csv                        town_id    T0                    yes                                                in the record at query time
+         addresses.csv                   address_type    T0                    yes                                                self-declared; may be stale
+         addresses.csv                         source    T0                    yes                                           provenance of the address record
+         addresses.csv                     added_date    T0                    yes                               record age; usable as a feature, not a label
+ baseline_geocodes.csv          geocoder_x/geocoder_y    T0                    yes                   vendor prior (licence clock: <=30-day cache, Google ToS)
+ baseline_geocodes.csv                      precision    T0                    yes                                vendor stratum — the honest uncertainty key
+        localities.csv centroid_x/centroid_y, pincode    T0                    yes                                                            gazetteer prior
+     landmarks_poi.csv      name, x, y, landmark_type    T0                    yes              gazetteer prior (incomplete; naive snapping measured 4,093 m)
+             towns.csv approx_radius_m, address_style    T0                    yes                                                      coarse prior per town
+          accounts.csv         outstanding, dpd_start    T0                    yes                    value side of a field slot, if a consumer prices visits
+            agents.csv  channel, tenure_months, shift    T2                    yes                 known at dispatch; use for integrity baselines, not labels
+      field_visits.csv            checkin_x/checkin_y    T2               post-hoc          the observation — label-side material, never a query-time feature
+      field_visits.csv        gps_accuracy_m, dwell_s    T2               post-hoc                              evidence quality; T2 but only after the visit
+      field_visits.csv                        outcome    T3               post-hoc outcome classification; NEVER a feature for the location of the same visit
+      field_visits.csv                         remark    T3               post-hoc                        free text; partially structured (landmark mentions)
+      field_visits.csv                     photo_hash    T2               post-hoc       duplicate detection input; do not expose agent identity to the model
+  visit_gps_points.csv     x, y, accuracy_m, point_ts    T2               post-hoc                                          trail; integrity + dwell geometry
+surveyed_addresses.csv          surveyed_x/surveyed_y    T4                     NO              the only ground truth — evaluation only, never training input
+            splits.csv                          split  meta                     no          evaluation protocol; assignment must respect account/address/time
+      field_visits.csv                         ptp_id    T3                     no                    belongs to another problem statement entirely — exclude
+
+  HARD RULES THIS MAP IMPLIES (tested in tools/check_leakage.py):
+    1. No column with stage >= T2 may appear in a query-time feature set for that address.
+    2. surveyed_* coordinates may never enter training; they are the scoring set.
+    3. A visit's own outcome may never be used to place a coordinate used at that visit.
+    4. Vendor coordinates may be cached at most 30 days (licence) -> the canonical point must be ours.
+    5. Any feature derived from field_visits must be aggregated with an explicit as-of timestamp.
+
+-> /home/user/PS3_SUTRA/data/derived/ps3_leakage_map.csv
+
+====================================================================================================
+10. TARGETED CHECKS — the traps that would silently break a naive build
+====================================================================================================
+  (a) THE ORPHAN TOWN — addresses carry a town_id that towns.csv does not define:
+      addresses.town_id values: {'T3': 986, 'T2': 952, 'T1': 942, 'OUT': 237}
+      towns.csv town_ids:       ['T1', 'T2', 'T3']
+      OUT addresses: 237  of which geocoded: 0 (0.0%)
+      non-OUT addresses geocoded: 100.0%
+      -> 'no address we can place' is a REAL state in the data, not a modelling edge case
+      OUT addresses by type: {'permanent_native': 226, 'residence': 11}
+
+  (b) MATCHED-LOCALITY CANDIDATE (a licence-clean retriever: does the text contain a gazetteer name?):
+      addresses whose text contains >=1 locality name from their own town: 1904 (61.1%)
+      addresses matching >1 locality name (ambiguity!): 0 (0.0%)
+      on the 100 surveyed addresses: matched-locality centroid error median 348 m (coverage 70%)  <- the honest free-artefact ceiling
+      vendor baseline on the same 100: median 376 m
+
+  (c) LANDMARK TABLE — usable as a prior?
+      rows=240 types={'ration_shop': 26, 'bus_stop': 22, 'govt_school': 22, 'masjid': 21, 'hanuman_temple': 21, 'medical_store': 19, 'ganesha_temple': 18, 'water_tank': 18, 'milk_dairy': 16, 'community_hall': 14, 'park': 13, 'church': 12, 'post_office': 10, 'petrol_bunk': 8}
+      duplicate names: 226  distinct names=14
+      landmarks per town: {'T1': 82, 'T2': 77, 'T3': 81}
+      addresses whose text mentions a known landmark of their town: 785 (25.2%)
+      duplicate (town,name) pairs: 198 -> name is NOT unique inside a town: snapping to a name is ambiguous
+
+  (d) LOCALITY TABLE — the duplicate-name trap:
+      locality_name duplicates: 2 rows -> locality_id town_id locality_name  pincode
+     T1-L11      T1  Nehru Colony   960102
+     T2-L06      T2  Nehru Colony   970203
+      pincode inside text but NOT a known pincode: see section 3
+
+  (e) GPS (0,0)-ISH POINTS (sensor artefacts that must be filtered, not learned from):
+      points with x==0 or y==0: 34 (0.0212%) across 32 visits
+      their outcomes: {'address_not_traceable': 11, 'met_borrower': 9, 'locked_premises': 5, 'met_family': 5, 'neighbour_says_shifted': 4}
+
+  (f) FIELD-EVIDENCE COVERAGE vs TIME (does the loop even close in 90 days?):
+      addresses added: 2026-04-01 -> 2026-06-29
+      days from record creation to first visit: {'p50': 14.0, 'p90': 66.0, 'mean': 24.67, 'max': 89.0, 'n': 1477}  (negative => visited before the record existed: 0)
+      visits per address per month during the window: 62.67 (portfolio-level cadence)
+
+  (g) THE OUTCOME VOCABULARY IS DECISION-BEARING:
+      met_borrower/met_family/cash_collected -> positive location evidence (a human confirmed the place)
+      locked_premises -> weak positive: the door is the right door; nobody confirmed identity
+      address_not_traceable -> the agent could NOT find it; 1,603 m from truth on the surveyed subset,
+                               median dwell 1.3 min -> this is evidence about the ADDRESS RECORD or the AGENT,
+                               not about location. Rule: a negative outcome may never move a coordinate.
+      no_such_person / neighbour_says_shifted -> the place resolved, the PERSON did not: location evidence is
+                               weak-positive (20-72 m on the surveyed subset) but identity evidence is negative
+      -> the outcome field carries TWO independent dimensions (place vs person); collapsing them loses both
+
+All figures above are from SYNTHETIC data. Mechanism only — never magnitude.

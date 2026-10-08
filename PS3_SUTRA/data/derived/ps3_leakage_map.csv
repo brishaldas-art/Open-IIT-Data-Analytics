@@ -1,0 +1,22 @@
+file,column,stage,available_at_inference,why_it_matters
+addresses.csv,address_text,T0,yes,the query itself
+addresses.csv,town_id,T0,yes,in the record at query time
+addresses.csv,address_type,T0,yes,self-declared; may be stale
+addresses.csv,source,T0,yes,provenance of the address record
+addresses.csv,added_date,T0,yes,"record age; usable as a feature, not a label"
+baseline_geocodes.csv,geocoder_x/geocoder_y,T0,yes,"vendor prior (licence clock: <=30-day cache, Google ToS)"
+baseline_geocodes.csv,precision,T0,yes,vendor stratum — the honest uncertainty key
+localities.csv,"centroid_x/centroid_y, pincode",T0,yes,gazetteer prior
+landmarks_poi.csv,"name, x, y, landmark_type",T0,yes,"gazetteer prior (incomplete; naive snapping measured 4,093 m)"
+towns.csv,"approx_radius_m, address_style",T0,yes,coarse prior per town
+accounts.csv,"outstanding, dpd_start",T0,yes,"value side of a field slot, if a consumer prices visits"
+agents.csv,"channel, tenure_months, shift",T2,yes,"known at dispatch; use for integrity baselines, not labels"
+field_visits.csv,checkin_x/checkin_y,T2,post-hoc,"the observation — label-side material, never a query-time feature"
+field_visits.csv,"gps_accuracy_m, dwell_s",T2,post-hoc,evidence quality; T2 but only after the visit
+field_visits.csv,outcome,T3,post-hoc,outcome classification; NEVER a feature for the location of the same visit
+field_visits.csv,remark,T3,post-hoc,free text; partially structured (landmark mentions)
+field_visits.csv,photo_hash,T2,post-hoc,duplicate detection input; do not expose agent identity to the model
+visit_gps_points.csv,"x, y, accuracy_m, point_ts",T2,post-hoc,trail; integrity + dwell geometry
+surveyed_addresses.csv,surveyed_x/surveyed_y,T4,NO,"the only ground truth — evaluation only, never training input"
+splits.csv,split,meta,no,evaluation protocol; assignment must respect account/address/time
+field_visits.csv,ptp_id,T3,no,belongs to another problem statement entirely — exclude

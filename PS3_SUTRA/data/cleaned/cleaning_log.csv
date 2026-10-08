@@ -1,0 +1,16 @@
+table,rule,rows_in,rows_out,dropped,note
+addresses,"normalise text (NFKC, case, punct, abbrev)",3117,3117,0,raw preserved in address_text_raw
+addresses,flag_no_digit,3117,3117,0,9 rows flagged — no digit at all -> no house number possible
+addresses,flag_no_separator,3117,3117,0,"24 rows flagged — no comma, slash or hyphen at all (24); no comma specifically: 777 (24.9%)"
+addresses,flag_pin_unknown,3117,3117,0,260 rows flagged — 6-digit token matches no known pincode
+addresses,flag_outside_town,3117,3117,0,237 rows flagged — town_id=OUT: outside every modelled town
+addresses,flag_dup_text,3117,3117,0,10 rows flagged — normalised text duplicated elsewhere
+addresses,rule-based span extraction,3117,3117,0,lane/block/cross/house/relation markers + gazetteer tokens
+visits,derive place/person evidence flags,5578,5578,0,outcome is split into two dimensions (see canonical schema §3)
+visits,flag_negative_travel,5578,5578,0,0 rows flagged — check-in before start
+visits,flag_short_dwell,5578,5578,0,443 rows flagged — dwell < 60 s
+visits,flag_implausible_dwell,5578,5578,0,0 rows flagged — dwell > 12 h
+visits,flag_negative_outcome,5578,5578,0,1400 rows flagged — address_not_traceable: never moves a coordinate
+visits,drop ptp_id column,5578,5578,0,89.2% null; belongs to a different problem statement
+gps_points,drop axis artefacts (x==0 or y==0),160406,160372,34,"sensor artefacts; flagged rows kept in the audit, not used as evidence"
+trail_features,per-visit trail geometry,5578,5578,0,"median 26 points/visit; feed the evidence scorer, not the location model directly"

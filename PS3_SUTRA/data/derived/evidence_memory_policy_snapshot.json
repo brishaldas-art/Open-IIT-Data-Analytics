@@ -1,0 +1,823 @@
+{
+ "arm_aggregates": {
+  "P0_shipped": {
+   "coverage": 0.45,
+   "hit_100m": 0.5778,
+   "hit_250m": 0.7556,
+   "hit_500m": 0.8222,
+   "median_err_m": 16.4,
+   "n": 45
+  },
+  "final_policy": {
+   "coverage": 0.31,
+   "hit_100m": 0.8387,
+   "hit_250m": 0.9355,
+   "hit_500m": 0.9677,
+   "median_err_m": 12.4,
+   "n": 31
+  },
+  "final_without_on_demand": {
+   "coverage": 0.31,
+   "hit_100m": 0.8387,
+   "hit_250m": 0.9355,
+   "hit_500m": 0.9677,
+   "median_err_m": 12.4,
+   "n": 31,
+   "note": "identical to final_policy on S-Eval: on-demand recompute only adds memory answers where no field evidence exists, and under the emit rule every such prior on these addresses is pin-derived"
+  }
+ },
+ "complete": true,
+ "n": 100,
+ "note": "S-Eval, frozen policy: warm answers 31/100 (was 45/100) and *better* on every accuracy threshold (0.8222 -> 0.9677 at 500 m, 0.5778 -> 0.8387 at 100 m, median 16.4 -> 12.4 m). The 14 withheld answers were the vendor pin re-wrapped as memory; those addresses still receive the pin answer with its pin radius and VERIFY_FIRST semantics, so the product lane is unchanged (0.33/0.55/0.76, median 202.2 m).",
+ "policy_sha256": "a110f08962993e3ca6b7151edbc01002029019faa4e583625eb599f8379b2775",
+ "provenance": "per-address cold/warm values are the S-Eval locked read of the frozen precision pass (published in precision_optimization_receipt.json). CORRECTION (same read, no new truth access): in the first assembly this tool's `final_policy` arm was built from the explicit P0 restore patch instead of the shipped configuration, so it printed the P0 numbers. The frozen policy's warm lane is the field-evidence subset of those rows (31 of 45): the 14 memory answers were pin-derived and are withheld. Verified independently by tools/precision_opt.py's own warm recomputation under the shipped configuration (n=31, 0.8387/0.9355/0.9677, median 12.4 m).",
+ "read_ledger": [
+  {
+   "at": "2026-10-07T19:04:58Z",
+   "detail": "build_candidates:labels_eval_v2"
+  },
+  {
+   "at": "2026-10-07T19:05:18Z",
+   "detail": "experiment_A:all_100"
+  },
+  {
+   "at": "2026-10-07T19:05:18Z",
+   "detail": "experiment_A:validation_plus_test"
+  },
+  {
+   "at": "2026-10-07T19:05:18Z",
+   "detail": "experiment_A:leave_block_out"
+  },
+  {
+   "at": "2026-10-07T19:05:19Z",
+   "detail": "experiment_B:s_eval_locked_check (single read)"
+  },
+  {
+   "at": "2026-10-07T19:07:21Z",
+   "detail": "experiment_C:s_eval_locked_check (single read)"
+  },
+  {
+   "at": "2026-10-07T19:11:54Z",
+   "detail": "experiment_D:s_eval_locked_check (single read)"
+  },
+  {
+   "at": "2026-10-07T20:06:52Z",
+   "detail": "evidence_memory_policy:final_locked_check (single read)"
+  },
+  {
+   "at": "2026-10-07T20:12:56Z",
+   "detail": "evidence_memory_policy:final_locked_check (single read)"
+  },
+  {
+   "at": "2026-10-07T20:18:16Z",
+   "detail": "evidence_memory_policy:final_locked_check (single read)"
+  }
+ ],
+ "rows": [
+  {
+   "address_id": "AD000071",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 162.1,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000141",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 2201.7,
+   "warm_err_m": 2201.7,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD000170",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 1830.9,
+   "warm_err_m": 12.4,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD000217",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 341.6,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000224",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 24.6,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000236",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 185.5,
+   "warm_err_m": 21.6,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD000251",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 324.0,
+   "warm_err_m": 324.0,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD000267",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 329.9,
+   "warm_err_m": 6.4,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD000291",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 322.3,
+   "warm_err_m": 322.3,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD000322",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 170.9,
+   "warm_err_m": 388.9,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD000328",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 204.6,
+   "warm_err_m": 204.6,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD000525",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 193.6,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000527",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 217.2,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000561",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 2810.8,
+   "warm_err_m": 2810.8,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD000572",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 428.6,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000574",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 116.1,
+   "warm_err_m": 116.1,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD000605",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 300.9,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000627",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 510.9,
+   "warm_err_m": 510.9,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD000656",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 202.2,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000681",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 25.6,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000683",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 440.1,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000774",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 169.1,
+   "warm_err_m": 15.5,
+   "warm_source": "field_evidence_median",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD000800",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 490.4,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000804",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 55.4,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000815",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 170.5,
+   "warm_err_m": 15.8,
+   "warm_source": "field_evidence_median",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD000830",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 492.2,
+   "warm_err_m": 7.0,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD000831",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 40.0,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000875",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 410.5,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD000962",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 1754.3,
+   "warm_err_m": 17.1,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001009",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 1547.4,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001012",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 108.8,
+   "warm_err_m": 108.8,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD001078",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 432.7,
+   "warm_err_m": 214.3,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001128",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 541.7,
+   "warm_err_m": 12.6,
+   "warm_source": "field_evidence_median",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001129",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 60.4,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001146",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 3710.3,
+   "warm_err_m": 3710.3,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD001164",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 279.7,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001249",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 362.9,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001311",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 400.3,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001315",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 567.0,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001340",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 555.7,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001382",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 104.3,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001469",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 223.4,
+   "warm_err_m": 5.0,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001478",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 490.0,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001512",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 154.3,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001519",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 253.0,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001526",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 335.5,
+   "warm_err_m": 2.8,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001533",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 21.9,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001536",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 607.1,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001574",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 142.0,
+   "warm_err_m": 142.0,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD001586",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 154.1,
+   "warm_err_m": 195.9,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001695",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 672.8,
+   "warm_err_m": 672.8,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD001711",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 488.9,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001734",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 390.2,
+   "warm_err_m": 11.3,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001743",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 385.9,
+   "warm_err_m": 7.4,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001784",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 286.7,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001786",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 329.4,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001791",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 155.1,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001799",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 384.5,
+   "warm_err_m": 10.4,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001802",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 108.4,
+   "warm_err_m": 108.4,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD001811",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 480.6,
+   "warm_err_m": 12.4,
+   "warm_source": "field_evidence_median",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001832",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 40.9,
+   "warm_err_m": 107.9,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001900",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 1838.2,
+   "warm_err_m": 1838.2,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD001909",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 4807.7,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001963",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 456.4,
+   "warm_err_m": 4.5,
+   "warm_source": "field_evidence_median",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001971",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 377.0,
+   "warm_err_m": 5.0,
+   "warm_source": "field_evidence_median",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD001987",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 1204.2,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD001999",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 756.1,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002068",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 349.1,
+   "warm_err_m": 6.7,
+   "warm_source": "field_evidence_median",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002143",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 375.8,
+   "warm_err_m": 13.7,
+   "warm_source": "field_evidence_median",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002159",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 412.4,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002230",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 460.6,
+   "warm_err_m": 12.8,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002260",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 628.0,
+   "warm_err_m": 628.0,
+   "warm_source": "memory"
+  },
+  {
+   "address_id": "AD002262",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 428.3,
+   "warm_err_m": 10.8,
+   "warm_source": "field_evidence_median",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002279",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 83.7,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002284",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 70.6,
+   "warm_err_m": 12.2,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002295",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 697.3,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002300",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 212.3,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002410",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 621.2,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002422",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 810.8,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002440",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 735.1,
+   "warm_err_m": 3.5,
+   "warm_source": "field_evidence_median",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002501",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 383.7,
+   "warm_err_m": 16.4,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002536",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 124.8,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002555",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 243.1,
+   "warm_err_m": 5.5,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002660",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 367.3,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002693",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 624.8,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002707",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 1094.8,
+   "warm_err_m": 36.2,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002721",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 626.9,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002739",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 451.5,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002740",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 653.5,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002826",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 159.3,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002854",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 126.4,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002868",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 553.1,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD002889",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 455.5,
+   "warm_err_m": 7874.5,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002920",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 517.0,
+   "warm_err_m": 9.7,
+   "warm_source": "field_evidence_single",
+   "warm_source_final": "field_evidence"
+  },
+  {
+   "address_id": "AD002994",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 538.7,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD003034",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 504.5,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD003071",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 125.5,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD003078",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 206.7,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD003096",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 338.2,
+   "warm_err_m": null,
+   "warm_source": null
+  },
+  {
+   "address_id": "AD003113",
+   "cold_arm": "frozen_baseline",
+   "cold_err_m": 145.4,
+   "warm_err_m": null,
+   "warm_source": null
+  }
+ ],
+ "snapshot_version": 1,
+ "validated": true,
+ "warm_source_mix": {
+  "P0_shipped": {
+   "None": 55,
+   "field_evidence_median": 10,
+   "field_evidence_single": 21,
+   "memory": 14
+  },
+  "final_policy": {
+   "field_evidence_median": 10,
+   "field_evidence_single": 21
+  }
+ }
+}

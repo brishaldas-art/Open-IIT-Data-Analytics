@@ -1,0 +1,609 @@
+====================================================================================================
+SUTRA — OFFICIAL PS3 DATASET: EXHAUSTIVE EDA
+source: /home/user/PS3_SUTRA/data/official_ps3   (opened read-only)
+====================================================================================================
+
+source files and SHA-256 (first 12 hex) — proof of the exact snapshot analysed
+  accounts                  0.320 MB   sha256:df65051e6f70
+  addresses                 0.405 MB   sha256:7e0eed682a64
+  agents                    0.001 MB   sha256:1a1d8722e4db
+  baseline_geocodes         0.092 MB   sha256:e7dde99db504
+  field_visits              0.961 MB   sha256:b4099e532581
+  landmarks_poi             0.011 MB   sha256:d565be9d3fca
+  localities                0.002 MB   sha256:b18ea44e58f0
+  splits                    0.037 MB   sha256:005342b60c45
+  surveyed_addresses        0.002 MB   sha256:2d26aa6c6c23
+  towns                     0.000 MB   sha256:e0167d3efe2d
+  visit_gps_points          7.136 MB   sha256:1afd7b9f7c0d
+
+row / column counts verified from the files themselves:
+  accounts               rows=   2400  cols= 20
+  addresses              rows=   3117  cols=  7
+  agents                 rows=     30  cols=  6
+  baseline_geocodes      rows=   2880  cols=  4
+  field_visits           rows=   5578  cols= 15
+  landmarks_poi          rows=    240  cols=  6
+  localities             rows=     36  cols=  6
+  splits                 rows=   2400  cols=  2
+  surveyed_addresses     rows=    100  cols=  3
+  towns                  rows=      3  cols=  4
+  visit_gps_points       rows= 160406  cols=  6
+  TOTAL rows across all 11 tables: 177,190
+
+====================================================================================================
+SECTION 1 — TABLE-BY-TABLE PROFILE (schema, keys, nulls, cardinality, duplicates, ranges)
+====================================================================================================
+
+▸ accounts  rows=2400  cols=20  exact duplicate rows=0
+   id-like columns → account_id:2400=UNIQUE, lender_id:6, town_id:3
+     account_id               object    null%=  0.0 distinct=2400    [unique] top=AC000001×1 | AC000002×1 | AC000003×1
+     lender_id                object    null%=  0.0 distinct=6      top=L01×646 | L06×567 | L03×499
+     portfolio                object    null%=  0.0 distinct=6      top=pl_salaried×682 | two_wheeler×502 | mfi_jlg×358
+     income_type              object    null%=  0.0 distinct=3      top=salaried×1283 | self_employed×792 | daily_wage×325
+     town_id                  object    null%=  0.0 distinct=3      top=T3×826 | T1×787 | T2×787
+     preferred_language       object    null%=  0.0 distinct=3      top=hinglish×1217 | kanglish×640 | english×543
+     bucket_start             object    null%=  0.0 distinct=5      top=1-30×664 | 31-60×528 | 90+×470
+     dpd_start                int64     null%=  0.0 distinct=323    min=0 max=720 mean=66.36
+     emi_amount               float64   null%=  0.0 distinct=473    min=700 max=3.995e+04 mean=7500
+     overdue_start            float64   null%=  0.0 distinct=790    min=700 max=4.602e+05 mean=2.049e+04
+     outstanding              float64   null%=  0.0 distinct=1665   min=6300 max=2.117e+06 mean=2.17e+05
+     salary_credit_day        float64   null%= 68.2 distinct=8      min=1 max=30 mean=11.14
+     bureau_score_band        object    null%=  0.0 distinct=5      top=300-549×1508 | 550-649×609 | 650-699×185
+     other_active_loans       int64     null%=  0.0 distinct=9      min=0 max=8 mean=1.902
+     paid_other_lenders_30d   bool      null%=  0.0 distinct=2      min=0 max=1 mean=0.2525
+     last_bounce_reason       object    null%=  0.0 distinct=4      top=insufficient_funds×2019 | technical×158 | stop_payment×118
+     ability_to_pay_estimate  float64   null%= 30.3 distinct=101    min=0 max=1 mean=0.5327
+     prev_ptp_count           int64     null%=  0.0 distinct=10     min=0 max=10 mean=1.549
+     prev_ptp_broken          int64     null%=  0.0 distinct=8      min=0 max=7 mean=0.8154
+     dialling_arm             object    null%=  0.0 distinct=2      top=rule_based×2277 | random_contact_point×123
+
+▸ addresses  rows=3117  cols=7  exact duplicate rows=0
+   id-like columns → address_id:3117=UNIQUE, account_id:2400, town_id:4
+     address_id               object    null%=  0.0 distinct=3117    [unique] top=AD000001×1 | AD000002×1 | AD000003×1
+     account_id               object    null%=  0.0 distinct=2400   top=AC001083×3 | AC002174×3 | AC000602×3
+     address_type             object    null%=  0.0 distinct=3      top=residence×2427 | office×464 | permanent_native×226
+     source                   object    null%=  0.0 distinct=2      top=kyc_origination×3090 | skip_trace×27
+     added_date               object    null%=  0.0 distinct=24     top=2026-04-01×3090 | 2026-06-01×2 | 2026-05-30×2
+     town_id                  object    null%=  0.0 distinct=4      top=T3×986 | T2×952 | T1×942
+     address_text             object    null%=  0.0 distinct=3114   top=railway colony navanagara ×2 | Gali 12, Krishna Puri, Dev×2 | gali no-10 azad mohalla de×2
+
+▸ agents  rows=30  cols=6  exact duplicate rows=0
+   id-like columns → agent_id:30=UNIQUE, town_id:3
+     agent_id                 object    null%=  0.0 distinct=30      [unique] top=TA001×1 | TA002×1 | TA003×1
+     channel                  object    null%=  0.0 distinct=3      top=tele×20 | field×9 | voice_bot×1
+     language_team            object    null%=  0.0 distinct=4      top=hinglish×14 | kanglish×8 | english×7
+     town_id                  object    null%= 70.0 distinct=3      top=T1×3 | T2×3 | T3×3
+     tenure_months            float64   null%=  3.3 distinct=25     min=1 max=64 mean=30.52
+     shift                    object    null%=  0.0 distinct=2      top=day×29 | all×1
+
+▸ baseline_geocodes  rows=2880  cols=4  exact duplicate rows=0
+   id-like columns → address_id:2880=UNIQUE
+     address_id               object    null%=  0.0 distinct=2880    [unique] top=AD000001×1 | AD000002×1 | AD000003×1
+     geocoder_x               float64   null%=  0.0 distinct=2806   min=-4062 max=4327 mean=522.2
+     geocoder_y               float64   null%=  0.0 distinct=2814   min=-4089 max=3403 mean=-533.1
+     precision                object    null%=  0.0 distinct=4      top=locality×2052 | street×504 | pincode×274
+
+▸ field_visits  rows=5578  cols=15  exact duplicate rows=0
+   id-like columns → visit_id:5578=UNIQUE, account_id:1339, address_id:1477, agent_id:9, ptp_id:605
+     visit_id                 object    null%=  0.0 distinct=5578    [unique] top=VS000001×1 | VS000002×1 | VS000003×1
+     account_id               object    null%=  0.0 distinct=1339   top=AC002147×9 | AC001181×9 | AC000481×9
+     address_id               object    null%=  0.0 distinct=1477   top=AD002771×9 | AD000617×9 | AD001775×9
+     agent_id                 object    null%=  0.0 distinct=9      top=FA003×645 | FA004×636 | FA002×633
+     visit_date               object    null%=  0.0 distinct=77     top=2026-06-03×82 | 2026-05-14×79 | 2026-06-02×79
+     start_ts                 object    null%=  0.0 distinct=5564   top=2026-06-29 10:14:17×2 | 2026-06-18 11:25:32×2 | 2026-06-12 10:44:38×2
+     checkin_ts               object    null%=  0.0 distinct=5569   top=2026-06-15 10:55:31×2 | 2026-06-04 09:58:49×2 | 2026-04-09 10:43:20×2
+     checkin_x                float64   null%=  0.0 distinct=5263   min=-4410 max=4311 mean=880.3
+     checkin_y                float64   null%=  0.0 distinct=5253   min=-4123 max=3627 mean=-795.1
+     gps_accuracy_m           float64   null%=  0.0 distinct=324    min=4 max=72.8 mean=11.28
+     dwell_s                  int64     null%=  0.0 distinct=1129   min=30 max=1495 mean=345.1
+     outcome                  object    null%=  0.0 distinct=7      top=address_not_traceable×1400 | locked_premises×1249 | met_borrower×1114
+     ptp_id                   object    null%= 89.2 distinct=605    top=PTP000042×1 | PTP000043×1 | PTP000044×1
+     remark                   object    null%=  0.0 distinct=762    top=address sikkilla, tumba hu×256 | address nahi mila×240 | address sikkilla×240
+     photo_hash               object    null%=  0.0 distinct=5417   top=ph0082×32 | ph0080×28 | ph0081×27
+
+▸ landmarks_poi  rows=240  cols=6  exact duplicate rows=0
+   id-like columns → poi_id:240=UNIQUE, town_id:3
+     poi_id                   object    null%=  0.0 distinct=240     [unique] top=LM0001×1 | LM0003×1 | LM0004×1
+     town_id                  object    null%=  0.0 distinct=3      top=T1×82 | T3×81 | T2×77
+     landmark_type            object    null%=  0.0 distinct=14     top=ration_shop×26 | bus_stop×22 | govt_school×22
+     name                     object    null%=  0.0 distinct=14     top=Ration Shop×26 | Bus Stop×22 | Govt School×22
+     x                        float64   null%=  0.0 distinct=238    min=-4072 max=3788 mean=209
+     y                        float64   null%=  0.0 distinct=239    min=-4086 max=3568 mean=-224
+
+▸ localities  rows=36  cols=6  exact duplicate rows=0
+   id-like columns → locality_id:36=UNIQUE, town_id:3
+     locality_id              object    null%=  0.0 distinct=36      [unique] top=T1-L01×1 | T1-L02×1 | T1-L03×1
+     town_id                  object    null%=  0.0 distinct=3      top=T1×12 | T2×12 | T3×12
+     locality_name            object    null%=  0.0 distinct=35     top=Nehru Colony×2 | Basava Nagar×1 | Vinayaka Nagar×1
+     pincode                  int64     null%=  0.0 distinct=12     min=9.601e+05 max=9.803e+05 mean=9.702e+05
+     centroid_x               float64   null%=  0.0 distinct=36      [unique] min=-3766 max=3654 mean=212.3
+     centroid_y               float64   null%=  0.0 distinct=36      [unique] min=-3613 max=3209 mean=-314.4
+
+▸ splits  rows=2400  cols=2  exact duplicate rows=0
+   id-like columns → account_id:2400=UNIQUE
+     account_id               object    null%=  0.0 distinct=2400    [unique] top=AC000001×1 | AC000002×1 | AC000003×1
+     split                    object    null%=  0.0 distinct=3      top=train×1680 | validation×360 | test×360
+
+▸ surveyed_addresses  rows=100  cols=3  exact duplicate rows=0
+   id-like columns → address_id:100=UNIQUE
+     address_id               object    null%=  0.0 distinct=100     [unique] top=AD000527×1 | AD000251×1 | AD002159×1
+     surveyed_x               float64   null%=  0.0 distinct=100     [unique] min=-4039 max=4178 mean=477.9
+     surveyed_y               float64   null%=  0.0 distinct=100     [unique] min=-4013 max=3430 mean=-565.1
+
+▸ towns  rows=3  cols=4  exact duplicate rows=0
+   id-like columns → town_id:3=UNIQUE
+     town_id                  object    null%=  0.0 distinct=3       [unique] top=T1×1 | T2×1 | T3×1
+     town_name                object    null%=  0.0 distinct=3       [unique] top=Kaveripura×1 | Devgarh Nagar×1 | Navanagara East×1
+     address_style            object    null%=  0.0 distinct=3       [unique] top=karnataka×1 | hindi×1 | metro×1
+     approx_radius_m          int64     null%=  0.0 distinct=3       [unique] min=3800 max=4800 mean=4267
+
+▸ visit_gps_points  rows=160406  cols=6  exact duplicate rows=0
+   id-like columns → visit_id:5578, seq:80
+     visit_id                 object    null%=  0.0 distinct=5578   top=VS005577×80 | VS000073×80 | VS003111×80
+     seq                      int64     null%=  0.0 distinct=80     min=0 max=79 mean=20.42
+     point_ts                 object    null%=  0.0 distinct=146732 top=2026-05-14 10:24:14×5 | 2026-06-10 10:28:20×5 | 2026-05-04 11:04:30×4
+     x                        int64     null%=  0.0 distinct=8200   min=-4420 max=4346 mean=793.9
+     y                        int64     null%=  0.0 distinct=7407   min=-4108 max=3648 mean=-737.6
+     accuracy_m               int64     null%=  0.0 distinct=98     min=3 max=111 mean=11.74
+
+DATE / TIME / COORDINATE RANGES
+  addresses.added_date   2026-04-01 00:00:00  →  2026-06-29 00:00:00   (nulls=0)
+  field_visits.visit_date   2026-04-01 00:00:00  →  2026-06-29 00:00:00   (nulls=0)
+  field_visits.start_ts     2026-04-01 09:38:36  →  2026-06-29 13:31:35   (nulls=0)
+  field_visits.checkin_ts   2026-04-01 09:48:45  →  2026-06-29 13:33:44   (nulls=0)
+  visit_gps_points.point_ts     2026-04-01 09:39:07  →  2026-06-29 13:43:44   (nulls=0)
+  baseline_geocodes   x∈[-4061.5,4327.2] y∈[-4088.6,3403.4] (mean |x|=1692.1, |y|=1684.6)
+  localities          x∈[-3766.2,3653.7] y∈[-3613.0,3208.9] (mean |x|=1560.4, |y|=1704.2)
+  landmarks_poi       x∈[-4072.0,3788.5] y∈[-4085.8,3568.5] (mean |x|=1511.3, |y|=1751.3)
+  field_visits        x∈[-4410.0,4311.0] y∈[-4122.6,3627.0] (mean |x|=1890.4, |y|=1672.2)
+  surveyed_addresses  x∈[-4039.0,4177.6] y∈[-4013.1,3429.9] (mean |x|=1758.5, |y|=1715.5)
+  visit_gps_points    x∈[-4420.0,4346.0] y∈[-4108.0,3648.0] (mean |x|=1752.8, |y|=1575.6)
+
+====================================================================================================
+SECTION 2 — ADDRESS TEXT EDA
+====================================================================================================
+length      : min=11 p25=55 median=67 p75=78 p90=84 max=113 mean=66.8
+length histogram bins(0..120): 0-10:0, 10-20:2, 20-30:8, 30-40:63, 40-50:246, 50-60:676, 60-70:739, 70-80:752, 80-90:496, 90-100:111, 100-110:21, 110-120:3
+tokens      : min=2 median=12 p90=15 max=20 mean=11.88
+token histogram: 0:0, 1:1, 2:4, 4:20, 5:29, 7:383, 8:231, 9:628, 11:414, 12:475, 14:697, 15:158, 16:69, 18:6, 19:2
+digits      : mean=8.86 median=9; addresses with 0 digits=9 (0.29%)
+letters     : mean=41.1; addresses with <5 letters=0
+commas      : 0 commas=777 (24.9%) · 1=26 · 2=427 · 3+=1887
+slashes     : any=426 (13.7%) · max=2
+hyphens     : any=2967 (95.2%) · max=2
+dots        : any=1302 (41.8%)   [likely abbreviations like 'H.No.']
+NO comma/slash/hyphen at all: 24 (0.8%)
+house-number (marker-anchored): 2111 (67.7%)   [marker+digit=1799 (57.7%) · 12/3-style=383 (12.3%)]  ← the definition used below
+house-number (any numeric token, upper bound): 3099 (99.4%)   [the two definitions disagree by 31.7 points: house-number parsing is definition-dependent, so BOTH are kept as features and neither is treated as a fact]
+6-digit token present       : 2907 (93.3%); of those, matches a known pincode: 2647 (91.1% of those) — unknown: 260
+non-ASCII rows              : 262 (8.41%)  Devanagari=154  Kannada=108
+non-ASCII examples:
+    6th Cross, 5th Main, ಚರ್ಚ್ ಹತ್ತಿರ, Kuvempu Layt, Kaveripura - 960102
+    गली नं. 3, राशन की दुकान के बगल में, Tilak Ngr, Devgarh Nagar - 970204
+    house 52 gali no. 5 ward 9 मस्जिद के पास shastri nagar devgarh nagar - 970201
+    #160, 5th Cross, 1st Main, ಕಲ್ಯಾಣ ಮಂಟಪ ಹತ್ತಿರ, Kalyana Ngr, Kaveripura - 960104
+locality-name token present : 2572 (82.5%)
+known landmark phrase present: 785 (25.2%)
+town name present            : 2922 (93.7%)
+has BOTH house-number token and a known locality: 1898 (60.9%)
+has NEITHER                                     : 332 (10.7%)
+
+top 30 content words:
+    nagar              1229  ( 39.4%)
+    east               1017  ( 32.6%)
+    navanagara          952  ( 30.5%)
+    devgarh             930  ( 29.8%)
+    kaveripura          922  ( 29.6%)
+    gali                702  ( 22.5%)
+    main                639  ( 20.5%)
+    blk                 592  ( 19.0%)
+    cross               522  ( 16.7%)
+    colony              484  ( 15.5%)
+    house               373  ( 12.0%)
+    ngr                 284  (  9.1%)
+    nehru               272  (  8.7%)
+    nagr                271  (  8.7%)
+    road                267  (  8.6%)
+    block               252  (  8.1%)
+    ward                240  (  7.7%)
+    village             237  (  7.6%)
+    district            237  (  7.6%)
+    close               233  (  7.5%)
+    temple              218  (  7.0%)
+    near                207  (  6.6%)
+    layout              180  (  5.8%)
+    bus                 166  (  5.3%)
+    gandhi              165  (  5.3%)
+    hattira             164  (  5.3%)
+    enclave             146  (  4.7%)
+    patel               146  (  4.7%)
+    school              143  (  4.6%)
+    colny               136  (  4.4%)
+
+rarest word shapes (unusual tokens, freq==1, length>8, sample 12): navanagora, navvanagara, apatments, naavanagara, kavripura, apartment, navnagara, sidddeshwara, naanagara, kaveipura, anjjaneya, communitty
+
+structural vocabulary (records containing the token):
+    h.no           402  ( 12.9%)
+    no.            972  ( 31.2%)
+    st               0  (  0.0%)
+    rd             711  ( 22.8%)
+    nagar/nager   1025  ( 32.9%)
+    colony         484  ( 15.5%)
+    layout         180  (  5.8%)
+    cross          522  ( 16.7%)
+    main           639  ( 20.5%)
+    block          252  (  8.1%)
+    sector           0  (  0.0%)
+    near           207  (  6.6%)
+    opp            117  (  3.8%)
+    behind          50  (  1.6%)
+    gali           702  ( 22.5%)
+    extension        0  (  0.0%)
+    opposite        55  (  1.8%)
+    circle           0  (  0.0%)
+    stage            0  (  0.0%)
+    phase           99  (  3.2%)
+
+top 12 repeated 2-grams: 'navanagara east'×927, 'devgarh nagar'×649, 'gali no'×471, 'th main'×404, 'h no'×399, 'th cross'×377, 'cross th'×336, 'nagar devgarh'×279, 'nagar kaveripura'×244, 'close to'×233, 'colony navanagara'×215, 'no gali'×196
+
+repeated structural templates (digits→#, words→w): 2586 distinct over 3117 rows; the 8 most common cover 2.5% of rows
+       22  #w w #w w w w w w w w - #
+       10  w.w. # #w w #w w w w w - #
+        9  #/# #w w #w w w w w w w w - #
+        9  w w w # w w w w w w w - #
+        8  ## w w w # w w w w w w w - #
+        7  w # w w w w w w - #
+        7  w # w w w w w w w - #
+        7  w # #w w #w w w w w - #
+
+duplicate text: exact=3  normalised=5  rows in a normalised-duplicate group=10
+near-duplicate pairs (char-3-gram Jaccard ≥ 0.80, blocked by leading tokens): 238; within one town: 238
+  of those, pairs identical once digits are masked (SAME TEMPLATE, different numbers): 228
+  pairs differing in wording as well: 10
+    J=0.923 same_town=True same_template=True  A: 'Village Rampura Kalan, Tehsil D, District South - 996281'  B: 'Village Rampura Kalan, Tehsil D, District South - 999621'
+    J=0.852 same_town=True same_template=True  A: 'Village Rampura Kalan, Tehsil D, District South - 996281'  B: 'Village Rampura Kalan, Tehsil D, District South - 993161'
+    J=0.852 same_town=True same_template=True  A: 'Village Rampura Kalan, Tehsil D, District North - 992673'  B: 'Village Rampura Kalan, Tehsil D, District North - 999495'
+    J=0.852 same_town=True same_template=True  A: 'Village Rampura Kalan, Tehsil D, District North - 992673'  B: 'Village Rampura Kalan, Tehsil D, District North - 997209'
+    J=0.852 same_town=True same_template=True  A: 'Village Rampura Kalan, Tehsil D, District South - 999621'  B: 'Village Rampura Kalan, Tehsil D, District South - 993161'
+    J=0.852 same_town=True same_template=True  A: 'Village Rampura Kalan, Tehsil D, District North - 999495'  B: 'Village Rampura Kalan, Tehsil D, District North - 997209'
+    J=0.846 same_town=True same_template=True  A: 'Village Rampura Kalan, Taluk A, District East - 994567'  B: 'Village Rampura Kalan, Taluk A, District East - 998926'
+    J=0.846 same_town=True same_template=True  A: 'Village Rampura Kalan, Taluk A, District East - 994567'  B: 'Village Rampura Kalan, Taluk A, District East - 992010'
+
+address_type distribution: {'residence': 2427, 'office': 464, 'permanent_native': 226}
+source distribution      : {'kyc_origination': 3090, 'skip_trace': 27}
+town distribution        : {'T3': 986, 'T2': 952, 'T1': 942, 'OUT': 237}  (OUT = outside every modelled town)
+addresses per account    : mean=1.30 max=3  distribution={1: 1694, 2: 695, 3: 11}
+
+DEGENERATE / UNUSUAL RECORDS
+  no digits: 9 | under 20 chars: 2 | under 4 tokens: 2 | no letters: 0
+  examples of the shortest records:
+    414/3, DEVGARH NAGAR - 970203
+    Kaveripura - 960102
+    shastri ngr devgrah nagar
+    gandhi basti devgarh nagar
+    64/1, Devgarh Nagr - 970203
+
+====================================================================================================
+SECTION 3 — GEOGRAPHIC HIERARCHY EDA  (town → locality → pincode → landmark → address)
+====================================================================================================
+towns: ['T1', 'T2', 'T3']  styles=['karnataka', 'hindi', 'metro']  approx_radius_m=[4200, 3800, 4800]
+localities per town: {'T1': 12, 'T2': 12, 'T3': 12}
+pincodes per town  : {'T1': 4, 'T2': 4, 'T3': 4}
+pincodes total     : 12 distinct over 36 localities
+localities per (town,pincode): {2: 5, 3: 3, 4: 3, 5: 1}  → pincode is NOT a 1:1 key for a locality
+pincodes appearing in more than one town: 0 (of 12)
+locality names repeated across towns: 1 names, 2 rows
+    Nehru Colony     town=T1  pincode=960102  centroid=(2735.1,-2128.6)
+    Nehru Colony     town=T2  pincode=970203  centroid=(3029.6,575.7)
+locality centroid precision: decimals x=1 y=1 → rounded artefacts, not survey points
+  T1: localities=12  landmarks=82  addresses=942  max locality-centroid spread from town centre=3469 m  approx_radius_m=4200
+  T2: localities=12  landmarks=77  addresses=952  max locality-centroid spread from town centre=3809 m  approx_radius_m=3800
+  T3: localities=12  landmarks=81  addresses=986  max locality-centroid spread from town centre=3935 m  approx_radius_m=4800
+landmarks: 240 rows, 14 distinct names, 14 types
+landmark type distribution: {'ration_shop': 26, 'bus_stop': 22, 'govt_school': 22, 'masjid': 21, 'hanuman_temple': 21, 'medical_store': 19, 'ganesha_temple': 18, 'water_tank': 18, 'milk_dairy': 16, 'community_hall': 14, 'park': 13, 'church': 12, 'post_office': 10, 'petrol_bunk': 8}
+duplicate (town,name) pairs: 42 covering 240 rows
+distinct names: ['Bus Stop', 'Church', 'Community Hall', 'Ganesh Temple', 'Govt School', 'Hanuman Temple', 'Masjid', 'Medical Store', 'Milk Dairy', 'Park', 'Petrol Bunk', 'Post Office', 'Ration Shop', 'Water Tank'] ...
+landmarks per town: {'T1': 82, 'T2': 77, 'T3': 81}
+
+address → hierarchy resolvability (text evidence only):
+  address has a locality-name token : 2572 (82.5%)
+  address has a known pincode token : 2647 (84.9%)
+  address has a landmark phrase     : 785 (25.2%)
+  has at least one of the three     : 2855 (91.6%)
+  has none of the three             : 262 (8.4%)
+
+====================================================================================================
+SECTION 4 — BASELINE GEOCODER EDA
+====================================================================================================
+addresses with a geocode : 2880 of 3117 = 92.4%  (missing: 237 = 7.6%)
+missing-geocode addresses by town: {'OUT': 237}  ← all of them are 'OUT'
+precision strata         : {'locality': 2052, 'street': 504, 'pincode': 274, 'rooftop': 50}
+   as share: {'locality': '71.2%', 'street': '17.5%', 'pincode': '9.5%', 'rooftop': '1.7%'}
+duplicate pin coordinates: 0 duplicated rows; largest pin pile = 1 address(es)
+distinct coordinates     : 2880 for 2880 rows → the baseline does not collapse many addresses onto one point
+coordinate decimals      : median x=1
+strata by town: {'locality': {'T1': 659, 'T2': 684, 'T3': 709}, 'pincode': {'T1': 115, 'T2': 80, 'T3': 79}, 'rooftop': {'T1': 16, 'T2': 17, 'T3': 17}, 'street': {'T1': 152, 'T2': 171, 'T3': 181}}
+
+ERROR vs surveyed truth (n=100 — the only ground truth available):
+  median=376.4 m  mean=532.7 m  p25=170.8  p75=539.4  p90=839.2  max=4807.7
+  within   50 m:   5.0%  (5 of 100)
+  within  100 m:   9.0%  (9 of 100)
+  within  250 m:  35.0%  (35 of 100)
+  within  500 m:  71.0%  (71 of 100)
+  within 1000 m:  90.0%  (90 of 100)
+
+  by precision stratum:
+    locality  n= 73  median=  385.9  p75=  504.5  p90=  626.5  <100m=  1.4%  <500m= 74.0%
+    pincode   n= 10  median= 1375.8  p75= 2658.5  p90= 3820.1  <100m=  0.0%  <500m=  0.0%
+    rooftop   n=  1  median=   25.6  p75=   25.6  p90=   25.6  <100m=100.0%  <500m=100.0%
+    street    n= 16  median=  108.6  p75=  129.6  p90=  166.3  <100m= 43.8%  <500m=100.0%
+
+  by town:
+    T1: n=33  median=  440.1  <100m=  9.1%  <500m= 60.6%
+    T2: n=29  median=  377.0  <100m= 10.3%  <500m= 75.9%
+    T3: n=38  median=  339.3  <100m=  7.9%  <500m= 76.3%
+
+  by address_type:
+    residence         n=100  median=  376.4
+
+  out-of-town records (town_id='OUT'): 237 addresses, geocoded: 0
+
+====================================================================================================
+SECTION 5 — SURVEYED / GROUND-TRUTH EDA (the only true labels)
+====================================================================================================
+surveyed records: 100 = 3.2% of addresses, 3.2% unique
+by town     : {'T3': 38, 'T1': 33, 'T2': 29}
+by type     : {'residence': 100}
+by source   : {'kyc_origination': 98, 'skip_trace': 2}
+by stratum  : {'locality': 73, 'street': 16, 'pincode': 10, 'rooftop': 1}
+by split    : {'train': 66, 'validation': 19, 'test': 15}  ← ground truth spans all three official splits
+distinct accounts represented: 100  (mean 1.00 addresses per account)
+addresses that were ever visited: 49 of 100
+distance from surveyed point to town centre: median=2740 m  max=4430 m
+surveyed-vs-vendor error: median=376.4 m
+representativeness checks:
+  surveyed share by stratum vs population: {'locality': '73.0% vs 71.2%', 'street': '16.0% vs 17.5%', 'pincode': '10.0% vs 9.5%', 'rooftop': '1.0% vs 1.7%'}
+  surveyed share of 'OUT' records: 0 (population: 237)
+  surveyed share of office/native addresses: 0 office, 0 native
+
+====================================================================================================
+SECTION 6 — FIELD VISIT EDA
+====================================================================================================
+visits total=5578 over 1477 addresses (47.4% of the book) and 1339 accounts
+visits per visited address: mean=3.78 median=3 p90=8 max=9
+distribution: {1: 406, 2: 248, 3: 154, 4: 134, 5: 118, 6: 111, 7: 107, 8: 118, 9: 81}
+visits per visited account: mean=4.17 median=4 max=9
+outcome frequency: {'address_not_traceable': 1400, 'locked_premises': 1249, 'met_borrower': 1114, 'met_family': 1062, 'neighbour_says_shifted': 455, 'no_such_person': 206, 'cash_collected': 92}
+  as shares: {'address_not_traceable': '25.1%', 'locked_premises': '22.4%', 'met_borrower': '20.0%', 'met_family': '19.0%', 'neighbour_says_shifted': '8.2%', 'no_such_person': '3.7%', 'cash_collected': '1.6%'}
+
+median dwell by outcome (minutes): {'address_not_traceable': 1.3, 'cash_collected': 14.5, 'locked_premises': 2.5, 'met_borrower': 14.8, 'met_family': 6.6, 'neighbour_says_shifted': 4.3, 'no_such_person': 3.2}
+median travel start→check-in by outcome (minutes): {'address_not_traceable': 18.6, 'cash_collected': 8.6, 'locked_premises': 9.1, 'met_borrower': 10.6, 'met_family': 9.5, 'neighbour_says_shifted': 8.8, 'no_such_person': 11.1}
+
+outcome by town:
+  T1: n=1906  met_borrower 21.0%  met_family 19.5%  locked 21.2%  not_traceable 25.6%
+  T2: n=1825  met_borrower 19.6%  met_family 19.6%  locked 23.1%  not_traceable 22.0%
+  T3: n=1847  met_borrower 19.3%  met_family 18.0%  locked 22.9%  not_traceable 27.7%
+outcome by address type:
+  office            n= 255  met-someone  32.5%  not_traceable  31.0%
+  residence         n=5323  met-someone  41.0%  not_traceable  24.8%
+outcome by baseline precision stratum:
+  locality  n=3996  met-someone  41.3%  not_traceable  24.3%  median dwell= 3.5 min
+  pincode   n= 581  met-someone  26.5%  not_traceable  51.8%  median dwell= 1.9 min
+  rooftop   n=  94  met-someone  43.6%  not_traceable   6.4%  median dwell= 4.2 min
+  street    n= 907  met-someone  46.6%  not_traceable  13.5%  median dwell= 4.0 min
+
+repeat visits: 1071 addresses visited more than once; 823 three or more times
+addresses confirmed by >1 distinct agent: 957
+visits with a remark: 5578 (100.0%); distinct remarks: 762; top: {'address sikkilla, tumba hudukide': 256, 'address nahi mila': 240, 'address sikkilla': 240, 'mane lock agide': 216, 'lock laga hai': 215}
+visits with ptp_id : 605 (10.8%)
+
+visit exposure by delinquency bucket (account level):
+  DPD 0–30     accounts= 1025  visited= 25.1%
+  DPD 31–60    accounts=  528  visited= 61.7%
+  DPD 61–90    accounts=  377  visited= 83.0%
+  DPD 91–180   accounts=  254  visited= 92.1%
+  DPD 180+     accounts=  216  visited= 96.8%
+visit exposure by outstanding quartile: Q1 low:55.2%, Q2:51.7%, Q3:59.8%, Q4 high:56.5%
+visit exposure by portfolio: consumer_durable:60.1%, credit_card:53.6%, mfi_jlg:59.8%, msme:51.4%, pl_salaried:55.6%, two_wheeler:54.2%
+visit exposure by address type: office:33.4%, permanent_native:0.0%, residence:54.5%
+visit exposure by baseline stratum: locality:51.3%, pincode:54.7%, rooftop:54.0%, street:49.0%
+
+====================================================================================================
+SECTION 7 — FIELD GPS / TRAJECTORY EDA
+====================================================================================================
+points total=160406 over 5578 visits; median=26 points/visit p10=7 p90=57 max=80
+visits with <5 points: 68; with ≥20: 3525
+accuracy_m: median=10.0 p75=15.0 p90=21.0 p99=40.0 max=111.0
+accuracy histogram bins: 0-5:14294, 5-8:38474, 8-10:24494, 10-15:42341, 15-20:21024, 20-30:14555, 30-50:4632, 50-100:582, 100-1000:10
+axis artefacts (x==0 or y==0): 34 (0.021%)
+consecutive-point distance: median=40.82 m p90=179.51 m max=544.9 m
+implied speed: median=4.84 p95=21.09 p99=23.06 p99.9=25.70 km/h  max=32.21 km/h
+steps faster than 40 km/h: 0; faster than 60: 0; negative or zero dt: 4842
+zero-length steps (same point twice): 0.05% of steps
+trail duration (last-first per visit): median=14.5 min
+check-in vs trail centroid: median=108.0 m p90=578.9 max=3455.0 m
+trail start vs check-in  : median=406.1 m p90=3446.2 m
+check-in accuracy vs trail accuracy: median check-in=9.8 m, median trail=10.0 m
+check-in ↔ trail agreement by outcome (median m): address_not_traceable:96, cash_collected:83, locked_premises:137, met_borrower:107, met_family:136, neighbour_says_shifted:150, no_such_person:125
+
+check-in coordinates: 5578 distinct for 5578 visits; largest cluster=1 visits; visits sharing a coordinate with ≥3 others: 0
+share of repeated coordinates within a visit: median=0.00 p90=0.00
+
+MODEL-RELEVANT DISTINCTION — what a trail tells us about (a) the place and (b) the collection process:
+   place-side signals   : where the agent converged, dwell cluster, distance from the check-in to that cluster
+   process-side signals : accuracy class, point count, speed plausibility, trail/check-in disagreement, axis artefacts
+   measured here: trails are internally consistent (max 32.2 km/h, no teleports) — the dataset contains no
+   spoofing to learn from, so process-side signals can be *defined* but not *validated* on this data.
+
+----------------------------------------------------------------------------------------------------
+SECTION 7b — TRAIL GEOMETRY DETAIL, AND THE PIN-AGREEMENT TEST ON ALL 5,578 VISITS
+----------------------------------------------------------------------------------------------------
+check-in → NEAREST trail point : median=7.6 m  p90=19.5 m  (this is the strict 'is the agent on their own path' test)
+check-in → trail CENTROID      : median=108.0 m  p90=578.9 m  (large because a walking trail has extent)
+trail bounding-box span        : median=525 m  p90=3563 m
+trail path length              : median=1150 m  p90=4641 m
+
+per-outcome comparison (full 5,578 visits; vendor pin present for 5,341 of them):
+  outcome                      n  dwell   to pin  ≤100m of pin  min trail   span  pts
+  address_not_traceable     1400   1.3m     195m         17.6%       7.7m   616m   38
+  cash_collected              92  14.5m     275m          9.8%       5.7m   540m   24
+  locked_premises           1249   2.5m     329m         11.0%       8.3m   475m   15
+  met_borrower              1114  14.8m     346m          9.2%       6.8m   538m   26
+  met_family                1062   6.6m     323m         11.6%       7.6m   506m   22
+  neighbour_says_shifted     455   4.3m     298m         14.3%       7.6m   551m   20
+  no_such_person             206   3.2m     233m         12.1%       7.8m   490m   24
+
+READING (three separate facts, reported separately rather than blended):
+  1. DISTANCE TO THE PIN is failure-correlated: the failure outcome is the only one whose median check-in sits
+     closer to the vendor pin (195 m) than the success outcomes (323–346 m), and it is the most likely to be
+     within 100 m of that pin (17.6% vs 9.2–11.6%).
+  2. DWELL is strongly discriminative: 1.3 min for the failure outcome vs 6.6–14.8 min for met-someone outcomes,
+     and 2.5 min for locked_premises. Short dwell + near-pin + no contact = the signature of giving up.
+  3. TRAIL TRAITS ARE NOT discriminative here: min distance check-in→trail is 5.7–8.3 m for every outcome (the
+     check-in is by construction a point on the agent's own path), and trail span is slightly LARGER for failures
+     (616 m) than for confirmations (475–551 m) because the trail includes the whole approach walk.
+  → consequence: integrity features must be built from MEDIA, COORDINATE and TIMING signals, not from trail shape;
+    trail geometry is useful as an evidence COORDINATE (where the agent converged) but not as a truth test.
+
+====================================================================================================
+SECTION 8 — AGENT / COLLECTOR EDA
+====================================================================================================
+agents: 30; channels={'tele': 20, 'field': 9, 'voice_bot': 1}; language teams={'hinglish': 14, 'kanglish': 8, 'english': 7, 'all': 1}; shifts={'day': 29, 'all': 1}
+town assignment: {nan: 21, 'T1': 3, 'T2': 3, 'T3': 3}  (null = non-field channels)
+tenure_months: min=1.0 median=33 max=64.0 nulls=1
+visits per agent: median=626 min=583 max=645 (agents with 0 visits: 21)
+
+per-agent behaviour table (sorted by visits):
+  agent    visits  addr   met%  nottr%  dwell photodup%  town
+  FA003       645   340  45.9%   22.9%   3.7m      0.0%    T1
+  FA004       636   310  41.0%   22.3%   3.7m      0.0%    T2
+  FA002       633   330  39.5%   27.5%   3.3m      0.3%    T1
+  FA001       628   360  40.6%   26.3%   3.4m      0.0%    T1
+  FA007       626   329  41.7%   28.0%   3.5m      0.0%    T3
+  FA008       611   321  38.0%   29.1%   3.1m      0.3%    T3
+  FA009       610   325  36.2%   25.9%   3.1m     25.6%    T3
+  FA005       606   332  41.6%   19.5%   3.7m      0.2%    T2
+  FA006       583   299  41.2%   24.4%   3.7m      0.0%    T2
+
+photo_hash: 5417 distinct for 5578 non-null visits; largest hash group = 32 visits
+agents above 5% duplicate-photo rate: ['FA009']
+  FA009: 610 visits, duplicate-photo rate 25.6%, met-someone 36.2%, median dwell 3.1 min, distinct check-in points 610
+agents' check-in coordinate reuse: median distinct check-in points per agent = 618 of 626 visits
+
+====================================================================================================
+SECTION 9 — TEMPORAL EDA
+====================================================================================================
+address added_date: 2026-04-01 → 2026-06-29 (89 days); weekday mix={0: 4, 1: 2, 2: 3093, 3: 6, 4: 4, 5: 4, 6: 4}
+visits visit_date: 2026-04-01 → 2026-06-29 (89 days); weekday mix={0: 949, 1: 866, 2: 942, 3: 968, 4: 928, 5: 925} (0=Mon)
+visit hour-of-day mix (check-in): {9: 165, 10: 1613, 11: 1729, 12: 1306, 13: 588, 14: 162, 15: 15}
+visits per week: [np.int64(293), np.int64(430), np.int64(444), np.int64(443), np.int64(432), np.int64(444), np.int64(438), np.int64(434), np.int64(430), np.int64(436), np.int64(426), np.int64(416), np.int64(440), np.int64(72)]
+gap between active visit days: median=1  max=2  days without any visit: 13 of 90
+addresses created before the first visit window: 0 of 3117 (0.0%)
+days from address creation to a visit: median=43 p10=8 p90=80 negative=0
+visits ordered within address: max sequence index = 8 (i.e. the longest history is 9 observations)
+first-visit date distribution by month: {Period('2026-04', 'M'): 989, Period('2026-05', 'M'): 291, Period('2026-06', 'M'): 197}
+
+====================================================================================================
+SECTION 10 — TRAIN / VALIDATION / TEST EDA
+====================================================================================================
+official split counts (account level): {'train': 1680, 'validation': 360, 'test': 360}; accounts covered=2400 of 2400; duplicate rows=0
+addresses per split: {'train': 2175, 'validation': 483, 'test': 459}  (accounts differ in address count, so split sizes are uneven in addresses)
+town distribution by split: {'OUT': {'test': 32, 'train': 165, 'validation': 40}, 'T1': {'test': 139, 'train': 664, 'validation': 139}, 'T2': {'test': 150, 'train': 639, 'validation': 163}, 'T3': {'test': 138, 'train': 707, 'validation': 141}}
+address_type by split: {'office': {'test': 63, 'train': 320, 'validation': 81}, 'permanent_native': {'test': 32, 'train': 156, 'validation': 38}, 'residence': {'test': 364, 'train': 1699, 'validation': 364}}
+baseline stratum by split: {'locality': {'test': 318, 'train': 1416, 'validation': 318}, 'pincode': {'test': 42, 'train': 203, 'validation': 29}, 'rooftop': {'test': 9, 'train': 34, 'validation': 7}, 'street': {'test': 58, 'train': 357, 'validation': 89}}
+ground-truth (surveyed) by split: {'train': 66, 'validation': 19, 'test': 15}
+visits by split: {'train': 3896, 'validation': 894, 'test': 788}
+normalised-duplicate text groups spanning >1 split: 3 (groups: 5); rows involved: 6
+same-building candidates (identical normalised text) spanning splits: 3 groups
+normalised text appearing in more than one town: 0 groups
+time leakage check: accounts have addresses added over the whole window; visits span 2026-04-01 → 2026-06-29 with no temporal split in the official file
+→ the official split is RANDOM over accounts and TIME-BLIND; it is necessary but not sufficient
+
+====================================================================================================
+SECTION 11 — MISSING-VALUE ANALYSIS (classified, not just counted)
+====================================================================================================
+  addresses                    -                        complete               no nulls anywhere
+  accounts.salary_credit_day   68.2% null               NOT APPLICABLE         not applicable — salaried accounts have a credit day; others do not
+  accounts.ability_to_pay_estimate 30.3% null               GENUINELY UNKNOWN      genuinely unknown — the estimate was never produced
+  accounts.last_bounce_reason  0.0% null                NOT APPLICABLE         not applicable — no bounce occurred
+  agents.town_id               70.0% null (21 of 30)    NOT APPLICABLE         not applicable — tele-calling and voice-bot channels have no town
+  agents.tenure_months         1 null                   GENUINELY UNKNOWN      genuinely unknown for a newly onboarded collector
+  baseline_geocodes.*          237 addresses absent (7.6%) STRUCTURAL             structurally missing — the vendor declines to place out-of-town records
+  field_visits.ptp_id          89.2% null               NOT APPLICABLE         not applicable to this problem statement — belongs to a different workflow
+  field_visits.remark          0.0% null                NOT APPLICABLE         not applicable — a remark is optional free text
+  field_visits.photo_hash      0 null                   PROCESS FAILURE (if any) process failure if non-zero — a visit without media evidence
+  visit_gps_points.accuracy_m  0 null                   POTENTIALLY CORRUPTED  corrupted/unreported accuracy — the device did not report it
+  surveyed_addresses           0 nulls, 100 rows of 3,117 STRUCTURAL             structurally missing by design — a survey covers a sample, not the book
+
+rule applied throughout: missingness is DATA, not an error to be filled.
+  leave null        → when absence has meaning (no vendor pin = out-of-town / unplaceable)
+  add indicator     → when absence changes the decision (pin_unknown, no_digit, trail_missing)
+  impute            → only for numeric model inputs where absence is noise, and only with a train-fitted statistic
+  derive            → when another table carries the fact (visit outcome → place/person dimensions)
+  exclude           → when a column belongs to a different workflow (ptp_id) or leaks (outcome at T0)
+
+====================================================================================================
+SECTION 12 — DUPLICATE / ENTITY ANALYSIS
+====================================================================================================
+exact duplicate rows per table: accounts:0, addresses:0, agents:0, baseline_geocodes:0, field_visits:0, landmarks_poi:0, localities:0, splits:0, surveyed_addresses:0, towns:0, visit_gps_points:0
+duplicate key values: accounts.lender_id:2394, accounts.town_id:2397, addresses.account_id:717, addresses.town_id:3113, agents.town_id:26, field_visits.account_id:4239, field_visits.address_id:4101, field_visits.agent_id:5569, field_visits.ptp_id:4972, landmarks_poi.town_id:237, localities.town_id:33, visit_gps_points.visit_id:154828
+
+normalised-text groups with >1 address: 5 groups covering 10 rows
+   ×2  accounts=['AC001300', 'AC002203'] towns=['T2', 'T2']  «Shivaji Nagar, Devgarh Nagar - 970202»
+   ×2  accounts=['AC001161', 'AC002284'] towns=['T3', 'T3']  «railway colony navanagara east - 980304»
+   ×2  accounts=['AC001454', 'AC001506'] towns=['T2', 'T2']  «Gali 12, Krishna Puri, Devgarh Nagar - 970202»
+   ×2  accounts=['AC000199', 'AC001418'] towns=['T2', 'T2']  «gali no-10 azad mohalla devgarh nagar - 970203»
+   ×2  accounts=['AC000482', 'AC001662'] towns=['T1', 'T1']  «ashoka layout kaveripura - 960104»
+same text, different accounts: 5 groups — legitimate repeat buildings, not a data error
+near-duplicate pairs (J≥0.80): 238 — 238 inside one town
+duplicate (town,locality_name) pairs: 0; duplicate (town,pincode) pairs: 24
+duplicate (town,landmark name) pairs: 198 of 240 rows
+repeated geographic points: vendor pins 0, check-ins 0, landmarks 0
+
+classification of the duplicates found:
+  multiple accounts at one building → LEGITIMATE REPEATED ENTITY (must be grouped, never deleted)
+  identical landmark names in one town → DATA LIMITATION (name is not an identity; scope by town+type+coords)
+  locality name repeated across towns → LEGITIMATE (keyed by town)
+  repeated check-in coordinates across visits → PROCESS SIGNAL (agents standing at the same spot)
+  repeated vendor coordinates → would be a degradation signal; none found in this dataset
+
+====================================================================================================
+SECTION 13 — OUTLIER / ANOMALY ANALYSIS (identified → explained → disposition)
+====================================================================================================
+vendor pins >6,000 m from their town centre: 0 (max 4608 m) → kept, flagged as implausible-distance candidates
+check-ins outside a 6,000 m town envelope: 0 (max 4544 m) → town containment holds in this dataset
+dwell_s: min=30 p1=33 median=207 p99=1431 max=1495; under 60 s: 443; over 2 h: 0
+travel time: min=0.5 min median=12.1 min p99=53.8 min max=85.3 min; negative=0
+gps_accuracy_m outliers: >100 m: 10 (0.006%); max=111.0 m → FLAG (low-reliability point), keep
+implied speed above 40 km/h: 0 steps (0.0005%) → FLAG as a process anomaly
+address strings with no digits: 9; with no letters: 0; with no separator: 24
+6-digit tokens that match no known pincode: 260 → FLAG (pin_unknown): the token is a hypothesis, not a fact
+hierarchy violations: addresses whose town differs from their account's town: 237
+  • axis GPS points (x=0 or y=0)                         n=34      why: device wrote a placeholder when it had no fix                  action: EXCLUDE from evidence, keep the row in the raw file
+  • vendor pins far from their own town centre           n=0       why: either a coarse pincode artefact or a wrong town               action: FLAG (implausible_distance), never delete
+  • check-ins outside the town envelope                  n=0       why: would indicate a mis-assigned town or a travelling collector   action: FLAG if present (none here)
+  • dwell under 60 s                                     n=443     why: a check-in and a fast departure                                action: FLAG (weak evidence for a place claim), keep the visit
+  • dwell over 2 hours                                   n=0       why: agent left the app open                                        action: FLAG, keep
+  • negative travel time                                 n=0       why: clock skew or data error                                       action: would be EXCLUDED (none here)
+  • GPS accuracy above 100 m                             n=10      why: urban canyon or no fix                                         action: FLAG: evidence weight reduced, never dropped silently
+  • implied speed above 40 km/h                          n=0       why: noise between fixes, not teleportation                         action: FLAG: speed-plausibility feature; no spoofing conclusion drawn
+  • address text with no digits                          n=9       why: a house number cannot exist in this record                     action: FLAG (no_digit) → tier cap at locality/street level
+  • 6-digit token matching no known pincode              n=260     why: either a phone fragment, a plot number, or an out-of-area pincode action: FLAG, never parse as evidence
+  • address.town_id differs from account.town_id         n=237     why: the borrower works/lives elsewhere than the account's serviced town action: FLAG (mobility), keep as-is
+
+====================================================================================================
+SECTION 14 — DATA QUALITY SCORECARD (per table)
+====================================================================================================
+  accounts               rows=   2400  mean null%= 4.93  exact dup rows=  0  key integrity=ok
+  addresses              rows=   3117  mean null%= 0.00  exact dup rows=  0  key integrity=CHECK
+  agents                 rows=     30  mean null%=12.22  exact dup rows=  0  key integrity=ok
+  baseline_geocodes      rows=   2880  mean null%= 0.00  exact dup rows=  0  key integrity=ok
+  field_visits           rows=   5578  mean null%= 5.94  exact dup rows=  0  key integrity=CHECK
+  landmarks_poi          rows=    240  mean null%= 0.00  exact dup rows=  0  key integrity=ok
+  localities             rows=     36  mean null%= 0.00  exact dup rows=  0  key integrity=ok
+  splits                 rows=   2400  mean null%= 0.00  exact dup rows=  0  key integrity=ok
+  surveyed_addresses     rows=    100  mean null%= 0.00  exact dup rows=  0  key integrity=ok
+  towns                  rows=      3  mean null%= 0.00  exact dup rows=  0  key integrity=ok
+  visit_gps_points       rows= 160406  mean null%= 0.00  exact dup rows=  0  key integrity=CHECK
+
+TOTAL runtime of this EDA: 23.6 s   peak RSS: 160 MB

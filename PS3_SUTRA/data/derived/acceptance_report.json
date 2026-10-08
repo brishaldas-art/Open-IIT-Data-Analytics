@@ -1,0 +1,218 @@
+{
+  "all_passed": true,
+  "evidence": {
+    "counters": {
+      "gate_decisions": 0,
+      "s_eval_looks": 1
+    },
+    "firewall": {
+      "n_surveyed": 100,
+      "n_surveyed_accounts": 100,
+      "n_surveyed_blocks": 99,
+      "share_of_corpus": 0.0465,
+      "union": 145
+    },
+    "indexes": {
+      "dir": "data/derived/runtime_indexes",
+      "memory_entries": 1477,
+      "mismatched": [],
+      "n_addresses": 3117,
+      "n_places": 3007,
+      "ok": true
+    },
+    "packs": [
+      "pack-T1-04c433191978.json",
+      "pack-T2-01ae94c33a90.json",
+      "pack-T2-0575dcc6c0df.json",
+      "pack-T2-7247f0bd3d96.json"
+    ],
+    "receipt_sha256": "228680109f0cfda6f90a7e8f9383a2c8d8571f97bb131ef5461d1fd73b0b2326",
+    "splits": {
+      "EXCLUDED": 45,
+      "POOL_UNSUPERVISED": 2680,
+      "S-EVAL": 100,
+      "S-TRAIN": 223,
+      "S-VAL": 69,
+      "n_addresses": 3117,
+      "n_firewalled": 145,
+      "n_supervision_eligible": 292
+    },
+    "store": {
+      "evidence_policy_version": "evidence-policy-v3",
+      "n_observations": 5578,
+      "store_path": "sutra_store.sqlite",
+      "store_schema_version": "store-2"
+    },
+    "store_attestation": {
+      "belief_versions": {
+        "digest": "2e07a6e64d4438f586a5eede14f7b68cd5a86299c0c73d2fa8fbb0378da9836e",
+        "n": 2757
+      },
+      "evidence_scores": {
+        "digest": "9955a9a217e76f8d5c167d5dbf9c084c65abf7c45e2a89b6b25ef499a623b51d",
+        "n": 5578
+      },
+      "observations": {
+        "digest": "0af3e93fb746953f9c461eabf22813b568d3e2b384557e4cf08811244c7be45e",
+        "n": 5578
+      },
+      "place_events": {
+        "digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "n": 0
+      },
+      "task_events": {
+        "digest": "157081e553e9d5e40e12f103a4ac5d9a0da03026ca1a0d0d321b5f82cf3f848a",
+        "n": 278
+      }
+    }
+  },
+  "failed_tests": [],
+  "generated_for": "PS3 implementation phase (contracts 2026-10-07)",
+  "latency": {
+    "max_ms": 51.788,
+    "mean_ms": 20.355,
+    "n": 400,
+    "note": "full request path incl. gate-decision logging, on a copy of the runtime store",
+    "p50_ms": 18.986,
+    "p95_ms": 35.376,
+    "p99_ms": 41.093,
+    "target_met": true,
+    "target_p95_ms": 250.0
+  },
+  "n_failed": 0,
+  "n_passed": 26,
+  "n_skipped": 0,
+  "seconds": 26.0,
+  "tests": [
+    {
+      "node": "tests/test_acceptance.py::test_T1_no_candidate_no_coordinate",
+      "outcome": "PASSED",
+      "test": "test_T1_no_candidate_no_coordinate"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T2_one_negative_coordinate_unchanged",
+      "outcome": "PASSED",
+      "test": "test_T2_one_negative_coordinate_unchanged"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T3_independent_negatives_doubt_out_loud",
+      "outcome": "PASSED",
+      "test": "test_T3_independent_negatives_doubt_out_loud"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T4_fake_independence_rejected",
+      "outcome": "PASSED",
+      "test": "test_T4_fake_independence_rejected"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T5_valid_confirmations_promote",
+      "outcome": "PASSED",
+      "test": "test_T5_valid_confirmations_promote"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T6_pincode_radius_withheld_and_falls_back",
+      "outcome": "PASSED",
+      "test": "test_T6_pincode_radius_withheld_and_falls_back"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T7_belief_determinism",
+      "outcome": "PASSED",
+      "test": "test_T7_belief_determinism"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T8_duplicate_observation_idempotent",
+      "outcome": "PASSED",
+      "test": "test_T8_duplicate_observation_idempotent"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T9_offline_capture_outbox_replay",
+      "outcome": "PASSED",
+      "test": "test_T9_offline_capture_outbox_replay"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T10_work_like_refused_for_notice",
+      "outcome": "PASSED",
+      "test": "test_T10_work_like_refused_for_notice"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T11_no_cue_when_nothing_resolves",
+      "outcome": "PASSED",
+      "test": "test_T11_no_cue_when_nothing_resolves"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T12_no_external_data_and_zero_outbound_calls",
+      "outcome": "PASSED",
+      "test": "test_T12_no_external_data_and_zero_outbound_calls"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T13_feature_matrix_audit",
+      "outcome": "PASSED",
+      "test": "test_T13_feature_matrix_audit"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T14_s_eval_firewall",
+      "outcome": "PASSED",
+      "test": "test_T14_s_eval_firewall"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T15_undeclared_split_aborts",
+      "outcome": "PASSED",
+      "test": "test_T15_undeclared_split_aborts"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_T16_residue_matcher_is_live_positive_control",
+      "outcome": "PASSED",
+      "test": "test_T16_residue_matcher_is_live_positive_control"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_invariant_rings_change_only_text",
+      "outcome": "PASSED",
+      "test": "test_invariant_rings_change_only_text"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_invariant_asof_is_the_single_gate",
+      "outcome": "PASSED",
+      "test": "test_invariant_asof_is_the_single_gate"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_invariant_store_is_append_only",
+      "outcome": "PASSED",
+      "test": "test_invariant_store_is_append_only"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_invariant_candidate_vocabulary_and_no_truth",
+      "outcome": "PASSED",
+      "test": "test_invariant_candidate_vocabulary_and_no_truth"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_invariant_labels_are_evaluation_only",
+      "outcome": "PASSED",
+      "test": "test_invariant_labels_are_evaluation_only"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_invariant_pack_has_no_truth_or_evidence",
+      "outcome": "PASSED",
+      "test": "test_invariant_pack_has_no_truth_or_evidence"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_invariant_radius_never_claims_an_unmeasured_nominal",
+      "outcome": "PASSED",
+      "test": "test_invariant_radius_never_claims_an_unmeasured_nominal"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_invariant_no_vendor_call_in_the_runtime",
+      "outcome": "PASSED",
+      "test": "test_invariant_no_vendor_call_in_the_runtime"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_invariant_supervision_manifest_shape",
+      "outcome": "PASSED",
+      "test": "test_invariant_supervision_manifest_shape"
+    },
+    {
+      "node": "tests/test_acceptance.py::test_invariant_typed_text_reaches_the_index",
+      "outcome": "PASSED",
+      "test": "test_invariant_typed_text_reaches_the_index"
+    }
+  ]
+}

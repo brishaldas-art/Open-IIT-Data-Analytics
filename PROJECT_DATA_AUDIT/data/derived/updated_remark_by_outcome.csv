@@ -1,0 +1,8 @@
+outcome,has_loc,has_lm
+address_not_traceable,0.0,0.0
+cash_collected,0.0,0.043
+locked_premises,0.0,0.05
+met_borrower,0.0,0.054
+met_family,0.0,0.048
+neighbour_says_shifted,0.0,0.055
+no_such_person,0.0,0.024

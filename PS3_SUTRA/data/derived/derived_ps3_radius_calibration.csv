@@ -1,0 +1,12 @@
+stratum,n,median_m,p75_m,p90_m,hit_100m,hit_250m,hit_500m,evidence
+vendor_precision=locality,1650,367.4,488.4,651.7,0.04,0.253,0.762,"field check-in vs geocode, met-someone visits only"
+vendor_precision=pincode,154,1336.5,1646.1,2056.7,0.006,0.019,0.13,"field check-in vs geocode, met-someone visits only"
+vendor_precision=rooftop,41,37.7,142.4,267.9,0.659,0.878,0.951,"field check-in vs geocode, met-someone visits only"
+vendor_precision=street,423,134.9,206.6,296.0,0.331,0.832,0.979,"field check-in vs geocode, met-someone visits only"
+SURVEY vendor_precision=locality,73,385.9,504.5,626.5,0.014,0.247,0.74,surveyed ground truth (n=100) vs geocode
+SURVEY vendor_precision=pincode,10,1375.8,2658.5,3820.1,0.0,0.0,0.0,surveyed ground truth (n=100) vs geocode
+SURVEY vendor_precision=rooftop,1,25.6,25.6,25.6,1.0,1.0,1.0,surveyed ground truth (n=100) vs geocode
+SURVEY vendor_precision=street,16,108.6,129.6,166.3,0.438,1.0,1.0,surveyed ground truth (n=100) vs geocode
+SURVEY all,100,376.4,539.4,839.2,0.09,0.35,0.71,surveyed ground truth (n=100) vs geocode
+FIELD all met-someone check-ins,2268,334.2,486.4,921.2,0.103,0.357,0.763,"AGENT-GENERATED, NOT GROUND TRUTH: check-in vs vendor pin. Range of agent behaviour is a caveat, not a confidence interval."
+FIELD address_not_traceable check-ins,1400,194.7,294.4,483.9,0.176,0.664,0.906,"NOT A LOCATION LABEL: measured 1,603 m from surveyed truth at 1.3 min median dwell."

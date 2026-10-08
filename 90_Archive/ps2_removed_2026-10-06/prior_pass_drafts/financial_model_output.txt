@@ -1,0 +1,131 @@
+[MODEL] gross recovery per RPC  = Rs 1,175;  INCREMENTAL = Rs 323.16  <-- used everywhere below
+====================================================================================================
+S1 — WHAT ACTUALLY COSTS MONEY  (the scope decision)
+====================================================================================================
+action                                               low      high   source
+Automated dial (voice-AI, 60-75s)                Rs 1.35   Rs 2.59   [PUB] India voice-AI Rs4-7/min + Rs0.55/min telephony
+Automated dial (human agent)                     Rs 8.48   Rs 8.48   [PUB] Rs15,788/mo agent salary + loading / [ASSUME] 3,300 dials/mo
+HLR / number-intelligence lookup                 Rs 0.13   Rs 0.60   [PUB] Telnyx $0.0015/dip; Neutrino $0.007; Twilio $0.005-0.04
+SMS / WhatsApp (utility)                         Rs 0.15   Rs 0.25   [PUB] WhatsApp utility per-conversation price
+Skip-trace (data purchase)                      Rs 60.00 Rs 150.00   [PUB-anchored] global bulk $5-25/record; India per-case higher
+Field visit, marginal (on an existing beat)    Rs 220.00 Rs 220.00   [MODEL] Rs130 labour + Rs90 travel
+Field visit, standalone trip                   Rs 370.00 Rs 370.00   [MODEL] Rs130 labour + Rs240 travel
+Voice-AI, per resolved outcome                   Rs 8.00  Rs 25.00   [PUB] per-outcome India pricing
+
+INSIGHT [MODEL-1]: the spread between a Rs 2 dial and a Rs 370 visit is 185x. Any optimisation
+effort spent on automated dial VOLUME is economically trivial; the money is in the four actions
+that carry material unit cost AND compliance exposure: HUMAN call, FIELD VISIT, TRACE, LEGAL/NOTICE.
+=> PRODUCT SCOPE DECISION: SANKET/SUTRA govern the expensive, reviewable actions. We do NOT compete
+   with a dialer on dial volume.
+
+====================================================================================================
+S2 — UNIT METRICS: cost per RPC and per productive RPC
+====================================================================================================
+  automated low    connect=26% rightparty=70% -> cost/RPC Rs 7.42 | cost/productive-RPC @60% pay Rs 12.36
+  automated low    connect=31% rightparty=85% -> cost/RPC Rs 5.12 | cost/productive-RPC @60% pay Rs 8.54
+  automated high   connect=26% rightparty=70% -> cost/RPC Rs 14.23 | cost/productive-RPC @60% pay Rs 23.72
+  automated high   connect=31% rightparty=85% -> cost/RPC Rs 9.83 | cost/productive-RPC @60% pay Rs 16.38
+  human call       connect=26% rightparty=70% -> cost/RPC Rs 46.59 | cost/productive-RPC @60% pay Rs 77.66
+  human call       connect=31% rightparty=85% -> cost/RPC Rs 32.18 | cost/productive-RPC @60% pay Rs 53.64
+  => Range: Rs 6-11 per RPC automated, Rs 33-44 per RPC on a human call [MODEL]
+
+====================================================================================================
+S3 — VALUE POOLS (monthly, 100k-account / Rs188 Cr book, 1-30 DPD)
+====================================================================================================
+
+VP-1 · DIAL-VOLUME OPTIMISATION  ->  negligible. Deliberately listed first so nobody funds it.
+
+    1 pp of dials avoided =   2,000 dials/mo =   Rs 2,700 -  Rs 5,180 / month [MODEL]
+    2 pp of dials avoided =   4,000 dials/mo =   Rs 5,400 - Rs 10,360 / month [MODEL]
+    5 pp of dials avoided =  10,000 dials/mo =  Rs 13,500 - Rs 25,900 / month [MODEL]
+
+VP-2 · SCARCE-CAPACITY ARBITRAGE  ->  the largest legitimate pool. Human agent minutes and field
+       slots are the real constraint. Reallocating ONE field slot from a low-yield stop to a
+       high-yield stop is worth the difference in expected recovery, not the travel cost.
+    6,600 field slots/mo; +10-25 pp slot-level success (better address confidence + timing) ->  Rs 9.43 L - Rs 23.57 L / month
+    6,600 field slots/mo; +25-45 pp slot-level success (better address confidence + timing) -> Rs 23.57 L - Rs 42.42 L / month
+    33,000 human conversations/mo (60 agents x 25/day x 22d [ASSUME]); +5-12 pp RPC on these ->  Rs 5.33 L - Rs 12.80 L / month incremental recovery
+    (human calls are reserved for high-value accounts; this is the pool that pays for better targeting)
+
+VP-3 · WASTED EXPENSIVE ACTIONS  ->  real but bounded. Every field visit or trace fired on a wrong
+       address / a recycled number is a ~100% loss, not a partial one.
+    10% of field slots wasted on wrong-door/low-confidence addresses ->  Rs 1.45 L -  Rs 2.44 L / month
+    20% of field slots wasted on wrong-door/low-confidence addresses ->  Rs 2.90 L -  Rs 4.88 L / month
+    35% of field slots wasted on wrong-door/low-confidence addresses ->  Rs 5.08 L -  Rs 8.55 L / month
+    NOTE: field slots assume a field-bearing portfolio (vehicle/MFI/consumer-durable/ARC).
+
+VP-4 · CONDUCT / COMPLAINT EXPOSURE  ->  the pool a CFO funds without an ROI debate.
+    5% of 200,000 dials reach a wrong party; 0.2-1.0% escalate:
+      wrong-party exposure = Rs 3.00 L - Rs 75.00 L / month  [MODEL]
+    [PUB] FY24 RBI Ombudsman: 85,281 loan/recovery complaints (+42.7% YoY, ~29% of all complaints)
+    [PUB] Bajaj Finance fined Rs 2.5 Cr for recovery-agent conduct — the LENDER pays, not the agent
+
+====================================================================================================
+S4 — FIELD VISIT & TRACE ROI BY TICKET (the segment-conditional finding)
+====================================================================================================
+    ticket | visit ROI (marginal) | visit ROI (standalone) |            trace EV (Rs)
+------------------------------------------------------------------------------------------
+  Rs 5,000 |                0.65x |                  0.38x |    Rs 1.80 -   Rs 54.14 vs fee Rs60-150
+ Rs 18,802 |                2.43x |                  1.45x |    Rs 6.79 -  Rs 203.59 vs fee Rs60-150
+ Rs 50,000 |                6.47x |                  3.85x |   Rs 18.05 -  Rs 541.41 vs fee Rs60-150
+ Rs 1.50 L |               19.42x |                 11.55x |   Rs 54.14 -   Rs 1,624 vs fee Rs60-150
+ Rs 8.00 L |              103.59x |                 61.60x |  Rs 288.75 -   Rs 8,663 vs fee Rs60-150
+
+FINDING [MODEL-2]: at the DIGITAL-PL average ticket (Rs 18.8k) a field visit only pays when it is
+MARGINAL to an existing beat (2.4x) — as a standalone trip it barely clears 1x. Trace EV spans
+Rs 7-204 per case at the average ticket depending on yield and uplift: a ~30x spread. Therefore BOTH actions must be
+priced per account, not triggered by a rule or a bucket. Above Rs 1.5 L tickets, visit ROI is 10-100x
+and the discipline that matters is ROUTE EFFICIENCY, not whether to visit at all.
+=> PRODUCT SCOPE DECISION: SUTRA's confidence gate matters most in the Rs 5k-50k band (where a bad
+   visit destroys the ROI) and matters least in vehicle/secured/ARC portfolios (where route
+   optimisation dominates). Segment the deployment, do not oversell one story for all portfolios.
+
+====================================================================================================
+S5 — SENSITIVITY: which lever buys the most recovery per 1 pp of its own probability
+====================================================================================================
+  +1 pp connect rate (timing/window/contact point)          Rs 5.01 L / month per pp   (new RPCs x incremental recovery per RPC)
+  +1 pp right-party share (identity gate)                   Rs 1.97 L / month per pp   (recovered RPCs + avoided conduct exposure)
+  +1 pp P(pay | RPC) (offer/agent/script)                   Rs 7.37 L / month per pp   (Maestro already owns this layer)
+  +1 pp field-slot success                                  Rs 94,272 / month per pp   (6,600 slots/mo [ASSUME])
+  +1 pp trace yield (new usable point found)                 Rs 1,131 / month per pp   (2,000 traces/mo [ASSUME])
+
+FINDING [MODEL-3]: per percentage point, identity/conduct corrections and field-slot success move
+the most money — but they are also the two hardest to move. The CHEAPEST large lever is
+P(pay | RPC), which belongs to the OFFER/agent layer (CN's Maestro already owns it).
+We should therefore NOT claim that layer. Our defensible claim is the two control levers:
+(a) never spend a Rs 220-370 slot or a Rs 60-150 trace on an unverified target, and
+(b) never take a compliance-bearing action on an unverified identity. Both are measurable as
+    AVOIDED WASTE and AVOIDED EXPOSURE — not as invented recovery uplift.
+
+====================================================================================================
+S6 — BREAK-EVEN AT A PRICE (what has to be true for CN to buy this)
+====================================================================================================
+  [MODEL] one percentage point of connect rate on this book = Rs 5.01 L/month of incremental recovery
+  Rs 1/account/month = Rs 1.00 L/mo -> requires +0.20 pp connect (baseline connect 28.5% -> 28.70%); or ~455 avoided field visits/month
+  Rs 3/account/month = Rs 3.00 L/mo -> requires +0.60 pp connect (baseline connect 28.5% -> 29.10%); or ~1,364 avoided field visits/month
+  Rs 5/account/month = Rs 5.00 L/mo -> requires +1.00 pp connect (baseline connect 28.5% -> 29.50%); or ~2,273 avoided field visits/month
+
+FINDING [MODEL-4]: at Rs 1-5 per account per month the required lift is TINY (a few basis points of
+connect rate, or one avoided field visit per ~60 accounts). The product does not need a heroic
+claim. It needs a DEMONSTRABLE one: show avoided expensive actions and avoided exposure on real
+accounts. That is the single most important design constraint in this whole document.
+If we cannot show avoided waste + avoided exposure, the ROI story collapses — no matter how good
+the model is.
+
+====================================================================================================
+S7 — EXECUTIVE SUMMARY OF THE ECONOMICS
+====================================================================================================
+
+  1. The expensive actions are human call (Rs33-44/RPC), field visit (Rs220-370), trace (Rs60-150),
+     notice/legal. Those four are the product's scope.
+  2. Automated dial-volume optimisation is worth Rs 0.3-7 L/month on a 100k book. Do not pitch it.
+  3. Field-visit ROI is ticket-conditional: 0.4x standalone at Rs5k, 2.4x marginal at Rs18.8k,
+     60-100x at Rs8L. One story cannot cover all portfolios.
+  4. Trace EV spans 30x by account. The only honest way to fire it is per-account EVSI.
+  5. Conduct exposure is bounded but real and is the pool a lender funds without argument: see S3
+     VP-4 for the band, plus lumpy RBI penalties (Rs 2.5 Cr against Bajaj Finance) that dwarf the
+     compensated amounts.
+  6. Break-even needs only basis points of improvement. So the deliverable is EVIDENCE OF AVOIDED
+     WASTE AND AVOIDED EXPOSURE, not a recovery-uplift claim.
+
+[MODEL END] every figure depends on [ASSUME] inputs that CN must replace with actuals.

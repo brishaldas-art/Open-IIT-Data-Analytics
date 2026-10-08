@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="184" viewBox="0 0 760 184" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">
+<rect width="760" height="184" fill="#ffffff"/>
+<text x="8" y="16" font-size="13" font-weight="600" fill="#1a202c">Baseline geocode precision strata (n=2,880 addresses with a geocode)</text>
+<text x="8" y="49" fill="#2d3748">locality</text>
+<rect x="300" y="39" width="380.0" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="686" y="49" fill="#1a202c" font-weight="600">2052</text>
+<text x="8" y="75" fill="#2d3748">street</text>
+<rect x="300" y="65" width="93.3" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="399" y="75" fill="#1a202c" font-weight="600">504</text>
+<text x="8" y="101" fill="#2d3748">pincode</text>
+<rect x="300" y="91" width="50.7" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="357" y="101" fill="#1a202c" font-weight="600">274</text>
+<text x="8" y="127" fill="#2d3748">rooftop</text>
+<rect x="300" y="117" width="9.3" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="315" y="127" fill="#1a202c" font-weight="600">50</text>
+<text x="8" y="152" fill="#718096" font-size="11">71% of all pins are locality-level: the baseline knows the neighbourhood, not the house.</text>
+</svg>

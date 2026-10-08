@@ -1,0 +1,13 @@
+table,rows,cols,key,dup_key,dup_rows,null_cols,date_range
+accounts,2400,20,account_id,0,0,salary_credit_day=68.2%;ability_to_pay_estimate=30.3%,
+addresses,3117,7,address_id,0,0,,2026-04-01 00:00:00 .. 2026-06-29 00:00:00
+agents,30,6,agent_id,0,0,town_id=70.0%;tenure_months=3.3%,
+baseline_geocodes,2880,4,address_id,0,0,,
+field_visits,5578,15,visit_id,0,0,ptp_id=89.2%,2026-04-01 00:00:00 .. 2026-06-29 00:00:00
+landmarks_poi,240,6,poi_id,0,0,,
+lenders,6,4,lender_id,0,0,,
+localities,36,6,locality_id,0,0,,
+splits,2400,2,account_id,0,0,,
+surveyed_addresses,100,3,address_id,0,0,,
+towns,3,4,town_id,0,0,,
+visit_gps_points,160406,6,visit_id,154828,0,,2026-04-01 09:39:07 .. 2026-06-29 13:43:44

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="242" viewBox="0 0 780 242" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">
+<rect width="780" height="242" fill="#fff"/>
+<text x="10" y="20" font-size="13.5" font-weight="600" fill="#1a202c">Candidate arms from official data only: coverage over 3,117 addresses, then median error on the surveyed 100</text>
+<text x="10" y="55" fill="#2d3748">locality_centroid — coverage 66%</text>
+<rect x="320" y="45" width="9.1" height="13" rx="2" fill="#2b6cb0" opacity="0.87"/>
+<text x="336" y="55" fill="#1a202c" font-weight="600">66</text>
+<text x="10" y="81" fill="#2d3748">town_centroid — coverage 92%</text>
+<rect x="320" y="71" width="12.8" height="13" rx="2" fill="#2b6cb0" opacity="0.87"/>
+<text x="340" y="81" fill="#1a202c" font-weight="600">92</text>
+<text x="10" y="107" fill="#2d3748">vendor_pin — coverage 92%</text>
+<rect x="320" y="97" width="12.8" height="13" rx="2" fill="#2b6cb0" opacity="0.87"/>
+<text x="340" y="107" fill="#1a202c" font-weight="600">92</text>
+<text x="10" y="133" fill="#2d3748">locality_centroid — median err</text>
+<rect x="320" y="123" width="49.5" height="13" rx="2" fill="#2b6cb0" opacity="0.87"/>
+<text x="376" y="133" fill="#1a202c" font-weight="600">357</text>
+<text x="10" y="159" fill="#2d3748">town_centroid — median err</text>
+<rect x="320" y="149" width="380.0" height="13" rx="2" fill="#2b6cb0" opacity="0.87"/>
+<text x="707" y="159" fill="#1a202c" font-weight="600">2740</text>
+<text x="10" y="185" fill="#2d3748">vendor_pin — median err</text>
+<rect x="320" y="175" width="52.2" height="13" rx="2" fill="#2b6cb0" opacity="0.87"/>
+<text x="379" y="185" fill="#1a202c" font-weight="600">376</text>
+<text x="10" y="212" fill="#718096" font-size="11.5">Vendor pin 92% coverage / 376 m; matched locality 66% / 357 m; town centroid 92% / 2,740 m.</text>
+</svg>

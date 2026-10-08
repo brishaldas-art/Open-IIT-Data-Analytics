@@ -1,0 +1,5163 @@
+{
+ "note": "DEMO FIXTURES \u2014 verbatim responses captured from the running SUTRA service on 2026-10-08. Real addresses, real coordinates, real tasks. Used only when the API is unreachable; they are never presented as live telemetry.",
+ "captured_from": "http://127.0.0.1:8125 (same process that serves the app in production)",
+ "captured_on": "2026-10-08",
+ "cases": {
+  "resolve_AD003067": {
+   "request": {
+    "address_text": "H.NO. 221, GALI 12, NR COMMUNITY HALL, PATEL NAGAR, DEVGARH NGR",
+    "town_hint": "T2",
+    "as_of": "2026-06-01T00:00:00Z",
+    "request_purpose": "FIELD_NAVIGATION"
+   },
+   "status": 200,
+   "response": {
+    "candidate": {
+     "candidate_id": "c-28f5aface67c",
+     "address_id": "AD003067",
+     "arm": "field_evidence",
+     "source_ref": "visits:median(3)",
+     "x": 1390.0,
+     "y": -1818.0,
+     "granularity": "street",
+     "arm_rank": 1,
+     "licence_class": "official",
+     "as_of_valid": "2026-05-15T05:35:37Z",
+     "provenance": {
+      "rule_version": "candidate-rules-v2",
+      "built_at": "2026-05-15T05:35:37Z",
+      "built_from": "store observations (median of agreeing independent check-ins)",
+      "n_observations": 3,
+      "spread_m": 14.3,
+      "observation_ids": [
+       "obs-VS000693",
+       "obs-VS001428",
+       "obs-VS002826"
+      ],
+      "stratum": "street",
+      "primary_eligible": true,
+      "agreement_arms": 2,
+      "agreement_list": [
+       "field_evidence",
+       "memory"
+      ]
+     }
+    },
+    "candidate_id": "c-28f5aface67c",
+    "score": 0.987106,
+    "score_reasons": [
+     "arm_prior:field_evidence=+0.620",
+     "granularity:street=+0.102",
+     "evidence_promotion_eligible=+0.080",
+     "locality_match=+0.050",
+     "text_locality_similarity=+0.010",
+     "text_char_similarity=+0.005",
+     "arm_agreement_x4=+0.120"
+    ],
+    "granularity": "street",
+    "tier": "CONFIRMED",
+    "status": "STABLE",
+    "radius_m": 566.9,
+    "radius_basis": "empirical_p80",
+    "nominal": null,
+    "measured_coverage": 0.792,
+    "n_calibration": 24,
+    "source_stratum": "locality",
+    "widened": true,
+    "widen_reason": "negative_accumulation",
+    "reasons": [
+     "cross_arm_agreement",
+     "field_confirmed_x3",
+     "negatives_independent=1",
+     "promotion:ok",
+     "resolution:exact_text_match"
+    ],
+    "request_purpose": "FIELD_NAVIGATION",
+    "address_id": "AD003067",
+    "address_purpose": {
+     "class": "HOME_LIKE",
+     "confidence": "medium",
+     "basis": [
+      "dwell_ge_180s",
+      "independence_ok",
+      "met_x2",
+      "not_office_type",
+      "weekday_daytime_visits"
+     ],
+     "model_version": "purpose_rules-v1"
+    },
+    "directions": [
+     {
+      "landmark": "Community Hall",
+      "landmark_type": "community_hall",
+      "distance_m": 1170,
+      "bearing_deg": 209.3,
+      "cue_text": "Community Hall ~1170 m, bearing SW, near it",
+      "ambiguous": true,
+      "source_ref": "landmark:LM0109",
+      "parsed_relation": "near",
+      "rule_version": "directions-v1"
+     }
+    ],
+    "is_area_context": false,
+    "area_context": null,
+    "eligibility": {
+     "action": "SERVE",
+     "reason": "purpose_home_like",
+     "rule_version": "gate-v2",
+     "request_purpose": "FIELD_NAVIGATION",
+     "address_purpose": "HOME_LIKE",
+     "tier": "CONFIRMED",
+     "status": "STABLE"
+    },
+    "stage": "T1",
+    "arms_available": [
+     "field_evidence",
+     "frozen_baseline",
+     "locality_centroid",
+     "memory",
+     "town_centroid"
+    ],
+    "arms_considered": [
+     {
+      "candidate_id": "c-28f5aface67c",
+      "arm": "field_evidence",
+      "score": 0.987106,
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "evidence_promotion_eligible=+0.080",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x4=+0.120"
+      ]
+     },
+     {
+      "candidate_id": "c-5cb0b3c3409f",
+      "arm": "memory",
+      "score": 0.917106,
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:memory=+0.550",
+       "granularity:street=+0.102",
+       "evidence_promotion_eligible=+0.080",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x4=+0.120"
+      ]
+     },
+     {
+      "candidate_id": "c-0068788403fc",
+      "arm": "field_evidence",
+      "score": 0.907106,
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x4=+0.120"
+      ]
+     },
+     {
+      "candidate_id": "c-06c02a8b703b",
+      "arm": "field_evidence",
+      "score": 0.907106,
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x4=+0.120"
+      ]
+     },
+     {
+      "candidate_id": "c-9a0aa17d3e20",
+      "arm": "field_evidence",
+      "score": 0.907106,
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x4=+0.120"
+      ]
+     },
+     {
+      "candidate_id": "c-c675f6d12e4c",
+      "arm": "frozen_baseline",
+      "score": 0.617106,
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:frozen_baseline=+0.500",
+       "granularity:locality=+0.072",
+       "coarse_precision_penalty=-0.060",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x1=+0.040"
+      ]
+     },
+     {
+      "candidate_id": "c-873aad00c796",
+      "arm": "locality_centroid",
+      "score": 0.557106,
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:locality_centroid=+0.380",
+       "granularity:locality=+0.072",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x1=+0.040"
+      ]
+     },
+     {
+      "candidate_id": "c-f7c33b913fec",
+      "arm": "town_centroid",
+      "score": 0.245106,
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:town_centroid=+0.150",
+       "granularity:town=+0.030",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005"
+      ]
+     }
+    ],
+    "support": {
+     "independent_confirmations": 3,
+     "negatives_independent": 1,
+     "n_positives": 4,
+     "n_observations": 6,
+     "positive_weight_sum": 2.798487,
+     "duplicate_claims": 0
+    },
+    "place_id": "PL-AD003067",
+    "belief_version": 7,
+    "resolution": "exact_text_match",
+    "versions": {
+     "rule_version": "candidate-rules-v2",
+     "radius_map_version": "radius-map-v1",
+     "evidence_policy_version": "evidence-policy-v3",
+     "schema_version": "sutra-1.0",
+     "gate_rule_version": "gate-v2",
+     "purpose_rule_version": "purpose_rules-v1",
+     "directions_rule_version": "directions-v1"
+    },
+    "town_id": "T2",
+    "as_of": "2026-06-01T00:00:00Z",
+    "coordinate": {
+     "x": 1390.0,
+     "y": -1818.0,
+     "granularity": "street",
+     "coordinate_space": "sutra_local_metric_plane:T2",
+     "radius_m": 566.9
+    },
+    "uncertainty": {
+     "radius_m": 566.9,
+     "basis": "empirical_p80",
+     "nominal": null,
+     "measured_coverage": 0.792,
+     "n_calibration": 24,
+     "source_stratum": "locality",
+     "fallback_applied": true,
+     "widened": true,
+     "widen_reason": "negative_accumulation",
+     "radius_map_version": "radius-map-v1"
+    },
+    "alternatives": [
+     {
+      "candidate_id": "c-5cb0b3c3409f",
+      "arm": "memory",
+      "score": 0.917106,
+      "rank": 2,
+      "granularity": "street",
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:memory=+0.550",
+       "granularity:street=+0.102",
+       "evidence_promotion_eligible=+0.080",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x4=+0.120"
+      ],
+      "lost_reason": [
+       "lower_arm_prior +0.550 vs +0.620",
+       "score_margin +0.070000"
+      ],
+      "score_margin": 0.07
+     },
+     {
+      "candidate_id": "c-0068788403fc",
+      "arm": "field_evidence",
+      "score": 0.907106,
+      "rank": 3,
+      "granularity": "street",
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x4=+0.120"
+      ],
+      "lost_reason": [
+       "no_promotion_credit",
+       "single_observation_not_primary_eligible",
+       "score_margin +0.080000"
+      ],
+      "score_margin": 0.08
+     },
+     {
+      "candidate_id": "c-06c02a8b703b",
+      "arm": "field_evidence",
+      "score": 0.907106,
+      "rank": 4,
+      "granularity": "street",
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x4=+0.120"
+      ],
+      "lost_reason": [
+       "no_promotion_credit",
+       "single_observation_not_primary_eligible",
+       "score_margin +0.080000"
+      ],
+      "score_margin": 0.08
+     },
+     {
+      "candidate_id": "c-9a0aa17d3e20",
+      "arm": "field_evidence",
+      "score": 0.907106,
+      "rank": 5,
+      "granularity": "street",
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x4=+0.120"
+      ],
+      "lost_reason": [
+       "no_promotion_credit",
+       "single_observation_not_primary_eligible",
+       "score_margin +0.080000"
+      ],
+      "score_margin": 0.08
+     },
+     {
+      "candidate_id": "c-c675f6d12e4c",
+      "arm": "frozen_baseline",
+      "score": 0.617106,
+      "rank": 6,
+      "granularity": "locality",
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:frozen_baseline=+0.500",
+       "granularity:locality=+0.072",
+       "coarse_precision_penalty=-0.060",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x1=+0.040"
+      ],
+      "lost_reason": [
+       "lower_arm_prior +0.500 vs +0.620",
+       "coarser_granularity locality < street",
+       "no_promotion_credit",
+       "coarse_precision_penalty",
+       "score_margin +0.370000"
+      ],
+      "score_margin": 0.37
+     },
+     {
+      "candidate_id": "c-873aad00c796",
+      "arm": "locality_centroid",
+      "score": 0.557106,
+      "rank": 7,
+      "granularity": "locality",
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:locality_centroid=+0.380",
+       "granularity:locality=+0.072",
+       "locality_match=+0.050",
+       "text_locality_similarity=+0.010",
+       "text_char_similarity=+0.005",
+       "arm_agreement_x1=+0.040"
+      ],
+      "lost_reason": [
+       "lower_arm_prior +0.380 vs +0.620",
+       "coarser_granularity locality < street",
+       "no_promotion_credit",
+       "score_margin +0.430000"
+      ],
+      "score_margin": 0.43
+     }
+    ],
+    "reason_codes": [
+     {
+      "code": "arm_prior:field_evidence=+0.620",
+      "kind": "score_term",
+      "subject": "field_evidence",
+      "effect": 0.62,
+      "direction": "positive",
+      "label": "Arm prior field evidence"
+     },
+     {
+      "code": "granularity:street=+0.102",
+      "kind": "score_term",
+      "subject": "street",
+      "effect": 0.102,
+      "direction": "positive",
+      "label": "Granularity street"
+     },
+     {
+      "code": "evidence_promotion_eligible=+0.080",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.08,
+      "direction": "positive",
+      "label": "Evidence promotion eligible"
+     },
+     {
+      "code": "locality_match=+0.050",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.05,
+      "direction": "positive",
+      "label": "Locality match"
+     },
+     {
+      "code": "text_locality_similarity=+0.010",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.01,
+      "direction": "positive",
+      "label": "Text locality similarity"
+     },
+     {
+      "code": "text_char_similarity=+0.005",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.005,
+      "direction": "positive",
+      "label": "Text char similarity"
+     },
+     {
+      "code": "arm_agreement_x4=+0.120",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.12,
+      "direction": "positive",
+      "label": "Arm agreement x4"
+     },
+     {
+      "code": "cross_arm_agreement",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Cross arm agreement"
+     },
+     {
+      "code": "field_confirmed_x3",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Field confirmed x3"
+     },
+     {
+      "code": "negatives_independent=1",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Negatives independent"
+     },
+     {
+      "code": "promotion:ok",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Promotion ok"
+     },
+     {
+      "code": "resolution:exact_text_match",
+      "kind": "resolution",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Resolution exact text match"
+     },
+     {
+      "code": "negative_accumulation",
+      "kind": "widen",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Negative accumulation"
+     },
+     {
+      "code": "purpose_home_like",
+      "kind": "gate",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Purpose home like"
+     }
+    ],
+    "decision_ticket": {
+     "headline": "Serve this location",
+     "case_id": "AD003067",
+     "town_id": "T2",
+     "gate": {
+      "action": "SERVE",
+      "reason": "purpose_home_like",
+      "rule_version": "gate-v2",
+      "request_purpose": "FIELD_NAVIGATION"
+     },
+     "answer": {
+      "candidate_id": "c-28f5aface67c",
+      "arm": "field_evidence",
+      "granularity": "street",
+      "score": 0.987106,
+      "tier": "CONFIRMED",
+      "status": "STABLE"
+     },
+     "why": [
+      {
+       "code": "cross_arm_agreement",
+       "kind": "support",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Cross arm agreement"
+      },
+      {
+       "code": "field_confirmed_x3",
+       "kind": "support",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Field confirmed x3"
+      },
+      {
+       "code": "negatives_independent=1",
+       "kind": "support",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Negatives independent"
+      },
+      {
+       "code": "promotion:ok",
+       "kind": "support",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Promotion ok"
+      },
+      {
+       "code": "resolution:exact_text_match",
+       "kind": "resolution",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Resolution exact text match"
+      },
+      {
+       "code": "negative_accumulation",
+       "kind": "widen",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Negative accumulation"
+      }
+     ],
+     "score_terms": [
+      {
+       "code": "arm_prior:field_evidence=+0.620",
+       "kind": "score_term",
+       "subject": "field_evidence",
+       "effect": 0.62,
+       "direction": "positive",
+       "label": "Arm prior field evidence"
+      },
+      {
+       "code": "granularity:street=+0.102",
+       "kind": "score_term",
+       "subject": "street",
+       "effect": 0.102,
+       "direction": "positive",
+       "label": "Granularity street"
+      },
+      {
+       "code": "evidence_promotion_eligible=+0.080",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.08,
+       "direction": "positive",
+       "label": "Evidence promotion eligible"
+      },
+      {
+       "code": "locality_match=+0.050",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.05,
+       "direction": "positive",
+       "label": "Locality match"
+      },
+      {
+       "code": "text_locality_similarity=+0.010",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.01,
+       "direction": "positive",
+       "label": "Text locality similarity"
+      },
+      {
+       "code": "text_char_similarity=+0.005",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.005,
+       "direction": "positive",
+       "label": "Text char similarity"
+      },
+      {
+       "code": "arm_agreement_x4=+0.120",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.12,
+       "direction": "positive",
+       "label": "Arm agreement x4"
+      }
+     ],
+     "provenance": {
+      "arm": "field_evidence",
+      "source_ref": "visits:median(3)",
+      "granularity": "street",
+      "licence_class": "official",
+      "as_of_valid": "2026-05-15T05:35:37Z",
+      "built_at": null,
+      "stratum": "street",
+      "prior_candidate_arm": null,
+      "memory_evidence_derived": null
+     },
+     "margin": {
+      "top_alternative_candidate_id": "c-5cb0b3c3409f",
+      "score_margin": 0.07
+     },
+     "confidence": {
+      "tier": "CONFIRMED",
+      "status": "STABLE",
+      "measured_coverage": 0.792,
+      "n_calibration": 24
+     },
+     "belief_version": 7,
+     "place_id": "PL-AD003067",
+     "next_action": {
+      "kind": "none",
+      "label": "Serve as resolved.",
+      "clears_when": null
+     },
+     "task": null,
+     "refusal": null
+    },
+    "evidence_summary": {
+     "n_observations": 6,
+     "n_positives": 4,
+     "negatives_independent": 1,
+     "independent_confirmations": 3,
+     "duplicate_claims": 0,
+     "positive_weight_sum": 2.798487,
+     "negatives_move_coordinate": false,
+     "radius_widened": true,
+     "widen_reason": "negative_accumulation"
+    },
+    "task": null,
+    "computed_at": "2026-10-08T07:39:46Z"
+   }
+  },
+  "resolve_AD002936": {
+   "request": {
+    "address_text": "Gali no-11, Azad Mohalla, Devgarh Nagar - 970203",
+    "town_hint": "T2",
+    "as_of": "2026-06-01T00:00:00Z",
+    "request_purpose": "FIELD_NAVIGATION"
+   },
+   "status": 200,
+   "response": {
+    "candidate": {
+     "candidate_id": "c-a7fcc592cd99",
+     "address_id": "AD002936",
+     "arm": "field_evidence",
+     "source_ref": "visits:median(2)",
+     "x": 1130.5,
+     "y": 2970.0,
+     "granularity": "rooftop",
+     "arm_rank": 1,
+     "licence_class": "official",
+     "as_of_valid": "2026-05-07T05:14:44Z",
+     "provenance": {
+      "rule_version": "candidate-rules-v2",
+      "built_at": "2026-05-07T05:14:44Z",
+      "built_from": "store observations (median of agreeing independent check-ins)",
+      "n_observations": 2,
+      "spread_m": 1.1,
+      "observation_ids": [
+       "obs-VS001649",
+       "obs-VS002307"
+      ],
+      "stratum": "rooftop",
+      "primary_eligible": true,
+      "agreement_arms": 2,
+      "agreement_list": [
+       "field_evidence",
+       "memory"
+      ]
+     }
+    },
+    "candidate_id": "c-a7fcc592cd99",
+    "score": 1.050441,
+    "score_reasons": [
+     "arm_prior:field_evidence=+0.620",
+     "granularity:rooftop=+0.120",
+     "evidence_promotion_eligible=+0.080",
+     "locality_match=+0.050",
+     "pin_in_text_known=+0.040",
+     "text_locality_similarity=+0.013",
+     "text_char_similarity=+0.008",
+     "arm_agreement_x3=+0.120"
+    ],
+    "granularity": "rooftop",
+    "tier": "APPROXIMATE",
+    "status": "MOVED_SUSPECTED",
+    "radius_m": 1202.6,
+    "radius_basis": "empirical_p80",
+    "nominal": null,
+    "measured_coverage": 0.792,
+    "n_calibration": 24,
+    "source_stratum": "locality",
+    "widened": true,
+    "widen_reason": "negative_accumulation",
+    "reasons": [
+     "cross_arm_agreement",
+     "field_confirmed_x2",
+     "negative_accumulation_cap",
+     "negatives_independent=2",
+     "promotion:ok",
+     "resolution:exact_text_match"
+    ],
+    "request_purpose": "FIELD_NAVIGATION",
+    "address_id": "AD002936",
+    "address_purpose": {
+     "class": "HOME_LIKE",
+     "confidence": "medium",
+     "basis": [
+      "dwell_ge_180s",
+      "independence_ok",
+      "met_x2",
+      "not_office_type",
+      "weekday_daytime_visits"
+     ],
+     "model_version": "purpose_rules-v1"
+    },
+    "directions": null,
+    "is_area_context": false,
+    "area_context": null,
+    "eligibility": {
+     "action": "VERIFY_FIRST",
+     "reason": "negatives_accumulated",
+     "rule_version": "gate-v2",
+     "request_purpose": "FIELD_NAVIGATION",
+     "address_purpose": "HOME_LIKE",
+     "tier": "APPROXIMATE",
+     "status": "MOVED_SUSPECTED"
+    },
+    "stage": "T1",
+    "arms_available": [
+     "field_evidence",
+     "frozen_baseline",
+     "locality_centroid",
+     "memory",
+     "town_centroid"
+    ],
+    "arms_considered": [
+     {
+      "candidate_id": "c-a7fcc592cd99",
+      "arm": "field_evidence",
+      "score": 1.050441,
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:rooftop=+0.120",
+       "evidence_promotion_eligible=+0.080",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008",
+       "arm_agreement_x3=+0.120"
+      ]
+     },
+     {
+      "candidate_id": "c-dc0c26bf12d1",
+      "arm": "field_evidence",
+      "score": 0.952441,
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008",
+       "arm_agreement_x3=+0.120"
+      ]
+     },
+     {
+      "candidate_id": "c-fdfba7428031",
+      "arm": "field_evidence",
+      "score": 0.952441,
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008",
+       "arm_agreement_x3=+0.120"
+      ]
+     },
+     {
+      "candidate_id": "c-9f36cb271436",
+      "arm": "memory",
+      "score": 0.900441,
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:memory=+0.550",
+       "granularity:rooftop=+0.120",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008",
+       "arm_agreement_x3=+0.120"
+      ]
+     },
+     {
+      "candidate_id": "c-503cfcf760dd",
+      "arm": "frozen_baseline",
+      "score": 0.622441,
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:frozen_baseline=+0.500",
+       "granularity:locality=+0.072",
+       "coarse_precision_penalty=-0.060",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008"
+      ]
+     },
+     {
+      "candidate_id": "c-bfe7106b5d7e",
+      "arm": "locality_centroid",
+      "score": 0.562441,
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:locality_centroid=+0.380",
+       "granularity:locality=+0.072",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008"
+      ]
+     },
+     {
+      "candidate_id": "c-6a5abef2b5d7",
+      "arm": "town_centroid",
+      "score": 0.290441,
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:town_centroid=+0.150",
+       "granularity:town=+0.030",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008"
+      ]
+     }
+    ],
+    "support": {
+     "independent_confirmations": 2,
+     "negatives_independent": 2,
+     "n_positives": 2,
+     "n_observations": 6,
+     "positive_weight_sum": 1.332913,
+     "duplicate_claims": 0
+    },
+    "place_id": "PL-AD002936",
+    "belief_version": 7,
+    "resolution": "exact_text_match",
+    "versions": {
+     "rule_version": "candidate-rules-v2",
+     "radius_map_version": "radius-map-v1",
+     "evidence_policy_version": "evidence-policy-v3",
+     "schema_version": "sutra-1.0",
+     "gate_rule_version": "gate-v2",
+     "purpose_rule_version": "purpose_rules-v1",
+     "directions_rule_version": "directions-v1"
+    },
+    "town_id": "T2",
+    "as_of": "2026-06-01T00:00:00Z",
+    "coordinate": {
+     "x": 1130.5,
+     "y": 2970.0,
+     "granularity": "rooftop",
+     "coordinate_space": "sutra_local_metric_plane:T2",
+     "radius_m": 1202.6
+    },
+    "uncertainty": {
+     "radius_m": 1202.6,
+     "basis": "empirical_p80",
+     "nominal": null,
+     "measured_coverage": 0.792,
+     "n_calibration": 24,
+     "source_stratum": "locality",
+     "fallback_applied": true,
+     "widened": true,
+     "widen_reason": "negative_accumulation",
+     "radius_map_version": "radius-map-v1"
+    },
+    "alternatives": [
+     {
+      "candidate_id": "c-dc0c26bf12d1",
+      "arm": "field_evidence",
+      "score": 0.952441,
+      "rank": 2,
+      "granularity": "street",
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008",
+       "arm_agreement_x3=+0.120"
+      ],
+      "lost_reason": [
+       "coarser_granularity street < rooftop",
+       "no_promotion_credit",
+       "single_observation_not_primary_eligible",
+       "score_margin +0.098000"
+      ],
+      "score_margin": 0.098
+     },
+     {
+      "candidate_id": "c-fdfba7428031",
+      "arm": "field_evidence",
+      "score": 0.952441,
+      "rank": 3,
+      "granularity": "street",
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:field_evidence=+0.620",
+       "granularity:street=+0.102",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008",
+       "arm_agreement_x3=+0.120"
+      ],
+      "lost_reason": [
+       "coarser_granularity street < rooftop",
+       "no_promotion_credit",
+       "single_observation_not_primary_eligible",
+       "score_margin +0.098000"
+      ],
+      "score_margin": 0.098
+     },
+     {
+      "candidate_id": "c-9f36cb271436",
+      "arm": "memory",
+      "score": 0.900441,
+      "rank": 4,
+      "granularity": "rooftop",
+      "primary_eligible": false,
+      "reasons": [
+       "arm_prior:memory=+0.550",
+       "granularity:rooftop=+0.120",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008",
+       "arm_agreement_x3=+0.120"
+      ],
+      "lost_reason": [
+       "lower_arm_prior +0.550 vs +0.620",
+       "no_promotion_credit",
+       "single_observation_not_primary_eligible",
+       "score_margin +0.150000"
+      ],
+      "score_margin": 0.15
+     },
+     {
+      "candidate_id": "c-503cfcf760dd",
+      "arm": "frozen_baseline",
+      "score": 0.622441,
+      "rank": 5,
+      "granularity": "locality",
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:frozen_baseline=+0.500",
+       "granularity:locality=+0.072",
+       "coarse_precision_penalty=-0.060",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008"
+      ],
+      "lost_reason": [
+       "lower_arm_prior +0.500 vs +0.620",
+       "coarser_granularity locality < rooftop",
+       "no_promotion_credit",
+       "coarse_precision_penalty",
+       "score_margin +0.428000"
+      ],
+      "score_margin": 0.428
+     },
+     {
+      "candidate_id": "c-bfe7106b5d7e",
+      "arm": "locality_centroid",
+      "score": 0.562441,
+      "rank": 6,
+      "granularity": "locality",
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:locality_centroid=+0.380",
+       "granularity:locality=+0.072",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008"
+      ],
+      "lost_reason": [
+       "lower_arm_prior +0.380 vs +0.620",
+       "coarser_granularity locality < rooftop",
+       "no_promotion_credit",
+       "score_margin +0.488000"
+      ],
+      "score_margin": 0.488
+     },
+     {
+      "candidate_id": "c-6a5abef2b5d7",
+      "arm": "town_centroid",
+      "score": 0.290441,
+      "rank": 7,
+      "granularity": "town",
+      "primary_eligible": true,
+      "reasons": [
+       "arm_prior:town_centroid=+0.150",
+       "granularity:town=+0.030",
+       "locality_match=+0.050",
+       "pin_in_text_known=+0.040",
+       "text_locality_similarity=+0.013",
+       "text_char_similarity=+0.008"
+      ],
+      "lost_reason": [
+       "lower_arm_prior +0.150 vs +0.620",
+       "coarser_granularity town < rooftop",
+       "no_promotion_credit",
+       "score_margin +0.760000"
+      ],
+      "score_margin": 0.76
+     }
+    ],
+    "reason_codes": [
+     {
+      "code": "arm_prior:field_evidence=+0.620",
+      "kind": "score_term",
+      "subject": "field_evidence",
+      "effect": 0.62,
+      "direction": "positive",
+      "label": "Arm prior field evidence"
+     },
+     {
+      "code": "granularity:rooftop=+0.120",
+      "kind": "score_term",
+      "subject": "rooftop",
+      "effect": 0.12,
+      "direction": "positive",
+      "label": "Granularity rooftop"
+     },
+     {
+      "code": "evidence_promotion_eligible=+0.080",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.08,
+      "direction": "positive",
+      "label": "Evidence promotion eligible"
+     },
+     {
+      "code": "locality_match=+0.050",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.05,
+      "direction": "positive",
+      "label": "Locality match"
+     },
+     {
+      "code": "pin_in_text_known=+0.040",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.04,
+      "direction": "positive",
+      "label": "Pin in text known"
+     },
+     {
+      "code": "text_locality_similarity=+0.013",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.013,
+      "direction": "positive",
+      "label": "Text locality similarity"
+     },
+     {
+      "code": "text_char_similarity=+0.008",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.008,
+      "direction": "positive",
+      "label": "Text char similarity"
+     },
+     {
+      "code": "arm_agreement_x3=+0.120",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.12,
+      "direction": "positive",
+      "label": "Arm agreement x3"
+     },
+     {
+      "code": "cross_arm_agreement",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Cross arm agreement"
+     },
+     {
+      "code": "field_confirmed_x2",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Field confirmed x2"
+     },
+     {
+      "code": "negative_accumulation_cap",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Negative accumulation cap"
+     },
+     {
+      "code": "negatives_independent=2",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Negatives independent"
+     },
+     {
+      "code": "promotion:ok",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Promotion ok"
+     },
+     {
+      "code": "resolution:exact_text_match",
+      "kind": "resolution",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Resolution exact text match"
+     },
+     {
+      "code": "negative_accumulation",
+      "kind": "widen",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Negative accumulation"
+     },
+     {
+      "code": "negatives_accumulated",
+      "kind": "gate",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Negatives accumulated"
+     }
+    ],
+    "decision_ticket": {
+     "headline": "Answer, but verify first",
+     "case_id": "AD002936",
+     "town_id": "T2",
+     "gate": {
+      "action": "VERIFY_FIRST",
+      "reason": "negatives_accumulated",
+      "rule_version": "gate-v2",
+      "request_purpose": "FIELD_NAVIGATION"
+     },
+     "answer": {
+      "candidate_id": "c-a7fcc592cd99",
+      "arm": "field_evidence",
+      "granularity": "rooftop",
+      "score": 1.050441,
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED"
+     },
+     "why": [
+      {
+       "code": "cross_arm_agreement",
+       "kind": "support",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Cross arm agreement"
+      },
+      {
+       "code": "field_confirmed_x2",
+       "kind": "support",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Field confirmed x2"
+      },
+      {
+       "code": "negative_accumulation_cap",
+       "kind": "support",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Negative accumulation cap"
+      },
+      {
+       "code": "negatives_independent=2",
+       "kind": "support",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Negatives independent"
+      },
+      {
+       "code": "promotion:ok",
+       "kind": "support",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Promotion ok"
+      },
+      {
+       "code": "resolution:exact_text_match",
+       "kind": "resolution",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Resolution exact text match"
+      },
+      {
+       "code": "negative_accumulation",
+       "kind": "widen",
+       "subject": null,
+       "effect": null,
+       "direction": "neutral",
+       "label": "Negative accumulation"
+      }
+     ],
+     "score_terms": [
+      {
+       "code": "arm_prior:field_evidence=+0.620",
+       "kind": "score_term",
+       "subject": "field_evidence",
+       "effect": 0.62,
+       "direction": "positive",
+       "label": "Arm prior field evidence"
+      },
+      {
+       "code": "granularity:rooftop=+0.120",
+       "kind": "score_term",
+       "subject": "rooftop",
+       "effect": 0.12,
+       "direction": "positive",
+       "label": "Granularity rooftop"
+      },
+      {
+       "code": "evidence_promotion_eligible=+0.080",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.08,
+       "direction": "positive",
+       "label": "Evidence promotion eligible"
+      },
+      {
+       "code": "locality_match=+0.050",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.05,
+       "direction": "positive",
+       "label": "Locality match"
+      },
+      {
+       "code": "pin_in_text_known=+0.040",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.04,
+       "direction": "positive",
+       "label": "Pin in text known"
+      },
+      {
+       "code": "text_locality_similarity=+0.013",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.013,
+       "direction": "positive",
+       "label": "Text locality similarity"
+      },
+      {
+       "code": "text_char_similarity=+0.008",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.008,
+       "direction": "positive",
+       "label": "Text char similarity"
+      },
+      {
+       "code": "arm_agreement_x3=+0.120",
+       "kind": "score_term",
+       "subject": null,
+       "effect": 0.12,
+       "direction": "positive",
+       "label": "Arm agreement x3"
+      }
+     ],
+     "provenance": {
+      "arm": "field_evidence",
+      "source_ref": "visits:median(2)",
+      "granularity": "rooftop",
+      "licence_class": "official",
+      "as_of_valid": "2026-05-07T05:14:44Z",
+      "built_at": null,
+      "stratum": "rooftop",
+      "prior_candidate_arm": null,
+      "memory_evidence_derived": null
+     },
+     "margin": {
+      "top_alternative_candidate_id": "c-dc0c26bf12d1",
+      "score_margin": 0.098
+     },
+     "confidence": {
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "measured_coverage": 0.792,
+      "n_calibration": 24
+     },
+     "belief_version": 7,
+     "place_id": "PL-AD002936",
+     "next_action": {
+      "kind": "verification_visit",
+      "label": "Re-visit with a fresh independent collector.",
+      "clears_when": "two clean independent positives"
+     },
+     "task": "VF-AD002936-MOVED_SUSPECTED",
+     "refusal": null
+    },
+    "evidence_summary": {
+     "n_observations": 6,
+     "n_positives": 2,
+     "negatives_independent": 2,
+     "independent_confirmations": 2,
+     "duplicate_claims": 0,
+     "positive_weight_sum": 1.332913,
+     "negatives_move_coordinate": false,
+     "radius_widened": true,
+     "widen_reason": "negative_accumulation"
+    },
+    "task": {
+     "task_id": "VF-AD002936-MOVED_SUSPECTED",
+     "kind": "verify_first",
+     "cause": "MOVED_SUSPECTED",
+     "state": "open",
+     "priority": 0.8,
+     "town_id": "T2",
+     "address_id": "AD002936",
+     "place_id": "PL-AD002936",
+     "tier": "APPROXIMATE",
+     "status": "MOVED_SUSPECTED",
+     "negatives_independent": 2,
+     "radius_m": 1202.6,
+     "rule_version": "candidate-rules-v2",
+     "at": "2026-05-30T04:45:54Z",
+     "recommended_action": {
+      "kind": "verification_visit",
+      "label": "Re-visit with a fresh independent collector.",
+      "clears_when": "two clean independent positives"
+     },
+     "evidence_refs": [
+      "obs-VS000244",
+      "obs-VS003098"
+     ],
+     "evidence_refs_basis": "negative_observations_upto_task_at"
+    },
+    "computed_at": "2026-10-08T07:39:46Z"
+   }
+  },
+  "resolve_refuse": {
+   "request": {
+    "method": "POST",
+    "path": "/resolve",
+    "body": {
+     "address_text": "",
+     "town_hint": "T2",
+     "as_of": "2026-06-01T00:00:00Z",
+     "request_purpose": "NOTICE_SERVICE",
+     "address_id": "AD000002"
+    }
+   },
+   "status": 200,
+   "response": {
+    "candidate": null,
+    "granularity": null,
+    "tier": "UNPLACEABLE",
+    "status": "UNPLACEABLE",
+    "radius_m": null,
+    "radius_basis": null,
+    "nominal": null,
+    "measured_coverage": null,
+    "n_calibration": null,
+    "source_stratum": null,
+    "widened": null,
+    "widen_reason": null,
+    "reasons": [
+     "no_candidate",
+     "no_match_in_address_book"
+    ],
+    "request_purpose": "NOTICE_SERVICE",
+    "address_id": null,
+    "address_purpose": {
+     "class": "UNKNOWN",
+     "confidence": "low",
+     "basis": [
+      "insufficient_evidence"
+     ],
+     "model_version": "purpose_rules-v1"
+    },
+    "directions": null,
+    "is_area_context": false,
+    "area_context": null,
+    "eligibility": {
+     "action": "VERIFY_FIRST",
+     "reason": "unplaceable",
+     "rule_version": "gate-v2",
+     "request_purpose": "NOTICE_SERVICE"
+    },
+    "stage": "T1",
+    "arms_available": [],
+    "resolution": "empty_text",
+    "versions": {
+     "rule_version": "candidate-rules-v2",
+     "radius_map_version": "radius-map-v1",
+     "evidence_policy_version": "evidence-policy-v3",
+     "schema_version": "sutra-1.0",
+     "gate_rule_version": "gate-v2",
+     "purpose_rule_version": "purpose_rules-v1",
+     "directions_rule_version": "directions-v1"
+    },
+    "town_id": null,
+    "as_of": "2026-06-01T00:00:00Z",
+    "coordinate": null,
+    "uncertainty": null,
+    "alternatives": [],
+    "reason_codes": [
+     {
+      "code": "no_candidate",
+      "kind": "refusal",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "No candidate"
+     },
+     {
+      "code": "no_match_in_address_book",
+      "kind": "refusal",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "No match in address book"
+     },
+     {
+      "code": "unplaceable",
+      "kind": "gate",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Unplaceable"
+     }
+    ],
+    "decision_ticket": {
+     "headline": "No candidate \u2192 no coordinate",
+     "case_id": null,
+     "town_id": null,
+     "gate": {
+      "action": "VERIFY_FIRST",
+      "reason": "unplaceable",
+      "rule_version": "gate-v2",
+      "request_purpose": "NOTICE_SERVICE"
+     },
+     "answer": null,
+     "why": [],
+     "score_terms": [],
+     "provenance": null,
+     "margin": null,
+     "confidence": {
+      "tier": "UNPLACEABLE",
+      "status": "UNPLACEABLE",
+      "measured_coverage": null,
+      "n_calibration": null
+     },
+     "belief_version": null,
+     "place_id": null,
+     "next_action": {
+      "kind": "field_capture",
+      "label": "Capture a field observation to establish a place.",
+      "clears_when": "any first field observation"
+     },
+     "task": null,
+     "refusal": {
+      "kind": "no_candidate",
+      "coordinate_withheld": true,
+      "reason_codes": [
+       "no_candidate",
+       "no_match_in_address_book",
+       "unplaceable"
+      ]
+     }
+    },
+    "evidence_summary": null,
+    "task": null,
+    "computed_at": "2026-10-08T07:39:36Z"
+   }
+  },
+  "geometry_AD003067": {
+   "request": {
+    "method": "GET",
+    "path": "/v1/geometry/AD003067?as_of=2026-06-01T00:00:00Z",
+    "body": null
+   },
+   "status": 200,
+   "response": {
+    "address_id": "AD003067",
+    "town_id": "T2",
+    "as_of": "2026-06-01T00:00:00Z",
+    "coordinate_space": "sutra_local_metric_plane:T2",
+    "units": "metres",
+    "extent": {
+     "x_min": 289.4,
+     "x_max": 2233.3,
+     "y_min": -2626.4,
+     "y_max": 676.2,
+     "basis": "bbox_of_returned_points_padded",
+     "pad_m": 566.9
+    },
+    "points": [
+     {
+      "id": "c-28f5aface67c",
+      "kind": "candidate",
+      "x": 1390.0,
+      "y": -1818.0,
+      "source": "field_evidence",
+      "granularity": "street",
+      "status": "CONFIRMED",
+      "selected": true,
+      "score": 0.987106,
+      "primary_eligible": true,
+      "metadata": {
+       "source_ref": "visits:median(3)",
+       "as_of_valid": "2026-05-15T05:35:37Z",
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-5cb0b3c3409f",
+      "kind": "candidate",
+      "x": 1390.0,
+      "y": -1818.0,
+      "source": "memory",
+      "granularity": "street",
+      "status": null,
+      "selected": false,
+      "score": 0.917106,
+      "primary_eligible": true,
+      "metadata": {
+       "source_ref": "memory:AD003067@v7",
+       "as_of_valid": "2026-05-28T07:11:05Z",
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-0068788403fc",
+      "kind": "candidate",
+      "x": 1390.0,
+      "y": -1818.0,
+      "source": "field_evidence",
+      "granularity": "street",
+      "status": null,
+      "selected": false,
+      "score": 0.907106,
+      "primary_eligible": false,
+      "metadata": {
+       "source_ref": "visit:obs-VS000693",
+       "as_of_valid": "2026-04-11T05:16:05Z",
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-06c02a8b703b",
+      "kind": "candidate",
+      "x": 1396.0,
+      "y": -1805.0,
+      "source": "field_evidence",
+      "granularity": "street",
+      "status": null,
+      "selected": false,
+      "score": 0.907106,
+      "primary_eligible": false,
+      "metadata": {
+       "source_ref": "visit:obs-VS002826",
+       "as_of_valid": "2026-05-15T05:35:37Z",
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-9a0aa17d3e20",
+      "kind": "candidate",
+      "x": 1389.0,
+      "y": -1823.0,
+      "source": "field_evidence",
+      "granularity": "street",
+      "status": null,
+      "selected": false,
+      "score": 0.907106,
+      "primary_eligible": false,
+      "metadata": {
+       "source_ref": "visit:obs-VS001428",
+       "as_of_valid": "2026-04-23T04:36:26Z",
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-c675f6d12e4c",
+      "kind": "candidate",
+      "x": 1666.4,
+      "y": -1939.4,
+      "source": "frozen_baseline",
+      "granularity": "locality",
+      "status": null,
+      "selected": false,
+      "score": 0.617106,
+      "primary_eligible": true,
+      "metadata": {
+       "source_ref": "baseline:locality",
+       "as_of_valid": null,
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-873aad00c796",
+      "kind": "candidate",
+      "x": 1577.4,
+      "y": -2059.5,
+      "source": "locality_centroid",
+      "granularity": "locality",
+      "status": null,
+      "selected": false,
+      "score": 0.557106,
+      "primary_eligible": true,
+      "metadata": {
+       "source_ref": "locality:T2-L11",
+       "as_of_valid": null,
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-f7c33b913fec",
+      "kind": "candidate",
+      "x": 856.325,
+      "y": 109.342,
+      "source": "town_centroid",
+      "granularity": "town",
+      "status": null,
+      "selected": false,
+      "score": 0.245106,
+      "primary_eligible": true,
+      "metadata": {
+       "source_ref": "town:T2",
+       "as_of_valid": null,
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "obs-VS000039",
+      "kind": "observation",
+      "x": 1407.0,
+      "y": -1825.0,
+      "source": "ambiguous",
+      "granularity": null,
+      "status": "ambiguous",
+      "selected": false,
+      "score": 0.306,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-04-01T06:34:51Z",
+       "outcome": "locked_premises",
+       "visit_id": "VS000039",
+       "captured_x": 1407.0,
+       "captured_y": -1825.0,
+       "coordinate_claim": true
+      }
+     },
+     {
+      "id": "obs-VS000693",
+      "kind": "observation",
+      "x": 1390.0,
+      "y": -1818.0,
+      "source": "positive",
+      "granularity": null,
+      "status": "positive",
+      "selected": false,
+      "score": 0.855,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-04-11T05:16:05Z",
+       "outcome": "met_borrower",
+       "visit_id": "VS000693",
+       "captured_x": 1390.0,
+       "captured_y": -1818.0,
+       "coordinate_claim": true
+      }
+     },
+     {
+      "id": "obs-VS001428",
+      "kind": "observation",
+      "x": 1389.0,
+      "y": -1823.0,
+      "source": "positive",
+      "granularity": null,
+      "status": "positive",
+      "selected": false,
+      "score": 0.855,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-04-23T04:36:26Z",
+       "outcome": "met_borrower",
+       "visit_id": "VS001428",
+       "captured_x": 1389.0,
+       "captured_y": -1823.0,
+       "coordinate_claim": true
+      }
+     },
+     {
+      "id": "obs-VS002068",
+      "kind": "observation",
+      "x": null,
+      "y": null,
+      "source": "process",
+      "granularity": null,
+      "status": "negative",
+      "selected": false,
+      "score": 0.0,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-05-04T05:38:06Z",
+       "outcome": "address_not_traceable",
+       "visit_id": "VS002068",
+       "captured_x": 1746.0,
+       "captured_y": -2089.0,
+       "coordinate_claim": false
+      }
+     },
+     {
+      "id": "obs-VS002826",
+      "kind": "observation",
+      "x": 1396.0,
+      "y": -1805.0,
+      "source": "positive",
+      "granularity": null,
+      "status": "positive",
+      "selected": false,
+      "score": 0.72,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-05-15T05:35:37Z",
+       "outcome": "met_family",
+       "visit_id": "VS002826",
+       "captured_x": 1396.0,
+       "captured_y": -1805.0,
+       "coordinate_claim": true
+      }
+     },
+     {
+      "id": "obs-VS003614",
+      "kind": "observation",
+      "x": 1403.0,
+      "y": -1815.0,
+      "source": "positive",
+      "granularity": null,
+      "status": "positive",
+      "selected": false,
+      "score": 0.48,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-05-28T07:11:04Z",
+       "outcome": "met_family",
+       "visit_id": "VS003614",
+       "captured_x": 1403.0,
+       "captured_y": -1815.0,
+       "coordinate_claim": true
+      }
+     }
+    ],
+    "rings": [
+     {
+      "center_x": 1390.0,
+      "center_y": -1818.0,
+      "radius_m": 566.9,
+      "candidate_id": "c-28f5aface67c",
+      "basis": "empirical_p80",
+      "n_calibration": 24,
+      "measured_coverage": 0.792,
+      "stratum": "locality",
+      "widened": true,
+      "widen_reason": "negative_accumulation",
+      "authoritative": true
+     }
+    ],
+    "traces": [],
+    "counts": {
+     "candidates": 8,
+     "observations": 6,
+     "traces": 0,
+     "rings": 1
+    },
+    "gate": {
+     "action": "SERVE",
+     "reason": "purpose_home_like"
+    },
+    "withheld": null,
+    "belief_version": 7,
+    "place_id": "PL-AD003067",
+    "renderer_hint": {
+     "preferred": "svg",
+     "max_objects": 2000,
+     "note": "equal-scale x/y; the frontend owns viewBox and presentation"
+    }
+   }
+  },
+  "geometry_AD002936": {
+   "request": {
+    "method": "GET",
+    "path": "/v1/geometry/AD002936?as_of=2026-06-01T00:00:00Z",
+    "body": null
+   },
+   "status": 200,
+   "response": {
+    "address_id": "AD002936",
+    "town_id": "T2",
+    "as_of": "2026-06-01T00:00:00Z",
+    "coordinate_space": "sutra_local_metric_plane:T2",
+    "units": "metres",
+    "extent": {
+     "x_min": -374.3,
+     "x_max": 2333.6,
+     "y_min": -1093.3,
+     "y_max": 4181.6,
+     "basis": "bbox_of_returned_points_padded",
+     "pad_m": 1202.6
+    },
+    "points": [
+     {
+      "id": "c-a7fcc592cd99",
+      "kind": "candidate",
+      "x": 1130.5,
+      "y": 2970.0,
+      "source": "field_evidence",
+      "granularity": "rooftop",
+      "status": "APPROXIMATE",
+      "selected": true,
+      "score": 1.050441,
+      "primary_eligible": true,
+      "metadata": {
+       "source_ref": "visits:median(2)",
+       "as_of_valid": "2026-05-07T05:14:44Z",
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-dc0c26bf12d1",
+      "kind": "candidate",
+      "x": 1130.0,
+      "y": 2969.0,
+      "source": "field_evidence",
+      "granularity": "street",
+      "status": null,
+      "selected": false,
+      "score": 0.952441,
+      "primary_eligible": false,
+      "metadata": {
+       "source_ref": "visit:obs-VS002307",
+       "as_of_valid": "2026-05-07T05:14:44Z",
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-fdfba7428031",
+      "kind": "candidate",
+      "x": 1131.0,
+      "y": 2971.0,
+      "source": "field_evidence",
+      "granularity": "street",
+      "status": null,
+      "selected": false,
+      "score": 0.952441,
+      "primary_eligible": false,
+      "metadata": {
+       "source_ref": "visit:obs-VS001649",
+       "as_of_valid": "2026-04-27T05:33:42Z",
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-9f36cb271436",
+      "kind": "candidate",
+      "x": 1130.5,
+      "y": 2970.0,
+      "source": "memory",
+      "granularity": "rooftop",
+      "status": null,
+      "selected": false,
+      "score": 0.900441,
+      "primary_eligible": false,
+      "metadata": {
+       "source_ref": "memory:AD002936@v7",
+       "as_of_valid": "2026-05-30T04:45:54Z",
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-503cfcf760dd",
+      "kind": "candidate",
+      "x": 828.3,
+      "y": 2849.6,
+      "source": "frozen_baseline",
+      "granularity": "locality",
+      "status": null,
+      "selected": false,
+      "score": 0.622441,
+      "primary_eligible": true,
+      "metadata": {
+       "source_ref": "baseline:locality",
+       "as_of_valid": null,
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-bfe7106b5d7e",
+      "kind": "candidate",
+      "x": 986.3,
+      "y": 2772.6,
+      "source": "locality_centroid",
+      "granularity": "locality",
+      "status": null,
+      "selected": false,
+      "score": 0.562441,
+      "primary_eligible": true,
+      "metadata": {
+       "source_ref": "locality:T2-L08",
+       "as_of_valid": null,
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "c-6a5abef2b5d7",
+      "kind": "candidate",
+      "x": 856.325,
+      "y": 109.342,
+      "source": "town_centroid",
+      "granularity": "town",
+      "status": null,
+      "selected": false,
+      "score": 0.290441,
+      "primary_eligible": true,
+      "metadata": {
+       "source_ref": "town:T2",
+       "as_of_valid": null,
+       "licence_class": "official"
+      }
+     },
+     {
+      "id": "obs-VS000244",
+      "kind": "observation",
+      "x": null,
+      "y": null,
+      "source": "process",
+      "granularity": null,
+      "status": "negative",
+      "selected": false,
+      "score": 0.0,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-04-04T05:39:09Z",
+       "outcome": "address_not_traceable",
+       "visit_id": "VS000244",
+       "captured_x": 1060.0,
+       "captured_y": 2814.0,
+       "coordinate_claim": false
+      }
+     },
+     {
+      "id": "obs-VS000969",
+      "kind": "observation",
+      "x": 1127.0,
+      "y": 2979.0,
+      "source": "ambiguous",
+      "granularity": null,
+      "status": "ambiguous",
+      "selected": false,
+      "score": 0.243,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-04-16T04:32:58Z",
+       "outcome": "locked_premises",
+       "visit_id": "VS000969",
+       "captured_x": 1127.0,
+       "captured_y": 2979.0,
+       "coordinate_claim": true
+      }
+     },
+     {
+      "id": "obs-VS001649",
+      "kind": "observation",
+      "x": 1131.0,
+      "y": 2971.0,
+      "source": "positive",
+      "granularity": null,
+      "status": "positive",
+      "selected": false,
+      "score": 0.57,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-04-27T05:33:42Z",
+       "outcome": "met_borrower",
+       "visit_id": "VS001649",
+       "captured_x": 1131.0,
+       "captured_y": 2971.0,
+       "coordinate_claim": true
+      }
+     },
+     {
+      "id": "obs-VS002307",
+      "kind": "observation",
+      "x": 1130.0,
+      "y": 2969.0,
+      "source": "positive",
+      "granularity": null,
+      "status": "positive",
+      "selected": false,
+      "score": 0.8,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-05-07T05:14:44Z",
+       "outcome": "met_family",
+       "visit_id": "VS002307",
+       "captured_x": 1130.0,
+       "captured_y": 2969.0,
+       "coordinate_claim": true
+      }
+     },
+     {
+      "id": "obs-VS003098",
+      "kind": "observation",
+      "x": null,
+      "y": null,
+      "source": "process",
+      "granularity": null,
+      "status": "negative",
+      "selected": false,
+      "score": 0.0,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-05-20T05:53:45Z",
+       "outcome": "address_not_traceable",
+       "visit_id": "VS003098",
+       "captured_x": 849.0,
+       "captured_y": 2929.0,
+       "coordinate_claim": false
+      }
+     },
+     {
+      "id": "obs-VS003745",
+      "kind": "observation",
+      "x": 1126.0,
+      "y": 2930.0,
+      "source": "ambiguous",
+      "granularity": null,
+      "status": "ambiguous",
+      "selected": false,
+      "score": 0.3375,
+      "primary_eligible": null,
+      "metadata": {
+       "observed_at": "2026-05-30T04:45:53Z",
+       "outcome": "locked_premises",
+       "visit_id": "VS003745",
+       "captured_x": 1126.0,
+       "captured_y": 2930.0,
+       "coordinate_claim": true
+      }
+     }
+    ],
+    "rings": [
+     {
+      "center_x": 1130.5,
+      "center_y": 2970.0,
+      "radius_m": 1202.6,
+      "candidate_id": "c-a7fcc592cd99",
+      "basis": "empirical_p80",
+      "n_calibration": 24,
+      "measured_coverage": 0.792,
+      "stratum": "locality",
+      "widened": true,
+      "widen_reason": "negative_accumulation",
+      "authoritative": true
+     }
+    ],
+    "traces": [],
+    "counts": {
+     "candidates": 7,
+     "observations": 6,
+     "traces": 0,
+     "rings": 1
+    },
+    "gate": {
+     "action": "VERIFY_FIRST",
+     "reason": "negatives_accumulated"
+    },
+    "withheld": null,
+    "belief_version": 7,
+    "place_id": "PL-AD002936",
+    "renderer_hint": {
+     "preferred": "svg",
+     "max_objects": 2000,
+     "note": "equal-scale x/y; the frontend owns viewBox and presentation"
+    }
+   }
+  },
+  "observations_AD003067": {
+   "request": {
+    "method": "GET",
+    "path": "/v1/address/AD003067/observations?as_of=2026-06-01T00:00:00Z",
+    "body": null
+   },
+   "status": 200,
+   "response": {
+    "address_id": "AD003067",
+    "town_id": "T2",
+    "as_of": "2026-06-01T00:00:00Z",
+    "coordinate_space": "sutra_local_metric_plane:T2",
+    "count": 6,
+    "observations": [
+     {
+      "observation_id": "obs-VS000039",
+      "visit_id": "VS000039",
+      "address_id": "AD003067",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-04-01T06:34:51Z",
+      "captured_at_device": "2026-04-01 12:04:51",
+      "server_received_at": "2026-04-01T06:34:51Z",
+      "local_seq": 39,
+      "outcome": "locked_premises",
+      "polarity": "ambiguous",
+      "coordinate_claim": true,
+      "x": 1407.0,
+      "y": -1825.0,
+      "captured": {
+       "x": 1407.0,
+       "y": -1825.0,
+       "gps_accuracy_m": 11.6,
+       "note": null
+      },
+      "dwell_s": 95.0,
+      "evidence": {
+       "weight": 0.306,
+       "polarity": "ambiguous",
+       "evidence_class": "ambiguous",
+       "reason_codes": [
+        "business_hours",
+        "dwell_brief",
+        "gps_fine",
+        "media_present",
+        "outcome:locked_premises",
+        "trail_loose"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "positive_support",
+      "duplicate_claim_of": null,
+      "agent_id": "FA005",
+      "device_id": "device-FA005",
+      "remark": "lock laga hai",
+      "media": [
+       {
+        "sha256": "db2392f2b4cd",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     },
+     {
+      "observation_id": "obs-VS000693",
+      "visit_id": "VS000693",
+      "address_id": "AD003067",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-04-11T05:16:05Z",
+      "captured_at_device": "2026-04-11 10:46:05",
+      "server_received_at": "2026-04-11T05:16:05Z",
+      "local_seq": 693,
+      "outcome": "met_borrower",
+      "polarity": "positive",
+      "coordinate_claim": true,
+      "x": 1390.0,
+      "y": -1818.0,
+      "captured": {
+       "x": 1390.0,
+       "y": -1818.0,
+       "gps_accuracy_m": 22.1,
+       "note": null
+      },
+      "dwell_s": 1280.0,
+      "evidence": {
+       "weight": 0.855,
+       "polarity": "positive",
+       "evidence_class": "positive",
+       "reason_codes": [
+        "business_hours",
+        "gps_moderate",
+        "media_present",
+        "outcome:met_borrower",
+        "trail_agrees"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "positive_support",
+      "duplicate_claim_of": null,
+      "agent_id": "FA005",
+      "device_id": "device-FA005",
+      "remark": "customer ghar pe mila",
+      "media": [
+       {
+        "sha256": "7fafae625cda",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     },
+     {
+      "observation_id": "obs-VS001428",
+      "visit_id": "VS001428",
+      "address_id": "AD003067",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-04-23T04:36:26Z",
+      "captured_at_device": "2026-04-23 10:06:26",
+      "server_received_at": "2026-04-23T04:36:26Z",
+      "local_seq": 1428,
+      "outcome": "met_borrower",
+      "polarity": "positive",
+      "coordinate_claim": true,
+      "x": 1389.0,
+      "y": -1823.0,
+      "captured": {
+       "x": 1389.0,
+       "y": -1823.0,
+       "gps_accuracy_m": 23.3,
+       "note": null
+      },
+      "dwell_s": 448.0,
+      "evidence": {
+       "weight": 0.855,
+       "polarity": "positive",
+       "evidence_class": "positive",
+       "reason_codes": [
+        "business_hours",
+        "gps_moderate",
+        "media_present",
+        "outcome:met_borrower",
+        "trail_agrees"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "positive_support",
+      "duplicate_claim_of": null,
+      "agent_id": "FA005",
+      "device_id": "device-FA005",
+      "remark": "customer ghar pe mila",
+      "media": [
+       {
+        "sha256": "82db4c1a27e0",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     },
+     {
+      "observation_id": "obs-VS002068",
+      "visit_id": "VS002068",
+      "address_id": "AD003067",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-05-04T05:38:06Z",
+      "captured_at_device": "2026-05-04 11:08:06",
+      "server_received_at": "2026-05-04T05:38:06Z",
+      "local_seq": 2068,
+      "outcome": "address_not_traceable",
+      "polarity": "negative",
+      "coordinate_claim": false,
+      "x": null,
+      "y": null,
+      "captured": {
+       "x": 1746.0,
+       "y": -2089.0,
+       "gps_accuracy_m": 6.9,
+       "note": "device position at capture \u2014 not a coordinate claim for a negative"
+      },
+      "dwell_s": 90.0,
+      "evidence": {
+       "weight": 0.0,
+       "polarity": "negative",
+       "evidence_class": "process",
+       "reason_codes": [
+        "negative_no_coordinate_claim",
+        "outcome:address_not_traceable"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "negative_doubt",
+      "duplicate_claim_of": null,
+      "agent_id": "FA006",
+      "device_id": "device-FA006",
+      "remark": "address nahi mila",
+      "media": [
+       {
+        "sha256": "ff2a9a645209",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     },
+     {
+      "observation_id": "obs-VS002826",
+      "visit_id": "VS002826",
+      "address_id": "AD003067",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-05-15T05:35:37Z",
+      "captured_at_device": "2026-05-15 11:05:37",
+      "server_received_at": "2026-05-15T05:35:37Z",
+      "local_seq": 2826,
+      "outcome": "met_family",
+      "polarity": "positive",
+      "coordinate_claim": true,
+      "x": 1396.0,
+      "y": -1805.0,
+      "captured": {
+       "x": 1396.0,
+       "y": -1805.0,
+       "gps_accuracy_m": 19.1,
+       "note": null
+      },
+      "dwell_s": 585.0,
+      "evidence": {
+       "weight": 0.72,
+       "polarity": "positive",
+       "evidence_class": "positive",
+       "reason_codes": [
+        "business_hours",
+        "gps_moderate",
+        "media_present",
+        "outcome:met_family",
+        "trail_agrees"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "positive_support",
+      "duplicate_claim_of": null,
+      "agent_id": "FA005",
+      "device_id": "device-FA005",
+      "remark": "wife mili, bola kaam pe gaye hain",
+      "media": [
+       {
+        "sha256": "4363f3d3adec",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     },
+     {
+      "observation_id": "obs-VS003614",
+      "visit_id": "VS003614",
+      "address_id": "AD003067",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-05-28T07:11:04Z",
+      "captured_at_device": "2026-05-28 12:41:04",
+      "server_received_at": "2026-05-28T07:11:04Z",
+      "local_seq": 3614,
+      "outcome": "met_family",
+      "polarity": "positive",
+      "coordinate_claim": true,
+      "x": 1403.0,
+      "y": -1815.0,
+      "captured": {
+       "x": 1403.0,
+       "y": -1815.0,
+       "gps_accuracy_m": 8.1,
+       "note": null
+      },
+      "dwell_s": 403.0,
+      "evidence": {
+       "weight": 0.48,
+       "polarity": "positive",
+       "evidence_class": "positive",
+       "reason_codes": [
+        "business_hours",
+        "gps_fine",
+        "media_present",
+        "outcome:met_family",
+        "trail_disagreement"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "positive_support",
+      "duplicate_claim_of": null,
+      "agent_id": "FA006",
+      "device_id": "device-FA006",
+      "remark": "ghar pe beta tha, customer bahar; address galat likha hai, ghar Hanuman Mandir ke paas hai",
+      "media": [
+       {
+        "sha256": "c91b8882f61f",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     }
+    ],
+    "negatives_move_coordinate": false
+   }
+  },
+  "observations_AD002936": {
+   "request": {
+    "method": "GET",
+    "path": "/v1/address/AD002936/observations?as_of=2026-06-01T00:00:00Z",
+    "body": null
+   },
+   "status": 200,
+   "response": {
+    "address_id": "AD002936",
+    "town_id": "T2",
+    "as_of": "2026-06-01T00:00:00Z",
+    "coordinate_space": "sutra_local_metric_plane:T2",
+    "count": 6,
+    "observations": [
+     {
+      "observation_id": "obs-VS000244",
+      "visit_id": "VS000244",
+      "address_id": "AD002936",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-04-04T05:39:09Z",
+      "captured_at_device": "2026-04-04 11:09:09",
+      "server_received_at": "2026-04-04T05:39:09Z",
+      "local_seq": 244,
+      "outcome": "address_not_traceable",
+      "polarity": "negative",
+      "coordinate_claim": false,
+      "x": null,
+      "y": null,
+      "captured": {
+       "x": 1060.0,
+       "y": 2814.0,
+       "gps_accuracy_m": 5.9,
+       "note": "device position at capture \u2014 not a coordinate claim for a negative"
+      },
+      "dwell_s": 57.0,
+      "evidence": {
+       "weight": 0.0,
+       "polarity": "negative",
+       "evidence_class": "process",
+       "reason_codes": [
+        "negative_no_coordinate_claim",
+        "outcome:address_not_traceable"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "negative_doubt",
+      "duplicate_claim_of": null,
+      "agent_id": "FA005",
+      "device_id": "device-FA005",
+      "remark": "address nahi mila",
+      "media": [
+       {
+        "sha256": "017316a4b0bd",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     },
+     {
+      "observation_id": "obs-VS000969",
+      "visit_id": "VS000969",
+      "address_id": "AD002936",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-04-16T04:32:58Z",
+      "captured_at_device": "2026-04-16 10:02:58",
+      "server_received_at": "2026-04-16T04:32:58Z",
+      "local_seq": 969,
+      "outcome": "locked_premises",
+      "polarity": "ambiguous",
+      "coordinate_claim": true,
+      "x": 1127.0,
+      "y": 2979.0,
+      "captured": {
+       "x": 1127.0,
+       "y": 2979.0,
+       "gps_accuracy_m": 19.1,
+       "note": null
+      },
+      "dwell_s": 226.0,
+      "evidence": {
+       "weight": 0.243,
+       "polarity": "ambiguous",
+       "evidence_class": "ambiguous",
+       "reason_codes": [
+        "business_hours",
+        "gps_moderate",
+        "media_present",
+        "outcome:locked_premises",
+        "trail_disagreement"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "positive_support",
+      "duplicate_claim_of": null,
+      "agent_id": "FA005",
+      "device_id": "device-FA005",
+      "remark": "ghar band tha; address galat likha hai, ghar Ganesh Mandir ke paas hai",
+      "media": [
+       {
+        "sha256": "84d3b14e7f9d",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     },
+     {
+      "observation_id": "obs-VS001649",
+      "visit_id": "VS001649",
+      "address_id": "AD002936",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-04-27T05:33:42Z",
+      "captured_at_device": "2026-04-27 11:03:42",
+      "server_received_at": "2026-04-27T05:33:42Z",
+      "local_seq": 1649,
+      "outcome": "met_borrower",
+      "polarity": "positive",
+      "coordinate_claim": true,
+      "x": 1131.0,
+      "y": 2971.0,
+      "captured": {
+       "x": 1131.0,
+       "y": 2971.0,
+       "gps_accuracy_m": 6.5,
+       "note": null
+      },
+      "dwell_s": 834.0,
+      "evidence": {
+       "weight": 0.57,
+       "polarity": "positive",
+       "evidence_class": "positive",
+       "reason_codes": [
+        "business_hours",
+        "gps_fine",
+        "media_present",
+        "outcome:met_borrower",
+        "trail_disagreement"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "positive_support",
+      "duplicate_claim_of": null,
+      "agent_id": "FA006",
+      "device_id": "device-FA006",
+      "remark": "customer mila, bola  tak karega",
+      "media": [
+       {
+        "sha256": "e0c413452a27",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     },
+     {
+      "observation_id": "obs-VS002307",
+      "visit_id": "VS002307",
+      "address_id": "AD002936",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-05-07T05:14:44Z",
+      "captured_at_device": "2026-05-07 10:44:44",
+      "server_received_at": "2026-05-07T05:14:44Z",
+      "local_seq": 2307,
+      "outcome": "met_family",
+      "polarity": "positive",
+      "coordinate_claim": true,
+      "x": 1130.0,
+      "y": 2969.0,
+      "captured": {
+       "x": 1130.0,
+       "y": 2969.0,
+       "gps_accuracy_m": 5.9,
+       "note": null
+      },
+      "dwell_s": 358.0,
+      "evidence": {
+       "weight": 0.8,
+       "polarity": "positive",
+       "evidence_class": "positive",
+       "reason_codes": [
+        "business_hours",
+        "gps_fine",
+        "media_present",
+        "outcome:met_family",
+        "trail_agrees"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "positive_support",
+      "duplicate_claim_of": null,
+      "agent_id": "FA006",
+      "device_id": "device-FA006",
+      "remark": "wife mili, bola kaam pe gaye hain",
+      "media": [
+       {
+        "sha256": "4b78e4232847",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     },
+     {
+      "observation_id": "obs-VS003098",
+      "visit_id": "VS003098",
+      "address_id": "AD002936",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-05-20T05:53:45Z",
+      "captured_at_device": "2026-05-20 11:23:45",
+      "server_received_at": "2026-05-20T05:53:45Z",
+      "local_seq": 3098,
+      "outcome": "address_not_traceable",
+      "polarity": "negative",
+      "coordinate_claim": false,
+      "x": null,
+      "y": null,
+      "captured": {
+       "x": 849.0,
+       "y": 2929.0,
+       "gps_accuracy_m": 21.3,
+       "note": "device position at capture \u2014 not a coordinate claim for a negative"
+      },
+      "dwell_s": 77.0,
+      "evidence": {
+       "weight": 0.0,
+       "polarity": "negative",
+       "evidence_class": "process",
+       "reason_codes": [
+        "negative_no_coordinate_claim",
+        "outcome:address_not_traceable"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "negative_doubt",
+      "duplicate_claim_of": null,
+      "agent_id": "FA004",
+      "device_id": "device-FA004",
+      "remark": "is address pe ghar nahi mila",
+      "media": [
+       {
+        "sha256": "21e35dc7bd7a",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     },
+     {
+      "observation_id": "obs-VS003745",
+      "visit_id": "VS003745",
+      "address_id": "AD002936",
+      "town_id": null,
+      "kind": "ingest",
+      "observed_at": "2026-05-30T04:45:53Z",
+      "captured_at_device": "2026-05-30 10:15:53",
+      "server_received_at": "2026-05-30T04:45:53Z",
+      "local_seq": 3745,
+      "outcome": "locked_premises",
+      "polarity": "ambiguous",
+      "coordinate_claim": true,
+      "x": 1126.0,
+      "y": 2930.0,
+      "captured": {
+       "x": 1126.0,
+       "y": 2930.0,
+       "gps_accuracy_m": 43.8,
+       "note": null
+      },
+      "dwell_s": 222.0,
+      "evidence": {
+       "weight": 0.3375,
+       "polarity": "ambiguous",
+       "evidence_class": "ambiguous",
+       "reason_codes": [
+        "business_hours",
+        "gps_coarse",
+        "media_present",
+        "outcome:locked_premises",
+        "trail_agrees"
+       ],
+       "policy_version": "evidence-policy-v3"
+      },
+      "contributes": "positive_support",
+      "duplicate_claim_of": null,
+      "agent_id": "FA006",
+      "device_id": "device-FA006",
+      "remark": "ghar band tha",
+      "media": [
+       {
+        "sha256": "e5adf5c6d1f1",
+        "kind": "photo"
+       }
+      ],
+      "policy_version": "evidence-policy-v3"
+     }
+    ],
+    "negatives_move_coordinate": false
+   }
+  },
+  "belief_AD003067": {
+   "request": {
+    "method": "GET",
+    "path": "/v1/belief/AD003067?as_of=2026-06-01T00:00:00Z",
+    "body": null
+   },
+   "status": 200,
+   "response": {
+    "address_id": "AD003067",
+    "town_id": "T2",
+    "as_of": "2026-06-01T00:00:00Z",
+    "coordinate_space": "sutra_local_metric_plane:T2",
+    "belief": {
+     "address_id": "AD003067",
+     "as_of": "2026-06-01T00:00:00Z",
+     "belief_version": 7,
+     "computed_from": {
+      "observations_upto": "2026-06-01T00:00:00Z",
+      "policy": "evidence-policy-v3",
+      "rule_version": "candidate-rules-v2",
+      "radius_map_version": "radius-map-v1"
+     },
+     "place_id": "PL-AD003067",
+     "candidate_id": "c-28f5aface67c",
+     "candidate": {
+      "candidate_id": "c-28f5aface67c",
+      "address_id": "AD003067",
+      "arm": "field_evidence",
+      "source_ref": "visits:median(3)",
+      "x": 1390.0,
+      "y": -1818.0,
+      "granularity": "street",
+      "arm_rank": 1,
+      "licence_class": "official",
+      "as_of_valid": "2026-05-15T05:35:37Z",
+      "provenance": {
+       "rule_version": "candidate-rules-v2",
+       "built_at": "2026-05-15T05:35:37Z",
+       "built_from": "store observations (median of agreeing independent check-ins)",
+       "n_observations": 3,
+       "spread_m": 14.3,
+       "observation_ids": [
+        "obs-VS000693",
+        "obs-VS001428",
+        "obs-VS002826"
+       ],
+       "stratum": "street",
+       "primary_eligible": true,
+       "agreement_arms": 2,
+       "agreement_list": [
+        "field_evidence",
+        "memory"
+       ]
+      }
+     },
+     "tier": "CONFIRMED",
+     "status": "STABLE",
+     "radius": {
+      "radius_m": 566.9,
+      "basis": "empirical_p80",
+      "nominal": null,
+      "measured_coverage": 0.792,
+      "n_calibration": 24,
+      "source_stratum": "locality",
+      "widened": true,
+      "widen_reason": "negative_accumulation",
+      "radius_map_version": "radius-map-v1"
+     },
+     "support": {
+      "independent_confirmations": 3,
+      "negatives_independent": 1,
+      "n_positives": 4,
+      "n_observations": 6,
+      "positive_weight_sum": 2.798487,
+      "duplicate_claims": 0
+     },
+     "score": 0.987106,
+     "score_reasons": [
+      "arm_prior:field_evidence=+0.620",
+      "granularity:street=+0.102",
+      "evidence_promotion_eligible=+0.080",
+      "locality_match=+0.050",
+      "text_locality_similarity=+0.010",
+      "text_char_similarity=+0.005",
+      "arm_agreement_x4=+0.120"
+     ],
+     "arms_available": [
+      "field_evidence",
+      "frozen_baseline",
+      "locality_centroid",
+      "memory",
+      "town_centroid"
+     ],
+     "arms_considered": [
+      {
+       "candidate_id": "c-28f5aface67c",
+       "arm": "field_evidence",
+       "score": 0.987106,
+       "primary_eligible": true,
+       "reasons": [
+        "arm_prior:field_evidence=+0.620",
+        "granularity:street=+0.102",
+        "evidence_promotion_eligible=+0.080",
+        "locality_match=+0.050",
+        "text_locality_similarity=+0.010",
+        "text_char_similarity=+0.005",
+        "arm_agreement_x4=+0.120"
+       ]
+      },
+      {
+       "candidate_id": "c-5cb0b3c3409f",
+       "arm": "memory",
+       "score": 0.917106,
+       "primary_eligible": true,
+       "reasons": [
+        "arm_prior:memory=+0.550",
+        "granularity:street=+0.102",
+        "evidence_promotion_eligible=+0.080",
+        "locality_match=+0.050",
+        "text_locality_similarity=+0.010",
+        "text_char_similarity=+0.005",
+        "arm_agreement_x4=+0.120"
+       ]
+      },
+      {
+       "candidate_id": "c-0068788403fc",
+       "arm": "field_evidence",
+       "score": 0.907106,
+       "primary_eligible": false,
+       "reasons": [
+        "arm_prior:field_evidence=+0.620",
+        "granularity:street=+0.102",
+        "locality_match=+0.050",
+        "text_locality_similarity=+0.010",
+        "text_char_similarity=+0.005",
+        "arm_agreement_x4=+0.120"
+       ]
+      },
+      {
+       "candidate_id": "c-06c02a8b703b",
+       "arm": "field_evidence",
+       "score": 0.907106,
+       "primary_eligible": false,
+       "reasons": [
+        "arm_prior:field_evidence=+0.620",
+        "granularity:street=+0.102",
+        "locality_match=+0.050",
+        "text_locality_similarity=+0.010",
+        "text_char_similarity=+0.005",
+        "arm_agreement_x4=+0.120"
+       ]
+      },
+      {
+       "candidate_id": "c-9a0aa17d3e20",
+       "arm": "field_evidence",
+       "score": 0.907106,
+       "primary_eligible": false,
+       "reasons": [
+        "arm_prior:field_evidence=+0.620",
+        "granularity:street=+0.102",
+        "locality_match=+0.050",
+        "text_locality_similarity=+0.010",
+        "text_char_similarity=+0.005",
+        "arm_agreement_x4=+0.120"
+       ]
+      },
+      {
+       "candidate_id": "c-c675f6d12e4c",
+       "arm": "frozen_baseline",
+       "score": 0.617106,
+       "primary_eligible": true,
+       "reasons": [
+        "arm_prior:frozen_baseline=+0.500",
+        "granularity:locality=+0.072",
+        "coarse_precision_penalty=-0.060",
+        "locality_match=+0.050",
+        "text_locality_similarity=+0.010",
+        "text_char_similarity=+0.005",
+        "arm_agreement_x1=+0.040"
+       ]
+      },
+      {
+       "candidate_id": "c-873aad00c796",
+       "arm": "locality_centroid",
+       "score": 0.557106,
+       "primary_eligible": true,
+       "reasons": [
+        "arm_prior:locality_centroid=+0.380",
+        "granularity:locality=+0.072",
+        "locality_match=+0.050",
+        "text_locality_similarity=+0.010",
+        "text_char_similarity=+0.005",
+        "arm_agreement_x1=+0.040"
+       ]
+      },
+      {
+       "candidate_id": "c-f7c33b913fec",
+       "arm": "town_centroid",
+       "score": 0.245106,
+       "primary_eligible": true,
+       "reasons": [
+        "arm_prior:town_centroid=+0.150",
+        "granularity:town=+0.030",
+        "locality_match=+0.050",
+        "text_locality_similarity=+0.010",
+        "text_char_similarity=+0.005"
+       ]
+      }
+     ],
+     "promotion_detail": {
+      "n_strong": 3,
+      "collectors": [
+       "FA005"
+      ],
+      "periods": [
+       "2026-04",
+       "2026-05"
+      ],
+      "media_distinct": 3,
+      "period_ok": true,
+      "media_ok": true,
+      "space_ok": true,
+      "space_spread_m": 14.3,
+      "rule": ">=2 strong positives and (>=2 collectors or period-independent) and distinct media"
+     },
+     "reasons": [
+      "cross_arm_agreement",
+      "field_confirmed_x3",
+      "negatives_independent=1",
+      "promotion:ok"
+     ]
+    },
+    "observation_refs": [
+     {
+      "observation_id": "obs-VS000039",
+      "visit_id": "VS000039",
+      "observed_at": "2026-04-01T06:34:51Z",
+      "polarity": "ambiguous",
+      "weight": 0.306
+     },
+     {
+      "observation_id": "obs-VS000693",
+      "visit_id": "VS000693",
+      "observed_at": "2026-04-11T05:16:05Z",
+      "polarity": "positive",
+      "weight": 0.855
+     },
+     {
+      "observation_id": "obs-VS001428",
+      "visit_id": "VS001428",
+      "observed_at": "2026-04-23T04:36:26Z",
+      "polarity": "positive",
+      "weight": 0.855
+     },
+     {
+      "observation_id": "obs-VS002068",
+      "visit_id": "VS002068",
+      "observed_at": "2026-05-04T05:38:06Z",
+      "polarity": "negative",
+      "weight": 0.0
+     },
+     {
+      "observation_id": "obs-VS002826",
+      "visit_id": "VS002826",
+      "observed_at": "2026-05-15T05:35:37Z",
+      "polarity": "positive",
+      "weight": 0.72
+     },
+     {
+      "observation_id": "obs-VS003614",
+      "visit_id": "VS003614",
+      "observed_at": "2026-05-28T07:11:04Z",
+      "polarity": "positive",
+      "weight": 0.48
+     }
+    ],
+    "uncertainty": {
+     "radius_m": 566.9,
+     "basis": "empirical_p80",
+     "nominal": null,
+     "measured_coverage": 0.792,
+     "n_calibration": 24,
+     "source_stratum": "locality",
+     "fallback_applied": true,
+     "widened": true,
+     "widen_reason": "negative_accumulation",
+     "radius_map_version": "radius-map-v1"
+    },
+    "evidence_summary": {
+     "n_observations": 6,
+     "n_positives": 4,
+     "negatives_independent": 1,
+     "independent_confirmations": 3,
+     "duplicate_claims": 0,
+     "positive_weight_sum": 2.798487,
+     "negatives_move_coordinate": false,
+     "radius_widened": true,
+     "widen_reason": "negative_accumulation"
+    },
+    "reason_codes": [
+     {
+      "code": "arm_prior:field_evidence=+0.620",
+      "kind": "score_term",
+      "subject": "field_evidence",
+      "effect": 0.62,
+      "direction": "positive",
+      "label": "Arm prior field evidence"
+     },
+     {
+      "code": "granularity:street=+0.102",
+      "kind": "score_term",
+      "subject": "street",
+      "effect": 0.102,
+      "direction": "positive",
+      "label": "Granularity street"
+     },
+     {
+      "code": "evidence_promotion_eligible=+0.080",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.08,
+      "direction": "positive",
+      "label": "Evidence promotion eligible"
+     },
+     {
+      "code": "locality_match=+0.050",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.05,
+      "direction": "positive",
+      "label": "Locality match"
+     },
+     {
+      "code": "text_locality_similarity=+0.010",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.01,
+      "direction": "positive",
+      "label": "Text locality similarity"
+     },
+     {
+      "code": "text_char_similarity=+0.005",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.005,
+      "direction": "positive",
+      "label": "Text char similarity"
+     },
+     {
+      "code": "arm_agreement_x4=+0.120",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.12,
+      "direction": "positive",
+      "label": "Arm agreement x4"
+     },
+     {
+      "code": "cross_arm_agreement",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Cross arm agreement"
+     },
+     {
+      "code": "field_confirmed_x3",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Field confirmed x3"
+     },
+     {
+      "code": "negatives_independent=1",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Negatives independent"
+     },
+     {
+      "code": "promotion:ok",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Promotion ok"
+     },
+     {
+      "code": "negative_accumulation",
+      "kind": "widen",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Negative accumulation"
+     }
+    ],
+    "versions": {
+     "schema_version": "sutra-1.0",
+     "rule_version": "candidate-rules-v2",
+     "evidence_policy_version": "evidence-policy-v3",
+     "radius_map_version": "radius-map-v1",
+     "gate_rule_version": "gate-v2",
+     "purpose_rule_version": "purpose_rules-v1",
+     "directions_rule_version": "directions-v1",
+     "protocol_version": "protocol-v1-immutable",
+     "store_schema_version": "store-2"
+    }
+   }
+  },
+  "belief_AD002936_pre": {
+   "request": {
+    "method": "GET",
+    "path": "/v1/belief/AD002936?as_of=2026-05-20T05:53:45Z",
+    "body": null
+   },
+   "status": 200,
+   "response": {
+    "address_id": "AD002936",
+    "town_id": "T2",
+    "as_of": "2026-05-20T05:53:45Z",
+    "coordinate_space": "sutra_local_metric_plane:T2",
+    "belief": {
+     "address_id": "AD002936",
+     "as_of": "2026-05-20T05:53:45Z",
+     "belief_version": 5,
+     "computed_from": {
+      "observations_upto": "2026-05-20T05:53:45Z",
+      "policy": "evidence-policy-v3",
+      "rule_version": "candidate-rules-v2",
+      "radius_map_version": "radius-map-v1"
+     },
+     "place_id": "PL-AD002936",
+     "candidate_id": "c-a7fcc592cd99",
+     "candidate": {
+      "candidate_id": "c-a7fcc592cd99",
+      "address_id": "AD002936",
+      "arm": "field_evidence",
+      "source_ref": "visits:median(2)",
+      "x": 1130.5,
+      "y": 2970.0,
+      "granularity": "rooftop",
+      "arm_rank": 1,
+      "licence_class": "official",
+      "as_of_valid": "2026-05-07T05:14:44Z",
+      "provenance": {
+       "rule_version": "candidate-rules-v2",
+       "built_at": "2026-05-07T05:14:44Z",
+       "built_from": "store observations (median of agreeing independent check-ins)",
+       "n_observations": 2,
+       "spread_m": 1.1,
+       "observation_ids": [
+        "obs-VS001649",
+        "obs-VS002307"
+       ],
+       "stratum": "rooftop",
+       "primary_eligible": true,
+       "agreement_arms": 2,
+       "agreement_list": [
+        "field_evidence",
+        "memory"
+       ]
+      }
+     },
+     "tier": "CONFIRMED",
+     "status": "STABLE",
+     "radius": {
+      "radius_m": 566.9,
+      "basis": "empirical_p80",
+      "nominal": null,
+      "measured_coverage": 0.792,
+      "n_calibration": 24,
+      "source_stratum": "locality",
+      "widened": true,
+      "widen_reason": "negative_accumulation",
+      "radius_map_version": "radius-map-v1"
+     },
+     "support": {
+      "independent_confirmations": 2,
+      "negatives_independent": 1,
+      "n_positives": 2,
+      "n_observations": 4,
+      "positive_weight_sum": 1.347862,
+      "duplicate_claims": 0
+     },
+     "score": 1.050441,
+     "score_reasons": [
+      "arm_prior:field_evidence=+0.620",
+      "granularity:rooftop=+0.120",
+      "evidence_promotion_eligible=+0.080",
+      "locality_match=+0.050",
+      "pin_in_text_known=+0.040",
+      "text_locality_similarity=+0.013",
+      "text_char_similarity=+0.008",
+      "arm_agreement_x3=+0.120"
+     ],
+     "arms_available": [
+      "field_evidence",
+      "frozen_baseline",
+      "locality_centroid",
+      "memory",
+      "town_centroid"
+     ],
+     "arms_considered": [
+      {
+       "candidate_id": "c-a7fcc592cd99",
+       "arm": "field_evidence",
+       "score": 1.050441,
+       "primary_eligible": true,
+       "reasons": [
+        "arm_prior:field_evidence=+0.620",
+        "granularity:rooftop=+0.120",
+        "evidence_promotion_eligible=+0.080",
+        "locality_match=+0.050",
+        "pin_in_text_known=+0.040",
+        "text_locality_similarity=+0.013",
+        "text_char_similarity=+0.008",
+        "arm_agreement_x3=+0.120"
+       ]
+      },
+      {
+       "candidate_id": "c-19595c2ce91e",
+       "arm": "memory",
+       "score": 0.980441,
+       "primary_eligible": true,
+       "reasons": [
+        "arm_prior:memory=+0.550",
+        "granularity:rooftop=+0.120",
+        "evidence_promotion_eligible=+0.080",
+        "locality_match=+0.050",
+        "pin_in_text_known=+0.040",
+        "text_locality_similarity=+0.013",
+        "text_char_similarity=+0.008",
+        "arm_agreement_x3=+0.120"
+       ]
+      },
+      {
+       "candidate_id": "c-dc0c26bf12d1",
+       "arm": "field_evidence",
+       "score": 0.952441,
+       "primary_eligible": false,
+       "reasons": [
+        "arm_prior:field_evidence=+0.620",
+        "granularity:street=+0.102",
+        "locality_match=+0.050",
+        "pin_in_text_known=+0.040",
+        "text_locality_similarity=+0.013",
+        "text_char_similarity=+0.008",
+        "arm_agreement_x3=+0.120"
+       ]
+      },
+      {
+       "candidate_id": "c-fdfba7428031",
+       "arm": "field_evidence",
+       "score": 0.952441,
+       "primary_eligible": false,
+       "reasons": [
+        "arm_prior:field_evidence=+0.620",
+        "granularity:street=+0.102",
+        "locality_match=+0.050",
+        "pin_in_text_known=+0.040",
+        "text_locality_similarity=+0.013",
+        "text_char_similarity=+0.008",
+        "arm_agreement_x3=+0.120"
+       ]
+      },
+      {
+       "candidate_id": "c-503cfcf760dd",
+       "arm": "frozen_baseline",
+       "score": 0.622441,
+       "primary_eligible": true,
+       "reasons": [
+        "arm_prior:frozen_baseline=+0.500",
+        "granularity:locality=+0.072",
+        "coarse_precision_penalty=-0.060",
+        "locality_match=+0.050",
+        "pin_in_text_known=+0.040",
+        "text_locality_similarity=+0.013",
+        "text_char_similarity=+0.008"
+       ]
+      },
+      {
+       "candidate_id": "c-bfe7106b5d7e",
+       "arm": "locality_centroid",
+       "score": 0.562441,
+       "primary_eligible": true,
+       "reasons": [
+        "arm_prior:locality_centroid=+0.380",
+        "granularity:locality=+0.072",
+        "locality_match=+0.050",
+        "pin_in_text_known=+0.040",
+        "text_locality_similarity=+0.013",
+        "text_char_similarity=+0.008"
+       ]
+      },
+      {
+       "candidate_id": "c-6a5abef2b5d7",
+       "arm": "town_centroid",
+       "score": 0.290441,
+       "primary_eligible": true,
+       "reasons": [
+        "arm_prior:town_centroid=+0.150",
+        "granularity:town=+0.030",
+        "locality_match=+0.050",
+        "pin_in_text_known=+0.040",
+        "text_locality_similarity=+0.013",
+        "text_char_similarity=+0.008"
+       ]
+      }
+     ],
+     "promotion_detail": {
+      "n_strong": 2,
+      "collectors": [
+       "FA006"
+      ],
+      "periods": [
+       "2026-04",
+       "2026-05"
+      ],
+      "media_distinct": 2,
+      "period_ok": true,
+      "media_ok": true,
+      "space_ok": true,
+      "space_spread_m": 1.1,
+      "rule": ">=2 strong positives and (>=2 collectors or period-independent) and distinct media"
+     },
+     "reasons": [
+      "cross_arm_agreement",
+      "field_confirmed_x2",
+      "negatives_independent=1",
+      "promotion:ok"
+     ]
+    },
+    "observation_refs": [
+     {
+      "observation_id": "obs-VS000244",
+      "visit_id": "VS000244",
+      "observed_at": "2026-04-04T05:39:09Z",
+      "polarity": "negative",
+      "weight": 0.0
+     },
+     {
+      "observation_id": "obs-VS000969",
+      "visit_id": "VS000969",
+      "observed_at": "2026-04-16T04:32:58Z",
+      "polarity": "ambiguous",
+      "weight": 0.243
+     },
+     {
+      "observation_id": "obs-VS001649",
+      "visit_id": "VS001649",
+      "observed_at": "2026-04-27T05:33:42Z",
+      "polarity": "positive",
+      "weight": 0.57
+     },
+     {
+      "observation_id": "obs-VS002307",
+      "visit_id": "VS002307",
+      "observed_at": "2026-05-07T05:14:44Z",
+      "polarity": "positive",
+      "weight": 0.8
+     }
+    ],
+    "uncertainty": {
+     "radius_m": 566.9,
+     "basis": "empirical_p80",
+     "nominal": null,
+     "measured_coverage": 0.792,
+     "n_calibration": 24,
+     "source_stratum": "locality",
+     "fallback_applied": true,
+     "widened": true,
+     "widen_reason": "negative_accumulation",
+     "radius_map_version": "radius-map-v1"
+    },
+    "evidence_summary": {
+     "n_observations": 4,
+     "n_positives": 2,
+     "negatives_independent": 1,
+     "independent_confirmations": 2,
+     "duplicate_claims": 0,
+     "positive_weight_sum": 1.347862,
+     "negatives_move_coordinate": false,
+     "radius_widened": true,
+     "widen_reason": "negative_accumulation"
+    },
+    "reason_codes": [
+     {
+      "code": "arm_prior:field_evidence=+0.620",
+      "kind": "score_term",
+      "subject": "field_evidence",
+      "effect": 0.62,
+      "direction": "positive",
+      "label": "Arm prior field evidence"
+     },
+     {
+      "code": "granularity:rooftop=+0.120",
+      "kind": "score_term",
+      "subject": "rooftop",
+      "effect": 0.12,
+      "direction": "positive",
+      "label": "Granularity rooftop"
+     },
+     {
+      "code": "evidence_promotion_eligible=+0.080",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.08,
+      "direction": "positive",
+      "label": "Evidence promotion eligible"
+     },
+     {
+      "code": "locality_match=+0.050",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.05,
+      "direction": "positive",
+      "label": "Locality match"
+     },
+     {
+      "code": "pin_in_text_known=+0.040",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.04,
+      "direction": "positive",
+      "label": "Pin in text known"
+     },
+     {
+      "code": "text_locality_similarity=+0.013",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.013,
+      "direction": "positive",
+      "label": "Text locality similarity"
+     },
+     {
+      "code": "text_char_similarity=+0.008",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.008,
+      "direction": "positive",
+      "label": "Text char similarity"
+     },
+     {
+      "code": "arm_agreement_x3=+0.120",
+      "kind": "score_term",
+      "subject": null,
+      "effect": 0.12,
+      "direction": "positive",
+      "label": "Arm agreement x3"
+     },
+     {
+      "code": "cross_arm_agreement",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Cross arm agreement"
+     },
+     {
+      "code": "field_confirmed_x2",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Field confirmed x2"
+     },
+     {
+      "code": "negatives_independent=1",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Negatives independent"
+     },
+     {
+      "code": "promotion:ok",
+      "kind": "support",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Promotion ok"
+     },
+     {
+      "code": "negative_accumulation",
+      "kind": "widen",
+      "subject": null,
+      "effect": null,
+      "direction": "neutral",
+      "label": "Negative accumulation"
+     }
+    ],
+    "versions": {
+     "schema_version": "sutra-1.0",
+     "rule_version": "candidate-rules-v2",
+     "evidence_policy_version": "evidence-policy-v3",
+     "radius_map_version": "radius-map-v1",
+     "gate_rule_version": "gate-v2",
+     "purpose_rule_version": "purpose_rules-v1",
+     "directions_rule_version": "directions-v1",
+     "protocol_version": "protocol-v1-immutable",
+     "store_schema_version": "store-2"
+    }
+   }
+  },
+  "place_AD002936": {
+   "request": {
+    "method": "GET",
+    "path": "/v1/place/PL-AD002936?as_of=2026-06-01T00:00:00Z",
+    "body": null
+   },
+   "status": 200,
+   "response": {
+    "place_id": "PL-AD002936",
+    "as_of": "2026-06-01T00:00:00Z",
+    "member_address_ids": [
+     "AD002936"
+    ],
+    "identity_rule": "colocation<=30m|adjudicated",
+    "state": "MOVED_SUSPECTED",
+    "coordinate": {
+     "x": 1130.5,
+     "y": 2970.0,
+     "radius_m": 1202.6,
+     "basis": "empirical_p80",
+     "n_calibration": 24
+    },
+    "anchor_address_id": "AD002936",
+    "members": {
+     "AD002936": {
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "belief_version": 7,
+      "candidate_id": "c-a7fcc592cd99"
+     }
+    },
+    "contradictions": [
+     "AD002936"
+    ],
+    "history": [
+     {
+      "observation_id": "obs-VS000244",
+      "at": "2026-04-04T05:39:09Z"
+     },
+     {
+      "observation_id": "obs-VS000969",
+      "at": "2026-04-16T04:32:58Z"
+     },
+     {
+      "observation_id": "obs-VS001649",
+      "at": "2026-04-27T05:33:42Z"
+     },
+     {
+      "observation_id": "obs-VS002307",
+      "at": "2026-05-07T05:14:44Z"
+     },
+     {
+      "observation_id": "obs-VS003098",
+      "at": "2026-05-20T05:53:45Z"
+     },
+     {
+      "observation_id": "obs-VS003745",
+      "at": "2026-05-30T04:45:53Z"
+     }
+    ],
+    "merge_review": "none",
+    "projection": true,
+    "versions": [
+     {
+      "address_id": "AD002936",
+      "belief_version": 7,
+      "as_of": "2026-05-30T04:45:54Z",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "candidate_id": "c-a7fcc592cd99",
+      "radius_m": 1202.6,
+      "rules_version": "candidate-rules-v2",
+      "evidence_policy_version": "evidence-policy-v3",
+      "computed_at": "2026-10-07T19:04:11Z"
+     }
+    ],
+    "contradictions_detail": [
+     {
+      "address_id": "AD002936",
+      "kind": "MOVED_SUSPECTED",
+      "separation_m": null,
+      "threshold_m": 1619.6,
+      "radius_m": 1202.6,
+      "widen_reason": "negative_accumulation",
+      "negatives_independent": 2,
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "belief_version": 7,
+      "coordinate_unchanged": true,
+      "effect": "radius widened; tier capped"
+     }
+    ],
+    "unplaced": false,
+    "versions_note": "stored belief rows only \u2014 history is never recomputed into invented versions"
+   }
+  },
+  "tasks_T2": {
+   "request": {
+    "method": "GET",
+    "path": "/v1/tasks?town_id=T2&limit=15",
+    "body": null
+   },
+   "status": 200,
+   "response": {
+    "as_of": null,
+    "filters": {
+     "town_id": "T2",
+     "cause": null,
+     "state": "open",
+     "limit": 15
+    },
+    "count": 15,
+    "total_matching": 84,
+    "items": [
+     {
+      "task_id": "VF-AD000105-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000105",
+      "place_id": "PL-AD000105",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 2,
+      "radius_m": 1202.6,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-29T05:44:55Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000902",
+       "obs-VS002296"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000141-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000141",
+      "place_id": "PL-AD000141",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 5,
+      "radius_m": 1366.6,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-21T06:17:58Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000258",
+       "obs-VS000845",
+       "obs-VS001781",
+       "obs-VS002444",
+       "obs-VS003180"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000147-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000147",
+      "place_id": "PL-AD000147",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 2,
+      "radius_m": 1202.6,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-26T06:09:16Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS002159",
+       "obs-VS003482"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000182-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000182",
+      "place_id": "PL-AD000182",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 6,
+      "radius_m": 1421.3,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-30T05:06:07Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000470",
+       "obs-VS001125",
+       "obs-VS001721",
+       "obs-VS002386",
+       "obs-VS003099",
+       "obs-VS003746"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000194-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000194",
+      "place_id": "PL-AD000194",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 4,
+      "radius_m": 1312.0,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-25T06:57:29Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000550",
+       "obs-VS001340",
+       "obs-VS002654",
+       "obs-VS003407"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000275-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000275",
+      "place_id": "PL-AD000275",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 3,
+      "radius_m": 1257.3,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-18T05:53:10Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS001128",
+       "obs-VS001732",
+       "obs-VS002958"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000284-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000284",
+      "place_id": "PL-AD000284",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 2,
+      "radius_m": 1202.6,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-23T05:27:34Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000542",
+       "obs-VS002663"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000290-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000290",
+      "place_id": "PL-AD000290",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 3,
+      "radius_m": 1257.3,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-26T05:16:47Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000770",
+       "obs-VS001502",
+       "obs-VS002221"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000358-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000358",
+      "place_id": "PL-AD000358",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 2,
+      "radius_m": 1202.6,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-30T04:22:49Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000400",
+       "obs-VS003105"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000365-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000365",
+      "place_id": "PL-AD000365",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 2,
+      "radius_m": 1202.6,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-09T05:06:02Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000772",
+       "obs-VS002448"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000386-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000386",
+      "place_id": "PL-AD000386",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 2,
+      "radius_m": 1202.6,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-06T05:02:22Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000193",
+       "obs-VS002224"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000438-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000438",
+      "place_id": "PL-AD000438",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 2,
+      "radius_m": 1202.6,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-04-14T05:33:56Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000111",
+       "obs-VS000836"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000495-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000495",
+      "place_id": "PL-AD000495",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 4,
+      "radius_m": 1312.0,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-21T07:01:20Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS000178",
+       "obs-VS001858",
+       "obs-VS002515",
+       "obs-VS003172"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000531-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000531",
+      "place_id": "PL-AD000531",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 2,
+      "radius_m": 1202.6,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-28T05:37:40Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS001728",
+       "obs-VS002373"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     },
+     {
+      "task_id": "VF-AD000579-MOVED_SUSPECTED",
+      "kind": "verify_first",
+      "cause": "MOVED_SUSPECTED",
+      "state": "open",
+      "priority": 0.8,
+      "town_id": "T2",
+      "address_id": "AD000579",
+      "place_id": "PL-AD000579",
+      "tier": "APPROXIMATE",
+      "status": "MOVED_SUSPECTED",
+      "negatives_independent": 2,
+      "radius_m": 1202.6,
+      "rule_version": "candidate-rules-v2",
+      "at": "2026-05-19T06:01:29Z",
+      "recommended_action": {
+       "kind": "verification_visit",
+       "label": "Re-visit with a fresh independent collector.",
+       "clears_when": "two clean independent positives"
+      },
+      "evidence_refs": [
+       "obs-VS001050",
+       "obs-VS003023"
+      ],
+      "evidence_refs_basis": "negative_observations_upto_task_at"
+     }
+    ],
+    "facets": {
+     "by_cause": {
+      "MOVED_SUSPECTED": 84
+     },
+     "by_state": {
+      "open": 84
+     },
+     "by_town": {
+      "T2": 84
+     }
+    },
+    "next_cursor": "WzAuOCwgIkFEMDAwNTc5IiwgIlZGLUFEMDAwNTc5LU1PVkVEX1NVU1BFQ1RFRCJd"
+   }
+  },
+  "health": {
+   "request": {
+    "method": "GET",
+    "path": "/v1/health",
+    "body": null
+   },
+   "status": 200,
+   "response": {
+    "ok": true,
+    "versions": {
+     "schema_version": "sutra-1.0",
+     "rule_version": "candidate-rules-v2",
+     "evidence_policy_version": "evidence-policy-v3",
+     "radius_map_version": "radius-map-v1",
+     "gate_rule_version": "gate-v2",
+     "purpose_rule_version": "purpose_rules-v1",
+     "directions_rule_version": "directions-v1",
+     "protocol_version": "protocol-v1-immutable",
+     "store_schema_version": "store-2"
+    },
+    "rule_version": "candidate-rules-v2",
+    "radius_map_version": "radius-map-v1",
+    "store": {
+     "store_path": "sutra_store.sqlite",
+     "store_schema_version": "store-2",
+     "evidence_policy_version": "evidence-policy-v3",
+     "n_observations": 5578,
+     "counts": {
+      "observations": 5578,
+      "evidence_scores": 5578,
+      "belief_versions": 2757,
+      "task_events": 278,
+      "place_events": 0,
+      "place_members": 0,
+      "held_observations": 0,
+      "receipts": 0,
+      "ingest_log": 1
+     },
+     "attestation": {
+      "observations": {
+       "n": 5578,
+       "digest": "0af3e93fb746953f9c461eabf22813b568d3e2b384557e4cf08811244c7be45e"
+      },
+      "evidence_scores": {
+       "n": 5578,
+       "digest": "9955a9a217e76f8d5c167d5dbf9c084c65abf7c45e2a89b6b25ef499a623b51d"
+      },
+      "belief_versions": {
+       "n": 2757,
+       "digest": "72292d15ede2e4423fa783ab31ba2fdf828d6ed510881d13e31e9ca4f16e5fde"
+      },
+      "place_events": {
+       "n": 0,
+       "digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "task_events": {
+       "n": 278,
+       "digest": "157081e553e9d5e40e12f103a4ac5d9a0da03026ca1a0d0d321b5f82cf3f848a"
+      }
+     }
+    },
+    "packs": [
+     {
+      "town_id": "T1",
+      "pack_version": "pack-T1-04c433191978",
+      "valid_days": 7,
+      "valid_until": "2026-06-08T00:00:00Z",
+      "built_for_as_of": "2026-06-01T00:00:00Z",
+      "age_days_at_cut": 0.0,
+      "n_addresses": 942,
+      "n_landmarks": 82,
+      "n_localities": 12,
+      "contains_truth": false,
+      "contains_evidence": false,
+      "contains_polygons": false
+     },
+     {
+      "town_id": "T2",
+      "pack_version": "pack-T2-01ae94c33a90",
+      "valid_days": 7,
+      "valid_until": "2026-06-08T00:00:00Z",
+      "built_for_as_of": "2026-06-01T00:00:00Z",
+      "age_days_at_cut": 0.0,
+      "n_addresses": 952,
+      "n_landmarks": 77,
+      "n_localities": 12,
+      "contains_truth": false,
+      "contains_evidence": false,
+      "contains_polygons": false
+     },
+     {
+      "town_id": "T2",
+      "pack_version": "pack-T2-0575dcc6c0df",
+      "valid_days": 7,
+      "valid_until": "2026-06-08T00:00:00Z",
+      "built_for_as_of": "2026-06-01T00:00:00Z",
+      "age_days_at_cut": 0.0,
+      "n_addresses": 952,
+      "n_landmarks": 77,
+      "n_localities": 12,
+      "contains_truth": false,
+      "contains_evidence": false,
+      "contains_polygons": false
+     },
+     {
+      "town_id": "T2",
+      "pack_version": "pack-T2-7247f0bd3d96",
+      "valid_days": 7,
+      "valid_until": "2026-06-08T00:00:00Z",
+      "built_for_as_of": "2026-06-01T00:00:00Z",
+      "age_days_at_cut": 0.0,
+      "n_addresses": 952,
+      "n_landmarks": 77,
+      "n_localities": 12,
+      "contains_truth": false,
+      "contains_evidence": false,
+      "contains_polygons": false
+     }
+    ],
+    "gauges": {
+     "cold_addresses_by_town": {
+      "T1": 486,
+      "T2": 560,
+      "T3": 554
+     },
+     "open_tasks_by_cause": {
+      "MOVED_SUSPECTED": 273,
+      "CONTESTED": 5
+     },
+     "n_addresses_indexed": 3117
+    },
+    "indexes": {
+     "addresses": "7ab95ecf1023253ff802f9a422b292b5e29d81770e80b94599d9e4d49ab2ca73",
+     "landmark_names": "a85b91a1e96542a46efb6a009899f15b93e50c9cab0651a4b2f116b1a37167aa",
+     "landmarks": "a33054f9d7720c8a2898d6bb9414dc88d2ef207dc546465569e16b9aee6e1631",
+     "localities": "3fad5ac0dbc174835897d7ba5ee31481d2aa7b51ca285bd732f2815fdeec2933",
+     "localities_by_pin": "48f1ccb80cc138b6135529d4a0cf96f042547e2ca3379de3167c31d97e226d06",
+     "memory": "1193bb8272f5ef5e12b2909797b6010ac91042ffdf807ad1e889690c6bcb9d92",
+     "place_blocks": "7cc7925bec0144acfaae6a31643646b8bb6767a46f12c8aefbf63fb67efb8c4c",
+     "text_book": "cd9c39d426426be267cf55f20e257e1585115a95dfed0ecc8ad378a67a59e3d0",
+     "token_idf": "591246b35f3e368223a02b58cdba33620c3513bff2bbe78523860d7dfaad0b93",
+     "town_centroids": "a12a40853f2dd8184778bf78e096e11d82d982a65df40a2114a12744b05da102"
+    },
+    "counters": {
+     "s_eval_looks": 10,
+     "gate_decisions": 82,
+     "evidence_memory_policy_runs": 12
+    },
+    "offline": {
+     "held_observations": 0,
+     "receipts": 0,
+     "ingest_batches": 1
+    },
+    "s_eval_firewall": {
+     "reads_by_tools_total": 10,
+     "tuning_uses": 0,
+     "note": "the 100 surveyed addresses are never trained or tuned on"
+    },
+    "capabilities": {
+     "resolve": "implemented",
+     "evidence_ingest": "implemented",
+     "belief_read": "implemented",
+     "observations_read": "implemented",
+     "place_read": "implemented",
+     "verification_queue_read": "implemented",
+     "plane_geometry": "implemented",
+     "alternatives_explanation": "implemented",
+     "typed_reason_codes": "implemented",
+     "offline_pack_capture_replay": "implemented",
+     "task_state_transitions": "not_implemented",
+     "adjudication_write": "not_implemented",
+     "audit_chain_read": "not_implemented",
+     "batch_resolve": "not_implemented",
+     "overview": "not_implemented",
+     "metrics_api": "not_implemented",
+     "learned_ranker": "evaluated_not_adopted",
+     "model_training": "not_implemented",
+     "calibration_learning": "research_only",
+     "place_neighbour_arm": "not_implemented"
+    },
+    "capabilities_note": "status describes this build only; no measured figure is served by the API \u2014 the frozen evaluation is published on the Method & Trust page",
+    "as_of_cut": "2026-06-01T00:00:00Z"
+   }
+  },
+  "plane_T2": {
+   "request": {
+    "method": "GET",
+    "path": "/v1/plane/T2",
+    "body": null
+   },
+   "status": 200,
+   "response": {
+    "town_id": "T2",
+    "town_name": "Devgarh Nagar",
+    "as_of": null,
+    "coordinate_space": "sutra_local_metric_plane:T2",
+    "units": "metres",
+    "town_centroid": {
+     "x": 856.325,
+     "y": 109.342
+    },
+    "points": [
+     {
+      "id": "LM0109",
+      "kind": "landmark",
+      "name": "Community Hall",
+      "x": 815.5,
+      "y": -2841.7,
+      "pincode": null,
+      "landmark_type": "community_hall"
+     },
+     {
+      "id": "LM0110",
+      "kind": "landmark",
+      "name": "Bus Stop",
+      "x": 708.4,
+      "y": -3319.2,
+      "pincode": null,
+      "landmark_type": "bus_stop"
+     },
+     {
+      "id": "LM0111",
+      "kind": "landmark",
+      "name": "Hanuman Temple",
+      "x": 999.8,
+      "y": -3112.8,
+      "pincode": null,
+      "landmark_type": "hanuman_temple"
+     },
+     {
+      "id": "LM0112",
+      "kind": "landmark",
+      "name": "Milk Dairy",
+      "x": 599.8,
+      "y": -2839.0,
+      "pincode": null,
+      "landmark_type": "milk_dairy"
+     },
+     {
+      "id": "LM0113",
+      "kind": "landmark",
+      "name": "Medical Store",
+      "x": 647.5,
+      "y": -2633.2,
+      "pincode": null,
+      "landmark_type": "medical_store"
+     },
+     {
+      "id": "LM0114",
+      "kind": "landmark",
+      "name": "Ganesh Temple",
+      "x": 331.0,
+      "y": -3084.2,
+      "pincode": null,
+      "landmark_type": "ganesha_temple"
+     },
+     {
+      "id": "LM0115",
+      "kind": "landmark",
+      "name": "Church",
+      "x": 513.3,
+      "y": -3082.8,
+      "pincode": null,
+      "landmark_type": "church"
+     },
+     {
+      "id": "LM0117",
+      "kind": "landmark",
+      "name": "Ration Shop",
+      "x": 471.9,
+      "y": -3260.2,
+      "pincode": null,
+      "landmark_type": "ration_shop"
+     },
+     {
+      "id": "LM0118",
+      "kind": "landmark",
+      "name": "Bus Stop",
+      "x": 1193.3,
+      "y": -221.1,
+      "pincode": null,
+      "landmark_type": "bus_stop"
+     },
+     {
+      "id": "LM0122",
+      "kind": "landmark",
+      "name": "Hanuman Temple",
+      "x": 1309.5,
+      "y": 290.4,
+      "pincode": null,
+      "landmark_type": "hanuman_temple"
+     },
+     {
+      "id": "LM0125",
+      "kind": "landmark",
+      "name": "Post Office",
+      "x": 933.9,
+      "y": 299.4,
+      "pincode": null,
+      "landmark_type": "post_office"
+     },
+     {
+      "id": "LM0126",
+      "kind": "landmark",
+      "name": "Park",
+      "x": 1063.8,
+      "y": -332.3,
+      "pincode": null,
+      "landmark_type": "park"
+     },
+     {
+      "id": "LM0128",
+      "kind": "landmark",
+      "name": "Hanuman Temple",
+      "x": -532.5,
+      "y": 3389.7,
+      "pincode": null,
+      "landmark_type": "hanuman_temple"
+     },
+     {
+      "id": "LM0131",
+      "kind": "landmark",
+      "name": "Ganesh Temple",
+      "x": -506.7,
+      "y": 2816.1,
+      "pincode": null,
+      "landmark_type": "ganesha_temple"
+     },
+     {
+      "id": "LM0132",
+      "kind": "landmark",
+      "name": "Medical Store",
+      "x": -740.1,
+      "y": 2565.6,
+      "pincode": null,
+      "landmark_type": "medical_store"
+     },
+     {
+      "id": "LM0133",
+      "kind": "landmark",
+      "name": "Milk Dairy",
+      "x": -868.8,
+      "y": 3100.8,
+      "pincode": null,
+      "landmark_type": "milk_dairy"
+     },
+     {
+      "id": "LM0134",
+      "kind": "landmark",
+      "name": "Water Tank",
+      "x": -1016.5,
+      "y": 2852.7,
+      "pincode": null,
+      "landmark_type": "water_tank"
+     },
+     {
+      "id": "LM0135",
+      "kind": "landmark",
+      "name": "Ration Shop",
+      "x": -170.1,
+      "y": 3207.2,
+      "pincode": null,
+      "landmark_type": "ration_shop"
+     },
+     {
+      "id": "LM0136",
+      "kind": "landmark",
+      "name": "Park",
+      "x": 2698.3,
+      "y": 1438.9,
+      "pincode": null,
+      "landmark_type": "park"
+     },
+     {
+      "id": "LM0137",
+      "kind": "landmark",
+      "name": "Community Hall",
+      "x": 2083.6,
+      "y": 1623.1,
+      "pincode": null,
+      "landmark_type": "community_hall"
+     },
+     {
+      "id": "LM0138",
+      "kind": "landmark",
+      "name": "Ganesh Temple",
+      "x": 2326.7,
+      "y": 1917.1,
+      "pincode": null,
+      "landmark_type": "ganesha_temple"
+     },
+     {
+      "id": "LM0139",
+      "kind": "landmark",
+      "name": "Ration Shop",
+      "x": 2335.2,
+      "y": 1476.5,
+      "pincode": null,
+      "landmark_type": "ration_shop"
+     },
+     {
+      "id": "LM0140",
+      "kind": "landmark",
+      "name": "Govt School",
+      "x": 2072.1,
+      "y": 2097.3,
+      "pincode": null,
+      "landmark_type": "govt_school"
+     },
+     {
+      "id": "LM0141",
+      "kind": "landmark",
+      "name": "Hanuman Temple",
+      "x": 2450.4,
+      "y": 1996.0,
+      "pincode": null,
+      "landmark_type": "hanuman_temple"
+     },
+     {
+      "id": "LM0142",
+      "kind": "landmark",
+      "name": "Medical Store",
+      "x": 2471.8,
+      "y": 2057.0,
+      "pincode": null,
+      "landmark_type": "medical_store"
+     },
+     {
+      "id": "LM0143",
+      "kind": "landmark",
+      "name": "Masjid",
+      "x": 1922.2,
+      "y": 1715.5,
+      "pincode": null,
+      "landmark_type": "masjid"
+     },
+     {
+      "id": "LM0144",
+      "kind": "landmark",
+      "name": "Church",
+      "x": 2362.0,
+      "y": 1745.2,
+      "pincode": null,
+      "landmark_type": "church"
+     },
+     {
+      "id": "LM0145",
+      "kind": "landmark",
+      "name": "Ration Shop",
+      "x": -1872.5,
+      "y": -2486.2,
+      "pincode": null,
+      "landmark_type": "ration_shop"
+     },
+     {
+      "id": "LM0149",
+      "kind": "landmark",
+      "name": "Milk Dairy",
+      "x": -1625.7,
+      "y": -2955.8,
+      "pincode": null,
+      "landmark_type": "milk_dairy"
+     },
+     {
+      "id": "LM0150",
+      "kind": "landmark",
+      "name": "Bus Stop",
+      "x": -1421.3,
+      "y": -3128.0,
+      "pincode": null,
+      "landmark_type": "bus_stop"
+     },
+     {
+      "id": "LM0151",
+      "kind": "landmark",
+      "name": "Govt School",
+      "x": -1869.6,
+      "y": -2662.9,
+      "pincode": null,
+      "landmark_type": "govt_school"
+     },
+     {
+      "id": "LM0152",
+      "kind": "landmark",
+      "name": "Masjid",
+      "x": -1698.8,
+      "y": -2329.8,
+      "pincode": null,
+      "landmark_type": "masjid"
+     },
+     {
+      "id": "LM0153",
+      "kind": "landmark",
+      "name": "Hanuman Temple",
+      "x": -1528.9,
+      "y": -2813.1,
+      "pincode": null,
+      "landmark_type": "hanuman_temple"
+     },
+     {
+      "id": "LM0156",
+      "kind": "landmark",
+      "name": "Community Hall",
+      "x": 2958.1,
+      "y": 214.7,
+      "pincode": null,
+      "landmark_type": "community_hall"
+     },
+     {
+      "id": "LM0158",
+      "kind": "landmark",
+      "name": "Ganesh Temple",
+      "x": 2886.7,
+      "y": 951.8,
+      "pincode": null,
+      "landmark_type": "ganesha_temple"
+     },
+     {
+      "id": "LM0159",
+      "kind": "landmark",
+      "name": "Ration Shop",
+      "x": 2908.5,
+      "y": 940.9,
+      "pincode": null,
+      "landmark_type": "ration_shop"
+     },
+     {
+      "id": "LM0160",
+      "kind": "landmark",
+      "name": "Water Tank",
+      "x": 2844.3,
+      "y": 775.5,
+      "pincode": null,
+      "landmark_type": "water_tank"
+     },
+     {
+      "id": "LM0161",
+      "kind": "landmark",
+      "name": "Bus Stop",
+      "x": 2665.0,
+      "y": 509.0,
+      "pincode": null,
+      "landmark_type": "bus_stop"
+     },
+     {
+      "id": "LM0163",
+      "kind": "landmark",
+      "name": "Hanuman Temple",
+      "x": 1438.2,
+      "y": 927.4,
+      "pincode": null,
+      "landmark_type": "hanuman_temple"
+     },
+     {
+      "id": "LM0164",
+      "kind": "landmark",
+      "name": "Govt School",
+      "x": 970.9,
+      "y": 1390.7,
+      "pincode": null,
+      "landmark_type": "govt_school"
+     },
+     {
+      "id": "LM0165",
+      "kind": "landmark",
+      "name": "Petrol Bunk",
+      "x": 641.3,
+      "y": 1006.0,
+      "pincode": null,
+      "landmark_type": "petrol_bunk"
+     },
+     {
+      "id": "LM0166",
+      "kind": "landmark",
+      "name": "Medical Store",
+      "x": 1240.7,
+      "y": 1472.2,
+      "pincode": null,
+      "landmark_type": "medical_store"
+     },
+     {
+      "id": "LM0167",
+      "kind": "landmark",
+      "name": "Post Office",
+      "x": 674.9,
+      "y": 1444.0,
+      "pincode": null,
+      "landmark_type": "post_office"
+     },
+     {
+      "id": "LM0168",
+      "kind": "landmark",
+      "name": "Park",
+      "x": 750.7,
+      "y": 1451.6,
+      "pincode": null,
+      "landmark_type": "park"
+     },
+     {
+      "id": "LM0171",
+      "kind": "landmark",
+      "name": "Bus Stop",
+      "x": 1388.1,
+      "y": 1115.9,
+      "pincode": null,
+      "landmark_type": "bus_stop"
+     },
+     {
+      "id": "LM0172",
+      "kind": "landmark",
+      "name": "Govt School",
+      "x": 907.5,
+      "y": 2586.7,
+      "pincode": null,
+      "landmark_type": "govt_school"
+     },
+     {
+      "id": "LM0173",
+      "kind": "landmark",
+      "name": "Medical Store",
+      "x": 1213.8,
+      "y": 2524.6,
+      "pincode": null,
+      "landmark_type": "medical_store"
+     },
+     {
+      "id": "LM0175",
+      "kind": "landmark",
+      "name": "Community Hall",
+      "x": 492.6,
+      "y": 2650.8,
+      "pincode": null,
+      "landmark_type": "community_hall"
+     },
+     {
+      "id": "LM0177",
+      "kind": "landmark",
+      "name": "Ration Shop",
+      "x": 940.8,
+      "y": 2546.9,
+      "pincode": null,
+      "landmark_type": "ration_shop"
+     },
+     {
+      "id": "LM0179",
+      "kind": "landmark",
+      "name": "Bus Stop",
+      "x": 1097.3,
+      "y": 2655.1,
+      "pincode": null,
+      "landmark_type": "bus_stop"
+     },
+     {
+      "id": "LM0180",
+      "kind": "landmark",
+      "name": "Petrol Bunk",
+      "x": 900.0,
+      "y": 3101.3,
+      "pincode": null,
+      "landmark_type": "petrol_bunk"
+     },
+     {
+      "id": "LM0182",
+      "kind": "landmark",
+      "name": "Milk Dairy",
+      "x": -280.8,
+      "y": -278.0,
+      "pincode": null,
+      "landmark_type": "milk_dairy"
+     },
+     {
+      "id": "LM0183",
+      "kind": "landmark",
+      "name": "Water Tank",
+      "x": -669.0,
+      "y": -472.4,
+      "pincode": null,
+      "landmark_type": "water_tank"
+     },
+     {
+      "id": "LM0185",
+      "kind": "landmark",
+      "name": "Bus Stop",
+      "x": -214.4,
+      "y": -209.1,
+      "pincode": null,
+      "landmark_type": "bus_stop"
+     },
+     {
+      "id": "LM0187",
+      "kind": "landmark",
+      "name": "Masjid",
+      "x": -651.2,
+      "y": -773.0,
+      "pincode": null,
+      "landmark_type": "masjid"
+     },
+     {
+      "id": "LM0188",
+      "kind": "landmark",
+      "name": "Hanuman Temple",
+      "x": -347.0,
+      "y": -84.0,
+      "pincode": null,
+      "landmark_type": "hanuman_temple"
+     },
+     {
+      "id": "LM0189",
+      "kind": "landmark",
+      "name": "Post Office",
+      "x": -600.4,
+      "y": -539.8,
+      "pincode": null,
+      "landmark_type": "post_office"
+     },
+     {
+      "id": "LM0191",
+      "kind": "landmark",
+      "name": "Hanuman Temple",
+      "x": 2469.1,
+      "y": -1329.6,
+      "pincode": null,
+      "landmark_type": "hanuman_temple"
+     },
+     {
+      "id": "LM0192",
+      "kind": "landmark",
+      "name": "Masjid",
+      "x": 2048.1,
+      "y": -1324.2,
+      "pincode": null,
+      "landmark_type": "masjid"
+     },
+     {
+      "id": "LM0193",
+      "kind": "landmark",
+      "name": "Ration Shop",
+      "x": 2661.9,
+      "y": -1811.1,
+      "pincode": null,
+      "landmark_type": "ration_shop"
+     },
+     {
+      "id": "LM0194",
+      "kind": "landmark",
+      "name": "Water Tank",
+      "x": 2577.3,
+      "y": -1320.1,
+      "pincode": null,
+      "landmark_type": "water_tank"
+     },
+     {
+      "id": "LM0195",
+      "kind": "landmark",
+      "name": "Govt School",
+      "x": 2441.1,
+      "y": -1253.6,
+      "pincode": null,
+      "landmark_type": "govt_school"
+     },
+     {
+      "id": "LM0197",
+      "kind": "landmark",
+      "name": "Bus Stop",
+      "x": 2378.9,
+      "y": -1282.9,
+      "pincode": null,
+      "landmark_type": "bus_stop"
+     },
+     {
+      "id": "LM0198",
+      "kind": "landmark",
+      "name": "Post Office",
+      "x": 2447.4,
+      "y": -1191.9,
+      "pincode": null,
+      "landmark_type": "post_office"
+     },
+     {
+      "id": "LM0199",
+      "kind": "landmark",
+      "name": "Masjid",
+      "x": 1346.4,
+      "y": -2520.7,
+      "pincode": null,
+      "landmark_type": "masjid"
+     },
+     {
+      "id": "LM0200",
+      "kind": "landmark",
+      "name": "Govt School",
+      "x": 1185.3,
+      "y": -2043.0,
+      "pincode": null,
+      "landmark_type": "govt_school"
+     },
+     {
+      "id": "LM0201",
+      "kind": "landmark",
+      "name": "Milk Dairy",
+      "x": 1268.9,
+      "y": -2044.0,
+      "pincode": null,
+      "landmark_type": "milk_dairy"
+     },
+     {
+      "id": "LM0203",
+      "kind": "landmark",
+      "name": "Ration Shop",
+      "x": 1041.5,
+      "y": -1855.2,
+      "pincode": null,
+      "landmark_type": "ration_shop"
+     },
+     {
+      "id": "LM0204",
+      "kind": "landmark",
+      "name": "Medical Store",
+      "x": 1722.9,
+      "y": -2340.4,
+      "pincode": null,
+      "landmark_type": "medical_store"
+     },
+     {
+      "id": "LM0207",
+      "kind": "landmark",
+      "name": "Church",
+      "x": 1440.8,
+      "y": -1984.6,
+      "pincode": null,
+      "landmark_type": "church"
+     },
+     {
+      "id": "LM0208",
+      "kind": "landmark",
+      "name": "Govt School",
+      "x": -128.5,
+      "y": 1670.7,
+      "pincode": null,
+      "landmark_type": "govt_school"
+     },
+     {
+      "id": "LM0209",
+      "kind": "landmark",
+      "name": "Park",
+      "x": 47.0,
+      "y": 1401.3,
+      "pincode": null,
+      "landmark_type": "park"
+     },
+     {
+      "id": "LM0211",
+      "kind": "landmark",
+      "name": "Masjid",
+      "x": -310.8,
+      "y": 990.8,
+      "pincode": null,
+      "landmark_type": "masjid"
+     },
+     {
+      "id": "LM0212",
+      "kind": "landmark",
+      "name": "Ration Shop",
+      "x": 107.8,
+      "y": 1245.9,
+      "pincode": null,
+      "landmark_type": "ration_shop"
+     },
+     {
+      "id": "LM0214",
+      "kind": "landmark",
+      "name": "Ganesh Temple",
+      "x": -301.2,
+      "y": 792.9,
+      "pincode": null,
+      "landmark_type": "ganesha_temple"
+     },
+     {
+      "id": "LM0215",
+      "kind": "landmark",
+      "name": "Water Tank",
+      "x": 126.5,
+      "y": 1694.7,
+      "pincode": null,
+      "landmark_type": "water_tank"
+     },
+     {
+      "id": "LM0216",
+      "kind": "landmark",
+      "name": "Petrol Bunk",
+      "x": -643.5,
+      "y": 1512.2,
+      "pincode": null,
+      "landmark_type": "petrol_bunk"
+     },
+     {
+      "id": "T2-L01",
+      "kind": "locality",
+      "name": "Shivaji Nagar",
+      "x": 688.3,
+      "y": -3007.0,
+      "pincode": "970202"
+     },
+     {
+      "id": "T2-L02",
+      "kind": "locality",
+      "name": "Indira Colony",
+      "x": 1046.9,
+      "y": -2.6,
+      "pincode": "970202"
+     },
+     {
+      "id": "T2-L03",
+      "kind": "locality",
+      "name": "Ambedkar Nagar",
+      "x": -603.5,
+      "y": 2996.1,
+      "pincode": "970204"
+     },
+     {
+      "id": "T2-L04",
+      "kind": "locality",
+      "name": "Ram Nagar",
+      "x": 2308.9,
+      "y": 1849.5,
+      "pincode": "970203"
+     },
+     {
+      "id": "T2-L05",
+      "kind": "locality",
+      "name": "Subhash Nagar",
+      "x": -1600.3,
+      "y": -2801.9,
+      "pincode": "970201"
+     },
+     {
+      "id": "T2-L06",
+      "kind": "locality",
+      "name": "Nehru Colony",
+      "x": 3029.6,
+      "y": 575.7,
+      "pincode": "970203"
+     },
+     {
+      "id": "T2-L07",
+      "kind": "locality",
+      "name": "Gandhi Basti",
+      "x": 987.4,
+      "y": 1270.5,
+      "pincode": "970203"
+     },
+     {
+      "id": "T2-L08",
+      "kind": "locality",
+      "name": "Azad Mohalla",
+      "x": 986.3,
+      "y": 2772.6,
+      "pincode": "970203"
+     },
+     {
+      "id": "T2-L09",
+      "kind": "locality",
+      "name": "Shastri Nagar",
+      "x": -533.7,
+      "y": -484.7,
+      "pincode": "970201"
+     },
+     {
+      "id": "T2-L10",
+      "kind": "locality",
+      "name": "Krishna Puri",
+      "x": 2589.2,
+      "y": -1273.1,
+      "pincode": "970202"
+     },
+     {
+      "id": "T2-L11",
+      "kind": "locality",
+      "name": "Patel Nagar",
+      "x": 1577.4,
+      "y": -2059.5,
+      "pincode": "970202"
+     },
+     {
+      "id": "T2-L12",
+      "kind": "locality",
+      "name": "Tilak Nagar",
+      "x": -200.6,
+      "y": 1476.5,
+      "pincode": "970204"
+     }
+    ],
+    "counts": {
+     "localities": 12,
+     "landmarks": 77,
+     "addresses_indexed": 952
+    },
+    "extent": {
+     "x_min": -2207.9,
+     "x_max": 3365.0,
+     "y_min": -3654.6,
+     "y_max": 3725.1,
+     "basis": "bbox_of_returned_points_padded",
+     "pad_m": 335.4
+    },
+    "address_geometry_endpoint": "/v1/geometry/{address_id}?town_id=T2",
+    "renderer_hint": {
+     "preferred": "svg",
+     "graticule_m": {
+      "minor": 10,
+      "major": 100
+     },
+     "note": "equal-scale x/y; the frontend owns viewBox and presentation"
+    }
+   }
+  }
+ },
+ "key": {
+  "resolve_AD003067": "POST /resolve \u2014 AD003067 (real address text, as_of 2026-06-01T00:00:00Z)",
+  "resolve_AD002936": "POST /resolve \u2014 AD002936 (real address text, as_of 2026-06-01T00:00:00Z)",
+  "resolve_refuse": "POST /resolve \u2014 AD000002, request_purpose NOTICE_SERVICE (real refusal)",
+  "geometry_AD003067": "GET /v1/geometry/AD003067",
+  "geometry_AD002936": "GET /v1/geometry/AD002936",
+  "observations_AD003067": "GET /v1/address/AD003067/observations",
+  "observations_AD002936": "GET /v1/address/AD002936/observations",
+  "belief_AD003067": "GET /v1/belief/AD003067",
+  "belief_AD002936_pre": "GET /v1/belief/AD002936 as_of 2026-05-20T05:53:45Z (one second before the real flip)",
+  "place_AD002936": "GET /v1/place/PL-AD002936",
+  "tasks_T2": "GET /v1/tasks?town_id=T2&limit=15",
+  "health": "GET /v1/health",
+  "plane_T2": "GET /v1/plane/T2"
+ }
+}

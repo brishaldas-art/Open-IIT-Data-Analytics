@@ -1,0 +1,76 @@
+table,column,stage,role,note
+accounts,account_id,T0,key (not a feature),grouping key
+accounts,lender_id,T0,business-value context,registry link; no address information
+accounts,portfolio,T0,exposure-propensity variable,which books get visited (met 38.2–47.6%)
+accounts,income_type,T0,exposure-propensity variable,targeting segment
+accounts,town_id,T0,business-value context,consistency check only: 0 mismatches vs addresses.town_id; does NOT locate OUT addresses (account town = operating town; 226/237 OUT rows are native-village records)
+accounts,preferred_language,T0,exposure-propensity variable,language-match test: matched 38.7% met vs unmatched 40.8% (n=331) → no usable signal
+accounts,bucket_start,T0,exposure-propensity variable,delinquency bucket
+accounts,dpd_start,T0,exposure-propensity variable,exposure rises with DPD; yield flat (37.5–42.9%)
+accounts,emi_amount,T0,business-value context,value side; not a location feature
+accounts,overdue_start,T0,business-value context,value side
+accounts,outstanding,T0,business-value context,value side; met/not-met median ratio 0.99
+accounts,salary_credit_day,T0,excluded,68.2% N/A; retention-sensitive
+accounts,bureau_score_band,T0,excluded,not location; fairness-sensitive
+accounts,other_active_loans,T0,excluded,not location
+accounts,paid_other_lenders_30d,T0,excluded,not location
+accounts,last_bounce_reason,T0,excluded,not location
+accounts,ability_to_pay_estimate,T0,excluded,30.3% missing; not location
+accounts,prev_ptp_count,T0,excluded,cross-domain (PS1/PS2 promise history)
+accounts,prev_ptp_broken,T0,excluded,cross-domain (PS1/PS2 promise history)
+accounts,dialling_arm,T0,excluded,PS2 experiment artefact
+addresses,address_id,T0,key (not a feature),"record key, not a place identity (191 addresses share 81 places)"
+addresses,account_id,T0,key (not a feature),grouping key; splits run on it
+addresses,address_text,T0,model feature,the only feature the geocoder consumes
+addresses,address_type,T0,exposure-propensity variable,residence 54.5% visited · office 33.4% · permanent_native 0%
+addresses,source,T0,business-value context,"provenance (kyc_origination 3,090 / skip_trace 27); 27 rows name a PS2 process — label only, no PS2 payload"
+addresses,added_date,T0,evaluation-only,"time axis (lag to first visit, median 14 d)"
+addresses,town_id,T0,candidate-generation input,constrains candidates; 237 OUT → no candidates
+agents,agent_id,T2,integrity feature,collector grouping; evidence weights by agent
+agents,channel,T2,integrity feature,only 'field' appears in visits (9 agents)
+agents,language_team,T2,exposure-propensity variable,no benefit measured (matched 38.7% vs 40.8%); monitoring only
+agents,town_id,T2,integrity feature,100% present for field agents; beat sanity checks
+agents,tenure_months,T2,integrity feature,tenure↔met r=−0.16 (nil); monitoring only
+agents,shift,T2,excluded,single value 'day' → zero variance
+dial_attempts,attempt_id,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,account_id,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,phone_id,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,attempt_ts,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,channel,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,agent_id,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,dialling_arm,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,selection_propensity,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,network_response,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,ring_duration_s,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,talk_duration_s,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,hangup_by,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,disposition,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,remark,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,ptp_id,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+dial_attempts,has_transcript,—,excluded,"PS1+PS2-assigned; call timeline, not visit timeline; no PS3 artefact reads it"
+field_visits,visit_id,T3,key (not a feature),evidence record key
+field_visits,account_id,T0,key (not a feature),grouping key
+field_visits,address_id,T0,key (not a feature),evidence-to-place binding
+field_visits,agent_id,T2,integrity feature,who collected; used for weights & diagnostics
+field_visits,visit_date,T2,evaluation-only,scheduling/time axis; split-aware replay
+field_visits,start_ts,T3,integrity feature,timing plausibility (all agents 79.5–88.7% of check-ins 10:00–12:59 — schedule artefact)
+field_visits,checkin_ts,T3,field-evidence input,evidence timestamp
+field_visits,checkin_x,T3,field-evidence input,location evidence for FUTURE decisions only
+field_visits,checkin_y,T3,field-evidence input,location evidence for FUTURE decisions only
+field_visits,gps_accuracy_m,T3,field-evidence input,quality weight (median 9.8 m)
+field_visits,dwell_s,T3,field-evidence input,weight (median 207 s); dwell↔outcome link is a synthetic artefact
+field_visits,outcome,T3,field-evidence input,the learning signal; address_not_traceable never a negative label
+field_visits,ptp_id,T3,excluded,89.2% null; cross-domain (PS1)
+field_visits,remark,T3,field-evidence input,research lane: 208 landmark-bearing (3.7%); never train on text as label
+field_visits,photo_hash,T3,integrity feature,media duplication (FA009 162/610)
+lenders,lender_id,T0,business-value context,assigned to PS3; measured no signal (style varies ≤1.4 pts)
+lenders,lender_name,T0,business-value context,assigned to PS3; measured no signal (style varies ≤1.4 pts)
+lenders,lender_type,T0,business-value context,assigned to PS3; measured no signal (style varies ≤1.4 pts)
+lenders,kyc_address_format,T0,business-value context,assigned to PS3; measured no signal (style varies ≤1.4 pts)
+payments,payment_id,—,excluded,PS1+PS2-assigned; post-outcome by construction; no PS3 artefact reads it
+payments,account_id,—,excluded,PS1+PS2-assigned; post-outcome by construction; no PS3 artefact reads it
+payments,payment_ts,T4,excluded,PS1+PS2-assigned; post-outcome by construction; no PS3 artefact reads it
+payments,amount,T4,excluded,PS1+PS2-assigned; post-outcome by construction; no PS3 artefact reads it
+payments,channel,T4,excluded,PS1+PS2-assigned; post-outcome by construction; no PS3 artefact reads it
+splits,account_id,T0,key (not a feature),protocol key
+splits,split,T0,evaluation-only,"official partition; account-level, time-blind"

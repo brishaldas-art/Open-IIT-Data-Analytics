@@ -1,0 +1,13 @@
+file,rows,cols,key,key_unique,key_is_pk,full_row_dupes,null_cells,null_cell_pct
+accounts.csv,2400,20,account_id,2400,True,0,2365,4.93
+addresses.csv,3117,7,address_id,3117,True,0,0,0.0
+agents.csv,30,6,agent_id,30,True,0,22,12.22
+baseline_geocodes.csv,2880,4,address_id,2880,True,0,0,0.0
+field_visits.csv,5578,15,visit_id,5578,True,0,4973,5.94
+landmarks_poi.csv,240,6,poi_id,240,True,0,0,0.0
+lenders.csv,6,4,lender_id,6,True,0,0,0.0
+localities.csv,36,6,locality_id,36,True,0,0,0.0
+splits.csv,2400,2,account_id,2400,True,0,0,0.0
+surveyed_addresses.csv,100,3,address_id,100,True,0,0,0.0
+towns.csv,3,4,town_id,3,True,0,0,0.0
+visit_gps_points.csv,160406,6,visit_id,5578,False,0,0,0.0

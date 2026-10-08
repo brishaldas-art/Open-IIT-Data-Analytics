@@ -1,0 +1,5034 @@
+{
+  "arm_comparisons_vs_production": {
+    "S-EVAL (locked check)": {
+      "address_book": {
+        "B1_err_both_fire": {
+          "n": 0
+        },
+        "B1_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B3_err_both_fire": {
+          "n": 0
+        },
+        "B3_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B4_err_both_fire": {
+          "n": 0
+        },
+        "B4_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "extra_firing_quality": {
+          "B1": {
+            "B1_only_firings": null,
+            "B2_only_firings": null,
+            "both_fire": null
+          },
+          "B3": {
+            "B2_only_firings": null,
+            "B3_only_firings": null,
+            "both_fire": null
+          },
+          "B4": {
+            "B2_only_firings": null,
+            "B4_only_firings": null,
+            "both_fire": null
+          }
+        }
+      },
+      "locality_centroid": {
+        "B1_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 98,
+          "n_both_fire": 98,
+          "n_groups": 97,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B1_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B3_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 98,
+          "n_both_fire": 98,
+          "n_groups": 97,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B3_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B4_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 98,
+          "n_both_fire": 98,
+          "n_groups": 97,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B4_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0303,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 0.01,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "extra_firing_quality": {
+          "B1": {
+            "B1_only_firings": null,
+            "B2_only_firings": null,
+            "both_fire": {
+              "hit_100m": 0.0204,
+              "hit_500m": 0.8163,
+              "median_err_m": 369.6,
+              "n": 98
+            }
+          },
+          "B3": {
+            "B2_only_firings": null,
+            "B3_only_firings": null,
+            "both_fire": {
+              "hit_100m": 0.0204,
+              "hit_500m": 0.8163,
+              "median_err_m": 369.6,
+              "n": 98
+            }
+          },
+          "B4": {
+            "B2_only_firings": null,
+            "B4_only_firings": {
+              "hit_100m": 0.0,
+              "hit_500m": 1.0,
+              "median_err_m": 370.1,
+              "n": 1
+            },
+            "both_fire": {
+              "hit_100m": 0.0204,
+              "hit_500m": 0.8163,
+              "median_err_m": 369.6,
+              "n": 98
+            }
+          }
+        }
+      },
+      "official_landmark": {
+        "B1_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 11,
+          "n_both_fire": 11,
+          "n_groups": 11,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B1_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": -0.03,
+          "level": 0.95,
+          "lo": -0.1386,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": -0.08,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B3_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 19,
+          "n_both_fire": 19,
+          "n_groups": 19,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B3_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B4_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 19,
+          "n_both_fire": 19,
+          "n_groups": 19,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B4_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "extra_firing_quality": {
+          "B1": {
+            "B1_only_firings": null,
+            "B2_only_firings": {
+              "hit_100m": 0.25,
+              "hit_500m": 0.5,
+              "median_err_m": 992.3,
+              "n": 8
+            },
+            "both_fire": {
+              "hit_100m": 0.0909,
+              "hit_500m": 0.3636,
+              "median_err_m": 1956.3,
+              "n": 11
+            }
+          },
+          "B3": {
+            "B2_only_firings": null,
+            "B3_only_firings": null,
+            "both_fire": {
+              "hit_100m": 0.1579,
+              "hit_500m": 0.4211,
+              "median_err_m": 1832.6,
+              "n": 19
+            }
+          },
+          "B4": {
+            "B2_only_firings": null,
+            "B4_only_firings": null,
+            "both_fire": {
+              "hit_100m": 0.1579,
+              "hit_500m": 0.4211,
+              "median_err_m": 1832.6,
+              "n": 19
+            }
+          }
+        }
+      }
+    },
+    "S_VAL (selection)": {
+      "address_book": {
+        "B1_err_both_fire": {
+          "n": 0
+        },
+        "B1_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B3_err_both_fire": {
+          "n": 0
+        },
+        "B3_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B4_err_both_fire": {
+          "n": 0
+        },
+        "B4_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "extra_firing_quality": {
+          "B1": {
+            "B1_only_firings": null,
+            "B2_only_firings": null,
+            "both_fire": null
+          },
+          "B3": {
+            "B2_only_firings": null,
+            "B3_only_firings": null,
+            "both_fire": null
+          },
+          "B4": {
+            "B2_only_firings": null,
+            "B4_only_firings": null,
+            "both_fire": null
+          }
+        }
+      },
+      "locality_centroid": {
+        "B1_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 290,
+          "n_both_fire": 290,
+          "n_groups": 275,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B1_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B3_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 290,
+          "n_both_fire": 290,
+          "n_groups": 275,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B3_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B4_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 290,
+          "n_both_fire": 290,
+          "n_groups": 275,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B4_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0105,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 0.0034,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "extra_firing_quality": {
+          "B1": {
+            "B1_only_firings": null,
+            "B2_only_firings": null,
+            "both_fire": {
+              "hit_100m": 0.0483,
+              "hit_500m": 0.8724,
+              "median_err_m": 320.7,
+              "n": 290
+            }
+          },
+          "B3": {
+            "B2_only_firings": null,
+            "B3_only_firings": null,
+            "both_fire": {
+              "hit_100m": 0.0483,
+              "hit_500m": 0.8724,
+              "median_err_m": 320.7,
+              "n": 290
+            }
+          },
+          "B4": {
+            "B2_only_firings": null,
+            "B4_only_firings": {
+              "hit_100m": 0.0,
+              "hit_500m": 0.0,
+              "median_err_m": 2988.0,
+              "n": 1
+            },
+            "both_fire": {
+              "hit_100m": 0.0483,
+              "hit_500m": 0.8724,
+              "median_err_m": 320.7,
+              "n": 290
+            }
+          }
+        }
+      },
+      "official_landmark": {
+        "B1_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 32,
+          "n_both_fire": 32,
+          "n_groups": 31,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B1_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": -0.0307,
+          "level": 0.95,
+          "lo": -0.0828,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": -0.0548,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B3_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 48,
+          "n_both_fire": 48,
+          "n_groups": 46,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B3_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "B4_err_both_fire": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 48,
+          "n_both_fire": 48,
+          "n_groups": 46,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "B4_fire_rate": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "extra_firing_quality": {
+          "B1": {
+            "B1_only_firings": null,
+            "B2_only_firings": {
+              "hit_100m": 0.0625,
+              "hit_500m": 0.4375,
+              "median_err_m": 698.8,
+              "n": 16
+            },
+            "both_fire": {
+              "hit_100m": 0.0312,
+              "hit_500m": 0.5312,
+              "median_err_m": 412.0,
+              "n": 32
+            }
+          },
+          "B3": {
+            "B2_only_firings": null,
+            "B3_only_firings": null,
+            "both_fire": {
+              "hit_100m": 0.0417,
+              "hit_500m": 0.5,
+              "median_err_m": 483.2,
+              "n": 48
+            }
+          },
+          "B4": {
+            "B2_only_firings": null,
+            "B4_only_firings": null,
+            "both_fire": {
+              "hit_100m": 0.0417,
+              "hit_500m": 0.5,
+              "median_err_m": 483.2,
+              "n": 48
+            }
+          }
+        }
+      }
+    }
+  },
+  "as_of": "2026-06-01T00:00:00Z",
+  "best_ring_on_S_VAL": "B1",
+  "comparisons_vs_production": {
+    "S-EVAL (locked check)": {
+      "B1": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "a",
+          "hi": -1.4071,
+          "level": 0.95,
+          "lo": -2.576,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": -2.0183,
+          "resamples": 10000,
+          "resolved": true,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": -0.0505,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": -0.02,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": -0.4963,
+          "level": 0.95,
+          "lo": -0.532,
+          "n": 3117,
+          "n_groups": 3007,
+          "point_delta": -0.514,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      },
+      "B3": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 3.4321,
+          "level": 0.95,
+          "lo": 0.4395,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 1.8208,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 3117,
+          "n_groups": 3007,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      },
+      "B4": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 32.4794,
+          "level": 0.95,
+          "lo": 8.1537,
+          "n": 100,
+          "n_groups": 99,
+          "point_delta": 19.3668,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 100,
+          "n_groups": 99,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 3117,
+          "n_groups": 3007,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      }
+    },
+    "S_TRAIN+S_VAL (stability)": {
+      "B1": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "a",
+          "hi": -2.0052,
+          "level": 0.95,
+          "lo": -2.4202,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": -2.2131,
+          "resamples": 10000,
+          "resolved": true,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": -0.0105,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": -0.0034,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": -0.4963,
+          "level": 0.95,
+          "lo": -0.532,
+          "n": 3117,
+          "n_groups": 3007,
+          "point_delta": -0.514,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      },
+      "B3": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 2.2076,
+          "level": 0.95,
+          "lo": 0.8156,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 1.4652,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 3117,
+          "n_groups": 3007,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      },
+      "B4": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 21.2236,
+          "level": 0.95,
+          "lo": 8.9194,
+          "n": 292,
+          "n_groups": 276,
+          "point_delta": 14.8095,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 292,
+          "n_groups": 276,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 3117,
+          "n_groups": 3007,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      }
+    },
+    "S_VAL (selection)": {
+      "B1": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "a",
+          "hi": -1.8495,
+          "level": 0.95,
+          "lo": -2.6327,
+          "n": 69,
+          "n_groups": 69,
+          "point_delta": -2.2372,
+          "resamples": 10000,
+          "resolved": true,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": -0.4963,
+          "level": 0.95,
+          "lo": -0.532,
+          "n": 3117,
+          "n_groups": 3007,
+          "point_delta": -0.514,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      },
+      "B3": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 2.037,
+          "level": 0.95,
+          "lo": 0.1035,
+          "n": 69,
+          "n_groups": 69,
+          "point_delta": 0.9283,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 3117,
+          "n_groups": 3007,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      },
+      "B4": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 24.8884,
+          "level": 0.95,
+          "lo": 2.8843,
+          "n": 69,
+          "n_groups": 69,
+          "point_delta": 12.3191,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 69,
+          "n_groups": 69,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 3117,
+          "n_groups": 3007,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      }
+    },
+    "leave-block-out (stress)": {
+      "B1": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "a",
+          "hi": -2.0186,
+          "level": 0.95,
+          "lo": -2.454,
+          "n": 268,
+          "n_groups": 259,
+          "point_delta": -2.2321,
+          "resamples": 10000,
+          "resolved": true,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "level": 0.95,
+          "lo": -0.0114,
+          "n": 268,
+          "n_groups": 259,
+          "point_delta": -0.0037,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": -0.4963,
+          "level": 0.95,
+          "lo": -0.532,
+          "n": 3117,
+          "n_groups": 3007,
+          "point_delta": -0.514,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      },
+      "B3": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 2.338,
+          "level": 0.95,
+          "lo": 0.8369,
+          "n": 268,
+          "n_groups": 259,
+          "point_delta": 1.5451,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 3117,
+          "n_groups": 3007,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      },
+      "B4": {
+        "coverage_labelled": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "latency_ms": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 22.1052,
+          "level": 0.95,
+          "lo": 9.2146,
+          "n": 268,
+          "n_groups": 259,
+          "point_delta": 15.2938,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "oracle_err_m": {
+          "direction": "lower_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "median"
+        },
+        "oracle_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_100": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "recall_500": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "rule_top1_hit_500m": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 268,
+          "n_groups": 259,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        },
+        "variant_round_trip": {
+          "direction": "higher_is_better",
+          "favours": "not_resolved",
+          "hi": 0.0,
+          "identical": true,
+          "level": 0.95,
+          "lo": 0.0,
+          "n": 3117,
+          "n_groups": 3007,
+          "note": "the two rings produce identical per-address values for this metric",
+          "point_delta": 0.0,
+          "resamples": 10000,
+          "resolved": false,
+          "seed": 7,
+          "stat": "mean"
+        }
+      }
+    }
+  },
+  "determinism": {
+    "run_hash_alg": "sha256 over (address|arm|source_ref|x|y|granularity|as_of_valid)",
+    "run_hashes": {
+      "B1": "db46b744c68742817c81ccc2802f9cf022c6fbb54e6ab1f6c76b36515983a1f3",
+      "B2": "7e3f3c146e2a09c521b68d30f714bc66543e3cdfb8f71cb3c18317fb0222642a",
+      "B3": "7e3f3c146e2a09c521b68d30f714bc66543e3cdfb8f71cb3c18317fb0222642a",
+      "B4": "5363ffd700cfa115be316040c71f731f2e790294aec6f4fc428c645b7ee19254"
+    }
+  },
+  "diagnostics": {
+    "B1": {
+      "addresses_compared": 392,
+      "addresses_with_a_different_choice_per_arm": {
+        "official_landmark": 24
+      },
+      "addresses_with_residue_candidate": 0,
+      "arm_disposition_top5": [
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "memory",
+            "town_centroid"
+          ],
+          "n": 116
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "memory",
+            "town_centroid"
+          ],
+          "n": 73
+        },
+        {
+          "arms": [
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 53
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 47
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 16
+        }
+      ],
+      "candidate_id_hash": "db46b744c68742817c81ccc2802f9cf022c6fbb54e6ab1f6c76b36515983a1f3"
+    },
+    "B2": {
+      "addresses_with_residue_candidate": 0,
+      "arm_disposition_top5": [
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "memory",
+            "town_centroid"
+          ],
+          "n": 110
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "memory",
+            "town_centroid"
+          ],
+          "n": 67
+        },
+        {
+          "arms": [
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 48
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 41
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 16
+        }
+      ],
+      "candidate_id_hash": "7e3f3c146e2a09c521b68d30f714bc66543e3cdfb8f71cb3c18317fb0222642a"
+    },
+    "B3": {
+      "addresses_compared": 392,
+      "addresses_with_a_different_choice_per_arm": {},
+      "addresses_with_residue_candidate": 0,
+      "arm_disposition_top5": [
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "memory",
+            "town_centroid"
+          ],
+          "n": 110
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "memory",
+            "town_centroid"
+          ],
+          "n": 67
+        },
+        {
+          "arms": [
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 48
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 41
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 16
+        }
+      ],
+      "candidate_id_hash": "7e3f3c146e2a09c521b68d30f714bc66543e3cdfb8f71cb3c18317fb0222642a"
+    },
+    "B4": {
+      "addresses_compared": 392,
+      "addresses_with_a_different_choice_per_arm": {
+        "locality_centroid": 2
+      },
+      "addresses_with_residue_candidate": 2,
+      "arm_disposition_top5": [
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "memory",
+            "town_centroid"
+          ],
+          "n": 110
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "memory",
+            "town_centroid"
+          ],
+          "n": 67
+        },
+        {
+          "arms": [
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 48
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 41
+        },
+        {
+          "arms": [
+            "field_evidence",
+            "field_evidence",
+            "frozen_baseline",
+            "locality_centroid",
+            "town_centroid"
+          ],
+          "n": 17
+        }
+      ],
+      "candidate_id_hash": "5363ffd700cfa115be316040c71f731f2e790294aec6f4fc428c645b7ee19254"
+    }
+  },
+  "dominance_vs_every_other_rung": {
+    "B1": {
+      "B2": [
+        "variant_round_trip vs B2: -0.514 [-0.532, -0.4963]"
+      ],
+      "B3": [
+        "variant_round_trip vs B3: -0.514 [-0.532, -0.4963]"
+      ],
+      "B4": [
+        "variant_round_trip vs B4: -0.514 [-0.532, -0.4963]"
+      ]
+    },
+    "B2": {},
+    "B3": {},
+    "B4": {}
+  },
+  "eligible_rungs": [
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "evidence_policy_version": "evidence-policy-v3",
+  "experiment": "B — preprocessing ablation",
+  "guardrails": {
+    "latency_materiality_ms": 12.5,
+    "materiality_note": "a latency difference is a regression only past 5% of the 250 ms p95 budget; error/hit metrics are exact given the candidate set, so any resolved difference counts",
+    "metrics": [
+      "coverage_labelled",
+      "recall_500",
+      "oracle_hit_500m",
+      "rule_top1_hit_500m",
+      "variant_round_trip",
+      "latency_ms"
+    ],
+    "rule": "a rung is eligible only if it is not *resolved worse* than any other rung on any guardrail, on S-VAL; among eligible rungs the cheapest wins"
+  },
+  "hashes": {
+    "candidate_artefact": {
+      "data/derived/candidates_v2.csv": "adc9a382c56596043a33f522b8353645d9b262316cdb735d720e141b531b434e"
+    },
+    "candidate_receipt": {
+      "data/derived/candidates_v2.receipt.json": "cd1598681623cd3f5cb4d802ca1c7a5b066cb879033dcafda91e9da606f862d6"
+    },
+    "code": {
+      "sutra/candidates.py": "bccd21af5c10975be7daedf801e2790fe17237726ad3a534b898c5a0eba00916",
+      "sutra/dataio.py": "761e932f91b54635db3e81f67b9f469ef5cf40bb8279508cca3dc336c64a7ab4",
+      "sutra/preprocess.py": "863baacd2a897e5600ba432b8191c04bb497b9ea3855e6eaf5819af9227ae32e",
+      "sutra/ranking.py": "fc9de57eadf7d8f0bdb30430b7301651cbe01d9119e0a388c0388b0932ce0bd5",
+      "sutra/stats.py": "716724039c338154d4c5c4824651c1f50ff67bd39fcf2c17a1601d2d63f3e8de",
+      "tools/experiment_b.py": "7b46536ce9f3d0693d750d136d44acd666707f2582ab5942f83d00ae932013bd"
+    },
+    "split_receipt": {
+      "data/derived/split_receipt.json": "886239dec70e1e28885c4a32533d13ad774957df6b420adf2566dbee8174f50a"
+    },
+    "supervision_manifest": {
+      "data/derived/supervision_manifest.csv": "cfc3ec26fcccd757b29e0e518dcf33a34fa61241050071ceda0d3864b5086d7c"
+    }
+  },
+  "intervals": {
+    "doc": "PS3_EXPERIMENT_PLAN.md §1 (fixed method, not a new choice)",
+    "group": "place_block",
+    "method": "grouped bootstrap, 95%, paired on the difference",
+    "module": "sutra/stats.py",
+    "resamples": 10000,
+    "seed": 7
+  },
+  "label_sources": {
+    "locked_check": "surveyed_ground_truth (S_EVAL_BASELINE, single read)",
+    "selection": "operational_confirmation_proxy"
+  },
+  "lane_note": "the scored lane is static-only: the proxy label is the address's own promoted check-in median, so the evidence arms reproduce it by construction and are excluded from scoring; the full lane is an interference check",
+  "locked_check_population": "S-EVAL (locked check)",
+  "n_labelled_proxy": 292,
+  "n_labelled_surveyed": 100,
+  "populations": {
+    "S-EVAL (locked check)": 100,
+    "S_TRAIN+S_VAL (stability)": 292,
+    "S_VAL (selection)": 69,
+    "leave-block-out (stress)": 268
+  },
+  "production_ring": "B2",
+  "protocol_version": "protocol-v1-immutable",
+  "quality_frontier_on_S_VAL": [
+    "B1",
+    "B2",
+    "B3",
+    "B4"
+  ],
+  "radius_map_version": "radius-map-v1",
+  "resolved_gains_vs_production": {
+    "B1": [],
+    "B3": [],
+    "B4": []
+  },
+  "results": {
+    "S-EVAL (locked check)": {
+      "B1": {
+        "all": {
+          "cand_count": {
+            "max": 11,
+            "mean": 4.11,
+            "median": 3.0,
+            "min": 2,
+            "p90": 7.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 7.132,
+            "p50": 6.8,
+            "p95": 18.7
+          },
+          "n": 100,
+          "n_labelled": 100,
+          "oracle": {
+            "hit_100m": 0.39,
+            "hit_250m": 0.63,
+            "hit_500m": 0.92,
+            "median_err_m": 156.8,
+            "p80_err_m": 410.7
+          },
+          "recall_100": 0.39,
+          "recall_250": 0.63,
+          "recall_500": 0.92,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.35,
+            "hit_250m": 0.55,
+            "hit_500m": 0.76,
+            "median_err_m": 197.9,
+            "n": 100
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 100
+          },
+          "field_evidence": {
+            "fire_rate": 0.31,
+            "fired": 31,
+            "hit_100m": 0.9032,
+            "hit_500m": 0.9677,
+            "median_err_m": 9.9,
+            "n_labelled": 100
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 100,
+            "hit_100m": 0.09,
+            "hit_500m": 0.71,
+            "median_err_m": 376.4,
+            "n_labelled": 100
+          },
+          "locality_centroid": {
+            "fire_rate": 0.98,
+            "fired": 98,
+            "hit_100m": 0.0204,
+            "hit_500m": 0.8163,
+            "median_err_m": 369.6,
+            "n_labelled": 100
+          },
+          "memory": {
+            "fire_rate": 0.1,
+            "fired": 10,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 11.6,
+            "n_labelled": 100
+          },
+          "official_landmark": {
+            "fire_rate": 0.11,
+            "fired": 11,
+            "hit_100m": 0.0909,
+            "hit_500m": 0.3636,
+            "median_err_m": 1956.3,
+            "n_labelled": 100
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 100
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 100,
+            "hit_100m": 0.0,
+            "hit_500m": 0.01,
+            "median_err_m": 2740.0,
+            "n_labelled": 100
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 7,
+            "mean": 3.36,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.1
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 7.132,
+            "p50": 6.8,
+            "p95": 18.7
+          },
+          "n": 100,
+          "n_labelled": 100,
+          "oracle": {
+            "hit_100m": 0.12,
+            "hit_250m": 0.45,
+            "hit_500m": 0.88,
+            "median_err_m": 263.0,
+            "p80_err_m": 428.4
+          },
+          "recall_100": 0.12,
+          "recall_250": 0.45,
+          "recall_500": 0.88,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.09,
+            "hit_250m": 0.35,
+            "hit_500m": 0.71,
+            "median_err_m": 376.4,
+            "n": 100
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B2": {
+        "all": {
+          "cand_count": {
+            "max": 11,
+            "mean": 4.19,
+            "median": 3.5,
+            "min": 2,
+            "p90": 7.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 9.151,
+            "p50": 7.4,
+            "p95": 22.4
+          },
+          "n": 100,
+          "n_labelled": 100,
+          "oracle": {
+            "hit_100m": 0.41,
+            "hit_250m": 0.64,
+            "hit_500m": 0.92,
+            "median_err_m": 143.7,
+            "p80_err_m": 410.3
+          },
+          "recall_100": 0.41,
+          "recall_250": 0.64,
+          "recall_500": 0.92,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.35,
+            "hit_250m": 0.55,
+            "hit_500m": 0.76,
+            "median_err_m": 197.9,
+            "n": 100
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 100
+          },
+          "field_evidence": {
+            "fire_rate": 0.31,
+            "fired": 31,
+            "hit_100m": 0.9032,
+            "hit_500m": 0.9677,
+            "median_err_m": 9.9,
+            "n_labelled": 100
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 100,
+            "hit_100m": 0.09,
+            "hit_500m": 0.71,
+            "median_err_m": 376.4,
+            "n_labelled": 100
+          },
+          "locality_centroid": {
+            "fire_rate": 0.98,
+            "fired": 98,
+            "hit_100m": 0.0204,
+            "hit_500m": 0.8163,
+            "median_err_m": 369.6,
+            "n_labelled": 100
+          },
+          "memory": {
+            "fire_rate": 0.1,
+            "fired": 10,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 11.6,
+            "n_labelled": 100
+          },
+          "official_landmark": {
+            "fire_rate": 0.19,
+            "fired": 19,
+            "hit_100m": 0.1579,
+            "hit_500m": 0.4211,
+            "median_err_m": 1832.6,
+            "n_labelled": 100
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 100
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 100,
+            "hit_100m": 0.0,
+            "hit_500m": 0.01,
+            "median_err_m": 2740.0,
+            "n_labelled": 100
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 7,
+            "mean": 3.44,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.1
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 9.151,
+            "p50": 7.4,
+            "p95": 22.4
+          },
+          "n": 100,
+          "n_labelled": 100,
+          "oracle": {
+            "hit_100m": 0.14,
+            "hit_250m": 0.46,
+            "hit_500m": 0.88,
+            "median_err_m": 255.8,
+            "p80_err_m": 420.9
+          },
+          "recall_100": 0.14,
+          "recall_250": 0.46,
+          "recall_500": 0.88,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.09,
+            "hit_250m": 0.35,
+            "hit_500m": 0.71,
+            "median_err_m": 376.4,
+            "n": 100
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B3": {
+        "all": {
+          "cand_count": {
+            "max": 11,
+            "mean": 4.19,
+            "median": 3.5,
+            "min": 2,
+            "p90": 7.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 10.971,
+            "p50": 7.7,
+            "p95": 35.0
+          },
+          "n": 100,
+          "n_labelled": 100,
+          "oracle": {
+            "hit_100m": 0.41,
+            "hit_250m": 0.64,
+            "hit_500m": 0.92,
+            "median_err_m": 143.7,
+            "p80_err_m": 410.3
+          },
+          "recall_100": 0.41,
+          "recall_250": 0.64,
+          "recall_500": 0.92,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.35,
+            "hit_250m": 0.55,
+            "hit_500m": 0.76,
+            "median_err_m": 197.9,
+            "n": 100
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 100
+          },
+          "field_evidence": {
+            "fire_rate": 0.31,
+            "fired": 31,
+            "hit_100m": 0.9032,
+            "hit_500m": 0.9677,
+            "median_err_m": 9.9,
+            "n_labelled": 100
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 100,
+            "hit_100m": 0.09,
+            "hit_500m": 0.71,
+            "median_err_m": 376.4,
+            "n_labelled": 100
+          },
+          "locality_centroid": {
+            "fire_rate": 0.98,
+            "fired": 98,
+            "hit_100m": 0.0204,
+            "hit_500m": 0.8163,
+            "median_err_m": 369.6,
+            "n_labelled": 100
+          },
+          "memory": {
+            "fire_rate": 0.1,
+            "fired": 10,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 11.6,
+            "n_labelled": 100
+          },
+          "official_landmark": {
+            "fire_rate": 0.19,
+            "fired": 19,
+            "hit_100m": 0.1579,
+            "hit_500m": 0.4211,
+            "median_err_m": 1832.6,
+            "n_labelled": 100
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 100
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 100,
+            "hit_100m": 0.0,
+            "hit_500m": 0.01,
+            "median_err_m": 2740.0,
+            "n_labelled": 100
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 7,
+            "mean": 3.44,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.1
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 10.971,
+            "p50": 7.7,
+            "p95": 35.0
+          },
+          "n": 100,
+          "n_labelled": 100,
+          "oracle": {
+            "hit_100m": 0.14,
+            "hit_250m": 0.46,
+            "hit_500m": 0.88,
+            "median_err_m": 255.8,
+            "p80_err_m": 420.9
+          },
+          "recall_100": 0.14,
+          "recall_250": 0.46,
+          "recall_500": 0.88,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.09,
+            "hit_250m": 0.35,
+            "hit_500m": 0.71,
+            "median_err_m": 376.4,
+            "n": 100
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B4": {
+        "all": {
+          "cand_count": {
+            "max": 11,
+            "mean": 4.2,
+            "median": 4.0,
+            "min": 2,
+            "p90": 7.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 28.517,
+            "p50": 8.0,
+            "p95": 221.4
+          },
+          "n": 100,
+          "n_labelled": 100,
+          "oracle": {
+            "hit_100m": 0.41,
+            "hit_250m": 0.64,
+            "hit_500m": 0.92,
+            "median_err_m": 143.7,
+            "p80_err_m": 410.3
+          },
+          "recall_100": 0.41,
+          "recall_250": 0.64,
+          "recall_500": 0.92,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.35,
+            "hit_250m": 0.55,
+            "hit_500m": 0.76,
+            "median_err_m": 197.9,
+            "n": 100
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 100
+          },
+          "field_evidence": {
+            "fire_rate": 0.31,
+            "fired": 31,
+            "hit_100m": 0.9032,
+            "hit_500m": 0.9677,
+            "median_err_m": 9.9,
+            "n_labelled": 100
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 100,
+            "hit_100m": 0.09,
+            "hit_500m": 0.71,
+            "median_err_m": 376.4,
+            "n_labelled": 100
+          },
+          "locality_centroid": {
+            "fire_rate": 0.99,
+            "fired": 99,
+            "hit_100m": 0.0202,
+            "hit_500m": 0.8182,
+            "median_err_m": 370.0,
+            "n_labelled": 100
+          },
+          "memory": {
+            "fire_rate": 0.1,
+            "fired": 10,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 11.6,
+            "n_labelled": 100
+          },
+          "official_landmark": {
+            "fire_rate": 0.19,
+            "fired": 19,
+            "hit_100m": 0.1579,
+            "hit_500m": 0.4211,
+            "median_err_m": 1832.6,
+            "n_labelled": 100
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 100
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 100,
+            "hit_100m": 0.0,
+            "hit_500m": 0.01,
+            "median_err_m": 2740.0,
+            "n_labelled": 100
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 7,
+            "mean": 3.45,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.1
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 28.517,
+            "p50": 8.0,
+            "p95": 221.4
+          },
+          "n": 100,
+          "n_labelled": 100,
+          "oracle": {
+            "hit_100m": 0.14,
+            "hit_250m": 0.46,
+            "hit_500m": 0.88,
+            "median_err_m": 255.8,
+            "p80_err_m": 420.9
+          },
+          "recall_100": 0.14,
+          "recall_250": 0.46,
+          "recall_500": 0.88,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.09,
+            "hit_250m": 0.35,
+            "hit_500m": 0.71,
+            "median_err_m": 376.4,
+            "n": 100
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      }
+    },
+    "S_TRAIN+S_VAL (stability)": {
+      "B1": {
+        "all": {
+          "cand_count": {
+            "max": 13,
+            "mean": 7.5,
+            "median": 8.0,
+            "min": 4,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 0.989,
+            "p50": 1.0,
+            "p95": 1.3
+          },
+          "n": 292,
+          "n_labelled": 292,
+          "oracle": {
+            "hit_100m": 0.9281,
+            "hit_250m": 0.9829,
+            "hit_500m": 0.9829,
+            "median_err_m": 0.0,
+            "p80_err_m": 0.8
+          },
+          "recall_100": 0.9281,
+          "recall_250": 0.9829,
+          "recall_500": 0.9829,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.9212,
+            "hit_250m": 0.9795,
+            "hit_500m": 0.9795,
+            "median_err_m": 0.0,
+            "n": 292
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 292
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.9212,
+            "hit_500m": 0.9795,
+            "median_err_m": 0.0,
+            "n_labelled": 292
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.1541,
+            "hit_500m": 0.839,
+            "median_err_m": 260.3,
+            "n_labelled": 292
+          },
+          "locality_centroid": {
+            "fire_rate": 0.9932,
+            "fired": 290,
+            "hit_100m": 0.0483,
+            "hit_500m": 0.8724,
+            "median_err_m": 320.7,
+            "n_labelled": 292
+          },
+          "memory": {
+            "fire_rate": 0.7466,
+            "fired": 218,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 292
+          },
+          "official_landmark": {
+            "fire_rate": 0.1096,
+            "fired": 32,
+            "hit_100m": 0.0312,
+            "hit_500m": 0.5312,
+            "median_err_m": 412.0,
+            "n_labelled": 292
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 292
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.0,
+            "hit_500m": 0.024,
+            "median_err_m": 2663.7,
+            "n_labelled": 292
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 8,
+            "mean": 3.36,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 0.989,
+            "p50": 1.0,
+            "p95": 1.3
+          },
+          "n": 292,
+          "n_labelled": 292,
+          "oracle": {
+            "hit_100m": 0.1884,
+            "hit_250m": 0.589,
+            "hit_500m": 0.9144,
+            "median_err_m": 199.0,
+            "p80_err_m": 363.9
+          },
+          "recall_100": 0.1884,
+          "recall_250": 0.589,
+          "recall_500": 0.9144,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1541,
+            "hit_250m": 0.4829,
+            "hit_500m": 0.839,
+            "median_err_m": 260.3,
+            "n": 292
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B2": {
+        "all": {
+          "cand_count": {
+            "max": 13,
+            "mean": 7.572,
+            "median": 8.0,
+            "min": 4,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 3.202,
+            "p50": 1.8,
+            "p95": 5.4
+          },
+          "n": 292,
+          "n_labelled": 292,
+          "oracle": {
+            "hit_100m": 0.9281,
+            "hit_250m": 0.9829,
+            "hit_500m": 0.9829,
+            "median_err_m": 0.0,
+            "p80_err_m": 0.8
+          },
+          "recall_100": 0.9281,
+          "recall_250": 0.9829,
+          "recall_500": 0.9829,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.9212,
+            "hit_250m": 0.9795,
+            "hit_500m": 0.9795,
+            "median_err_m": 0.0,
+            "n": 292
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 292
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.9212,
+            "hit_500m": 0.9795,
+            "median_err_m": 0.0,
+            "n_labelled": 292
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.1541,
+            "hit_500m": 0.839,
+            "median_err_m": 260.3,
+            "n_labelled": 292
+          },
+          "locality_centroid": {
+            "fire_rate": 0.9932,
+            "fired": 290,
+            "hit_100m": 0.0483,
+            "hit_500m": 0.8724,
+            "median_err_m": 320.7,
+            "n_labelled": 292
+          },
+          "memory": {
+            "fire_rate": 0.7466,
+            "fired": 218,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 292
+          },
+          "official_landmark": {
+            "fire_rate": 0.1644,
+            "fired": 48,
+            "hit_100m": 0.0417,
+            "hit_500m": 0.5,
+            "median_err_m": 483.2,
+            "n_labelled": 292
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 292
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.0,
+            "hit_500m": 0.024,
+            "median_err_m": 2663.7,
+            "n_labelled": 292
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 8,
+            "mean": 3.432,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 3.202,
+            "p50": 1.8,
+            "p95": 5.4
+          },
+          "n": 292,
+          "n_labelled": 292,
+          "oracle": {
+            "hit_100m": 0.1918,
+            "hit_250m": 0.589,
+            "hit_500m": 0.9144,
+            "median_err_m": 196.8,
+            "p80_err_m": 363.9
+          },
+          "recall_100": 0.1918,
+          "recall_250": 0.589,
+          "recall_500": 0.9144,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1541,
+            "hit_250m": 0.4829,
+            "hit_500m": 0.839,
+            "median_err_m": 260.3,
+            "n": 292
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B3": {
+        "all": {
+          "cand_count": {
+            "max": 13,
+            "mean": 7.572,
+            "median": 8.0,
+            "min": 4,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 4.668,
+            "p50": 1.7,
+            "p95": 20.8
+          },
+          "n": 292,
+          "n_labelled": 292,
+          "oracle": {
+            "hit_100m": 0.9281,
+            "hit_250m": 0.9829,
+            "hit_500m": 0.9829,
+            "median_err_m": 0.0,
+            "p80_err_m": 0.8
+          },
+          "recall_100": 0.9281,
+          "recall_250": 0.9829,
+          "recall_500": 0.9829,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.9212,
+            "hit_250m": 0.9795,
+            "hit_500m": 0.9795,
+            "median_err_m": 0.0,
+            "n": 292
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 292
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.9212,
+            "hit_500m": 0.9795,
+            "median_err_m": 0.0,
+            "n_labelled": 292
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.1541,
+            "hit_500m": 0.839,
+            "median_err_m": 260.3,
+            "n_labelled": 292
+          },
+          "locality_centroid": {
+            "fire_rate": 0.9932,
+            "fired": 290,
+            "hit_100m": 0.0483,
+            "hit_500m": 0.8724,
+            "median_err_m": 320.7,
+            "n_labelled": 292
+          },
+          "memory": {
+            "fire_rate": 0.7466,
+            "fired": 218,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 292
+          },
+          "official_landmark": {
+            "fire_rate": 0.1644,
+            "fired": 48,
+            "hit_100m": 0.0417,
+            "hit_500m": 0.5,
+            "median_err_m": 483.2,
+            "n_labelled": 292
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 292
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.0,
+            "hit_500m": 0.024,
+            "median_err_m": 2663.7,
+            "n_labelled": 292
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 8,
+            "mean": 3.432,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 4.668,
+            "p50": 1.7,
+            "p95": 20.8
+          },
+          "n": 292,
+          "n_labelled": 292,
+          "oracle": {
+            "hit_100m": 0.1918,
+            "hit_250m": 0.589,
+            "hit_500m": 0.9144,
+            "median_err_m": 196.8,
+            "p80_err_m": 363.9
+          },
+          "recall_100": 0.1918,
+          "recall_250": 0.589,
+          "recall_500": 0.9144,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1541,
+            "hit_250m": 0.4829,
+            "hit_500m": 0.839,
+            "median_err_m": 260.3,
+            "n": 292
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B4": {
+        "all": {
+          "cand_count": {
+            "max": 13,
+            "mean": 7.575,
+            "median": 8.0,
+            "min": 4,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 18.012,
+            "p50": 1.8,
+            "p95": 206.5
+          },
+          "n": 292,
+          "n_labelled": 292,
+          "oracle": {
+            "hit_100m": 0.9281,
+            "hit_250m": 0.9829,
+            "hit_500m": 0.9829,
+            "median_err_m": 0.0,
+            "p80_err_m": 0.8
+          },
+          "recall_100": 0.9281,
+          "recall_250": 0.9829,
+          "recall_500": 0.9829,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.9212,
+            "hit_250m": 0.9795,
+            "hit_500m": 0.9795,
+            "median_err_m": 0.0,
+            "n": 292
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 292
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.9212,
+            "hit_500m": 0.9795,
+            "median_err_m": 0.0,
+            "n_labelled": 292
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.1541,
+            "hit_500m": 0.839,
+            "median_err_m": 260.3,
+            "n_labelled": 292
+          },
+          "locality_centroid": {
+            "fire_rate": 0.9966,
+            "fired": 291,
+            "hit_100m": 0.0481,
+            "hit_500m": 0.8694,
+            "median_err_m": 321.9,
+            "n_labelled": 292
+          },
+          "memory": {
+            "fire_rate": 0.7466,
+            "fired": 218,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 292
+          },
+          "official_landmark": {
+            "fire_rate": 0.1644,
+            "fired": 48,
+            "hit_100m": 0.0417,
+            "hit_500m": 0.5,
+            "median_err_m": 483.2,
+            "n_labelled": 292
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 292
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 292,
+            "hit_100m": 0.0,
+            "hit_500m": 0.024,
+            "median_err_m": 2663.7,
+            "n_labelled": 292
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 8,
+            "mean": 3.435,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 18.012,
+            "p50": 1.8,
+            "p95": 206.5
+          },
+          "n": 292,
+          "n_labelled": 292,
+          "oracle": {
+            "hit_100m": 0.1918,
+            "hit_250m": 0.589,
+            "hit_500m": 0.9144,
+            "median_err_m": 196.8,
+            "p80_err_m": 363.9
+          },
+          "recall_100": 0.1918,
+          "recall_250": 0.589,
+          "recall_500": 0.9144,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1541,
+            "hit_250m": 0.4829,
+            "hit_500m": 0.839,
+            "median_err_m": 260.3,
+            "n": 292
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      }
+    },
+    "S_VAL (selection)": {
+      "B1": {
+        "all": {
+          "cand_count": {
+            "max": 12,
+            "mean": 7.377,
+            "median": 7.0,
+            "min": 5,
+            "p90": 8.2
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 0.981,
+            "p50": 1.0,
+            "p95": 1.2
+          },
+          "n": 69,
+          "n_labelled": 69,
+          "oracle": {
+            "hit_100m": 0.8986,
+            "hit_250m": 0.9855,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "p80_err_m": 2.4
+          },
+          "recall_100": 0.8986,
+          "recall_250": 0.9855,
+          "recall_500": 0.9855,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.8986,
+            "hit_250m": 0.9855,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "n": 69
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 69
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.8986,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "n_labelled": 69
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.1739,
+            "hit_500m": 0.8406,
+            "median_err_m": 248.9,
+            "n_labelled": 69
+          },
+          "locality_centroid": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.0435,
+            "hit_500m": 0.8406,
+            "median_err_m": 303.1,
+            "n_labelled": 69
+          },
+          "memory": {
+            "fire_rate": 0.6957,
+            "fired": 48,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 69
+          },
+          "official_landmark": {
+            "fire_rate": 0.1594,
+            "fired": 11,
+            "hit_100m": 0.0,
+            "hit_500m": 0.5455,
+            "median_err_m": 430.4,
+            "n_labelled": 69
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 69
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.0,
+            "hit_500m": 0.0145,
+            "median_err_m": 2633.5,
+            "n_labelled": 69
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 7,
+            "mean": 3.391,
+            "median": 3.0,
+            "min": 3,
+            "p90": 4.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 0.981,
+            "p50": 1.0,
+            "p95": 1.2
+          },
+          "n": 69,
+          "n_labelled": 69,
+          "oracle": {
+            "hit_100m": 0.2029,
+            "hit_250m": 0.6522,
+            "hit_500m": 0.8986,
+            "median_err_m": 184.7,
+            "p80_err_m": 301.7
+          },
+          "recall_100": 0.2029,
+          "recall_250": 0.6522,
+          "recall_500": 0.8986,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1739,
+            "hit_250m": 0.5072,
+            "hit_500m": 0.8406,
+            "median_err_m": 248.9,
+            "n": 69
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B2": {
+        "all": {
+          "cand_count": {
+            "max": 12,
+            "mean": 7.464,
+            "median": 7.0,
+            "min": 5,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 3.218,
+            "p50": 1.8,
+            "p95": 5.3
+          },
+          "n": 69,
+          "n_labelled": 69,
+          "oracle": {
+            "hit_100m": 0.8986,
+            "hit_250m": 0.9855,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "p80_err_m": 2.4
+          },
+          "recall_100": 0.8986,
+          "recall_250": 0.9855,
+          "recall_500": 0.9855,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.8986,
+            "hit_250m": 0.9855,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "n": 69
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 69
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.8986,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "n_labelled": 69
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.1739,
+            "hit_500m": 0.8406,
+            "median_err_m": 248.9,
+            "n_labelled": 69
+          },
+          "locality_centroid": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.0435,
+            "hit_500m": 0.8406,
+            "median_err_m": 303.1,
+            "n_labelled": 69
+          },
+          "memory": {
+            "fire_rate": 0.6957,
+            "fired": 48,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 69
+          },
+          "official_landmark": {
+            "fire_rate": 0.2319,
+            "fired": 16,
+            "hit_100m": 0.0,
+            "hit_500m": 0.5,
+            "median_err_m": 712.4,
+            "n_labelled": 69
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 69
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.0,
+            "hit_500m": 0.0145,
+            "median_err_m": 2633.5,
+            "n_labelled": 69
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 7,
+            "mean": 3.478,
+            "median": 3.0,
+            "min": 3,
+            "p90": 4.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 3.218,
+            "p50": 1.8,
+            "p95": 5.3
+          },
+          "n": 69,
+          "n_labelled": 69,
+          "oracle": {
+            "hit_100m": 0.2029,
+            "hit_250m": 0.6522,
+            "hit_500m": 0.8986,
+            "median_err_m": 184.7,
+            "p80_err_m": 301.7
+          },
+          "recall_100": 0.2029,
+          "recall_250": 0.6522,
+          "recall_500": 0.8986,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1739,
+            "hit_250m": 0.5072,
+            "hit_500m": 0.8406,
+            "median_err_m": 248.9,
+            "n": 69
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B3": {
+        "all": {
+          "cand_count": {
+            "max": 12,
+            "mean": 7.464,
+            "median": 7.0,
+            "min": 5,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 4.146,
+            "p50": 1.9,
+            "p95": 10.0
+          },
+          "n": 69,
+          "n_labelled": 69,
+          "oracle": {
+            "hit_100m": 0.8986,
+            "hit_250m": 0.9855,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "p80_err_m": 2.4
+          },
+          "recall_100": 0.8986,
+          "recall_250": 0.9855,
+          "recall_500": 0.9855,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.8986,
+            "hit_250m": 0.9855,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "n": 69
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 69
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.8986,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "n_labelled": 69
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.1739,
+            "hit_500m": 0.8406,
+            "median_err_m": 248.9,
+            "n_labelled": 69
+          },
+          "locality_centroid": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.0435,
+            "hit_500m": 0.8406,
+            "median_err_m": 303.1,
+            "n_labelled": 69
+          },
+          "memory": {
+            "fire_rate": 0.6957,
+            "fired": 48,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 69
+          },
+          "official_landmark": {
+            "fire_rate": 0.2319,
+            "fired": 16,
+            "hit_100m": 0.0,
+            "hit_500m": 0.5,
+            "median_err_m": 712.4,
+            "n_labelled": 69
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 69
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.0,
+            "hit_500m": 0.0145,
+            "median_err_m": 2633.5,
+            "n_labelled": 69
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 7,
+            "mean": 3.478,
+            "median": 3.0,
+            "min": 3,
+            "p90": 4.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 4.146,
+            "p50": 1.9,
+            "p95": 10.0
+          },
+          "n": 69,
+          "n_labelled": 69,
+          "oracle": {
+            "hit_100m": 0.2029,
+            "hit_250m": 0.6522,
+            "hit_500m": 0.8986,
+            "median_err_m": 184.7,
+            "p80_err_m": 301.7
+          },
+          "recall_100": 0.2029,
+          "recall_250": 0.6522,
+          "recall_500": 0.8986,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1739,
+            "hit_250m": 0.5072,
+            "hit_500m": 0.8406,
+            "median_err_m": 248.9,
+            "n": 69
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B4": {
+        "all": {
+          "cand_count": {
+            "max": 12,
+            "mean": 7.464,
+            "median": 7.0,
+            "min": 5,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 15.537,
+            "p50": 1.8,
+            "p95": 124.9
+          },
+          "n": 69,
+          "n_labelled": 69,
+          "oracle": {
+            "hit_100m": 0.8986,
+            "hit_250m": 0.9855,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "p80_err_m": 2.4
+          },
+          "recall_100": 0.8986,
+          "recall_250": 0.9855,
+          "recall_500": 0.9855,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.8986,
+            "hit_250m": 0.9855,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "n": 69
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 69
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.8986,
+            "hit_500m": 0.9855,
+            "median_err_m": 0.0,
+            "n_labelled": 69
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.1739,
+            "hit_500m": 0.8406,
+            "median_err_m": 248.9,
+            "n_labelled": 69
+          },
+          "locality_centroid": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.0435,
+            "hit_500m": 0.8406,
+            "median_err_m": 303.1,
+            "n_labelled": 69
+          },
+          "memory": {
+            "fire_rate": 0.6957,
+            "fired": 48,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 69
+          },
+          "official_landmark": {
+            "fire_rate": 0.2319,
+            "fired": 16,
+            "hit_100m": 0.0,
+            "hit_500m": 0.5,
+            "median_err_m": 712.4,
+            "n_labelled": 69
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 69
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 69,
+            "hit_100m": 0.0,
+            "hit_500m": 0.0145,
+            "median_err_m": 2633.5,
+            "n_labelled": 69
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 7,
+            "mean": 3.478,
+            "median": 3.0,
+            "min": 3,
+            "p90": 4.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 15.537,
+            "p50": 1.8,
+            "p95": 124.9
+          },
+          "n": 69,
+          "n_labelled": 69,
+          "oracle": {
+            "hit_100m": 0.2029,
+            "hit_250m": 0.6522,
+            "hit_500m": 0.8986,
+            "median_err_m": 184.7,
+            "p80_err_m": 301.7
+          },
+          "recall_100": 0.2029,
+          "recall_250": 0.6522,
+          "recall_500": 0.8986,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1739,
+            "hit_250m": 0.5072,
+            "hit_500m": 0.8406,
+            "median_err_m": 248.9,
+            "n": 69
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      }
+    },
+    "leave-block-out (stress)": {
+      "B1": {
+        "all": {
+          "cand_count": {
+            "max": 12,
+            "mean": 7.485,
+            "median": 8.0,
+            "min": 4,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 0.992,
+            "p50": 1.0,
+            "p95": 1.3
+          },
+          "n": 268,
+          "n_labelled": 268,
+          "oracle": {
+            "hit_100m": 0.9216,
+            "hit_250m": 0.9813,
+            "hit_500m": 0.9813,
+            "median_err_m": 0.0,
+            "p80_err_m": 1.1
+          },
+          "recall_100": 0.9216,
+          "recall_250": 0.9813,
+          "recall_500": 0.9813,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.9142,
+            "hit_250m": 0.9776,
+            "hit_500m": 0.9776,
+            "median_err_m": 0.0,
+            "n": 268
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 268
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.9142,
+            "hit_500m": 0.9776,
+            "median_err_m": 0.0,
+            "n_labelled": 268
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.1567,
+            "hit_500m": 0.8396,
+            "median_err_m": 259.1,
+            "n_labelled": 268
+          },
+          "locality_centroid": {
+            "fire_rate": 0.9963,
+            "fired": 267,
+            "hit_100m": 0.0487,
+            "hit_500m": 0.8689,
+            "median_err_m": 323.6,
+            "n_labelled": 268
+          },
+          "memory": {
+            "fire_rate": 0.7463,
+            "fired": 200,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 268
+          },
+          "official_landmark": {
+            "fire_rate": 0.1007,
+            "fired": 27,
+            "hit_100m": 0.037,
+            "hit_500m": 0.5185,
+            "median_err_m": 430.4,
+            "n_labelled": 268
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 268
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.0,
+            "hit_500m": 0.0261,
+            "median_err_m": 2643.7,
+            "n_labelled": 268
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 8,
+            "mean": 3.351,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 0.992,
+            "p50": 1.0,
+            "p95": 1.3
+          },
+          "n": 268,
+          "n_labelled": 268,
+          "oracle": {
+            "hit_100m": 0.1903,
+            "hit_250m": 0.5858,
+            "hit_500m": 0.9179,
+            "median_err_m": 202.2,
+            "p80_err_m": 362.3
+          },
+          "recall_100": 0.1903,
+          "recall_250": 0.5858,
+          "recall_500": 0.9179,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1567,
+            "hit_250m": 0.4851,
+            "hit_500m": 0.8396,
+            "median_err_m": 259.1,
+            "n": 268
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B2": {
+        "all": {
+          "cand_count": {
+            "max": 12,
+            "mean": 7.56,
+            "median": 8.0,
+            "min": 4,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 3.224,
+            "p50": 1.8,
+            "p95": 5.5
+          },
+          "n": 268,
+          "n_labelled": 268,
+          "oracle": {
+            "hit_100m": 0.9216,
+            "hit_250m": 0.9813,
+            "hit_500m": 0.9813,
+            "median_err_m": 0.0,
+            "p80_err_m": 1.1
+          },
+          "recall_100": 0.9216,
+          "recall_250": 0.9813,
+          "recall_500": 0.9813,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.9142,
+            "hit_250m": 0.9776,
+            "hit_500m": 0.9776,
+            "median_err_m": 0.0,
+            "n": 268
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 268
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.9142,
+            "hit_500m": 0.9776,
+            "median_err_m": 0.0,
+            "n_labelled": 268
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.1567,
+            "hit_500m": 0.8396,
+            "median_err_m": 259.1,
+            "n_labelled": 268
+          },
+          "locality_centroid": {
+            "fire_rate": 0.9963,
+            "fired": 267,
+            "hit_100m": 0.0487,
+            "hit_500m": 0.8689,
+            "median_err_m": 323.6,
+            "n_labelled": 268
+          },
+          "memory": {
+            "fire_rate": 0.7463,
+            "fired": 200,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 268
+          },
+          "official_landmark": {
+            "fire_rate": 0.1567,
+            "fired": 42,
+            "hit_100m": 0.0476,
+            "hit_500m": 0.5,
+            "median_err_m": 483.2,
+            "n_labelled": 268
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 268
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.0,
+            "hit_500m": 0.0261,
+            "median_err_m": 2643.7,
+            "n_labelled": 268
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 8,
+            "mean": 3.425,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.3
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 3.224,
+            "p50": 1.8,
+            "p95": 5.5
+          },
+          "n": 268,
+          "n_labelled": 268,
+          "oracle": {
+            "hit_100m": 0.194,
+            "hit_250m": 0.5858,
+            "hit_500m": 0.9179,
+            "median_err_m": 199.0,
+            "p80_err_m": 362.3
+          },
+          "recall_100": 0.194,
+          "recall_250": 0.5858,
+          "recall_500": 0.9179,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1567,
+            "hit_250m": 0.4851,
+            "hit_500m": 0.8396,
+            "median_err_m": 259.1,
+            "n": 268
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B3": {
+        "all": {
+          "cand_count": {
+            "max": 12,
+            "mean": 7.56,
+            "median": 8.0,
+            "min": 4,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 4.769,
+            "p50": 1.7,
+            "p95": 22.0
+          },
+          "n": 268,
+          "n_labelled": 268,
+          "oracle": {
+            "hit_100m": 0.9216,
+            "hit_250m": 0.9813,
+            "hit_500m": 0.9813,
+            "median_err_m": 0.0,
+            "p80_err_m": 1.1
+          },
+          "recall_100": 0.9216,
+          "recall_250": 0.9813,
+          "recall_500": 0.9813,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.9142,
+            "hit_250m": 0.9776,
+            "hit_500m": 0.9776,
+            "median_err_m": 0.0,
+            "n": 268
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 268
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.9142,
+            "hit_500m": 0.9776,
+            "median_err_m": 0.0,
+            "n_labelled": 268
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.1567,
+            "hit_500m": 0.8396,
+            "median_err_m": 259.1,
+            "n_labelled": 268
+          },
+          "locality_centroid": {
+            "fire_rate": 0.9963,
+            "fired": 267,
+            "hit_100m": 0.0487,
+            "hit_500m": 0.8689,
+            "median_err_m": 323.6,
+            "n_labelled": 268
+          },
+          "memory": {
+            "fire_rate": 0.7463,
+            "fired": 200,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 268
+          },
+          "official_landmark": {
+            "fire_rate": 0.1567,
+            "fired": 42,
+            "hit_100m": 0.0476,
+            "hit_500m": 0.5,
+            "median_err_m": 483.2,
+            "n_labelled": 268
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 268
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.0,
+            "hit_500m": 0.0261,
+            "median_err_m": 2643.7,
+            "n_labelled": 268
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 8,
+            "mean": 3.425,
+            "median": 3.0,
+            "min": 2,
+            "p90": 4.3
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 4.769,
+            "p50": 1.7,
+            "p95": 22.0
+          },
+          "n": 268,
+          "n_labelled": 268,
+          "oracle": {
+            "hit_100m": 0.194,
+            "hit_250m": 0.5858,
+            "hit_500m": 0.9179,
+            "median_err_m": 199.0,
+            "p80_err_m": 362.3
+          },
+          "recall_100": 0.194,
+          "recall_250": 0.5858,
+          "recall_500": 0.9179,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1567,
+            "hit_250m": 0.4851,
+            "hit_500m": 0.8396,
+            "median_err_m": 259.1,
+            "n": 268
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      },
+      "B4": {
+        "all": {
+          "cand_count": {
+            "max": 12,
+            "mean": 7.563,
+            "median": 8.0,
+            "min": 5,
+            "p90": 9.0
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 18.518,
+            "p50": 1.8,
+            "p95": 207.4
+          },
+          "n": 268,
+          "n_labelled": 268,
+          "oracle": {
+            "hit_100m": 0.9216,
+            "hit_250m": 0.9813,
+            "hit_500m": 0.9813,
+            "median_err_m": 0.0,
+            "p80_err_m": 1.1
+          },
+          "recall_100": 0.9216,
+          "recall_250": 0.9813,
+          "recall_500": 0.9813,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.9142,
+            "hit_250m": 0.9776,
+            "hit_500m": 0.9776,
+            "median_err_m": 0.0,
+            "n": 268
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        },
+        "arms": {
+          "address_book": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 268
+          },
+          "field_evidence": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.9142,
+            "hit_500m": 0.9776,
+            "median_err_m": 0.0,
+            "n_labelled": 268
+          },
+          "frozen_baseline": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.1567,
+            "hit_500m": 0.8396,
+            "median_err_m": 259.1,
+            "n_labelled": 268
+          },
+          "locality_centroid": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.0485,
+            "hit_500m": 0.8657,
+            "median_err_m": 323.9,
+            "n_labelled": 268
+          },
+          "memory": {
+            "fire_rate": 0.7463,
+            "fired": 200,
+            "hit_100m": 1.0,
+            "hit_500m": 1.0,
+            "median_err_m": 0.0,
+            "n_labelled": 268
+          },
+          "official_landmark": {
+            "fire_rate": 0.1567,
+            "fired": 42,
+            "hit_100m": 0.0476,
+            "hit_500m": 0.5,
+            "median_err_m": 483.2,
+            "n_labelled": 268
+          },
+          "place_neighbour": {
+            "fire_rate": 0.0,
+            "fired": 0,
+            "hit_100m": null,
+            "hit_500m": null,
+            "median_err_m": null,
+            "n_labelled": 268
+          },
+          "town_centroid": {
+            "fire_rate": 1.0,
+            "fired": 268,
+            "hit_100m": 0.0,
+            "hit_500m": 0.0261,
+            "median_err_m": 2643.7,
+            "n_labelled": 268
+          }
+        },
+        "static": {
+          "cand_count": {
+            "max": 8,
+            "mean": 3.429,
+            "median": 3.0,
+            "min": 3,
+            "p90": 4.3
+          },
+          "coverage_all": 1.0,
+          "coverage_labelled": 1.0,
+          "latency_ms": {
+            "mean": 18.518,
+            "p50": 1.8,
+            "p95": 207.4
+          },
+          "n": 268,
+          "n_labelled": 268,
+          "oracle": {
+            "hit_100m": 0.194,
+            "hit_250m": 0.5858,
+            "hit_500m": 0.9179,
+            "median_err_m": 199.0,
+            "p80_err_m": 362.3
+          },
+          "recall_100": 0.194,
+          "recall_250": 0.5858,
+          "recall_500": 0.9179,
+          "refusal": {
+            "unplaceable_share": 0.0
+          },
+          "rule_top1": {
+            "hit_100m": 0.1567,
+            "hit_250m": 0.4851,
+            "hit_500m": 0.8396,
+            "median_err_m": 259.1,
+            "n": 268
+          },
+          "unresolved_all": 0.0,
+          "unresolved_labelled": 0.0
+        }
+      }
+    }
+  },
+  "rings": {
+    "B1": {
+      "description": "raw address text: lowercase alphanumeric tokens, 6-digit pin regex, the arm's relation vocabulary — no NFKC, no abbreviation table, no cleaning spans",
+      "ring_id": "B1",
+      "uses": [
+        "raw_text"
+      ]
+    },
+    "B2": {
+      "description": "production: NFKC + the corpus abbreviation table + script-preserving strip, the cleaned `text_norm`, the deterministic span flags, relation windows",
+      "ring_id": "B2",
+      "uses": [
+        "normalisation",
+        "abbreviations",
+        "spans"
+      ]
+    },
+    "B3": {
+      "description": "B2 + a residue matcher: where B2 finds no locality or landmark, score the in-town gazetteer by character-ngram TF-IDF cosine and by its truncated-SVD projection",
+      "min_margin": 1.25,
+      "ngram_n": 4,
+      "residue_stats": {
+        "landmark_accepted": 0,
+        "landmark_calls": 31,
+        "landmark_no_relation": 0,
+        "landmark_rejected_margin": 0,
+        "landmark_rejected_threshold": 31,
+        "locality_accepted": 0,
+        "locality_calls": 4,
+        "locality_rejected_margin": 1,
+        "locality_rejected_threshold": 3
+      },
+      "ring_id": "B3",
+      "text_model": {
+        "build_s": 1.29,
+        "n_docs": 3393,
+        "svd_dim": 16,
+        "vocab_full": 8133,
+        "vocab_used": 1200
+      },
+      "threshold": 0.35,
+      "uses": [
+        "normalisation",
+        "abbreviations",
+        "spans",
+        "tfidf",
+        "svd"
+      ]
+    },
+    "B4": {
+      "description": "B3 + deterministic parser/statistical features on the residue: IDF-weighted edit-tolerant token evidence and numeric-slot consistency against the candidate locality's own member addresses",
+      "locality_slot_profiles": 33,
+      "min_margin": 1.15,
+      "ngram_n": 4,
+      "residue_stats": {
+        "landmark_accepted": 0,
+        "landmark_calls": 31,
+        "landmark_no_relation": 0,
+        "landmark_rejected_margin": 29,
+        "landmark_rejected_threshold": 2,
+        "locality_accepted": 2,
+        "locality_calls": 4,
+        "locality_rejected_margin": 1,
+        "locality_rejected_threshold": 1
+      },
+      "ring_id": "B4",
+      "text_model": {
+        "build_s": 1.081,
+        "median_member_slots": 21,
+        "n_docs": 3393,
+        "n_localities_with_slots": 33,
+        "svd_dim": 16,
+        "vocab_full": 8133,
+        "vocab_used": 1200
+      },
+      "threshold": 0.3,
+      "uses": [
+        "normalisation",
+        "abbreviations",
+        "spans",
+        "tfidf",
+        "svd",
+        "parser_slots",
+        "idf_weighted_tokens",
+        "slot_consistency"
+      ]
+    }
+  },
+  "rule_version": "candidate-rules-v2",
+  "schema_version": "sutra-1.0",
+  "scored_lane": "static",
+  "seconds": 124.1,
+  "selection": {
+    "change": "none",
+    "why": "production is the cheapest rung that is not resolved-worse than the others on S-VAL, and no more expensive rung is resolved better than it",
+    "winner": "B2"
+  },
+  "selection_population": "S_VAL (selection)",
+  "test_look_counter_after": 5,
+  "variant_round_trip": {
+    "B1": {
+      "n_with_abbreviation": 1602,
+      "rate_all": 0.486,
+      "rate_with_abbreviation": 0.0
+    },
+    "B2": {
+      "n_with_abbreviation": 1602,
+      "rate_all": 1.0,
+      "rate_with_abbreviation": 1.0
+    },
+    "B3": {
+      "n_with_abbreviation": 1602,
+      "rate_all": 1.0,
+      "rate_with_abbreviation": 1.0
+    },
+    "B4": {
+      "n_with_abbreviation": 1602,
+      "rate_all": 1.0,
+      "rate_with_abbreviation": 1.0
+    }
+  }
+}

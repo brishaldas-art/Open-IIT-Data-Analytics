@@ -1,0 +1,10 @@
+rule,input,condition,transformation,rows,why,risk_if_wrong,information_preserved_or_lost
+A1,address_text,all,"identity key — lowercase, unicode-safe punctuation strip, trailing token KEPT",3117,two accounts at one place must be linkable; two villages differing only in the trailing token must not merge,over-merging distinct places,none lost
+A2,address_text,all,"render key — same, trailing token stripped; parse/template lane only",3117,single key for parsing,if used as identity: 193 rows collapse into 70 false places,trailing token kept as pin_tail
+A3,address_text,trailing 6-digit present,"extract pin_tail + pin_known (2,647 known / 260 unknown)",2907,"pincode is an address component; unknown tails flagged, never imputed",misreading a house number as pincode,none lost
+A4,field_visits.remark,all,"keep raw; flag landmark-named (208, audited definition) and digit-bearing (451)",5578,the only free text that can correct a location,training on text as a label,none lost
+A5,address_type,permanent_native,flag (226); exclude from place merging; never a visit target,226,native-village templates collide across accounts; 0/226 ever visited,losing OUT context,none lost (flag)
+A6,photo_hash,repeats within agent,same_hash_hits; count >1 flags a repeat (172 visits flagged),5578,media duplication is the measured integrity signal,accusing instead of weighting,none lost
+A7,baseline_geocodes,absent pin,left join; missing-pin flag (237),237,coverage must stay visible,imputing a pin,none lost
+A8,"agents, field_visits",all visits,"integrity weight in {1, w_media} from repeat-hash + timing; per-agent not-traceable rate is a diagnostic, not a per-visit penalty",5578,separates evidence quality from evidence content; avoids modelling the collector,over-penalising an agent's addresses,nothing lost (weights reversible)
+A9,accounts exposure fields,all,excluded from feature matrices; retained in analysis tables as exposure/value context,2400,"flat-yield measurements show these describe targeting, not place success",silent leakage of exposure into geography,none lost (analysis intact)

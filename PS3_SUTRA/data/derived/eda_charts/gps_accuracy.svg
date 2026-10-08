@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="240" viewBox="0 0 760 240" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="11">
+<rect width="760" height="240" fill="#ffffff"/>
+<text x="40" y="18" font-size="13" font-weight="600" fill="#1a202c">GPS reported accuracy per point (metres, n=160,406)</text>
+<line x1="40" y1="210" x2="720" y2="210" stroke="#e2e8f0"/>
+<rect x="41.0" y="154.6" width="73.6" height="55.4" fill="#2c7a7b" opacity="0.85"/>
+<text x="77.8" y="150.6" text-anchor="middle" fill="#4a5568">14294</text>
+<rect x="116.6" y="61.0" width="73.6" height="149.0" fill="#2c7a7b" opacity="0.85"/>
+<text x="153.3" y="57.0" text-anchor="middle" fill="#4a5568">38474</text>
+<rect x="192.1" y="115.1" width="73.6" height="94.9" fill="#2c7a7b" opacity="0.85"/>
+<text x="228.9" y="111.1" text-anchor="middle" fill="#4a5568">24494</text>
+<rect x="267.7" y="46.0" width="73.6" height="164.0" fill="#2c7a7b" opacity="0.85"/>
+<text x="304.4" y="42.0" text-anchor="middle" fill="#4a5568">42341</text>
+<rect x="343.2" y="128.6" width="73.6" height="81.4" fill="#2c7a7b" opacity="0.85"/>
+<text x="380.0" y="124.6" text-anchor="middle" fill="#4a5568">21024</text>
+<rect x="418.8" y="153.6" width="73.6" height="56.4" fill="#2c7a7b" opacity="0.85"/>
+<text x="455.6" y="149.6" text-anchor="middle" fill="#4a5568">14555</text>
+<rect x="494.3" y="192.1" width="73.6" height="17.9" fill="#2c7a7b" opacity="0.85"/>
+<text x="531.1" y="188.1" text-anchor="middle" fill="#4a5568">4632</text>
+<rect x="569.9" y="207.7" width="73.6" height="2.3" fill="#2c7a7b" opacity="0.85"/>
+<text x="606.7" y="203.7" text-anchor="middle" fill="#4a5568">582</text>
+<rect x="645.4" y="210.0" width="73.6" height="0.0" fill="#2c7a7b" opacity="0.85"/>
+<text x="682.2" y="206.0" text-anchor="middle" fill="#4a5568">10</text>
+<text x="40.0" y="224" text-anchor="middle" fill="#718096">0</text>
+<text x="115.6" y="224" text-anchor="middle" fill="#718096">5</text>
+<text x="191.1" y="224" text-anchor="middle" fill="#718096">8</text>
+<text x="266.7" y="224" text-anchor="middle" fill="#718096">10</text>
+<text x="342.2" y="224" text-anchor="middle" fill="#718096">15</text>
+<text x="417.8" y="224" text-anchor="middle" fill="#718096">20</text>
+<text x="493.3" y="224" text-anchor="middle" fill="#718096">30</text>
+<text x="568.9" y="224" text-anchor="middle" fill="#718096">50</text>
+<text x="644.4" y="224" text-anchor="middle" fill="#718096">100</text>
+<text x="720.0" y="224" text-anchor="middle" fill="#718096">1000</text>
+<text x="40" y="236" fill="#718096">Median 10 m. API accuracy is a ~68% radial confidence, not a bound.</text>
+</svg>

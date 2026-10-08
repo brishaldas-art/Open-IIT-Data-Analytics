@@ -1,0 +1,81 @@
+{
+ "decision": "rule-priority ranker over the static candidate set; locality matching is retrieval-v2; the warm lane (as-of field evidence) is the product's answer whenever evidence exists; place_neighbour stays locked (C2 gate)",
+ "frozen_configuration": {
+  "as_of": "2026-06-01T00:00:00Z",
+  "coordinate_policy": {
+   "fallback": "checkin",
+   "ingest_id": "ingest-official-ps3-field-visits-v3",
+   "measured": {
+    "holdout_median_m_checkin": 28.7,
+    "holdout_median_m_tail3": 7.6,
+    "label_shift_median_m": 13.7
+   },
+   "rule": "the coordinate of an ingested visit is the component-wise median of the last 3 fixes of its official track; the raw check-in sample is retained as provenance",
+   "version": "coord-v2-trace-tail"
+  },
+  "evidence_arms": [
+   "field_evidence",
+   "memory",
+   "place_neighbour"
+  ],
+  "evidence_policy_version": "evidence-policy-v3",
+  "indexes": {
+   "addresses": "7ab95ecf1023253f",
+   "landmark_names": "a85b91a1e96542a4",
+   "landmarks": "a33054f9d7720c8a",
+   "localities": "3fad5ac0dbc17483",
+   "localities_by_pin": "48f1ccb80cc138b6",
+   "memory": "490e9f5add2e08c6",
+   "place_blocks": "7cc7925bec0144ac",
+   "text_book": "cd9c39d426426be2",
+   "token_idf": "591246b35f3e3682",
+   "town_centroids": "a12a40853f2dd818"
+  },
+  "locality_min_coverage": 0.5,
+  "place_neighbour": {
+   "c2_gate": "locked",
+   "enabled": false
+  },
+  "protocol_version": "protocol-v1-immutable",
+  "radius_map_version": "radius-map-v1",
+  "ranker": "rule priority (learned challengers rejected: see selection study)",
+  "retrieval_version": "v2",
+  "rule_version": "candidate-rules-v2",
+  "schema_version": "sutra-1.0",
+  "static_arms": [
+   "frozen_baseline",
+   "locality_centroid",
+   "town_centroid",
+   "official_landmark",
+   "address_book"
+  ],
+  "temporal_holdout_cut": "2026-05-15",
+  "w_n_guard": 15
+ },
+ "frozen_configuration_sha256": "9abebb8fb62df2cadca7f9a15b3c500c1fe3293095f4d8ddb0b45843977ddcf4",
+ "note": "no model artefact is written by the precision pass; challengers fit in memory only",
+ "populations": {
+  "S-EVAL": 100,
+  "S-TRAIN": 223,
+  "S-VAL": 69,
+  "pool": 292
+ },
+ "rejected": [
+  {
+   "candidate": "lambdamart",
+   "reading": "identical",
+   "s_val_hit_500m": 0.8406
+  },
+  {
+   "candidate": "logistic",
+   "reading": "not_resolved",
+   "s_val_hit_500m": 0.8261
+  },
+  {
+   "candidate": "pairwise",
+   "reading": "rule_better",
+   "s_val_hit_500m": 0.5942
+  }
+ ],
+ "retrieval_version": "v2"
+}

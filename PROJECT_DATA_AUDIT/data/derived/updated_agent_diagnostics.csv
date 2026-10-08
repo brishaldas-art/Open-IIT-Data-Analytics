@@ -1,0 +1,10 @@
+agent_id,language_team,shift,tenure_months,town_id,visits,met,nt,dwell,dup_hash,dup_hash_visits,share_10_13
+FA008,hinglish,day,38.0,T3,611,0.38,0.291,187.0,,4,0.838
+FA007,kanglish,day,37.0,T3,626,0.417,0.28,212.5,,0,0.797
+FA002,kanglish,day,52.0,T1,633,0.395,0.275,197.0,,4,0.806
+FA001,english,day,29.0,T1,628,0.406,0.263,206.0,,0,0.812
+FA009,english,day,6.0,T3,610,0.362,0.259,184.0,,162,0.849
+FA006,hinglish,day,64.0,T2,583,0.412,0.244,220.0,,0,0.887
+FA003,kanglish,day,4.0,T1,645,0.459,0.229,223.0,,0,0.795
+FA004,hinglish,day,3.0,T2,636,0.41,0.223,221.0,,0,0.86
+FA005,hinglish,day,16.0,T2,606,0.416,0.195,220.5,,2,0.842

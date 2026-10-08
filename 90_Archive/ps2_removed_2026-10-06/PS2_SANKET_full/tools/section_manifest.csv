@@ -1,0 +1,88 @@
+path,bytes,sha256_12,role,status
+ARCHITECTURE_DECISION_LOG_FINAL.md,19796,45c713f20e50,document,CURRENT
+ARCHITECTURE_RESEARCH_BIBLIOGRAPHY.md,28954,fb29de21dc53,document,CURRENT
+CN_QUESTIONS.md,11451,9afe7c9c9d9e,document,CURRENT
+CreditNirvana_PS2_PS3_MASTER.md,784700,2505da3e3fd3,document,BINDING
+CreditNirvana_PS2_PS3_Research_and_Strategy.docx,167205,b0a757d3c6f4,artifact,CURRENT
+CreditNirvana_PS2_PS3_Research_and_Strategy.md,215328,4e45661fcc19,document,CURRENT
+FRONTIER_PS2_PS3_ARCHITECTURES.md,14672,b1279c53d9f7,document,CURRENT
+HACKATHON_EXECUTION_PLAN.md,10346,7e78deeadb07,document,CURRENT
+HOW_TO_USE_AND_UNDERSTAND_THIS_PACKAGE.md,35553,082ee41252c2,document,CURRENT
+NOVELTY_MATRIX.md,7421,35a627a1d651,document,CURRENT
+PS2_ADVANCED_ARCHITECTURE_RESEARCH.md,29204,4b75a91429e0,document,CURRENT
+PS2_ARCHITECTURE_OPTIONS.md,12206,28d5a3a5a13b,document,CURRENT
+PS2_ARCHITECTURE_REQUIREMENTS.md,15566,a3b87e00fe51,document,CURRENT
+PS2_ARCHITECTURE_SELECTION.md,11226,e190819be666,document,CURRENT
+PS2_ASSUMPTIONS.md,12031,e65445e90300,document,CURRENT
+PS2_DEEP_INTERNET_RESEARCH.md,31660,57606fe36bec,document,CURRENT
+PS2_PS3_DATASET_REVIEW.md,51060,ecd1847256d5,document,CURRENT
+PS2_PS3_DATA_STRATEGY.md,6737,fb51fe31d8c2,document,CURRENT
+PS2_PS3_FINANCIAL_MODEL.md,9060,55e9049c98d6,document,CURRENT
+PS2_PS3_INTEGRATED_PRODUCT.md,19835,8dee3b1a91b8,document,CURRENT
+PS2_PS3_MARKET_RESEARCH.md,16322,ebc42ca5d4b8,document,CURRENT
+PS2_PS3_RED_TEAM.md,15033,693fddcce30e,document,CURRENT
+PS2_PS3_RESEARCH_SYNTHESIS.md,24459,b1965ab0b5b8,document,CURRENT
+PS2_PS3_SOURCE_BIBLIOGRAPHY.md,36539,04b30ff5fd93,document,CURRENT
+PS2_SANKET_SOLUTION_ARCHITECTURE.md,13858,03b0b157bcfa,document,SUPERSEDED (hypothesis)
+PS2_SANKET_SOLUTION_ARCHITECTURE_FINAL.md,55534,6a6488e83ca8,document,BINDING
+README.md,17206,264bb3b6f81c,document,CURRENT
+README_PS2_SANKET.md,8445,430f47f1dcaa,document,CURRENT
+SANKET_SUTRA_DEMO.html,17018,510045781151,demo prop,CURRENT
+SANKET_SUTRA_SYSTEM_ARCHITECTURE_FINAL.md,17276,3476cd04199c,document,CURRENT
+SIMILAR_SYSTEMS_REVERSE_ENGINEERING.md,38701,34c561b0f1a5,document,CURRENT
+START_HERE_TEAM_HANDOFF.md,15793,4958657499b9,document,CURRENT
+tools/build_derived_table.py,2521,e544831fa679,tool,TOOL
+tools/build_manifest.py,1808,37735f1574c3,tool,TOOL
+tools/build_package.sh,1504,a8f86cf24406,tool,TOOL
+tools/check_links.py,2167,b370f09384d1,tool,TOOL
+tools/check_section.sh,3342,444f34074ec3,tool,TOOL
+tools/dataset_audit.py,26207,aadaaf7dd6d3,tool,TOOL
+tools/financial_model.py,12678,8ab5964b6c46,tool,TOOL
+tools/financial_model_output.txt,10946,3da3d9d1bc2c,tool,TOOL
+tools/reproduce.sh,728,87a26ea3e5db,tool,TOOL
+data/DATASET_README.md,3158,94aff5538190,document,CURRENT
+data/README_DATA_PS2.md,4825,64cc56fcb0de,document,CURRENT
+data/raw/accounts.csv,320356,df65051e6f70,input table (read-only),"INPUT (synthetic, read-only)"
+data/raw/addresses.csv,405168,7e0eed682a64,input table (read-only),"INPUT (synthetic, read-only)"
+data/raw/agents.csv,969,1a1d8722e4db,input table (read-only),"INPUT (synthetic, read-only)"
+data/raw/dial_attempts.csv,7493973,65a20525e213,input table (read-only),"INPUT (synthetic, read-only)"
+data/raw/field_visits.csv,960718,b4099e532581,input table (read-only),"INPUT (synthetic, read-only)"
+data/raw/lenders.csv,270,e96671f0258e,input table (read-only),"INPUT (synthetic, read-only)"
+data/raw/payments.csv,121006,1448ed59dfd8,input table (read-only),"INPUT (synthetic, read-only)"
+data/raw/phones.csv,359654,d336ad5c28d7,input table (read-only),"INPUT (synthetic, read-only)"
+data/raw/skip_traces.csv,60093,8e869ff36b09,input table (read-only),"INPUT (synthetic, read-only)"
+data/raw/splits.csv,37457,005342b60c45,input table (read-only),"INPUT (synthetic, read-only)"
+data/raw/verified_contact_points.csv,11570,c56eea469bbd,input table (read-only),"INPUT (synthetic, read-only)"
+data/derived/derived_ps2_policy_baselines.csv,539,b606c07e9f02,acceptance table,BINDING (acceptance numbers)
+_superseded/ARCHITECTURE_DECISION_LOG_FINAL.md,19796,45c713f20e50,superseded draft,SUPERSEDED
+_superseded/ARCHITECTURE_RESEARCH_BIBLIOGRAPHY.md,28953,60aba37d4422,superseded draft,SUPERSEDED
+_superseded/CN_QUESTIONS.md,11451,9afe7c9c9d9e,superseded draft,SUPERSEDED
+_superseded/CreditNirvana_PS2_PS3_MASTER.md,395114,df11720a6282,superseded draft,SUPERSEDED
+_superseded/CreditNirvana_PS2_PS3_Research_and_Strategy.docx,167205,b0a757d3c6f4,superseded draft,SUPERSEDED
+_superseded/CreditNirvana_PS2_PS3_Research_and_Strategy.md,215328,4e45661fcc19,superseded draft,SUPERSEDED
+_superseded/FRONTIER_PS2_PS3_ARCHITECTURES.md,14672,b1279c53d9f7,superseded draft,SUPERSEDED
+_superseded/HACKATHON_EXECUTION_PLAN.md,10346,7e78deeadb07,superseded draft,SUPERSEDED
+_superseded/HOW_TO_USE_AND_UNDERSTAND_THIS_PACKAGE.md,28774,6a33ca0a2a24,superseded draft,SUPERSEDED
+_superseded/NOVELTY_MATRIX.md,7421,35a627a1d651,superseded draft,SUPERSEDED
+_superseded/PS2_ADVANCED_ARCHITECTURE_RESEARCH.md,29204,4b75a91429e0,superseded draft,SUPERSEDED
+_superseded/PS2_ARCHITECTURE_OPTIONS.md,12206,28d5a3a5a13b,superseded draft,SUPERSEDED
+_superseded/PS2_ARCHITECTURE_REQUIREMENTS.md,15566,a3b87e00fe51,superseded draft,SUPERSEDED
+_superseded/PS2_ARCHITECTURE_SELECTION.md,11226,e190819be666,superseded draft,SUPERSEDED
+_superseded/PS2_ASSUMPTIONS.md,12031,e65445e90300,superseded draft,SUPERSEDED
+_superseded/PS2_DEEP_INTERNET_RESEARCH.md,31660,57606fe36bec,superseded draft,SUPERSEDED
+_superseded/PS2_PS3_DATASET_REVIEW.md,51072,3b7a6c1ef338,superseded draft,SUPERSEDED
+_superseded/PS2_PS3_DATA_STRATEGY.md,6737,fb51fe31d8c2,superseded draft,SUPERSEDED
+_superseded/PS2_PS3_FINANCIAL_MODEL.md,9060,55e9049c98d6,superseded draft,SUPERSEDED
+_superseded/PS2_PS3_INTEGRATED_PRODUCT.md,19835,8dee3b1a91b8,superseded draft,SUPERSEDED
+_superseded/PS2_PS3_MARKET_RESEARCH.md,16322,ebc42ca5d4b8,superseded draft,SUPERSEDED
+_superseded/PS2_PS3_RED_TEAM.md,15033,693fddcce30e,superseded draft,SUPERSEDED
+_superseded/PS2_PS3_RESEARCH_SYNTHESIS.md,24459,b1965ab0b5b8,superseded draft,SUPERSEDED
+_superseded/PS2_PS3_SOURCE_BIBLIOGRAPHY.md,36539,04b30ff5fd93,superseded draft,SUPERSEDED
+_superseded/PS2_SANKET_SOLUTION_ARCHITECTURE.md,13858,03b0b157bcfa,superseded draft,SUPERSEDED
+_superseded/PS2_SANKET_SOLUTION_ARCHITECTURE_FINAL.md,55549,4a1ee54b87e0,superseded draft,SUPERSEDED
+_superseded/SANKET_SUTRA_DEMO.html,17018,510045781151,superseded draft,SUPERSEDED
+_superseded/SANKET_SUTRA_SYSTEM_ARCHITECTURE_FINAL.md,17276,3476cd04199c,superseded draft,SUPERSEDED
+_superseded/SIMILAR_SYSTEMS_REVERSE_ENGINEERING.md,38701,34c561b0f1a5,superseded draft,SUPERSEDED
+_superseded/dataset_audit.py,24662,c2c496d50923,superseded draft,SUPERSEDED
+_superseded/financial_model.py,12678,8ab5964b6c46,superseded draft,SUPERSEDED
+_superseded/financial_model_output.txt,10946,3da3d9d1bc2c,superseded draft,SUPERSEDED

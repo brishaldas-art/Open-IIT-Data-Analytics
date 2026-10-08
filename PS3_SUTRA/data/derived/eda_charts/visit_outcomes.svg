@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="262" viewBox="0 0 760 262" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">
+<rect width="760" height="262" fill="#ffffff"/>
+<text x="8" y="16" font-size="13" font-weight="600" fill="#1a202c">Field-visit outcomes (n=5,578 visits)</text>
+<text x="8" y="49" fill="#2d3748">address_not_traceable</text>
+<rect x="300" y="39" width="380.0" height="13" rx="2" fill="#553c9a" opacity="0.85"/>
+<text x="686" y="49" fill="#1a202c" font-weight="600">1400</text>
+<text x="8" y="75" fill="#2d3748">locked_premises</text>
+<rect x="300" y="65" width="339.0" height="13" rx="2" fill="#553c9a" opacity="0.85"/>
+<text x="645" y="75" fill="#1a202c" font-weight="600">1249</text>
+<text x="8" y="101" fill="#2d3748">met_borrower</text>
+<rect x="300" y="91" width="302.4" height="13" rx="2" fill="#553c9a" opacity="0.85"/>
+<text x="608" y="101" fill="#1a202c" font-weight="600">1114</text>
+<text x="8" y="127" fill="#2d3748">met_family</text>
+<rect x="300" y="117" width="288.3" height="13" rx="2" fill="#553c9a" opacity="0.85"/>
+<text x="594" y="127" fill="#1a202c" font-weight="600">1062</text>
+<text x="8" y="153" fill="#2d3748">neighbour_says_shifted</text>
+<rect x="300" y="143" width="123.5" height="13" rx="2" fill="#553c9a" opacity="0.85"/>
+<text x="430" y="153" fill="#1a202c" font-weight="600">455</text>
+<text x="8" y="179" fill="#2d3748">no_such_person</text>
+<rect x="300" y="169" width="55.9" height="13" rx="2" fill="#553c9a" opacity="0.85"/>
+<text x="362" y="179" fill="#1a202c" font-weight="600">206</text>
+<text x="8" y="205" fill="#2d3748">cash_collected</text>
+<rect x="300" y="195" width="25.0" height="13" rx="2" fill="#553c9a" opacity="0.85"/>
+<text x="331" y="205" fill="#1a202c" font-weight="600">92</text>
+<text x="8" y="230" fill="#718096" font-size="11">1 in 4 visits is 'address_not_traceable' — the failure mode this project must handle.</text>
+</svg>

@@ -1,0 +1,11 @@
+import { chromium } from 'playwright'
+const b=await chromium.launch({args:['--no-sandbox','--disable-dev-shm-usage']})
+const p=await b.newPage({viewport:{width:1512,height:950},deviceScaleFactor:2})
+await p.goto('http://127.0.0.1:8000/#/resolve',{waitUntil:'networkidle'})
+await p.locator('.demo-tab[data-case="AD002936"]').click()
+await p.locator('text=MOVED_SUSPECTED').first().waitFor()
+await p.waitForTimeout(1200)
+const el = p.locator('.figure-row').first()
+console.log('figure-row html:', (await el.innerHTML()).slice(0,600))
+await el.screenshot({path:'../screenshots/_zoom-figures.png'})
+await b.close()

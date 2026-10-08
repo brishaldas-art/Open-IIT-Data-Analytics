@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="216" viewBox="0 0 780 216" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">
+<rect width="780" height="216" fill="#fff"/>
+<text x="10" y="20" font-size="13.5" font-weight="600" fill="#1a202c">Vendor pin: share of surveyed addresses within X metres (n=100)</text>
+<text x="10" y="55" fill="#2d3748">≤ 50 m</text>
+<rect x="320" y="45" width="21.1" height="13" rx="2" fill="#9b2c2c" opacity="0.87"/>
+<text x="348" y="55" fill="#1a202c" font-weight="600">5%</text>
+<text x="10" y="81" fill="#2d3748">≤ 100 m</text>
+<rect x="320" y="71" width="38.0" height="13" rx="2" fill="#9b2c2c" opacity="0.87"/>
+<text x="365" y="81" fill="#1a202c" font-weight="600">9%</text>
+<text x="10" y="107" fill="#2d3748">≤ 250 m</text>
+<rect x="320" y="97" width="147.8" height="13" rx="2" fill="#9b2c2c" opacity="0.87"/>
+<text x="475" y="107" fill="#1a202c" font-weight="600">35%</text>
+<text x="10" y="133" fill="#2d3748">≤ 500 m</text>
+<rect x="320" y="123" width="299.8" height="13" rx="2" fill="#9b2c2c" opacity="0.87"/>
+<text x="627" y="133" fill="#1a202c" font-weight="600">71%</text>
+<text x="10" y="159" fill="#2d3748">≤ 1000 m</text>
+<rect x="320" y="149" width="380.0" height="13" rx="2" fill="#9b2c2c" opacity="0.87"/>
+<text x="707" y="159" fill="#1a202c" font-weight="600">90%</text>
+<text x="10" y="186" fill="#718096" font-size="11.5">Only 9% within 100 m. Median error 376 m, max 4,808 m.</text>
+</svg>

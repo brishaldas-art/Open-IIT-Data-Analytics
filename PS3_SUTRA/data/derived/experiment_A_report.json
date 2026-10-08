@@ -1,0 +1,134 @@
+{
+  "as_of": "2026-06-01T00:00:00Z",
+  "corpus_coverage": {
+    "n_addresses": 3117,
+    "n_with_frozen_baseline": 2880,
+    "note": "the pre-contract 'coverage 92.4%' figure [S91] is this share",
+    "share": 0.924
+  },
+  "label_basis": "surveyed ground truth (the only ground truth this project has, n=100)",
+  "label_source": "surveyed_ground_truth",
+  "populations": {
+    "all_100": 100,
+    "leave_block_out": 31,
+    "validation_plus_test": 34
+  },
+  "regression_check": {
+    "matches": true,
+    "median_delta_m": 0.0,
+    "post_contract": {
+      "hit_100m": 0.09,
+      "hit_250m": 0.35,
+      "hit_500m": 0.71,
+      "max_err_m": 4807.7,
+      "median_err_m": 376.4,
+      "n": 100,
+      "p80_err_m": 610.0
+    },
+    "pre_contract_reference": {
+      "coverage": 0.924,
+      "hit_100m": 0.09,
+      "hit_500m": 0.71,
+      "median_err_m": 376.4,
+      "population": "all_100",
+      "source": "[S91]"
+    }
+  },
+  "reports": {
+    "all_100": {
+      "coverage": 1.0,
+      "frozen_baseline_only": {
+        "hit_100m": 0.09,
+        "hit_250m": 0.35,
+        "hit_500m": 0.71,
+        "max_err_m": 4807.7,
+        "median_err_m": 376.4,
+        "n": 100,
+        "p80_err_m": 610.0
+      },
+      "n_surveyed": 100,
+      "rule_priority_top1 (frozen_baseline else town_centroid)": {
+        "hit_100m": 0.09,
+        "hit_250m": 0.35,
+        "hit_500m": 0.71,
+        "max_err_m": 4807.7,
+        "median_err_m": 376.4,
+        "n": 100,
+        "p80_err_m": 610.0
+      }
+    },
+    "leave_block_out": {
+      "coverage": 1.0,
+      "frozen_baseline_only": {
+        "hit_100m": 0.0968,
+        "hit_250m": 0.4839,
+        "hit_500m": 0.6774,
+        "max_err_m": 4807.7,
+        "median_err_m": 329.9,
+        "n": 31,
+        "p80_err_m": 626.9
+      },
+      "n_surveyed": 31,
+      "rule_priority_top1 (frozen_baseline else town_centroid)": {
+        "hit_100m": 0.0968,
+        "hit_250m": 0.4839,
+        "hit_500m": 0.6774,
+        "max_err_m": 4807.7,
+        "median_err_m": 329.9,
+        "n": 31,
+        "p80_err_m": 626.9
+      }
+    },
+    "validation_plus_test": {
+      "coverage": 1.0,
+      "frozen_baseline_only": {
+        "hit_100m": 0.0882,
+        "hit_250m": 0.4706,
+        "hit_500m": 0.7059,
+        "max_err_m": 4807.7,
+        "median_err_m": 326.1,
+        "n": 34,
+        "p80_err_m": 591.0
+      },
+      "n_surveyed": 34,
+      "rule_priority_top1 (frozen_baseline else town_centroid)": {
+        "hit_100m": 0.0882,
+        "hit_250m": 0.4706,
+        "hit_500m": 0.7059,
+        "max_err_m": 4807.7,
+        "median_err_m": 326.1,
+        "n": 34,
+        "p80_err_m": 591.0
+      }
+    }
+  },
+  "spec": {
+    "as_of": "2026-06-01T00:00:00Z",
+    "firewall_receipt_sha256": "",
+    "inner_grouping": "account",
+    "label_source": "surveyed_ground_truth",
+    "note": "the only place surveyed truth may be read; increments the test-look counter",
+    "outer_fold": null,
+    "outer_grouping": "place_block",
+    "populations": [
+      "S-EVAL"
+    ],
+    "protocol_version": "protocol-v1-immutable",
+    "spec_id": "S_EVAL_BASELINE"
+  },
+  "test_look_counter": 4,
+  "test_look_reads": [
+    {
+      "n": 100,
+      "population": "all_100"
+    },
+    {
+      "n": 34,
+      "population": "validation_plus_test"
+    },
+    {
+      "n": 31,
+      "population": "leave_block_out"
+    }
+  ]
+}

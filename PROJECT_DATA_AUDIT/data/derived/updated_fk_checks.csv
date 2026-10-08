@@ -1,0 +1,15 @@
+child,parent,orphans,values_checked
+addresses.account_id,accounts.account_id,0,2400
+addresses.town_id,towns.town_id,1,4
+accounts.lender_id,lenders.lender_id,0,6
+accounts.town_id,towns.town_id,0,3
+field_visits.address_id,addresses.address_id,0,1477
+field_visits.account_id,accounts.account_id,0,1339
+field_visits.agent_id,agents.agent_id,0,9
+visit_gps_points.visit_id,field_visits.visit_id,0,5578
+splits.account_id,accounts.account_id,0,2400
+baseline_geocodes.address_id,addresses.address_id,0,2880
+surveyed_addresses.address_id,addresses.address_id,0,100
+localities.town_id,towns.town_id,0,3
+landmarks_poi.town_id,towns.town_id,0,3
+agents.town_id,towns.town_id,0,3

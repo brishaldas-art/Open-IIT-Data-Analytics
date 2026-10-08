@@ -1,0 +1,5 @@
+policy,calls,rpc_per_call,rpcs,third_party_contacts,note
+incumbent_realised_first_3_calls_per_account,1043,0.1544,161,0,"what the incumbent policy actually did first, per test account"
+incumbent_all_calls,7407,0.1762,1305,0,every attempt the incumbent made in the test window
+rule_drop_3rd_consecutive_dead_call,6478,0.1872,1213,0,deterministic waste floor: never make the 3rd+ consecutive dead call to the same point
+rule_first_ever_call_only,600,0.1333,80,0,only the first call to each contact point (upper bound on a cold-start policy)

@@ -1,0 +1,4 @@
+kyc_address_format,n,non_ascii,pincode_tail,house_marker,median_len
+app_free_text,1381,0.08,0.935,0.468,66.0
+kyc_mixed,1077,0.093,0.927,0.468,68.0
+kyc_upper,659,0.079,0.938,0.463,68.0

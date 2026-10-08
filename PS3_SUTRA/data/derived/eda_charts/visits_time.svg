@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="444" viewBox="0 0 760 444" font-family="Segoe UI,Helvetica,Arial,sans-serif" font-size="12">
+<rect width="760" height="444" fill="#ffffff"/>
+<text x="8" y="16" font-size="13" font-weight="600" fill="#1a202c">Visits per week (weeks beginning 2026-04-01 → 2026-06-29)</text>
+<text x="8" y="49" fill="#2d3748">05 Apr</text>
+<rect x="300" y="39" width="250.8" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="557" y="49" fill="#1a202c" font-weight="600">293</text>
+<text x="8" y="75" fill="#2d3748">12 Apr</text>
+<rect x="300" y="65" width="368.0" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="674" y="75" fill="#1a202c" font-weight="600">430</text>
+<text x="8" y="101" fill="#2d3748">19 Apr</text>
+<rect x="300" y="91" width="380.0" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="686" y="101" fill="#1a202c" font-weight="600">444</text>
+<text x="8" y="127" fill="#2d3748">26 Apr</text>
+<rect x="300" y="117" width="379.1" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="685" y="127" fill="#1a202c" font-weight="600">443</text>
+<text x="8" y="153" fill="#2d3748">03 May</text>
+<rect x="300" y="143" width="369.7" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="676" y="153" fill="#1a202c" font-weight="600">432</text>
+<text x="8" y="179" fill="#2d3748">10 May</text>
+<rect x="300" y="169" width="380.0" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="686" y="179" fill="#1a202c" font-weight="600">444</text>
+<text x="8" y="205" fill="#2d3748">17 May</text>
+<rect x="300" y="195" width="374.9" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="681" y="205" fill="#1a202c" font-weight="600">438</text>
+<text x="8" y="231" fill="#2d3748">24 May</text>
+<rect x="300" y="221" width="371.4" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="677" y="231" fill="#1a202c" font-weight="600">434</text>
+<text x="8" y="257" fill="#2d3748">31 May</text>
+<rect x="300" y="247" width="368.0" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="674" y="257" fill="#1a202c" font-weight="600">430</text>
+<text x="8" y="283" fill="#2d3748">07 Jun</text>
+<rect x="300" y="273" width="373.2" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="679" y="283" fill="#1a202c" font-weight="600">436</text>
+<text x="8" y="309" fill="#2d3748">14 Jun</text>
+<rect x="300" y="299" width="364.6" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="671" y="309" fill="#1a202c" font-weight="600">426</text>
+<text x="8" y="335" fill="#2d3748">21 Jun</text>
+<rect x="300" y="325" width="356.0" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="662" y="335" fill="#1a202c" font-weight="600">416</text>
+<text x="8" y="361" fill="#2d3748">28 Jun</text>
+<rect x="300" y="351" width="376.6" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="683" y="361" fill="#1a202c" font-weight="600">440</text>
+<text x="8" y="387" fill="#2d3748">05 Jul</text>
+<rect x="300" y="377" width="61.6" height="13" rx="2" fill="#2b6cb0" opacity="0.85"/>
+<text x="368" y="387" fill="#1a202c" font-weight="600">72</text>
+<text x="8" y="412" fill="#718096" font-size="11">13 weeks; no regime change is observable in this window.</text>
+</svg>

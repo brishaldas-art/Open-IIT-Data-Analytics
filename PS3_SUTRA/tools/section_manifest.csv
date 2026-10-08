@@ -1,0 +1,343 @@
+path,bytes,sha256_12,role,status,domain
+.dockerignore,161,3b836a376d3d,deployment configuration,CURRENT,—
+.pytest_cache/.gitignore,37,3ed731b65d06,artefact,CURRENT,—
+.pytest_cache/CACHEDIR.TAG,191,37dc88ef9a0a,artefact,CURRENT,—
+.pytest_cache/README.md,302,73fd6fccdd80,document (front door / handoff),CURRENT,—
+.pytest_cache/v/cache/nodeids,10181,6028a5966898,artefact,CURRENT,—
+DEPLOYMENT.md,8693,6620e63542e3,deployment configuration,CURRENT,—
+Dockerfile,2149,f0d011d731f1,deployment configuration,CURRENT,—
+PS3_ADDRESS_MEMORY_ARCHITECTURE.md,15581,f3663bbcad35,document,CURRENT,—
+PS3_ADVANCED_ARCHITECTURE_RESEARCH.md,30954,845c7dc5c230,document,CURRENT,—
+PS3_API_AND_COMPONENT_DESIGN.md,11494,6d18b364bad7,document,CURRENT,—
+PS3_ARCHITECTURE_CHANGE_SET_2026-10-07.md,10604,360cb0072714,document,CURRENT,—
+PS3_ARCHITECTURE_DUE_DILIGENCE_2026-10-07.md,24103,b39b9556719c,document,CURRENT,—
+PS3_ARCHITECTURE_LOCK_CANDIDATE_2026-10-07.md,18253,3cf0ac1d85a3,document,CURRENT,—
+PS3_ARCHITECTURE_OPTIONS.md,11380,444374d8973b,document,CURRENT,—
+PS3_ARCHITECTURE_REQUIREMENTS.md,17320,ceee26acbd8e,document,CURRENT,—
+PS3_ARCHITECTURE_REQUIREMENTS_RECONCILED.md,9626,ea54afa8ed2e,document,CURRENT,—
+PS3_ARCHITECTURE_SELECTION.md,14060,33c0ab1bc038,document,CURRENT,—
+PS3_ASSUMPTIONS.md,9435,ab7bbc29afe7,document,CURRENT,—
+PS3_BUSINESS_AND_OPERATIONAL_RETHINK.md,96166,27dff0f224e6,document,CURRENT,—
+PS3_CANONICAL_SCHEMA.md,12028,263a807b6324,document,CURRENT (method contract),—
+PS3_COST_ARCHITECTURE.md,9131,99327c732fc0,document,CURRENT,—
+PS3_DATA_ARCHITECTURE.md,13468,714bed980d1a,document,CURRENT,—
+PS3_DATA_AUDIT.md,22961,085d96249c4c,document,CURRENT,—
+PS3_DATA_CLEANING_REPORT.md,9556,2730453a18ed,document,CURRENT,—
+PS3_DATA_EDA_AND_PREPROCESSING.md,131865,d99044183412,document,CURRENT,—
+PS3_DATA_LINEAGE.md,9601,240e66dc4543,document,CURRENT,—
+PS3_DATA_PREPROCESSING.md,10216,e9fae9ed55f7,document,CURRENT,—
+PS3_DECISION_LOG.md,21821,cf8dbd2b6ab4,document,CURRENT,—
+PS3_DEEP_INTERNET_RESEARCH.md,24753,cbc8a811277d,document,CURRENT,—
+PS3_DYNAMIC_LEARNING_ARCHITECTURE.md,15282,374762e7dd07,document,CURRENT,—
+PS3_EXPERIMENT_PLAN.md,18911,f510df616e33,document,CURRENT,—
+PS3_FIELD_EVIDENCE_ARCHITECTURE.md,16106,35166d62514f,document,CURRENT,—
+PS3_FINAL_DATA_AND_ARCHITECTURE_FREEZE.md,13196,a1bd1d1996a6,document,CURRENT,—
+PS3_FINAL_REPORT.md,29455,a1e1c2c25324,document,CURRENT,—
+PS3_IMPLEMENTATION_CONTRACTS_2026-10-07.md,17393,5bbb220d9522,document,CURRENT,—
+PS3_IMPLEMENTATION_PHASE_REPORT_2026-10-07.md,54838,71ea569e9392,document,CURRENT,—
+PS3_LEAKAGE_AND_VALIDATION.md,13329,7e489f0bd9f7,document,CURRENT,—
+PS3_MASTER_ARCHITECTURE.md,25130,3f462fac065c,document,CURRENT,—
+PS3_MLOPS_ARCHITECTURE.md,12355,00c5a98adf6f,document,CURRENT,—
+PS3_MODEL_ARCHITECTURE.md,16300,8fb00a5ad65f,document,CURRENT,—
+PS3_MODEL_SELECTION.md,10653,20f510b49d4a,document,CURRENT,—
+PS3_NOVELTY_AND_DIFFERENTIATION.md,9816,67aaa9357e22,document,CURRENT,—
+PS3_OPERATIONAL_NEIGHBOUR_INDEX_RESEARCH.md,6981,ab6a2697aa14,document,CURRENT,—
+PS3_PURPOSE_AND_DIRECTION_MODULES.md,7954,8b455521e52e,document,CURRENT,—
+PS3_REAL_SYSTEMS_RESEARCH.md,17301,31932034236d,document,CURRENT,—
+PS3_RED_TEAM.md,24752,9651b29ae2af,document,CURRENT,—
+PS3_SOURCE_REGISTER.md,43210,58b74d0a9473,document,CURRENT (method contract),—
+PS3_SYSTEM_DESIGN.md,13652,2eba7b3aa9cf,document,CURRENT,—
+PS3_UNCERTAINTY_ARCHITECTURE.md,12861,88fb3c50ebb5,document,CURRENT,—
+PS3_WORKSPACE_MANIFEST.md,13847,3c3996d383f3,document,CURRENT,—
+README.md,8524,ab7d5208ea4f,document (front door / handoff),CURRENT,—
+SUTRA_BACKEND_GAP_AUDIT_2026-10-08.md,40058,cfd91a90329c,document (front door / handoff),CURRENT,—
+SUTRA_FINAL_INTEGRATION_REPORT_2026-10-08.md,23851,35d90f6bf273,document (front door / handoff),CURRENT,—
+SUTRA_FRONTEND_BACKEND_CONTRACT_V1_2026-10-08.md,47573,49436ac40667,document (front door / handoff),CURRENT,—
+SUTRA_FRONTEND_DEMO_FLOW_2026-10-08.md,23814,11ad61895ab8,document (front door / handoff),CURRENT,—
+SUTRA_FRONTEND_SMOKE_REPORT_2026-10-08.md,10668,9a71772ef503,document (front door / handoff),CURRENT,—
+SUTRA_JUDGE_DEMO_SCRIPT_2026-10-08.md,10414,884e02eeaf24,document (front door / handoff),CURRENT,—
+SUTRA_PRODUCT_UX_SPEC_2026-10-08.md,28258,c571bbb91aed,document (front door / handoff),CURRENT,—
+SUTRA_UIUX_FRONTEND_RESEARCH_2026-10-08.md,21953,95e19cac85e9,document (front door / handoff),CURRENT,—
+SUTRA_UIUX_RESEARCH_SOURCES_2026-10-08.md,10811,1f8a2b7ace8f,document (front door / handoff),CURRENT,—
+battle_model/INTEGRATION_PLAN.md,5635,c11546b769ce,document (front door / handoff),CURRENT,—
+battle_model/index.html,1306,406af68ab206,artefact,CURRENT,—
+battle_model/package-lock.json,87743,3ce4c90c06ce,leakage receipt / config,RECEIPT,—
+battle_model/package.json,740,8618340332e1,leakage receipt / config,RECEIPT,—
+battle_model/src/App.tsx,2189,481a4c1e2d2d,artefact,CURRENT,—
+battle_model/src/components/LocalPlaneMap.tsx,19407,745fe3045ff8,artefact,CURRENT,—
+battle_model/src/components/Shell.tsx,11580,985163924f19,artefact,CURRENT,—
+battle_model/src/components/u.tsx,9829,cb9ec199658b,artefact,CURRENT,—
+battle_model/src/index.css,2625,155fc864b3ef,artefact,CURRENT,—
+battle_model/src/lib/api.ts,7484,a9beda41b39b,artefact,CURRENT,—
+battle_model/src/lib/session.tsx,3323,911889b62d16,artefact,CURRENT,—
+battle_model/src/lib/types.ts,21661,3fc9868c3f9f,artefact,CURRENT,—
+battle_model/src/lib/utils.ts,3379,8e8f1a912c3b,artefact,CURRENT,—
+battle_model/src/main.tsx,230,f268dc44f712,artefact,CURRENT,—
+battle_model/src/utils/cn.ts,169,d1f1e0d62cb8,artefact,CURRENT,—
+battle_model/src/views/FieldEvidence.tsx,13347,c176003cfa02,artefact,CURRENT,—
+battle_model/src/views/Method.tsx,19302,76b9fbf4b322,artefact,CURRENT,—
+battle_model/src/views/Overview.tsx,11757,9936a25cab97,artefact,CURRENT,—
+battle_model/src/views/Places.tsx,16723,f008a89bfaa4,artefact,CURRENT,—
+battle_model/src/views/Resolver.tsx,30542,1d1ff0373f8a,artefact,CURRENT,—
+battle_model/src/views/VerifyQueue.tsx,19550,dd90884c55c3,artefact,CURRENT,—
+battle_model/tools/browser_smoke.mjs,17860,95e57563dfbf,artefact,CURRENT,—
+battle_model/tsconfig.json,681,2a760f56fa49,leakage receipt / config,RECEIPT,—
+battle_model/tsconfig.tsbuildinfo,442,3f0eeb6bd384,artefact,CURRENT,—
+battle_model/vite.config.ts,1061,b0ab2c9a8e8c,artefact,CURRENT,—
+data/cleaned/addresses_clean.csv,1051063,294128a7a190,cleaned/derived table produced from Domain A,DERIVED (logged transformation),A
+data/cleaned/cleaning_log.csv,1596,dd2031f46460,cleaned/derived table produced from Domain A,DERIVED (logged transformation),A
+data/cleaned/gps_points_clean.csv,14329004,994a999d7089,cleaned/derived table produced from Domain A,DERIVED (logged transformation),A
+data/cleaned/trail_features.csv,1075650,9da2e36ec053,cleaned/derived table produced from Domain A,DERIVED (logged transformation),A
+data/cleaned/visits_clean.csv,1547847,3baf4bfafb09,cleaned/derived table produced from Domain A,DERIVED (logged transformation),A
+data/derived/acceptance_report.json,7004,92f969d8a81a,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/candidates_v2.csv,1883522,adc9a382c565,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/candidates_v2.receipt.json,1026,cd1598681623,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/demo_transcript.md,5020,80eb47e4e01c,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/derived_place_neighbour_probe.csv,7354,90ae6fee7c9f,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/derived_ps3_radius_calibration.csv,1422,1ded98a764f7,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_agent_behaviour.csv,836,ca2f7e1e21f6,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_baseline_error_by_stratum.csv,235,585ae353f587,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_chart_index.json,203,6f3c479f405e,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts.html,36340,600b7471c74d,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/addr_components.svg,2269,94ccd8aa8da6,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/addr_len.svg,3211,52f74bd6aad2,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/addr_tokens.svg,3878,54797453f17d,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/agent_photo_dup.svg,2348,267d09597bdd,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/baseline_error_curve.svg,1479,b92de7bc499b,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/baseline_error_stratum.svg,1302,c438e4319f5e,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/baseline_strata.svg,1297,ee56d5f55d10,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/candidate_arms.svg,1885,bac1a1c8a4ed,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/dwell_outcome.svg,1302,3f9a6da7af78,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/exposure_dpd.svg,1489,0168a3be4c50,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/gps_accuracy.svg,2632,caca0a9ce82a,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/outcome_by_stratum.svg,1303,3b03794a71d6,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/visit_outcomes.svg,1938,56eaaf36259d,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_charts/visits_time.svg,3274,dc90e1aa24df,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_column_profile.csv,3552,7d27a5424b49,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_ground_truth_composition.csv,4740,2d15c0f7ed80,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_hierarchy_town.csv,52,14d7632a674c,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_landmark_types.csv,214,42fa9cd8f39d,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_missingness.csv,2385,2a5525b6b6b4,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_near_duplicates.csv,8114,b1042b097a67,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_report.txt,47739,73f4f4a82949,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_split_town.csv,189,a24f934f7fe9,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_town_shape.csv,72,5684b41fbe31,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_visit_outcome_geometry.csv,472,f48e64edc786,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/eda_visit_outcomes.csv,156,1bb9d92a578b,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/evidence_memory_error_table.csv,97329,8f22fc2a02c8,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/evidence_memory_policy_receipt.json,1424323,e2b05d6a0e05,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/evidence_memory_policy_report.md,17221,6c961c96b632,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/evidence_memory_policy_results.csv,9006,3c535a864a16,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/evidence_memory_policy_snapshot.json,19346,53f0b00d27d1,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/experiment_A_report.json,3340,7e97b7a8a21f,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/experiment_b_receipt.json,137926,95b030e7cd4b,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/experiment_b_report.md,16403,8f9032a3c56d,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/experiment_b_results.csv,464148,a5eaff71c36e,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/experiment_c_receipt.json,196536,838a85cb35ca,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/experiment_c_report.md,22374,15881c3a9db6,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/experiment_c_results.csv,2158252,19ccdfdc94f5,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/experiment_d_receipt.json,120071,dd5ebf6d8c54,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/experiment_d_report.md,31276,9710f120d10d,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/experiment_d_results.csv,237371,9318bba9f516,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/features_coldstart_v2.csv,1092167,c435b089b444,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/features_coldstart_v2.receipt.json,1265,1c8c496df67e,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/features_warm_v2.csv,1331890,e5372490f114,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/features_warm_v2.receipt.json,1340,0cd814df2405,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/final_evidence_memory_policy.json,3754,f802eb48d206,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/final_precision_config.json,2450,7296ac39a37d,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/labels_eval_v2.csv,44636,1501adcd2ba4,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/packs/pack-T1-04c433191978.json,1510485,ddd4ebd4b37a,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/packs/pack-T2-01ae94c33a90.json,1568865,183d78ff1560,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/packs/pack-T2-0575dcc6c0df.json,1623407,40e8b5d778cd,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/packs/pack-T2-7247f0bd3d96.json,1774492,a207722ec47c,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/precision_bottleneck_table.csv,22663,d4bb9e8eaefc,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/precision_optimization_receipt.json,221794,7b4cba0afdd4,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/precision_optimization_report.md,18792,08750ea7df6e,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/precision_optimization_results.csv,4444,9fd58047a1a4,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/ps3_audit_full.txt,34371,cbf84e17ea14,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/ps3_column_profile.csv,7272,3dc75a748dad,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/ps3_evidence_diagnostics.csv,760,1e5adcba5b6b,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/ps3_leakage_map.csv,1956,9481e6c83e67,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/ps3_place_blocks.csv,141762,fbd18a007227,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/ps3_table_profile.csv,678,16ff1db84912,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime/sutra_store.sqlite,25419776,a28a180f28a7,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime/sutra_store.sqlite-shm,32768,a24f8522123c,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime/sutra_store.sqlite-wal,185432,69ed0e61d370,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/addresses.json,2204069,7ab95ecf1023,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/landmark_names.json,4858,a85b91a1e965,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/landmarks.json,26601,a33054f9d772,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/localities.json,4878,3fad5ac0dbc1,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/localities_by_pin.json,493,48f1ccb80cc1,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/manifest.json,1390,a5db3ca4c2a3,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/memory.json,157608,490e9f5add2e,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/place_blocks.json,217030,7cc7925bec01,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/text_book.json,263966,cd9c39d42642,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/token_idf.json,13669,591246b35f3e,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/runtime_indexes/town_centroids.json,71,a12a40853f2d,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/split_receipt.json,2460,886239dec70e,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/superseded_pre_contract_2026-10-07/README.md,1848,fb9509a64da5,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/superseded_pre_contract_2026-10-07/candidates_coldstart.csv,745217,d0691a085416,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/superseded_pre_contract_2026-10-07/candidates_warm.csv,820689,e4c4c524c229,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/superseded_pre_contract_2026-10-07/features_coldstart.csv,891172,f702ecb5a2d6,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/superseded_pre_contract_2026-10-07/features_coldstart.receipt.json,872,1f39004668aa,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/superseded_pre_contract_2026-10-07/features_warm.csv,995861,b1f30fe3b6b8,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/superseded_pre_contract_2026-10-07/features_warm.receipt.json,971,0cb163f0befc,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/superseded_pre_contract_2026-10-07/labels_eval.csv,24488,b52f90ededf3,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/supervision_firewall.csv,11276,5a2622bd8a5a,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/derived/supervision_manifest.csv,408313,cfc3ec26fccc,"derived artefact (profile, candidates, features, calibration)",DERIVED (reproducible),A
+data/official_ps3/DATASET_README.md,3198,e741589a2055,dataset documentation (the dataset's own words),INPUT (read-only),A
+data/official_ps3/README_DATA_PS3.md,4288,e69c94afaac0,dataset documentation (the dataset's own words),INPUT (read-only),A
+data/official_ps3/accounts.csv,320356,df65051e6f70,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/addresses.csv,405168,7e0eed682a64,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/agents.csv,969,1a1d8722e4db,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/baseline_geocodes.csv,91795,e7dde99db504,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/field_visits.csv,960718,b4099e532581,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/landmarks_poi.csv,11278,d565be9d3fca,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/lenders.csv,270,e96671f0258e,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/localities.csv,1701,b18ea44e58f0,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/splits.csv,37457,005342b60c45,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/surveyed_addresses.csv,2356,2d26aa6c6c23,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/towns.csv,135,e0167d3efe2d,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+data/official_ps3/visit_gps_points.csv,7136303,1afd7b9f7c0d,"input table — DATASET A, official benchmark","INPUT (synthetic, READ-ONLY)",A
+research/precision/README.md,7395,4c9917ad732d,document (front door / handoff),CURRENT,—
+research/precision/audit.py,4790,0fe65bdadedf,artefact,CURRENT,—
+research/precision/bound.py,3459,0b40e348ea14,artefact,CURRENT,—
+research/precision/lexicon.py,4062,5a7afd31d368,artefact,CURRENT,—
+research/precision/lm.py,5074,10b252cb90c8,artefact,CURRENT,—
+research/precision/loc.py,3184,ab81a561dafb,artefact,CURRENT,—
+research/precision/pin.py,2725,6d59c10fd748,artefact,CURRENT,—
+research/precision/policies.py,10546,14951fb3b8bb,artefact,CURRENT,—
+research/precision/prod.py,2513,dd910becf756,artefact,CURRENT,—
+research/precision/rank2.py,5057,b1112dd84abf,artefact,CURRENT,—
+research/precision/resolver.py,3972,9955b46f65b3,artefact,CURRENT,—
+research/precision/rule_study.py,6644,ead2dccaaaf1,artefact,CURRENT,—
+research/precision/sib.py,4259,75de7944ed58,artefact,CURRENT,—
+research/precision/sib2.py,5413,4f3920075e64,artefact,CURRENT,—
+research/precision/sim.py,6423,301d30995f34,artefact,CURRENT,—
+research/precision/temporal.py,3447,9b24b7ea099c,artefact,CURRENT,—
+research/precision/temporal2.py,2852,16ffadf5796b,artefact,CURRENT,—
+research/precision/trace.py,3630,ce14a5c3823d,artefact,CURRENT,—
+research/precision/v2cand.py,3398,ea757c940de5,artefact,CURRENT,—
+research/precision/warm.py,3953,13f6cd42c71c,artefact,CURRENT,—
+screenshots/01-operations.png,147229,bb6d14ba262c,artefact,CURRENT,—
+screenshots/02-resolve-serve.png,264228,6c2e8851d567,artefact,CURRENT,—
+screenshots/03-resolve-candidate-selected.png,253295,f57d0c1f8b7b,artefact,CURRENT,—
+screenshots/04-resolve-replay.png,220535,a365106ca0eb,artefact,CURRENT,—
+screenshots/05-resolve-verify-first.png,258067,64164eb88136,artefact,CURRENT,—
+screenshots/06-resolve-transition-after-flip.png,258054,b2666f400313,artefact,CURRENT,—
+screenshots/07-resolve-refusal.png,273199,5dc322793913,artefact,CURRENT,—
+screenshots/08-places.png,164361,b2c82d85d888,artefact,CURRENT,—
+screenshots/09-evidence.png,234980,ed27ad454f3a,artefact,CURRENT,—
+screenshots/10-queue.png,186412,f542fcd576f3,artefact,CURRENT,—
+screenshots/11-queue-to-resolve.png,216671,f2e25f0d98a9,artefact,CURRENT,—
+screenshots/11b-case-adjudicated.png,237780,70450ad41dda,artefact,CURRENT,—
+screenshots/12-method.png,226559,c4b64e08692a,artefact,CURRENT,—
+screenshots/13-resolve-narrow.png,77990,2c7fb8fb4a42,artefact,CURRENT,—
+screenshots/bm-01-overview.png,173628,1106eda4d48c,artefact,CURRENT,—
+screenshots/bm-02-resolver-serve.png,194799,52e6b642324a,artefact,CURRENT,—
+screenshots/bm-03-resolver-verify-first.png,202786,0d2c7fda57b5,artefact,CURRENT,—
+screenshots/bm-04-cross-highlight.png,202415,569bb6a0be68,artefact,CURRENT,—
+screenshots/bm-05-refusal.png,173563,7a96d31369ee,artefact,CURRENT,—
+screenshots/bm-06-places.png,207131,606ecbf4591f,artefact,CURRENT,—
+screenshots/bm-07-evidence.png,252232,504801b773a2,artefact,CURRENT,—
+screenshots/bm-08-queue.png,190381,1ade10e850de,artefact,CURRENT,—
+screenshots/bm-09-transition.png,155732,9bdd34aca7c0,artefact,CURRENT,—
+screenshots/bm-10-adjudication.png,221256,3f2ddc9a563f,artefact,CURRENT,—
+screenshots/bm-11-method.png,209906,a80f0406ae8b,artefact,CURRENT,—
+screenshots/bm-12-narrow.png,115280,f8781b45e9b0,artefact,CURRENT,—
+sutra/__init__.py,2067,ed4988b0f482,artefact,CURRENT,—
+sutra/api.py,24664,0208d5de8fac,artefact,CURRENT,—
+sutra/asof.py,3716,204b42729855,artefact,CURRENT,—
+sutra/belief.py,11774,db53c75bac8d,artefact,CURRENT,—
+sutra/candidates.py,25898,bccd21af5c10,artefact,CURRENT,—
+sutra/config.py,10928,1c1fe67b9568,artefact,CURRENT,—
+sutra/dataio.py,7320,761e932f91b5,artefact,CURRENT,—
+sutra/directions.py,2383,5e2f27ec6369,artefact,CURRENT,—
+sutra/eligibility.py,2730,a01c34fc1748,artefact,CURRENT,—
+sutra/evidence.py,12879,c6cb285e7f3f,artefact,CURRENT,—
+sutra/feeds.py,9886,078e44bb7051,artefact,CURRENT,—
+sutra/geo.py,1641,8d0d144b3b90,artefact,CURRENT,—
+sutra/indexes.py,10062,695f90c299c4,artefact,CURRENT,—
+sutra/learning.py,23757,a6ff49d2afca,artefact,CURRENT,—
+sutra/memory.py,7395,05d9350a09d3,artefact,CURRENT,—
+sutra/offline.py,8248,cf22c021a82d,artefact,CURRENT,—
+sutra/packs.py,5295,0161a2ca5616,artefact,CURRENT,—
+sutra/preprocess.py,29810,863baacd2a89,artefact,CURRENT,—
+sutra/product.py,57939,1e25a914defa,artefact,CURRENT,—
+sutra/purpose.py,3446,4c30b96f727c,artefact,CURRENT,—
+sutra/ranking.py,7376,fc9de57eadf7,artefact,CURRENT,—
+sutra/replay.py,8191,22b615031cf9,artefact,CURRENT,—
+sutra/resolve.py,11019,49b419156072,artefact,CURRENT,—
+sutra/seed.py,6501,e512d244448a,artefact,CURRENT,—
+sutra/splits.py,12083,47ab95846b35,artefact,CURRENT,—
+sutra/stats.py,6646,716724039c33,artefact,CURRENT,—
+sutra/store.py,29217,b3f66b8cf947,artefact,CURRENT,—
+sutra/uncertainty.py,3851,aa1e8cdca087,artefact,CURRENT,—
+sutra/version.py,1096,5b3e0c431195,artefact,CURRENT,—
+sutra/views.py,50687,76c85fa26abd,artefact,CURRENT,—
+tests/test_acceptance.py,37664,1340342e65df,artefact,CURRENT,—
+tests/test_contract_v1.py,42803,b489b8d76525,artefact,CURRENT,—
+tests/test_no_fake_data.py,10599,d7c5cb749e31,artefact,CURRENT,—
+tests/test_product_v1.py,32214,a0482ac67695,artefact,CURRENT,—
+tools/build_candidates.py,9848,197c6a7c110d,tool,TOOL,—
+tools/build_derived_table.py,3626,c80c66c328f6,tool,TOOL,—
+tools/build_manifest.py,3606,d266359343dd,tool,TOOL,—
+tools/build_runtime_indexes.py,1372,c5944dd19cb8,tool,TOOL,—
+tools/build_store.py,3054,8c4a359777dc,tool,TOOL,—
+tools/build_supervision.py,2064,fd72e168fe0e,tool,TOOL,—
+tools/check_leakage.py,10995,ce4b81bed22a,tool,TOOL,—
+tools/check_links.py,3945,067845d9e22b,tool,TOOL,—
+tools/check_workspace.py,9156,ef2dc099a923,tool,TOOL,—
+tools/clean_official.py,9008,e3f185c5b6e3,tool,TOOL,—
+tools/demo_walkthrough.py,13400,2f6dd9c1db90,tool,TOOL,—
+tools/eda_charts.py,13508,6d9f442f924c,tool,TOOL,—
+tools/eda_official.py,62219,7c40aed360f3,tool,TOOL,—
+tools/evidence_diagnostics.py,3813,7cf487bbb71a,tool,TOOL,—
+tools/evidence_memory_policy.py,64375,1f6fce571e38,tool,TOOL,—
+tools/experiment_a.py,7789,96cf31cd2246,tool,TOOL,—
+tools/experiment_b.py,59930,7b46536ce9f3,tool,TOOL,—
+tools/experiment_c.py,88287,a04a3831198b,tool,TOOL,—
+tools/experiment_d.py,82146,5beb871a6238,tool,TOOL,—
+tools/neighbour_index_probe.py,7328,a0bd0334d1f6,tool,TOOL,—
+tools/place_block_folds.py,5752,a6b2fc0705bd,tool,TOOL,—
+tools/precision_opt.py,105301,806e2069bed8,tool,TOOL,—
+tools/ps3_audit.py,42493,63e233f257d2,tool,TOOL,—
+tools/reproduce.sh,6572,da93db1c98ca,tool,TOOL,—
+tools/run_acceptance_tests.py,5696,2d1257090983,tool,TOOL,—
+tools/serve_runtime.py,1769,8357e52a86da,tool,TOOL,—
+tools/smoke_test.py,10103,a6c7c6f273dc,tool,TOOL,—
+web/index.html,522,384a44074c0f,frontend source (React + TypeScript console),CURRENT,—
+web/package-lock.json,62672,c53d4148bb92,frontend source (React + TypeScript console),CURRENT,—
+web/package.json,585,1280e8cf9923,frontend source (React + TypeScript console),CURRENT,—
+web/src/api/client.ts,1294,6a099e15b7ee,frontend source (React + TypeScript console),CURRENT,—
+web/src/api/endpoints.ts,6312,ed354951d517,frontend source (React + TypeScript console),CURRENT,—
+web/src/api/types.ts,17444,fb5dd7d2fca3,frontend source (React + TypeScript console),CURRENT,—
+web/src/api/useApi.ts,3362,fde2a3107926,frontend source (React + TypeScript console),CURRENT,—
+web/src/api/validate.ts,2354,467d651e5dd9,frontend source (React + TypeScript console),CURRENT,—
+web/src/app/App.tsx,4392,04c1189cd05f,frontend source (React + TypeScript console),CURRENT,—
+web/src/components/CandidateList.tsx,4165,9f2b5db3c029,frontend source (React + TypeScript console),CURRENT,—
+web/src/components/DecisionTicket.tsx,7252,070c64ef4f51,frontend source (React + TypeScript console),CURRENT,—
+web/src/components/EvidenceTimeline.tsx,4182,153263edb359,frontend source (React + TypeScript console),CURRENT,—
+web/src/components/Plane.tsx,14880,4e8b5e2f9103,frontend source (React + TypeScript console),CURRENT,—
+web/src/components/ui.tsx,5122,4c833599c97a,frontend source (React + TypeScript console),CURRENT,—
+web/src/config/product.ts,3010,c507fd25619b,frontend source (React + TypeScript console),CURRENT,—
+web/src/fixtures/captured.json,135834,e38cf1867935,frontend source (React + TypeScript console),CURRENT,—
+web/src/fixtures/demo.ts,3447,9864d0c84064,frontend source (React + TypeScript console),CURRENT,—
+web/src/main.tsx,613,8848cf75c35e,frontend source (React + TypeScript console),CURRENT,—
+web/src/pages/Evidence.tsx,11048,ca7f1b771e6c,frontend source (React + TypeScript console),CURRENT,—
+web/src/pages/Method.tsx,13612,7641f87633de,frontend source (React + TypeScript console),CURRENT,—
+web/src/pages/Operations.tsx,9123,0e2f4f670d68,frontend source (React + TypeScript console),CURRENT,—
+web/src/pages/Places.tsx,9787,8629d1c9a04f,frontend source (React + TypeScript console),CURRENT,—
+web/src/pages/Queue.tsx,19466,bb627a0afba1,frontend source (React + TypeScript console),CURRENT,—
+web/src/pages/Resolve.tsx,21226,67ee8efd9f88,frontend source (React + TypeScript console),CURRENT,—
+web/src/state/appState.tsx,1517,170909eb3ed5,frontend source (React + TypeScript console),CURRENT,—
+web/src/styles/app.css,22803,71deb4fbf0ce,frontend source (React + TypeScript console),CURRENT,—
+web/src/styles/tokens.css,2049,3c4efb0eca2e,frontend source (React + TypeScript console),CURRENT,—
+web/src/vite-env.d.ts,38,65996936fbb0,frontend source (React + TypeScript console),CURRENT,—
+web/tools/browser_smoke.mjs,9017,cd51c0e02106,frontend source (React + TypeScript console),CURRENT,—
+web/tools/debug.mjs,1322,c1c37595cb02,frontend source (React + TypeScript console),CURRENT,—
+web/tools/install_browser_deps.sh,1800,35235b9030ba,frontend source (React + TypeScript console),CURRENT,—
+web/tools/zoom.mjs,611,16d8df24ef86,frontend source (React + TypeScript console),CURRENT,—
+web/tsconfig.json,547,d2e12dabf867,frontend source (React + TypeScript console),CURRENT,—
+web/tsconfig.tsbuildinfo,605,261ba9267086,frontend source (React + TypeScript console),CURRENT,—
+web/vite.config.ts,441,128ccd01193b,frontend source (React + TypeScript console),CURRENT,—

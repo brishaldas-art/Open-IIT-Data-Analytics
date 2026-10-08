@@ -1,0 +1,10 @@
+outcome,n,med_dist_to_truth_m,med_dist_to_vendor_pin_m,pct_closer_to_pin,med_dwell_min,reading
+address_not_traceable,53,1603.2,253.4,84.9,1.3,"check-in follows the PIN, not the truth"
+cash_collected,3,71.2,420.2,0.0,14.7,check-in follows the TRUTH
+locked_premises,45,20.2,400.8,11.1,2.8,check-in follows the TRUTH
+met_borrower,60,34.3,412.0,3.3,16.6,check-in follows the TRUTH
+met_family,30,15.9,381.2,3.3,5.7,check-in follows the TRUTH
+neighbour_says_shifted,19,20.1,427.5,10.5,4.5,check-in follows the TRUTH
+no_such_person,3,72.3,140.4,0.0,1.8,check-in follows the TRUTH
+ALL met-someone,93,29.3,396.9,3.2,9.7,success visits converge on the truth
+ALL address_not_traceable,53,1603.2,253.4,84.9,1.3,failure visits converge on the PIN -> never a location label

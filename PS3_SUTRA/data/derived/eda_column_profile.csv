@@ -1,0 +1,80 @@
+table,column,dtype,null_pct,distinct,rows,note
+accounts,account_id,object,0.0,2400,2400,  [unique
+accounts,lender_id,object,0.0,6,2400,
+accounts,portfolio,object,0.0,6,2400,
+accounts,income_type,object,0.0,3,2400,
+accounts,town_id,object,0.0,3,2400,
+accounts,preferred_language,object,0.0,3,2400,
+accounts,bucket_start,object,0.0,5,2400,
+accounts,dpd_start,int64,0.0,323,2400,
+accounts,emi_amount,float64,0.0,473,2400,
+accounts,overdue_start,float64,0.0,790,2400,
+accounts,outstanding,float64,0.0,1665,2400,
+accounts,salary_credit_day,float64,68.25,8,2400,
+accounts,bureau_score_band,object,0.0,5,2400,
+accounts,other_active_loans,int64,0.0,9,2400,
+accounts,paid_other_lenders_30d,bool,0.0,2,2400,
+accounts,last_bounce_reason,object,0.0,4,2400,
+accounts,ability_to_pay_estimate,float64,30.292,101,2400,
+accounts,prev_ptp_count,int64,0.0,10,2400,
+accounts,prev_ptp_broken,int64,0.0,8,2400,
+accounts,dialling_arm,object,0.0,2,2400,
+addresses,address_id,object,0.0,3117,3117,  [unique
+addresses,account_id,object,0.0,2400,3117,
+addresses,address_type,object,0.0,3,3117,
+addresses,source,object,0.0,2,3117,
+addresses,added_date,object,0.0,24,3117,
+addresses,town_id,object,0.0,4,3117,
+addresses,address_text,object,0.0,3114,3117,
+agents,agent_id,object,0.0,30,30,  [unique
+agents,channel,object,0.0,3,30,
+agents,language_team,object,0.0,4,30,
+agents,town_id,object,70.0,3,30,
+agents,tenure_months,float64,3.333,25,30,
+agents,shift,object,0.0,2,30,
+baseline_geocodes,address_id,object,0.0,2880,2880,  [unique
+baseline_geocodes,geocoder_x,float64,0.0,2806,2880,
+baseline_geocodes,geocoder_y,float64,0.0,2814,2880,
+baseline_geocodes,precision,object,0.0,4,2880,
+field_visits,visit_id,object,0.0,5578,5578,  [unique
+field_visits,account_id,object,0.0,1339,5578,
+field_visits,address_id,object,0.0,1477,5578,
+field_visits,agent_id,object,0.0,9,5578,
+field_visits,visit_date,object,0.0,77,5578,
+field_visits,start_ts,object,0.0,5564,5578,
+field_visits,checkin_ts,object,0.0,5569,5578,
+field_visits,checkin_x,float64,0.0,5263,5578,
+field_visits,checkin_y,float64,0.0,5253,5578,
+field_visits,gps_accuracy_m,float64,0.0,324,5578,
+field_visits,dwell_s,int64,0.0,1129,5578,
+field_visits,outcome,object,0.0,7,5578,
+field_visits,ptp_id,object,89.154,605,5578,
+field_visits,remark,object,0.0,762,5578,
+field_visits,photo_hash,object,0.0,5417,5578,
+landmarks_poi,poi_id,object,0.0,240,240,  [unique
+landmarks_poi,town_id,object,0.0,3,240,
+landmarks_poi,landmark_type,object,0.0,14,240,
+landmarks_poi,name,object,0.0,14,240,
+landmarks_poi,x,float64,0.0,238,240,
+landmarks_poi,y,float64,0.0,239,240,
+localities,locality_id,object,0.0,36,36,  [unique
+localities,town_id,object,0.0,3,36,
+localities,locality_name,object,0.0,35,36,
+localities,pincode,int64,0.0,12,36,
+localities,centroid_x,float64,0.0,36,36,  [unique
+localities,centroid_y,float64,0.0,36,36,  [unique
+splits,account_id,object,0.0,2400,2400,  [unique
+splits,split,object,0.0,3,2400,
+surveyed_addresses,address_id,object,0.0,100,100,  [unique
+surveyed_addresses,surveyed_x,float64,0.0,100,100,  [unique
+surveyed_addresses,surveyed_y,float64,0.0,100,100,  [unique
+towns,town_id,object,0.0,3,3,  [unique
+towns,town_name,object,0.0,3,3,  [unique
+towns,address_style,object,0.0,3,3,  [unique
+towns,approx_radius_m,int64,0.0,3,3,  [unique
+visit_gps_points,visit_id,object,0.0,5578,160406,
+visit_gps_points,seq,int64,0.0,80,160406,
+visit_gps_points,point_ts,object,0.0,146732,160406,
+visit_gps_points,x,int64,0.0,8200,160406,
+visit_gps_points,y,int64,0.0,7407,160406,
+visit_gps_points,accuracy_m,int64,0.0,98,160406,

@@ -1,0 +1,204 @@
+norm,n,accts,towns,address_id,account_id,town_id,address_type,split
+ashoka layout kaveripura,2,2,1,AD000619,AC000482,T1,residence,test
+ashoka layout kaveripura,2,2,1,AD002148,AC001662,T1,residence,train
+gali 12 krishna puri devgarh nagar,2,2,1,AD001877,AC001454,T2,residence,validation
+gali 12 krishna puri devgarh nagar,2,2,1,AD001944,AC001506,T2,residence,train
+gali no 10 azad mohalla devgarh nagar,2,2,1,AD000250,AC000199,T2,residence,test
+gali no 10 azad mohalla devgarh nagar,2,2,1,AD001830,AC001418,T2,residence,validation
+railway colony navanagara east,2,2,1,AD001507,AC001161,T3,residence,train
+railway colony navanagara east,2,2,1,AD002939,AC002284,T3,residence,train
+shivaji nagar devgarh nagar,2,2,1,AD001690,AC001300,T2,residence,test
+shivaji nagar devgarh nagar,2,2,1,AD002844,AC002203,T2,office,test
+unity nagar navanagara east,2,2,1,AD002366,AC001833,T3,office,train
+unity nagar navanagara east,2,2,1,AD002969,AC002306,T3,residence,train
+village bilagi taluk a district east,3,3,1,AD000661,AC000512,OUT,permanent_native,train
+village bilagi taluk a district east,3,3,1,AD001169,AC000905,OUT,permanent_native,validation
+village bilagi taluk a district east,3,3,1,AD002885,AC002240,OUT,permanent_native,test
+village bilagi taluk a district south,2,2,1,AD001793,AC001387,OUT,permanent_native,train
+village bilagi taluk a district south,2,2,1,AD002805,AC002173,OUT,permanent_native,test
+village bilagi taluk b district north,2,2,1,AD002076,AC001611,OUT,permanent_native,train
+village bilagi taluk b district north,2,2,1,AD002409,AC001868,OUT,permanent_native,validation
+village bilagi taluk b district south,4,4,1,AD000659,AC000511,OUT,permanent_native,train
+village bilagi taluk b district south,4,4,1,AD001672,AC001287,OUT,permanent_native,validation
+village bilagi taluk b district south,4,4,1,AD002010,AC001558,OUT,permanent_native,train
+village bilagi taluk b district south,4,4,1,AD002338,AC001811,OUT,permanent_native,train
+village bilagi taluk b district west,2,2,1,AD000643,AC000499,OUT,permanent_native,train
+village bilagi taluk b district west,2,2,1,AD002379,AC001845,OUT,permanent_native,train
+village bilagi tehsil c district east,5,5,1,AD001014,AC000787,OUT,permanent_native,train
+village bilagi tehsil c district east,5,5,1,AD002041,AC001583,OUT,permanent_native,train
+village bilagi tehsil c district east,5,5,1,AD002219,AC001716,OUT,permanent_native,train
+village bilagi tehsil c district east,5,5,1,AD002443,AC001891,OUT,permanent_native,train
+village bilagi tehsil c district east,5,5,1,AD003033,AC002355,OUT,permanent_native,validation
+village bilagi tehsil c district south,5,5,1,AD000474,AC000374,OUT,permanent_native,train
+village bilagi tehsil c district south,5,5,1,AD000546,AC000424,OUT,permanent_native,train
+village bilagi tehsil c district south,5,5,1,AD001179,AC000913,OUT,permanent_native,train
+village bilagi tehsil c district south,5,5,1,AD001819,AC001409,OUT,permanent_native,train
+village bilagi tehsil c district south,5,5,1,AD002006,AC001555,OUT,permanent_native,train
+village bilagi tehsil c district west,4,4,1,AD000618,AC000481,OUT,permanent_native,train
+village bilagi tehsil c district west,4,4,1,AD001459,AC001123,OUT,permanent_native,validation
+village bilagi tehsil c district west,4,4,1,AD001661,AC001281,OUT,permanent_native,train
+village bilagi tehsil c district west,4,4,1,AD002797,AC002167,OUT,permanent_native,test
+village bilagi tehsil d district north,2,2,1,AD001313,AC001016,OUT,permanent_native,validation
+village bilagi tehsil d district north,2,2,1,AD001580,AC001217,OUT,permanent_native,validation
+village chikkapura taluk a district west,3,3,1,AD000559,AC000434,OUT,permanent_native,train
+village chikkapura taluk a district west,3,3,1,AD001056,AC000820,OUT,permanent_native,train
+village chikkapura taluk a district west,3,3,1,AD001452,AC001118,OUT,permanent_native,validation
+village chikkapura taluk b district west,3,3,1,AD000747,AC000579,OUT,permanent_native,train
+village chikkapura taluk b district west,3,3,1,AD001358,AC001050,OUT,permanent_native,train
+village chikkapura taluk b district west,3,3,1,AD001670,AC001286,OUT,permanent_native,train
+village chikkapura tehsil c district north,2,2,1,AD001550,AC001192,OUT,permanent_native,validation
+village chikkapura tehsil c district north,2,2,1,AD002897,AC002248,OUT,permanent_native,train
+village chikkapura tehsil d district east,2,2,1,AD000413,AC000327,OUT,permanent_native,validation
+village chikkapura tehsil d district east,2,2,1,AD002446,AC001893,OUT,permanent_native,train
+village chikkapura tehsil d district south,3,3,1,AD001085,AC000841,OUT,permanent_native,validation
+village chikkapura tehsil d district south,3,3,1,AD001235,AC000954,OUT,permanent_native,train
+village chikkapura tehsil d district south,3,3,1,AD001796,AC001389,OUT,permanent_native,train
+village devipur taluk a district east,2,2,1,AD000564,AC000437,OUT,permanent_native,test
+village devipur taluk a district east,2,2,1,AD000691,AC000535,OUT,permanent_native,train
+village devipur taluk a district north,4,4,1,AD000215,AC000172,OUT,permanent_native,train
+village devipur taluk a district north,4,4,1,AD000329,AC000260,OUT,permanent_native,validation
+village devipur taluk a district north,4,4,1,AD001979,AC001537,OUT,permanent_native,train
+village devipur taluk a district north,4,4,1,AD002386,AC001851,OUT,permanent_native,train
+village devipur taluk a district south,2,2,1,AD000158,AC000125,OUT,permanent_native,train
+village devipur taluk a district south,2,2,1,AD002747,AC002130,OUT,permanent_native,train
+village devipur taluk a district west,2,2,1,AD001737,AC001340,OUT,permanent_native,test
+village devipur taluk a district west,2,2,1,AD002460,AC001902,OUT,permanent_native,test
+village devipur taluk b district north,2,2,1,AD001675,AC001289,OUT,permanent_native,train
+village devipur taluk b district north,2,2,1,AD003021,AC002347,OUT,permanent_native,test
+village devipur tehsil c district south,3,3,1,AD000271,AC000215,OUT,permanent_native,train
+village devipur tehsil c district south,3,3,1,AD002137,AC001655,OUT,permanent_native,train
+village devipur tehsil c district south,3,3,1,AD003061,AC002378,OUT,permanent_native,train
+village devipur tehsil c district west,3,3,1,AD000640,AC000497,OUT,permanent_native,train
+village devipur tehsil c district west,3,3,1,AD000887,AC000690,OUT,permanent_native,train
+village devipur tehsil c district west,3,3,1,AD002780,AC002154,OUT,permanent_native,train
+village devipur tehsil d district north,2,2,1,AD001518,AC001170,OUT,permanent_native,train
+village devipur tehsil d district north,2,2,1,AD002503,AC001936,OUT,permanent_native,train
+village devipur tehsil d district south,2,2,1,AD001106,AC000857,OUT,permanent_native,test
+village devipur tehsil d district south,2,2,1,AD001708,AC001315,OUT,permanent_native,validation
+village hosahalli taluk a district east,2,2,1,AD001398,AC001080,OUT,permanent_native,train
+village hosahalli taluk a district east,2,2,1,AD001423,AC001095,OUT,permanent_native,train
+village hosahalli taluk a district south,3,3,1,AD000777,AC000602,OUT,permanent_native,train
+village hosahalli taluk a district south,3,3,1,AD001038,AC000806,OUT,permanent_native,train
+village hosahalli taluk a district south,3,3,1,AD002985,AC002319,OUT,permanent_native,test
+village hosahalli taluk a district west,4,4,1,AD000051,AC000041,OUT,permanent_native,validation
+village hosahalli taluk a district west,4,4,1,AD001090,AC000845,OUT,permanent_native,train
+village hosahalli taluk a district west,4,4,1,AD001292,AC001000,OUT,permanent_native,train
+village hosahalli taluk a district west,4,4,1,AD001869,AC001448,OUT,permanent_native,train
+village hosahalli taluk b district south,4,4,1,AD000796,AC000616,OUT,permanent_native,train
+village hosahalli taluk b district south,4,4,1,AD001051,AC000816,OUT,permanent_native,train
+village hosahalli taluk b district south,4,4,1,AD002630,AC002038,OUT,permanent_native,train
+village hosahalli taluk b district south,4,4,1,AD003023,AC002348,OUT,permanent_native,validation
+village hosahalli tehsil c district east,4,4,1,AD000716,AC000554,OUT,permanent_native,validation
+village hosahalli tehsil c district east,4,4,1,AD001244,AC000960,OUT,permanent_native,train
+village hosahalli tehsil c district east,4,4,1,AD001762,AC001360,OUT,permanent_native,train
+village hosahalli tehsil c district east,4,4,1,AD002406,AC001866,OUT,permanent_native,train
+village hosahalli tehsil c district south,3,3,1,AD001814,AC001405,OUT,permanent_native,train
+village hosahalli tehsil c district south,3,3,1,AD002168,AC001677,OUT,permanent_native,train
+village hosahalli tehsil c district south,3,3,1,AD002313,AC001793,OUT,permanent_native,train
+village hosahalli tehsil d district south,3,3,1,AD000425,AC000336,OUT,permanent_native,train
+village hosahalli tehsil d district south,3,3,1,AD001111,AC000860,OUT,permanent_native,train
+village hosahalli tehsil d district south,3,3,1,AD002203,AC001703,OUT,permanent_native,train
+village hosahalli tehsil d district west,2,2,1,AD000582,AC000451,OUT,permanent_native,test
+village hosahalli tehsil d district west,2,2,1,AD000941,AC000729,OUT,permanent_native,train
+village kodihalli taluk a district north,2,2,1,AD001159,AC000896,OUT,permanent_native,validation
+village kodihalli taluk a district north,2,2,1,AD001229,AC000949,OUT,permanent_native,train
+village kodihalli taluk a district west,2,2,1,AD001061,AC000823,OUT,permanent_native,train
+village kodihalli taluk a district west,2,2,1,AD001093,AC000847,OUT,permanent_native,train
+village kodihalli taluk b district north,2,2,1,AD000490,AC000385,OUT,permanent_native,validation
+village kodihalli taluk b district north,2,2,1,AD000956,AC000741,OUT,permanent_native,train
+village kodihalli taluk b district south,2,2,1,AD001527,AC001176,OUT,permanent_native,train
+village kodihalli taluk b district south,2,2,1,AD002604,AC002016,OUT,permanent_native,train
+village kodihalli tehsil c district east,3,3,1,AD000931,AC000721,OUT,permanent_native,train
+village kodihalli tehsil c district east,3,3,1,AD001072,AC000832,OUT,permanent_native,train
+village kodihalli tehsil c district east,3,3,1,AD001334,AC001031,OUT,permanent_native,train
+village kodihalli tehsil c district north,3,3,1,AD000454,AC000358,OUT,permanent_native,train
+village kodihalli tehsil c district north,3,3,1,AD001828,AC001416,OUT,permanent_native,train
+village kodihalli tehsil c district north,3,3,1,AD002538,AC001963,OUT,permanent_native,train
+village kodihalli tehsil c district west,6,6,1,AD000131,AC000104,OUT,permanent_native,train
+village kodihalli tehsil c district west,6,6,1,AD000494,AC000387,OUT,permanent_native,train
+village kodihalli tehsil c district west,6,6,1,AD000571,AC000443,OUT,permanent_native,train
+village kodihalli tehsil c district west,6,6,1,AD001205,AC000932,OUT,permanent_native,validation
+village kodihalli tehsil c district west,6,6,1,AD001936,AC001499,OUT,permanent_native,validation
+village kodihalli tehsil c district west,6,6,1,AD002895,AC002247,OUT,permanent_native,train
+village kodihalli tehsil d district east,3,3,1,AD002208,AC001706,OUT,permanent_native,train
+village kodihalli tehsil d district east,3,3,1,AD002790,AC002161,OUT,permanent_native,train
+village kodihalli tehsil d district east,3,3,1,AD003095,AC002341,OUT,residence,validation
+village kodihalli tehsil d district south,4,4,1,AD001418,AC001092,OUT,permanent_native,train
+village kodihalli tehsil d district south,4,4,1,AD001887,AC001462,OUT,permanent_native,train
+village kodihalli tehsil d district south,4,4,1,AD002507,AC001939,OUT,permanent_native,validation
+village kodihalli tehsil d district south,4,4,1,AD003112,AC000523,OUT,residence,train
+village mallapura taluk a district east,3,3,1,AD002058,AC001596,OUT,permanent_native,train
+village mallapura taluk a district east,3,3,1,AD002329,AC001804,OUT,permanent_native,train
+village mallapura taluk a district east,3,3,1,AD003101,AC000232,OUT,residence,train
+village mallapura taluk a district north,4,4,1,AD000044,AC000036,OUT,permanent_native,validation
+village mallapura taluk a district north,4,4,1,AD001345,AC001041,OUT,permanent_native,validation
+village mallapura taluk a district north,4,4,1,AD001562,AC001202,OUT,permanent_native,test
+village mallapura taluk a district north,4,4,1,AD002093,AC001622,OUT,permanent_native,train
+village mallapura taluk a district west,4,4,1,AD000095,AC000074,OUT,permanent_native,train
+village mallapura taluk a district west,4,4,1,AD000373,AC000296,OUT,permanent_native,train
+village mallapura taluk a district west,4,4,1,AD000909,AC000704,OUT,permanent_native,test
+village mallapura taluk a district west,4,4,1,AD001728,AC001332,OUT,permanent_native,validation
+village mallapura taluk b district south,2,2,1,AD001595,AC001231,OUT,permanent_native,train
+village mallapura taluk b district south,2,2,1,AD001599,AC001234,OUT,permanent_native,test
+village mallapura tehsil c district east,5,5,1,AD000289,AC000228,OUT,permanent_native,train
+village mallapura tehsil c district east,5,5,1,AD000463,AC000365,OUT,permanent_native,train
+village mallapura tehsil c district east,5,5,1,AD000966,AC000748,OUT,permanent_native,test
+village mallapura tehsil c district east,5,5,1,AD002084,AC001615,OUT,permanent_native,train
+village mallapura tehsil c district east,5,5,1,AD002644,AC002048,OUT,permanent_native,test
+village mallapura tehsil c district south,3,3,1,AD000183,AC000146,OUT,permanent_native,test
+village mallapura tehsil c district south,3,3,1,AD002646,AC002049,OUT,permanent_native,train
+village mallapura tehsil c district south,3,3,1,AD002963,AC002300,OUT,permanent_native,train
+village mallapura tehsil c district west,2,2,1,AD000218,AC000174,OUT,permanent_native,train
+village mallapura tehsil c district west,2,2,1,AD003103,AC001162,OUT,residence,train
+village mallapura tehsil d district east,3,3,1,AD000724,AC000561,OUT,permanent_native,train
+village mallapura tehsil d district east,3,3,1,AD002290,AC001772,OUT,permanent_native,train
+village mallapura tehsil d district east,3,3,1,AD002686,AC002082,OUT,permanent_native,train
+village mallapura tehsil d district north,2,2,1,AD000811,AC000627,OUT,permanent_native,train
+village mallapura tehsil d district north,2,2,1,AD003079,AC002390,OUT,permanent_native,train
+village mallapura tehsil d district south,2,2,1,AD002109,AC001634,OUT,permanent_native,train
+village mallapura tehsil d district south,2,2,1,AD002625,AC002034,OUT,permanent_native,validation
+village rampura kalan taluk a district east,4,4,1,AD000859,AC000665,OUT,permanent_native,train
+village rampura kalan taluk a district east,4,4,1,AD001347,AC001042,OUT,permanent_native,test
+village rampura kalan taluk a district east,4,4,1,AD001975,AC001534,OUT,permanent_native,test
+village rampura kalan taluk a district east,4,4,1,AD002144,AC001659,OUT,permanent_native,train
+village rampura kalan taluk a district south,4,4,1,AD001077,AC000836,OUT,permanent_native,train
+village rampura kalan taluk a district south,4,4,1,AD001997,AC001549,OUT,permanent_native,train
+village rampura kalan taluk a district south,4,4,1,AD002032,AC001575,OUT,permanent_native,test
+village rampura kalan taluk a district south,4,4,1,AD003001,AC002333,OUT,permanent_native,train
+village rampura kalan taluk b district north,2,2,1,AD001492,AC001149,OUT,permanent_native,train
+village rampura kalan taluk b district north,2,2,1,AD002285,AC001768,OUT,permanent_native,validation
+village rampura kalan taluk b district south,2,2,1,AD001221,AC000942,OUT,permanent_native,train
+village rampura kalan taluk b district south,2,2,1,AD003114,AC000505,OUT,residence,train
+village rampura kalan tehsil c district south,3,3,1,AD001030,AC000799,OUT,permanent_native,test
+village rampura kalan tehsil c district south,3,3,1,AD001547,AC001190,OUT,permanent_native,train
+village rampura kalan tehsil c district south,3,3,1,AD003116,AC002060,OUT,residence,train
+village rampura kalan tehsil d district north,3,3,1,AD000415,AC000328,OUT,permanent_native,train
+village rampura kalan tehsil d district north,3,3,1,AD000714,AC000553,OUT,permanent_native,test
+village rampura kalan tehsil d district north,3,3,1,AD000977,AC000757,OUT,permanent_native,test
+village rampura kalan tehsil d district south,3,3,1,AD000006,AC000004,OUT,permanent_native,train
+village rampura kalan tehsil d district south,3,3,1,AD000496,AC000388,OUT,permanent_native,train
+village rampura kalan tehsil d district south,3,3,1,AD001429,AC001099,OUT,permanent_native,train
+village rampura kalan tehsil d district west,4,4,1,AD000983,AC000762,OUT,permanent_native,train
+village rampura kalan tehsil d district west,4,4,1,AD002156,AC001668,OUT,permanent_native,test
+village rampura kalan tehsil d district west,4,4,1,AD002745,AC002129,OUT,permanent_native,test
+village rampura kalan tehsil d district west,4,4,1,AD002919,AC002266,OUT,permanent_native,train
+village sundarpur taluk a district east,5,5,1,AD000476,AC000375,OUT,permanent_native,train
+village sundarpur taluk a district east,5,5,1,AD000520,AC000405,OUT,permanent_native,test
+village sundarpur taluk a district east,5,5,1,AD001185,AC000917,OUT,permanent_native,validation
+village sundarpur taluk a district east,5,5,1,AD002589,AC002005,OUT,permanent_native,validation
+village sundarpur taluk a district east,5,5,1,AD002937,AC002282,OUT,permanent_native,train
+village sundarpur taluk b district south,3,3,1,AD000143,AC000113,OUT,permanent_native,train
+village sundarpur taluk b district south,3,3,1,AD000514,AC000402,OUT,permanent_native,train
+village sundarpur taluk b district south,3,3,1,AD002554,AC001976,OUT,permanent_native,train
+village sundarpur taluk b district west,4,4,1,AD001650,AC001273,OUT,permanent_native,train
+village sundarpur taluk b district west,4,4,1,AD001826,AC001415,OUT,permanent_native,train
+village sundarpur taluk b district west,4,4,1,AD002426,AC001880,OUT,permanent_native,validation
+village sundarpur taluk b district west,4,4,1,AD002810,AC002176,OUT,permanent_native,train
+village sundarpur tehsil c district south,3,3,1,AD001688,AC001298,OUT,permanent_native,train
+village sundarpur tehsil c district south,3,3,1,AD003089,AC002399,OUT,permanent_native,train
+village sundarpur tehsil c district south,3,3,1,AD003108,AC002174,OUT,residence,train
+village sundarpur tehsil c district west,3,3,1,AD000070,AC000056,OUT,permanent_native,train
+village sundarpur tehsil c district west,3,3,1,AD001464,AC001127,OUT,permanent_native,test
+village sundarpur tehsil c district west,3,3,1,AD002320,AC001798,OUT,permanent_native,train
+village sundarpur tehsil d district west,2,2,1,AD002020,AC001564,OUT,permanent_native,train
+village sundarpur tehsil d district west,2,2,1,AD002597,AC002011,OUT,permanent_native,train

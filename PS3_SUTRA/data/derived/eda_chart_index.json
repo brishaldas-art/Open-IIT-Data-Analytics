@@ -1,0 +1,10 @@
+{
+  "addr_len": 3209,
+  "addr_tokens": 3878,
+  "baseline_strata": 1297,
+  "baseline_error_stratum": 1302,
+  "visit_outcomes": 1936,
+  "exposure_dpd": 1481,
+  "gps_accuracy": 2632,
+  "visits_time": 3272
+}

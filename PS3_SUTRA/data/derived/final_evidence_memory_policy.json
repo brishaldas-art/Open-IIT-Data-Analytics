@@ -1,0 +1,58 @@
+{
+ "confirmation_independence": "unchanged F2.2 tuple; measured side effect of the emit rule on the F2.2 promotion path: none \u2014 the tier/status census is identical (0 changes), so the rule moved candidate ranking, not belief promotion. A pin-derived prior simply no longer competes as a candidate.",
+ "contradiction_behavior": "unchanged: CONTESTED when strong observations separate by more than 2x radius; memory never overrides a contradiction, it is only ever demoted or withheld",
+ "declared_before_evaluation": true,
+ "field_evidence": {
+  "consolidated_median": "unchanged: emitted when >=2 promoting independent observations agree within CONSISTENCY_BAND_M=30",
+  "quality_gates": null,
+  "singles_emitted": 3,
+  "singles_primary_eligible": false,
+  "tie_break": "candidate_id (shipped; the quality-ordered tie-break lost on S-VAL and temporal)"
+ },
+ "frozen_at": "2026-10-08",
+ "knobs": {
+  "EVIDENCE_MEMORY_POLICY": "emp-v1",
+  "MEMORY_EMIT": "always",
+  "MEMORY_ON_DEMAND_BELIEF": false,
+  "MEMORY_REQUIRES_EVIDENCE_DERIVED": false,
+  "SINGLE_GATE_GPS_M": null,
+  "SINGLE_GATE_MIN_WEIGHT": null,
+  "SINGLE_MAX_EMITTED": 3,
+  "SINGLE_QUALITY_TIERING": false,
+  "SINGLE_TIEBREAK_QUALITY": false
+ },
+ "memory": {
+  "eligibility_rule": "prior tier in (CONFIRMED, PROBABLE) AND the prior is evidence-derived",
+  "emit_rule": "evidence-derived priors only (MEMORY_EMIT=evidence_derived_only)",
+  "evidence_derived_definition": "the prior belief's candidate coordinate comes from accumulated field evidence (armed `field_evidence`, provenance built_from='store observations'); a prior that merely re-wraps a static arm (pin/locality/town/landmark/address-book) is NOT memory and is not emitted",
+  "place_keying": "unchanged: ix.place_blocks; account identity never maps to a coordinate",
+  "prior_source": "belief recomputed at the query instant when no belief row was materialised there (MEMORY_ON_DEMAND_BELIEF) \u2014 belief is a pure function of the store, the stored row is a projection"
+ },
+ "negative_evidence_safety": "unchanged: a negative observation can never relocate a coordinate (demote / widen / VERIFY_FIRST only); graded negatives accumulate at NEG_ACCUMULATION_MIN=2",
+ "policy_id": "FINAL_EVIDENCE_MEMORY_POLICY",
+ "policy_sha256": "a110f08962993e3ca6b7151edbc01002029019faa4e583625eb599f8379b2775",
+ "promotion_gate": "<500 m must improve on S-VAL beyond the paired grouped bootstrap interval; no regression in coverage / refusal / strata / latency / negative-evidence safety / contradiction / leakage; directionally consistent on leave-block-out and temporal holdout; no S-Eval tuning",
+ "rejected_challengers": {
+  "P2 single quality tiering": "no effect (the competing singles carry equal weight)",
+  "P2b/P2c fewer singles": "regression: pool <500 -1.8/-3.1 pp",
+  "P3 GPS-accuracy gates (50/100 m)": "no effect (no single is dropped)",
+  "P5 on-demand prior alone (no emit rule)": "regression: temporal <100 0.8903 -> 0.6498 \u2014 materialising pin-derived memory at every instant is worse than not having it",
+  "P8/P9 quality-ordered tie-break": "regression on S-VAL and both temporal cuts"
+ },
+ "s_eval_used_for_selection": false,
+ "scoring_code": "sutra runtime + tools/evidence_memory_policy.py",
+ "staleness_behavior": "unchanged: STALE when the newest positive is older than 365 days; no invented decay, no age-based reweighting",
+ "supersedes": {
+  "evidence_memory_policy": "P0 (shipped until emp-v1)",
+  "final_precision_config_sha256": "ac61cf2e71f77454d91c854c0738b81f11a1b81d1261d2f63145f37df7401989"
+ },
+ "thresholds": {
+  "consistency_band_m": 30.0,
+  "contest_separation_mult": 2.0,
+  "neg_accumulation_min": 2,
+  "stale_after_days": 365.0,
+  "w_min": 0.35,
+  "w_promote": 0.5
+ },
+ "version": "emp-v1"
+}

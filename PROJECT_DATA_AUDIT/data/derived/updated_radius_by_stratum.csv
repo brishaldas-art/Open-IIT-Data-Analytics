@@ -1,0 +1,5 @@
+stratum,n,n_train,n_eval,train_p50,train_p80,train_p90,eval_cov_at_p80
+locality,73,49,24,400.3,539.9,630.6,0.792
+pincode,10,6,4,925.5,1204.2,1703.0,0.0
+rooftop,1,0,1,,,,0.0
+street,16,11,5,116.1,162.1,170.5,1.0

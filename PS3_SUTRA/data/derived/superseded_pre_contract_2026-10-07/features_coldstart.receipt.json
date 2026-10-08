@@ -1,0 +1,36 @@
+{
+  "artefact": "features_coldstart.csv",
+  "mode": "coldstart",
+  "rows": 7813,
+  "candidates": 7813,
+  "addresses": 3117,
+  "schema_version": "1.0",
+  "rule_version": "cand-1.0",
+  "feature_columns": {
+    "f_sim_jaccard": "T0",
+    "f_sim_char3": "T0",
+    "f_sim_ratio": "T0",
+    "f_locality_name_matched": "T0",
+    "f_pin_in_text": "T0",
+    "f_pin_unknown": "T0",
+    "f_no_digit": "T0",
+    "f_no_separator": "T0",
+    "f_outside_town": "T0",
+    "f_vendor_stratum": "T0",
+    "f_n_candidates": "T1",
+    "f_dist_to_town_centroid_m": "T0"
+  },
+  "forbidden_prefixes": [
+    "checkin",
+    "gps_",
+    "dwell",
+    "outcome",
+    "photo",
+    "remark",
+    "surveyed",
+    "trail"
+  ],
+  "statement": "coldstart: no visit-derived information of any kind.",
+  "labels_are_separate": true,
+  "evaluated_only_on": "/home/user/PS3_SUTRA/data/derived/labels_eval.csv"
+}

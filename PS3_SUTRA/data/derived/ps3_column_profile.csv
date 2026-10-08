@@ -1,0 +1,84 @@
+file,column,dtype,n_null,pct_null,n_unique,pct_unique,min,max,mean,top3
+accounts.csv,account_id,object,0,0.0,2400,100.0,,,,AC000001(1) | AC000002(1) | AC000003(1)
+accounts.csv,lender_id,object,0,0.0,6,0.25,,,,L01(646) | L06(567) | L03(499)
+accounts.csv,portfolio,object,0,0.0,6,0.25,,,,pl_salaried(682) | two_wheeler(502) | mfi_jlg(358)
+accounts.csv,income_type,object,0,0.0,3,0.12,,,,salaried(1283) | self_employed(792) | daily_wage(325)
+accounts.csv,town_id,object,0,0.0,3,0.12,,,,T3(826) | T1(787) | T2(787)
+accounts.csv,preferred_language,object,0,0.0,3,0.12,,,,hinglish(1217) | kanglish(640) | english(543)
+accounts.csv,bucket_start,object,0,0.0,5,0.21,,,,1-30(664) | 31-60(528) | 90+(470)
+accounts.csv,dpd_start,int64,0,0.0,323,13.46,0.0,720.0,66.3633,
+accounts.csv,emi_amount,float64,0,0.0,473,19.71,700.0,39950.0,7500.0417,
+accounts.csv,overdue_start,float64,0,0.0,790,32.92,700.0,460200.0,20494.4583,
+accounts.csv,outstanding,float64,0,0.0,1665,69.38,6300.0,2117000.0,217014.7083,
+accounts.csv,salary_credit_day,float64,1638,68.25,8,0.33,1.0,30.0,11.1417,
+accounts.csv,bureau_score_band,object,0,0.0,5,0.21,,,,300-549(1508) | 550-649(609) | 650-699(185)
+accounts.csv,other_active_loans,int64,0,0.0,9,0.38,0.0,8.0,1.9017,
+accounts.csv,paid_other_lenders_30d,bool,0,0.0,2,0.08,0.0,1.0,0.2525,
+accounts.csv,last_bounce_reason,object,0,0.0,4,0.17,,,,insufficient_funds(2019) | technical(158) | stop_payment(118)
+accounts.csv,ability_to_pay_estimate,float64,727,30.29,101,4.21,0.0,1.0,0.5327,
+accounts.csv,prev_ptp_count,int64,0,0.0,10,0.42,0.0,10.0,1.5492,
+accounts.csv,prev_ptp_broken,int64,0,0.0,8,0.33,0.0,7.0,0.8154,
+accounts.csv,dialling_arm,object,0,0.0,2,0.08,,,,rule_based(2277) | random_contact_point(123)
+addresses.csv,address_id,object,0,0.0,3117,100.0,,,,AD000001(1) | AD000002(1) | AD000003(1)
+addresses.csv,account_id,object,0,0.0,2400,77.0,,,,AC001083(3) | AC002174(3) | AC000602(3)
+addresses.csv,address_type,object,0,0.0,3,0.1,,,,residence(2427) | office(464) | permanent_native(226)
+addresses.csv,source,object,0,0.0,2,0.06,,,,kyc_origination(3090) | skip_trace(27)
+addresses.csv,added_date,object,0,0.0,24,0.77,,,,2026-04-01(3090) | 2026-06-01(2) | 2026-05-30(2)
+addresses.csv,town_id,object,0,0.0,4,0.13,,,,T3(986) | T2(952) | T1(942)
+addresses.csv,address_text,object,0,0.0,3114,99.9,,,,"railway colony navanagara east - 980304(2) | Gali 12, Krishna Puri, Devgarh Nagar - 970202"
+agents.csv,agent_id,object,0,0.0,30,100.0,,,,TA001(1) | TA002(1) | TA003(1)
+agents.csv,channel,object,0,0.0,3,10.0,,,,tele(20) | field(9) | voice_bot(1)
+agents.csv,language_team,object,0,0.0,4,13.33,,,,hinglish(14) | kanglish(8) | english(7)
+agents.csv,town_id,object,21,70.0,3,10.0,,,,T1(3) | T2(3) | T3(3)
+agents.csv,tenure_months,float64,1,3.33,25,83.33,1.0,64.0,30.5172,
+agents.csv,shift,object,0,0.0,2,6.67,,,,day(29) | all(1)
+baseline_geocodes.csv,address_id,object,0,0.0,2880,100.0,,,,AD000001(1) | AD000002(1) | AD000003(1)
+baseline_geocodes.csv,geocoder_x,float64,0,0.0,2806,97.43,-4061.5,4327.2,522.2314,
+baseline_geocodes.csv,geocoder_y,float64,0,0.0,2814,97.71,-4088.6,3403.4,-533.0977,
+baseline_geocodes.csv,precision,object,0,0.0,4,0.14,,,,locality(2052) | street(504) | pincode(274)
+field_visits.csv,visit_id,object,0,0.0,5578,100.0,,,,VS000001(1) | VS000002(1) | VS000003(1)
+field_visits.csv,account_id,object,0,0.0,1339,24.01,,,,AC002147(9) | AC001181(9) | AC000481(9)
+field_visits.csv,address_id,object,0,0.0,1477,26.48,,,,AD002771(9) | AD000617(9) | AD001775(9)
+field_visits.csv,agent_id,object,0,0.0,9,0.16,,,,FA003(645) | FA004(636) | FA002(633)
+field_visits.csv,visit_date,object,0,0.0,77,1.38,,,,2026-06-03(82) | 2026-05-14(79) | 2026-06-02(79)
+field_visits.csv,start_ts,object,0,0.0,5564,99.75,,,,2026-06-29 10:14:17(2) | 2026-06-18 11:25:32(2) | 2026-06-12 10:44:38(2)
+field_visits.csv,checkin_ts,object,0,0.0,5569,99.84,,,,2026-06-15 10:55:31(2) | 2026-06-04 09:58:49(2) | 2026-04-09 10:43:20(2)
+field_visits.csv,checkin_x,float64,0,0.0,5263,94.35,-4410.0,4311.0,880.3041,
+field_visits.csv,checkin_y,float64,0,0.0,5253,94.17,-4122.6,3627.0,-795.1148,
+field_visits.csv,gps_accuracy_m,float64,0,0.0,324,5.81,4.0,72.8,11.2757,
+field_visits.csv,dwell_s,int64,0,0.0,1129,20.24,30.0,1495.0,345.102,
+field_visits.csv,outcome,object,0,0.0,7,0.13,,,,address_not_traceable(1400) | locked_premises(1249) | met_borrower(1114)
+field_visits.csv,ptp_id,object,4973,89.15,605,10.85,,,,PTP000042(1) | PTP000043(1) | PTP000044(1)
+field_visits.csv,remark,object,0,0.0,762,13.66,,,,"address sikkilla, tumba hudukide(256) | address nahi mila(240) | address sikkilla(240)"
+field_visits.csv,photo_hash,object,0,0.0,5417,97.11,,,,ph0082(32) | ph0080(28) | ph0081(27)
+landmarks_poi.csv,poi_id,object,0,0.0,240,100.0,,,,LM0001(1) | LM0003(1) | LM0004(1)
+landmarks_poi.csv,town_id,object,0,0.0,3,1.25,,,,T1(82) | T3(81) | T2(77)
+landmarks_poi.csv,landmark_type,object,0,0.0,14,5.83,,,,ration_shop(26) | bus_stop(22) | govt_school(22)
+landmarks_poi.csv,name,object,0,0.0,14,5.83,,,,Ration Shop(26) | Bus Stop(22) | Govt School(22)
+landmarks_poi.csv,x,float64,0,0.0,238,99.17,-4072.0,3788.5,209.0388,
+landmarks_poi.csv,y,float64,0,0.0,239,99.58,-4085.8,3568.5,-224.0425,
+lenders.csv,lender_id,object,0,0.0,6,100.0,,,,L01(1) | L02(1) | L03(1)
+lenders.csv,lender_name,object,0,0.0,6,100.0,,,,Lender A(1) | Lender B(1) | Lender C(1)
+lenders.csv,lender_type,object,0,0.0,6,100.0,,,,Private bank(1) | NBFC(1) | Fintech NBFC(1)
+lenders.csv,kyc_address_format,object,0,0.0,3,50.0,,,,kyc_mixed(2) | kyc_upper(2) | app_free_text(2)
+localities.csv,locality_id,object,0,0.0,36,100.0,,,,T1-L01(1) | T1-L02(1) | T1-L03(1)
+localities.csv,town_id,object,0,0.0,3,8.33,,,,T1(12) | T2(12) | T3(12)
+localities.csv,locality_name,object,0,0.0,35,97.22,,,,Nehru Colony(2) | Basava Nagar(1) | Vinayaka Nagar(1)
+localities.csv,pincode,int64,0,0.0,12,33.33,960101.0,980304.0,970202.3333,
+localities.csv,centroid_x,float64,0,0.0,36,100.0,-3766.2,3653.7,212.2889,
+localities.csv,centroid_y,float64,0,0.0,36,100.0,-3613.0,3208.9,-314.4361,
+splits.csv,account_id,object,0,0.0,2400,100.0,,,,AC000001(1) | AC000002(1) | AC000003(1)
+splits.csv,split,object,0,0.0,3,0.12,,,,train(1680) | validation(360) | test(360)
+surveyed_addresses.csv,address_id,object,0,0.0,100,100.0,,,,AD000527(1) | AD000251(1) | AD002159(1)
+surveyed_addresses.csv,surveyed_x,float64,0,0.0,100,100.0,-4039.0,4177.6,477.95,
+surveyed_addresses.csv,surveyed_y,float64,0,0.0,100,100.0,-4013.1,3429.9,-565.087,
+towns.csv,town_id,object,0,0.0,3,100.0,,,,T1(1) | T2(1) | T3(1)
+towns.csv,town_name,object,0,0.0,3,100.0,,,,Kaveripura(1) | Devgarh Nagar(1) | Navanagara East(1)
+towns.csv,address_style,object,0,0.0,3,100.0,,,,karnataka(1) | hindi(1) | metro(1)
+towns.csv,approx_radius_m,int64,0,0.0,3,100.0,3800.0,4800.0,4266.6667,
+visit_gps_points.csv,visit_id,object,0,0.0,5578,3.48,,,,VS005577(80) | VS000073(80) | VS003111(80)
+visit_gps_points.csv,seq,int64,0,0.0,80,0.05,0.0,79.0,20.4248,
+visit_gps_points.csv,point_ts,object,0,0.0,146732,91.48,,,,2026-05-14 10:24:14(5) | 2026-06-10 10:28:20(5) | 2026-05-04 11:04:30(4)
+visit_gps_points.csv,x,int64,0,0.0,8200,5.11,-4420.0,4346.0,793.8972,
+visit_gps_points.csv,y,int64,0,0.0,7407,4.62,-4108.0,3648.0,-737.6042,
+visit_gps_points.csv,accuracy_m,int64,0,0.0,98,0.06,3.0,111.0,11.7355,

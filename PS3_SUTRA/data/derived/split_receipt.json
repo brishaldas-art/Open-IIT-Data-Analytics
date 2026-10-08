@@ -1,0 +1,73 @@
+{
+  "counts": {
+    "EXCLUDED": 45,
+    "POOL_UNSUPERVISED": 2680,
+    "S-EVAL": 100,
+    "S-TRAIN": 223,
+    "S-VAL": 69,
+    "n_addresses": 3117,
+    "n_firewalled": 145,
+    "n_supervision_eligible": 292
+  },
+  "declared_specs": [
+    {
+      "as_of": "2026-06-01T00:00:00Z",
+      "firewall_receipt_sha256": "",
+      "inner_grouping": "account",
+      "label_source": "surveyed_ground_truth",
+      "note": "the only place surveyed truth may be read; increments the test-look counter",
+      "outer_fold": null,
+      "outer_grouping": "place_block",
+      "populations": [
+        "S-EVAL"
+      ],
+      "protocol_version": "protocol-v1-immutable",
+      "spec_id": "S_EVAL_BASELINE"
+    },
+    {
+      "as_of": "2026-06-01T00:00:00Z",
+      "firewall_receipt_sha256": "",
+      "inner_grouping": "account",
+      "label_source": "operational_confirmation_proxy",
+      "note": "ranker fitting, nested grouped CV inner split",
+      "outer_fold": null,
+      "outer_grouping": "place_block",
+      "populations": [
+        "S-TRAIN"
+      ],
+      "protocol_version": "protocol-v1-immutable",
+      "spec_id": "S_TRAIN_INNER"
+    },
+    {
+      "as_of": "2026-06-01T00:00:00Z",
+      "firewall_receipt_sha256": "",
+      "inner_grouping": "account",
+      "label_source": "operational_confirmation_proxy",
+      "note": "challenger selection; never S-Eval",
+      "outer_fold": null,
+      "outer_grouping": "place_block",
+      "populations": [
+        "S-VAL"
+      ],
+      "protocol_version": "protocol-v1-immutable",
+      "spec_id": "S_VAL_INNER"
+    }
+  ],
+  "firewall": {
+    "n_surveyed": 100,
+    "n_surveyed_accounts": 100,
+    "n_surveyed_blocks": 99,
+    "share_of_corpus": 0.0465,
+    "union": 145
+  },
+  "grouping": {
+    "inner": "account",
+    "outer": "place_block (fold in ps3_place_blocks.csv)"
+  },
+  "member_manifest_sha256": "131b4125c0d6857683e9b96ec7cb3230bbf8a6b4c26610c934cf879f9038072a",
+  "protocol_version": "protocol-v1-immutable",
+  "receipt_sha256": "228680109f0cfda6f90a7e8f9383a2c8d8571f97bb131ef5461d1fd73b0b2326",
+  "rule": "S-Eval = the 100 surveyed addresses (never trained, never tuned). Firewall = surveyed ∪ their accounts ∪ their place blocks, excluded from every supervision/feature-fit set. S-Train/S-Val = operational supervision (promotion-grade confirmations), nested grouped CV: outer folds = place blocks, inner folds = accounts.",
+  "test_look_counter": 0,
+  "valid_as_of": "2026-06-01T00:00:00Z"
+}

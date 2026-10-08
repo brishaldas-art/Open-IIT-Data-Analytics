@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SANKET + SUTRA — Permission Layer Demo (synthetic data)</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#131a23; --panel2:#182130; --line:#243141; --ink:#e6edf3;
+    --dim:#8b98a8; --ok:#3fb950; --warn:#d29922; --bad:#f85149; --acc:#58a6ff; --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:18px}
+  header{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+  h1{font-size:17px;margin:0;letter-spacing:.2px}
+  h1 span{color:var(--acc)}
+  .tag{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--dim)}
+  .warn-tag{border-color:#5c4a12;color:var(--warn);background:#2a2208}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+  .kpi{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+  .kpi b{display:block;font-size:19px;font-weight:600}
+  .kpi small{color:var(--dim);font-size:11px}
+  .grid{display:grid;grid-template-columns:300px 1fr 1fr;gap:12px;align-items:start}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px}
+  .card h3{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--dim);font-weight:600}
+  .row{border:1px solid var(--line);border-radius:8px;padding:9px 10px;margin-bottom:8px;cursor:pointer;background:var(--panel2);transition:.15s}
+  .row:hover{border-color:#3a4b60}
+  .row.sel{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc) inset}
+  .row .id{font-family:var(--mono);font-size:12px;color:var(--acc)}
+  .row .meta{font-size:11px;color:var(--dim)}
+  .btn{display:block;width:100%;text-align:left;background:#1d2735;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13px;cursor:pointer;margin-bottom:8px;transition:.15s}
+  .btn:hover{border-color:var(--acc)}
+  .btn small{display:block;color:var(--dim);font-size:11px;margin-top:2px}
+  .btn[disabled]{opacity:.35;cursor:not-allowed}
+  .verdict{border-radius:8px;padding:12px;margin-bottom:10px;font-weight:600;letter-spacing:.3px}
+  .v-block{background:#2b1113;border:1px solid #6e2a26;color:#ffb4ae}
+  .v-allow{background:#0e2417;border:1px solid #1f5c33;color:#9be6b0}
+  .v-wait{background:#2a2208;border:1px solid #5c4a12;color:#f0d38a}
+  .rules{list-style:none;margin:8px 0 0;padding:0;font-size:12.5px}
+  .rules li{padding:6px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}
+  .rules li:first-child{border-top:0}
+  .pass{color:var(--ok)} .fail{color:var(--bad)}
+  .mono{font-family:var(--mono);font-size:11.5px}
+  .bars{margin:6px 0 0}
+  .bar{margin-bottom:7px}
+  .bar .lab{display:flex;justify-content:space-between;font-size:11.5px;color:var(--dim)}
+  .bar .track{height:7px;background:#0a0f16;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-top:3px}
+  .bar .fill{height:100%;background:linear-gradient(90deg,#1f6feb,#58a6ff);width:0;transition:width .7s ease}
+  .bar .fill.low{background:linear-gradient(90deg,#7d1f1f,#f85149)}
+  .legend{font-size:11px;color:var(--dim);margin-top:6px}
+  pre{background:#0a0f16;border:1px solid var(--line);border-radius:8px;padding:10px;overflow:auto;max-height:230px;font-family:var(--mono);font-size:11px;margin:0}
+  .note{font-size:11.5px;color:var(--dim);margin-top:8px}
+  .svgbox{background:#0a0f16;border:1px solid var(--line);border-radius:8px;margin-top:8px}
+  .beat{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--dim);margin-bottom:10px;flex-wrap:wrap}
+  .beat i{font-style:normal;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-size:11px;background:#0a0f16}
+  .beat i.on{border-color:var(--acc);color:var(--acc)}
+  @media(max-width:960px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>SANKET <span>·</span> SUTRA — the permission layer</h1>
+    <span class="tag">decision console</span>
+    <span class="tag">segment: personal loan (1–60 DPD)</span>
+    <span class="tag warn-tag">SYNTHETIC DATA — not a measured result</span>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi"><b id="k1">—</b><small>expensive actions blocked this session</small></div>
+    <div class="kpi"><b id="k2">—</b><small>notices stopped before service</small></div>
+    <div class="kpi"><b id="k3">—</b><small>wasted field slots avoided (modelled ₹)</small></div>
+    <div class="kpi"><b id="k4">—</b><small>disclosure-capable contacts refused</small></div>
+  </div>
+
+  <div class="beat">
+    <i id="b1">1</i><span>notice attempted → <b>refused</b></span>
+    <i id="b2">2</i><span>field evidence → <b>released</b></span>
+    <i id="b3">3</i><span>fake check-in → <b>widens, does not move</b></span>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Worklist</h3>
+      <div class="row sel" data-ac="0">
+        <div class="id">AC-8841 · PL</div>
+        <div class="meta">₹42,300 · 46 DPD · home address unverified</div>
+      </div>
+      <div class="row" data-ac="1">
+        <div class="id">AC-2210 · PL</div>
+        <div class="meta">₹18,800 · 33 DPD · shared family number</div>
+      </div>
+      <div class="row" data-ac="2">
+        <div class="id">AC-3311 · PL</div>
+        <div class="meta">₹18,800 · 33 DPD · verified own number</div>
+      </div>
+      <div class="row" data-ac="3">
+        <div class="id">AC-7702 · used car</div>
+        <div class="meta">₹3,20,000 · 71 DPD · address confirmed</div>
+      </div>
+
+      <h3 style="margin-top:14px">Advance the case</h3>
+      <button class="btn" id="act1">1 · Attempt to serve the 1-day advance notice
+        <small>Address confidence 0.41 — below the notice threshold</small></button>
+      <button class="btn" id="act2">2 · Field agent check-in at the landmark
+        <small>GPS 12 m accuracy · 6 min dwell · door photo matched</small></button>
+      <button class="btn" id="act3">3 · A second check-in arrives, 6.1 km away
+        <small>No dwell, no photo, device flagged</small></button>
+      <button class="btn" id="reset">Reset to beat 1</button>
+      <div class="note">The console is a demo prop. It runs on synthetic cases and the
+        integrity weights shown are illustrative.</div>
+    </div>
+
+    <div class="card">
+      <h3>Decision — what is permitted</h3>
+      <div id="verdict" class="verdict v-wait">Select a case and advance it.</div>
+      <div id="actionTable"></div>
+      <ul class="rules" id="ruleList"></ul>
+      <div class="note" id="why"></div>
+    </div>
+
+    <div class="card">
+      <h3>Evidence — address & identity</h3>
+      <div class="mono" id="evHead">—</div>
+      <div class="bars" id="bars"></div>
+      <div class="svgbox">
+        <svg id="geo" viewBox="0 0 320 150" width="100%" height="150" aria-label="radius">
+          <line x1="20" y1="130" x2="300" y2="130" stroke="#243141"/>
+          <line x1="20" y1="130" x2="20" y2="12" stroke="#243141"/>
+          <text x="24" y="126" fill="#8b98a8" font-size="9" font-family="monospace">0</text>
+          <text x="120" y="126" fill="#8b98a8" font-size="9" font-family="monospace">250 m (visit tolerance)</text>
+          <text x="243" y="126" fill="#8b98a8" font-size="9" font-family="monospace">1500 m</text>
+          <rect id="rad" x="20" y="60" width="0" height="26" fill="#1f6feb" opacity=".55"/>
+          <line id="radlim" x1="0" y1="52" x2="0" y2="94" stroke="#d29922" stroke-dasharray="4 3"/>
+          <text id="radtxt" x="24" y="40" fill="#e6edf3" font-size="13" font-family="monospace">radius_90 —</text>
+        </svg>
+      </div>
+      <div class="legend">Bar = modelled 90% containment radius for the address estimate. Dashed line = the tolerance above which a doorstep action is refused.</div>
+      <h3 style="margin-top:12px">Permission ledger (last record)</h3>
+      <pre id="ledger">—</pre>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---- synthetic cases ---------------------------------------------------- */
+const CASES = [
+  { id:"AC-8841", prod:"personal loan", os:"₹42,300", dpd:46,
+    conf:0.41, radius:1400, rightParty:0.82, connect:0.31,
+    identityMode:"own",  note:"Home address unverified since origination; two distinct PIN-code level candidates disagree." },
+  { id:"AC-2210", prod:"personal loan", os:"₹18,800", dpd:33,
+    conf:0.66, radius:310, rightParty:0.36, connect:0.31,
+    identityMode:"shared", note:"Number is shared by four borrowers in the same household; last 4 digits heard on a call were the spouse's." },
+  { id:"AC-3311", prod:"personal loan", os:"₹18,800", dpd:33,
+    conf:0.66, radius:310, rightParty:0.88, connect:0.31,
+    identityMode:"own", note:"Same connect probability as AC-2210, but the number verifies to the borrower." },
+  { id:"AC-7702", prod:"used car", os:"₹3,20,000", dpd:71,
+    conf:0.91, radius:60, rightParty:0.94, connect:0.41,
+    identityMode:"own", note:"Large ticket: a visit at this ticket size pays for itself at 19× marginal ROI." }
+];
+
+const TH = { notice:{conf:0.70, radius:400}, visit:{conf:0.75, radius:250} };
+
+const ST = { sel:0, step:1, w:null, radiusOverride:null, confOverride:null,
+             k:{blocked:0, notices:0, waste:0, refused:0} };
+
+const $ = id => document.getElementById(id);
+const pct = x => (x*100).toFixed(0)+"%";
+const inr = n => "₹" + Math.round(n).toLocaleString("en-IN");
+
+function caseState(){
+  const c = CASES[ST.sel];
+  let conf = ST.confOverride ?? c.conf;
+  let radius = ST.radiusOverride ?? c.radius;
+  let w = ST.w;
+  return { c, conf, radius, w };
+}
+
+/* ---- rules -------------------------------------------------------------- */
+function evaluate(){
+  const { c, conf, radius, w } = caseState();
+  const noticeOK = conf >= TH.notice.conf && radius <= TH.notice.radius;
+  const visitOK  = conf >= TH.visit.conf  && radius <= TH.visit.radius;
+  const identityOK = c.rightParty >= 0.70;
+  return { c, conf, radius, w, noticeOK, visitOK, identityOK };
+}
+
+/* ---- render ------------------------------------------------------------- */
+function render(){
+  const s = evaluate();
+  const { c } = s;
+
+  /* worklist highlight */
+  document.querySelectorAll(".row").forEach(r =>
+    r.classList.toggle("sel", +r.dataset.ac === ST.sel));
+
+  /* beats */
+  $("b1").className = ST.step >= 1 ? "on" : "";
+  $("b2").className = ST.step >= 2 ? "on" : "";
+  $("b3").className = ST.step >= 3 ? "on" : "";
+
+  /* actions */
+  const rows = [
+    { k:"1-day advance notice + doorstep visit",
+      v:s.noticeOK && s.visitOK, r:s.noticeOK&&s.visitOK?null:(s.conf<TH.notice.conf?"conf_address below threshold":"radius too coarse") },
+    { k:"Notice by SMS / e-mail (no doorstep)",
+      v:s.conf >= 0.55, r:s.conf>=0.55?null:"conf_address below 0.55" },
+    { k:"Human call disclosing the debt",
+      v:s.identityOK, r:s.identityOK?null:"P(right party) below 0.70" },
+    { k:"Automated reminder — non-disclosing",
+      v:true, r:null },
+    { k:"Order a skip-trace at " + inr(110),
+      v:s.conf < 0.75, r:s.conf<0.75?null:"no information value left" }
+  ];
+
+  $("actionTable").innerHTML = rows.map(x => `
+    <ul class="rules" style="margin:0 0 8px">
+      <li><span>${x.k}</span>
+      <span class="${x.v?'pass':'fail'}">${x.v?'PERMITTED':'REFUSED'}</span></li>
+      ${x.v?'':`<li style="border-top:0;padding-top:0"><span class="mono" style="color:#8b98a8">${x.r}</span></li>`}
+    </ul>`).join("");
+
+  /* verdict */
+  const v = $("verdict");
+  if (ST.step === 1){
+    v.className = "verdict v-block";
+    v.textContent = "REFUSED — notice not generated. Rule: NOTICE_PRECHECK / ADDR_CONF_LOW";
+    $("why").textContent = "A recovery notice is a disclosure to an address. At 0.41 confidence the system will not let one exist — the refusal is the record.";
+  } else if (ST.step === 2){
+    v.className = "verdict v-allow";
+    v.textContent = "RELEASED — notice and visit permitted. Rules satisfied: NOTICE_PRECHECK, VISIT_TOLERANCE";
+    $("why").textContent = "One verified field observation moved conf_address 0.41 → 0.78 and pulled the radius to 90 m. The ledger stores the evidence, the weight, and the rule that released the action.";
+  } else if (ST.step === 3){
+    v.className = "verdict v-wait";
+    v.textContent = "NOTICE STILL PERMITTED · DOORSTEP VISIT REFUSED — evidence integrity 0.20";
+    $("why").textContent = "The spoofed check-in was not rejected and not believed: it was down-weighted to w = 0.20, so the belief held (0.79) and the uncertainty widened (90 m → 520 m). Fraud can cost us precision, it cannot teach us the wrong door.";
+  } else {
+    v.className = "verdict v-wait"; v.textContent = "Select a case and advance it.";
+    $("why").textContent = "";
+  }
+
+  /* evidence bars */
+  const identityLab = c.identityMode === "shared" ? "P(right party) — shared household number" : "P(right party)";
+  $("evHead").textContent = `${c.id} · ${c.prod} · outstanding ${c.os} · ${c.dpd} DPD`;
+  const bars = [
+    { l:"conf_address", v:s.conf, low:s.conf<TH.notice.conf, txt:s.conf.toFixed(2) },
+    { l:identityLab, v:c.rightParty, low:c.rightParty<0.70, txt:c.rightParty.toFixed(2) },
+    { l:"P(connect) at this point", v:c.connect, low:false, txt:c.connect.toFixed(2) }
+  ];
+  if (s.w !== null) bars.push({ l:"evidence integrity weight w", v:s.w, low:s.w<0.5, txt:s.w.toFixed(2) });
+  $("bars").innerHTML = bars.map(b => `
+    <div class="bar"><div class="lab"><span>${b.l}</span><span class="mono">${b.txt}</span></div>
+    <div class="track"><div class="fill ${b.low?'low':''}" style="width:${Math.round(b.v*100)}%"></div></div></div>`).join("");
+
+  /* radius viz — log-ish scale to 1500 m */
+  const scale = r => Math.min(280, Math.round(280 * Math.log10(r+10)/Math.log10(1510)));
+  $("rad").setAttribute("width", scale(s.radius));
+  const lim = 20 + scale(TH.visit.radius);
+  $("radlim").setAttribute("x1", lim); $("radlim").setAttribute("x2", lim);
+  $("radtxt").textContent = `radius_90 = ${Math.round(s.radius).toLocaleString("en-IN")} m`;
+
+  /* KPIs */
+  $("k1").textContent = ST.k.blocked;
+  $("k2").textContent = ST.k.notices;
+  $("k3").textContent = inr(ST.k.waste);
+  $("k4").textContent = ST.k.refused;
+
+  /* ledger */
+  const ledger = {
+    ts:"2026-10-05T11:24:07+05:30",
+    account:c.id, segment:`${c.prod} / ${c.dpd} DPD`,
+    recommendation: ST.step===1 ? "suppress_notice" : ST.step===2 ? "release_notice" : "release_notice_visit_refused",
+    rules_evaluated:["NOTICE_PRECHECK","VISIT_TOLERANCE","IDENTITY_GATE","TRACE_EV"],
+    conf_address:+s.conf.toFixed(2),
+    radius_90_m:Math.round(s.radius),
+    integrity_weight:s.w===null?null:+s.w.toFixed(2),
+    p_right_party:c.rightParty,
+    permitted:["automated_reminder_non_disclosing"].concat(s.identityOK?["human_call_disclosure"]:[]).concat(s.noticeOK?["advance_notice"]:[]).concat(s.noticeOK&&s.visitOK?["doorstep_visit"]:[]),
+    refused:["human_call_disclosure"].filter(()=>!s.identityOK).concat(s.noticeOK?[]:["advance_notice","doorstep_visit"]).concat((s.noticeOK&&!s.visitOK)?["doorstep_visit"]:[]),
+    evidence_used: ST.step>=2 ? [{type:"field_checkin", weight:s.w===null?null:+s.w.toFixed(2), distance_m:12, dwell_min:6, photo_match:true}] : [],
+    model_versions:{ sanket_right_party:"1.0.0", sutra_address:"1.0.0", integrity:"1.0.0" },
+    synthetic_inputs:true
+  };
+  $("ledger").textContent = JSON.stringify(ledger, null, 1);
+}
+
+/* ---- interactions ------------------------------------------------------- */
+document.querySelectorAll(".row").forEach(r => r.addEventListener("click", () => {
+  ST.sel = +r.dataset.ac;
+  const c = CASES[ST.sel];
+  if (c.conf >= 0.90 && ST.step < 2){ ST.step = 2; }        // already-confirmed address case
+  else if (ST.step > 1 && ST.sel !== 0) { ST.step = 1; ST.w = null; ST.radiusOverride = null; ST.confOverride = null; }
+  render();
+}));
+
+$("act1").addEventListener("click", () => { ST.step = 1; ST.w = null; ST.radiusOverride = null; ST.confOverride = null;
+  ST.k.blocked++; ST.k.notices++; ST.k.waste += 220; render(); });
+
+$("act2").addEventListener("click", () => { ST.step = 2; ST.w = 0.95; ST.confOverride = 0.78; ST.radiusOverride = 90; render(); });
+
+$("act3").addEventListener("click", () => { ST.step = 3; ST.w = 0.20; ST.confOverride = 0.79; ST.radiusOverride = 520;
+  ST.k.blocked++; ST.k.waste += 220; render(); });
+
+$("reset").addEventListener("click", () => { ST.step = 1; ST.w = null; ST.radiusOverride = null; ST.confOverride = null;
+  ST.k = {blocked:0, notices:0, waste:0, refused:0}; ST.sel = 0; render(); });
+
+render();
+</script>
+</body>
+</html>
