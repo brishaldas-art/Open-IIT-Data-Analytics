@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SUTRA — Slide 1: Key Findings (executive summary) + detailed notes</title>
+<style>
+  :root{
+    --ink:#0d1117; --ink2:#1f2937; --muted:#5b6572; --line:#e3e7ec;
+    --bg:#f6f7f9; --card:#ffffff;
+    --navy:#0b1730; --navy2:#132444; --teal:#2dd4bf; --amber:#f5b642;
+    --red:#e5484d; --green:#2f9e63; --violet:#8b7cf6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:1180px;margin:0 auto;padding:32px 24px 96px;}
+  h1.doc{font-size:26px;line-height:1.25;margin:0 0 4px;}
+  .sub{color:var(--muted);font-size:14px;margin-bottom:26px}
+  .sub code{background:#eceff3;padding:1px 5px;border-radius:4px;font-size:12.5px}
+
+  /* ---------- THE SLIDE ---------- */
+  .slidebox{background:#0a0f1c;border-radius:14px;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,.28)}
+  .slide{position:relative;width:100%;aspect-ratio:16/9;background:
+      radial-gradient(1200px 600px at 88% -10%, #1c3358 0%, rgba(28,51,88,0) 60%),
+      linear-gradient(160deg,#0b1730 0%,#0d1f3d 55%,#0a142a 100%);
+    color:#eaf0f8;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;
+    font-size:clamp(7px,1.05vw,14px);}
+  .slide .pad{padding:2.4em 2.6em;display:flex;flex-direction:column;height:100%;gap:1.1em}
+  .s-top{display:flex;justify-content:space-between;align-items:flex-start;gap:2em}
+  .s-title{font-size:2.35em;font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:0}
+  .s-title span{color:var(--teal)}
+  .s-kicker{font-size:.95em;color:#93a4bd;margin-top:.55em;letter-spacing:.14em;text-transform:uppercase}
+  .s-tag{font-size:.82em;color:#0b1730;background:var(--teal);padding:.45em .85em;border-radius:999px;font-weight:700;white-space:nowrap}
+  .s-body{display:grid;grid-template-columns:23% 1fr;gap:1.5em;flex:1;min-height:0}
+  .panel{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.10);border-radius:10px;
+         padding:1.15em 1.2em;overflow:hidden}
+  .panel h4{margin:0 0 .75em;font-size:.9em;letter-spacing:.13em;text-transform:uppercase;color:var(--teal)}
+  .panel.problem h4{color:var(--amber)}
+  .panel ul{margin:0;padding-left:1.05em}
+  .panel li{margin-bottom:.7em;line-height:1.42}
+  .panel li b{color:#fff}
+  .pb{color:#c8d4e6}
+  .grid9{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:.85em;height:100%}
+  .f{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);
+     border-left:3px solid var(--teal);border-radius:8px;padding:.85em .95em;display:flex;flex-direction:column;
+     gap:.3em;min-height:0;overflow:hidden}
+  .f.warn{border-left-color:var(--amber)} .f.neg{border-left-color:var(--red)} .f.pos{border-left-color:var(--green)}
+  .f .n{font-size:.72em;color:#7f90a8;letter-spacing:.1em;font-weight:700}
+  .f .m{font-size:1.5em;font-weight:800;line-height:1.05;color:#fff;letter-spacing:-.01em}
+  .f .m em{font-style:normal;color:var(--teal)}
+  .f.warn .m em{color:var(--amber)} .f.neg .m em{color:var(--red)} .f.pos .m em{color:var(--green)}
+  .f .t{font-size:.87em;line-height:1.34;color:#c3cfe0}
+  .s-foot{display:grid;grid-template-columns:1fr auto;gap:1.4em;align-items:center;
+          border-top:1px solid rgba(255,255,255,.13);padding-top:.9em}
+  .built{display:flex;gap:.6em;flex-wrap:wrap}
+  .chip{background:rgba(45,212,191,.13);border:1px solid rgba(45,212,191,.4);color:#c9f5ee;
+        padding:.4em .8em;border-radius:6px;font-size:.86em;font-weight:600}
+  .result{text-align:right;font-size:.95em;color:#c8d4e6;line-height:1.5}
+  .result b{color:#fff;font-size:1.25em}
+  .result .arrow{color:var(--teal);font-weight:800}
+  .prov{position:absolute;bottom:.5em;left:2.6em;right:2.6em;display:flex;justify-content:space-between;
+        font-size:.68em;color:#61748f;}
+  .caption{color:var(--muted);font-size:13px;margin:10px 2px 0;text-align:center}
+
+  /* ---------- NOTES ---------- */
+  h2.sec{font-size:20px;margin:52px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+  h2.sec small{font-weight:400;color:var(--muted);font-size:14px}
+  .lede{color:var(--ink2);margin:12px 0 22px;max-width:900px}
+  .kf{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:18px 0;overflow:hidden}
+  .kf>.hd{display:flex;gap:14px;align-items:baseline;padding:14px 18px;background:#f0f3f7;border-bottom:1px solid var(--line)}
+  .kf .badge{background:var(--navy);color:#fff;font-weight:800;font-size:13px;border-radius:6px;padding:3px 9px;white-space:nowrap}
+  .kf .hd h3{margin:0;font-size:17px;line-height:1.3}
+  .kf .hd .metric{margin-left:auto;font-size:15px;font-weight:800;color:var(--navy);white-space:nowrap}
+  .kf .bd{padding:6px 18px 16px}
+  .row{display:grid;grid-template-columns:150px 1fr;gap:10px 18px;padding:11px 0;border-bottom:1px dashed #e8ebef}
+  .row:last-child{border-bottom:0}
+  .row .k{font-size:12px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+  .row .v{font-size:15px}
+  .row .v b{color:var(--ink)}
+  .tag{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+       padding:2px 8px;border-radius:5px;margin:0 4px 4px 0}
+  .t-data{background:#e7f0ff;color:#1c4fa1}
+  .t-mean{background:#f1e9fb;color:#6b3fc4}
+  .t-inf{background:#e2f6ec;color:#1d7346}
+  .t-why{background:#fdf0dc;color:#8a5a06}
+  .t-slide{background:#eceff3;color:#41505f}
+  .feeds{display:flex;flex-wrap:wrap;gap:6px}
+  .feeds span{background:#eceff3;border:1px solid #dde2e8;color:#41505f;border-radius:5px;
+              font-size:12.5px;padding:2px 8px;font-weight:600}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:#f0f3f7;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2)}
+  td .num{font-variant-numeric:tabular-nums;font-weight:700}
+  .callout{background:#fff8e8;border:1px solid #f2d9a0;border-left:4px solid var(--amber);
+           border-radius:8px;padding:14px 18px;margin:18px 0}
+  .callout.red{background:#fdeeee;border-color:#f3c2c4;border-left-color:var(--red)}
+  .callout.green{background:#eaf7f0;border-color:#bfe3cd;border-left-color:var(--green)}
+  .callout h4{margin:0 0 6px;font-size:14px;text-transform:uppercase;letter-spacing:.08em}
+  code{background:#eceff3;padding:1px 5px;border-radius:4px;font-size:13px}
+  pre{background:#0d1117;color:#d8e0ea;padding:14px 16px;border-radius:8px;overflow:auto;font-size:12.5px;line-height:1.5}
+  .deck td:first-child{white-space:nowrap;font-weight:700;color:var(--navy)}
+  .small{font-size:13px;color:var(--muted)}
+  @media print{
+    body{background:#fff}
+    .wrap{max-width:none;padding:0}
+    .slidebox{box-shadow:none;padding:0;page-break-after:always}
+    .notes{page-break-before:always}
+    .kf,.callout,table{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1 class="doc">SUTRA — Slide 1: Key Findings (executive summary)</h1>
+  <div class="sub">
+    PS3 · <i>Address Geocoder That Learns from Field Visits</i> · every figure below is measured on the official
+    CreditNirvana PS3 dataset and reproducible from this repository. The headline numbers were independently
+    re-computed in this session by <code>PS3_SUTRA/tools/verify_slide1_numbers.py</code> (output appended at the end).
+  </div>
+
+  <!-- ============================== THE SLIDE ============================== -->
+  <div class="slidebox">
+    <div class="slide">
+      <div class="pad">
+
+        <div class="s-top">
+          <div>
+            <h1 class="s-title">SUTRA — <span>Key Findings</span></h1>
+            <div class="s-kicker">PS3 · Address geocoder that learns from field visits · Slide 1 of 14</div>
+          </div>
+          <div class="s-tag">OFFICIAL DATA ONLY · 12 TABLES · 177,190 ROWS · 0 EXTERNAL CALLS</div>
+        </div>
+
+        <div class="s-body">
+
+          <div class="panel problem">
+            <h4>The problem</h4>
+            <ul>
+              <li><b>The vendor pin is wrong by a street-block.</b> Median error <b>376 m</b> on the 100 surveyed
+                  addresses; only <b>9%</b> within 100 m; <b>237</b> addresses (7.6%) have no pin at all.</li>
+              <li><b>Field visits already happen — and are thrown away.</b> <b>5,578</b> visits to <b>1,477</b>
+                  addresses; <b>73.5%</b> are repeat visits that start again from the same bad pin.</li>
+              <li><b>A failed visit is not a location.</b> <b>25.1%</b> of visits end
+                  <i>address_not_traceable</i> — and those check-ins sit <b>1,603 m</b> from the truth but only
+                  <b>253 m</b> from the wrong pin.</li>
+            </ul>
+          </div>
+
+          <div class="grid9">
+            <div class="f neg">
+              <div class="n">FINDING 01</div>
+              <div class="m"><em>376.4 m</em> · 9%</div>
+              <div class="t">The vendor geocode, not our model, sets the ceiling. 71% of its pins are
+                locality-level; pincode-level pins miss by 1,376 m.</div>
+            </div>
+            <div class="f warn">
+              <div class="n">FINDING 02</div>
+              <div class="m">29 m <em>vs</em> 1,603 m</div>
+              <div class="t">Successful visits converge on the truth; failed visits converge on <i>our</i> pin.
+                A negative visit is evidence about the record, never a new coordinate.</div>
+            </div>
+            <div class="f">
+              <div class="n">FINDING 03</div>
+              <div class="m">88% <em>ceiling</em> · 71% shipped</div>
+              <div class="t">A perfect chooser over every official candidate reaches only 88% ≤500 m cold.
+                Ranking is not the bottleneck — the data is.</div>
+            </div>
+            <div class="f pos">
+              <div class="n">FINDING 04</div>
+              <div class="m">7.9 m <em>median</em> · 98.7%</div>
+              <div class="t">With prior field evidence the same pipeline scores 98.7% ≤500 m at a 7.9 m
+                median — a non-circular temporal holdout, not a replay.</div>
+            </div>
+            <div class="f pos">
+              <div class="n">FINDING 05</div>
+              <div class="m">24 m <em>vs</em> 380 m</div>
+              <div class="t">Where a confirmation exists, its check-in sits 24 m from surveyed truth versus
+                380 m for the vendor pin. Memory beats re-deriving.</div>
+            </div>
+            <div class="f warn">
+              <div class="n">FINDING 06</div>
+              <div class="m">7 <em>of 10</em> warm failures</div>
+              <div class="t">Were “memory” sitting within 5 m of the vendor pin — remembering a pin and
+                calling it learning. Fixed by an emit rule: evidence-derived priors only.</div>
+            </div>
+            <div class="f">
+              <div class="n">FINDING 07</div>
+              <div class="m">28.7 m <em>→</em> 7.6 m</div>
+              <div class="t">A visit is a GPS track, not a dot. The median of the last three fixes halves the
+                error of using the single check-in sample.</div>
+            </div>
+            <div class="f">
+              <div class="n">FINDING 08</div>
+              <div class="m">36% <em>contamination</em></div>
+              <div class="t">124 of 344 met test addresses sit within 30 m of a <i>train</i> check-in. Places,
+                not rows, carry the signal → place-block folds, not random splits.</div>
+            </div>
+            <div class="f neg">
+              <div class="n">FINDING 09</div>
+              <div class="m">25.6% <em>vs</em> 0.33%</div>
+              <div class="t">The one real integrity anomaly is duplicate photos by a single agent — GPS is
+                clean. Weight the evidence; accuse nobody.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-foot">
+          <div class="built">
+            <span class="chip">Official-only candidate generation</span>
+            <span class="chip">Deterministic rule ranker</span>
+            <span class="chip">Integrity-weighted evidence</span>
+            <span class="chip">Append-only place memory</span>
+            <span class="chip">Measured radius → SERVE / VERIFY_FIRST / REFUSE</span>
+          </div>
+          <div class="result">
+            Cold start <b>71%</b> ≤500 m <span class="arrow">→</span> with evidence <b>96.8%</b> ≤500 m,
+            <b>12.4 m</b> median (n=31, locked check)
+          </div>
+        </div>
+
+      </div>
+      <div class="prov">
+        <span>Every figure: measured on the official PS3 dataset · re-verified this session from the frozen CSVs</span>
+        <span>S-Eval (n=100 surveyed) read once, after freeze · no external data, no LLM, 0 outbound calls</span>
+      </div>
+    </div>
+  </div>
+  <div class="caption">Slide 1 — 16:9, presentation-ready. Everything below is the speaking detail behind it.</div>
+
+  <!-- ============================== NOTES ============================== -->
+  <div class="notes">
+
+  <h2 class="sec">How to read these notes <small>— what each finding is built on, and what it forces later</small></h2>
+  <p class="lede">
+    Each finding below is unpacked in the same five moves: <b>the data used</b> (which table, how many rows, which
+    tool produced it), <b>what it actually means</b> (the plain-language reading, not the metric),
+    <b>the inference we take</b> (the design decision it forces), <b>why it matters</b> (what breaks if we ignore it),
+    and <b>which slides it feeds</b>. Numbers in <b>bold</b> were re-computed in this session directly from
+    <code>PS3_SUTRA/data/official_ps3/</code>; the rest come from frozen experiment artefacts in
+    <code>PS3_SUTRA/data/derived/</code> and are cited with the file they came from.
+  </p>
+
+  <!-- F1 -->
+  <div class="kf">
+    <div class="hd"><span class="badge">F1</span>
+      <h3>The vendor geocode is the ceiling — and it is a coarse one</h3>
+      <span class="metric">376.4 m median · 9.0% &lt;100 m · 237 with no pin</span></div>
+    <div class="bd">
+      <div class="row"><div class="k">Data used</div><div class="v">
+        <code>baseline_geocodes.csv</code> (2,880 rows) joined to <code>surveyed_addresses.csv</code> (100 rows — the
+        only ground truth in the project), over <code>addresses.csv</code> (3,117 rows). Distances are Euclidean on
+        the dataset's own local metre grid. Recomputed this session by <code>tools/verify_slide1_numbers.py</code>;
+        the locked-check artefact is <code>data/derived/experiment_A_report.json</code>.</div></div>
+      <div class="row"><div class="k">What it means</div><div class="v">
+        <span class="tag t-mean">Reading</span>
+        The supplied pin is not broken, it is <b>uncalibrated</b>. It answers at street-block resolution and says so:
+        <b>71.2%</b> of its pins are labelled <i>locality</i>, 17.5% <i>street</i>, 9.5% <i>pincode</i>, 1.7%
+        <i>rooftop</i>. The label is honest — the median error tracks it almost perfectly:
+        rooftop <b>25.6 m</b> (n=1) · street <b>108.6 m</b> (n=16) · locality <b>385.9 m</b> (n=73) ·
+        pincode <b>1,375.8 m</b> (n=10, max 4,808 m). Separately, <b>237 addresses (7.6%) never got a pin at all</b>
+        (they are the <code>town_id='OUT'</code> records), and <b>24.9%</b> of address strings carry no comma while
+        <b>9</b> carry no digit at all.
+      </div></div>
+      <div class="row"><div class="k">Inference</div><div class="v">
+        <span class="tag t-inf">Design consequence</span>
+        Three things follow immediately and none of them is “train a better regressor”.
+        (i) The vendor's <code>precision</code> field is a <b>usable feature</b> — it is the pin's own calibrated
+        granularity, so it becomes the prior for the answer's granularity and radius.
+        (ii) A pre-trained model cannot beat the information that isn't there, so we <b>build candidate
+        generators</b> (locality centroid, landmark, memory) rather than a coordinate predictor.
+        (iii) <code>OUT</code> becomes a <b>first-class state</b> (<code>UNPLACEABLE</code>), not a null to be imputed.
+      </div></div>
+      <div class="row"><div class="k">Why it matters</div><div class="v">
+        <span class="tag t-why">Stakes</span>
+        This is the compliance-sensitive part of a collections visit: a 376 m median error is a wrong-door risk on a
+        doorstep conversation. It is also the reason the whole product thesis is <i>reuse</i> rather than
+        <i>prediction</i> — the data already contains 5,578 answers, at 24 m accuracy, if we keep them.
+      </div></div>
+      <div class="row"><div class="k">Feeds</div><div class="v"><div class="feeds">
+        <span>Slide 2 · The problem in the data</span><span>Slide 4 · EDA</span>
+        <span>Slide 8 · Candidate generation &amp; ceiling</span><span>Slide 11 · Uncertainty contract</span>
+        <span>Slide 12 · Results</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- F2 -->
+  <div class="kf">
+    <div class="hd"><span class="badge">F2</span>
+      <h3>A failed visit is evidence about the record — never a new coordinate</h3>
+      <span class="metric">29.3 m vs 1,603.2 m · 84.9% closer to the pin</span></div>
+    <div class="bd">
+      <div class="row"><div class="k">Data used</div><div class="v">
+        <code>field_visits.csv</code> (5,578 rows) restricted to the 100 surveyed addresses, so that each check-in can
+        be measured against both <b>surveyed truth</b> and the <b>vendor pin</b> at the same time. Recomputed this
+        session; it reproduces the table in <code>PS3_FINAL_REPORT.md</code> §C exactly.
+      </div></div>
+      <div class="row"><div class="k">What it means</div><div class="v">
+        <span class="tag t-mean">Reading</span>
+        This is the single most consequential measurement in the project.
+        Successful outcomes (met_borrower / met_family / cash_collected, n=93) sit a median
+        <b>29.3 m</b> from the truth and <b>396.9 m</b> from our pin — the agent ignored our pin and found the house.
+        <code>address_not_traceable</code> (n=53) sits a median <b>1,603.2 m</b> from the truth but only
+        <b>253.4 m</b> from our pin, is closer to the pin in <b>84.9%</b> of cases, and lasts a median
+        <b>1.3 minutes</b>. Read plainly: <i>the agent walked to where our bad geocode pointed, failed, and left.</i>
+        The failure is ours, mis-recorded as the borrower's.
+      </div></div>
+      <div class="row"><div class="k">Inference</div><div class="v">
+        <span class="tag t-inf">Design consequence</span>
+        <b>Negative evidence is graded, never locational.</b> One <code>address_not_traceable</code> can demote
+        confidence, widen the radius and raise a re-verification task — it can never move the coordinate. Only
+        accumulated independent negatives mark a place <code>MOVED_SUSPECTED</code>/<code>CONTESTED</code>; only
+        positive evidence or human adjudication establishes a new primary coordinate. This is a unit-tested
+        invariant, not a preference. Corollary: the feature <i>“field GPS agrees with our pin”</i> is
+        <b>banned by name</b> — in this dataset agreement is a <i>failure</i> signal, so using it as confirmation
+        would make the system reward its own mistakes.
+      </div></div>
+      <div class="row"><div class="k">Why it matters</div><div class="v">
+        <span class="tag t-why">Stakes</span>
+        Every naive version of this product does the opposite: it treats the last check-in as truth, so a
+        quarter of all visits (25.1% are <code>address_not_traceable</code>) actively poison the map. Getting this
+        wrong doesn't just cost accuracy — it inverts it, because the system would learn fastest exactly where it is
+        most wrong.
+      </div></div>
+      <div class="row"><div class="k">Feeds</div><div class="v"><div class="feeds">
+        <span>Slide 5 · What a visit really means (the pivot slide)</span>
+        <span>Slide 10 · Evidence &amp; memory</span><span>Slide 12 · Results</span>
+        <span>Slide 13 · Validation &amp; leakage</span><span>Slide 14 · Claims we refuse</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- F3 -->
+  <div class="kf">
+    <div class="hd"><span class="badge">F3</span>
+      <h3>Cold start is data-capped — ranking cannot fix it, and we measured that</h3>
+      <span class="metric">oracle 88% ≤500 m vs shipped 71% · learned rankers rejected</span></div>
+    <div class="bd">
+      <div class="row"><div class="k">Data used</div><div class="v">
+        <code>experiment_c_report.md</code> (retrieval ceiling, 229 s) and <code>experiment_d_report.md</code>
+        (ranking, 60 s); populations S-TRAIN 223 · S-VAL 69 · leave-block-out 62 · pool 292 · S-EVAL 100 (locked,
+        read once). Intervals are paired grouped bootstraps over place blocks, 10,000 resamples, seed 7.
+      </div></div>
+      <div class="row"><div class="k">What it means</div><div class="v">
+        <span class="tag t-mean">Reading</span>
+        On the locked 100: the vendor pin alone gives <b>376.4 m</b> median / <b>0.71</b> ≤500 m; adding every other
+        official arm (locality centroid, town centroid, landmark, address-book) moves the <i>oracle</i> — the best
+        candidate in the set — to <b>255.8 m</b> median / <b>0.88</b> ≤500 m. That is the ceiling: it is what a
+        <i>perfect</i> chooser could reach, and it is not 100%. Meanwhile the rule we ship picks the best available
+        candidate already on <b>55.1%</b> of S-VAL addresses and <b>41.0%</b> of S-Eval — the entire remaining
+        reordering headroom is +0.029 on &lt;100 m and +0.058 on ≤500 m.
+      </div></div>
+      <div class="row"><div class="k">Inference</div><div class="v">
+        <span class="tag t-inf">Design consequence</span>
+        <b>Ship the deterministic rule; reject the learned rankers on the measurement.</b>
+        LambdaMART is an identical series to the rule out-of-fold; logistic is <i>not resolved</i>; pairwise is
+        <i>resolved — rule better</i> (0.594 vs 0.841 on S-VAL). The shuffled-grade control collapses to
+        <b>0.232 / 2,516 m</b>, which is the proof the pipeline was measuring something real. So the engineering
+        budget moves out of ranking and into retrieval quality, field evidence and memory — and we report the
+        ceiling next to the result instead of hiding it.
+      </div></div>
+      <div class="row"><div class="k">Why it matters</div><div class="v">
+        <span class="tag t-why">Stakes</span>
+        Two ways to lose this slide. If we claim the 88% oracle as ours, we are claiming a number that requires the
+        answer. If we quietly drop the ceiling and show only 71%, the audience assumes a better model would fix it.
+        Publishing both is what makes “cold start is capped; warm start is the product” a defensible thesis rather
+        than an excuse.
+      </div></div>
+      <div class="row"><div class="k">Feeds</div><div class="v"><div class="feeds">
+        <span>Slide 8 · Candidate generation &amp; ceiling</span><span>Slide 9 · Why the rule ships</span>
+        <span>Slide 12 · Results</span><span>Slide 14 · Claims we refuse</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- F4 -->
+  <div class="kf">
+    <div class="hd"><span class="badge">F4</span>
+      <h3>In the regime the product actually runs in, the numbers are a different species</h3>
+      <span class="metric">98.7% ≤500 m · 85.2% ≤100 m · 7.9 m median (n=229)</span></div>
+    <div class="bd">
+      <div class="row"><div class="k">Data used</div><div class="v">
+        <code>precision_optimization_report.md</code> §5 — a <b>non-circular temporal holdout</b>: candidates are
+        built from evidence strictly before T0 (2026-05-15 and 2026-05-01), the label is the median of promoted
+        check-ins at or after T0, so the label cannot influence the candidate. §6 is the one locked S-Eval read of
+        the frozen configuration (<code>final_precision_config.json</code>, hash <code>9abebb8f…</code>).
+      </div></div>
+      <div class="row"><div class="k">What it means</div><div class="v">
+        <span class="tag t-mean">Reading</span>
+        At T0 = 2026-05-15 on the same 229 addresses: <b>cold</b> 84.7% ≤500 m / 12.2% ≤100 m /
+        <b>271.2 m</b> median → <b>warm</b> 98.7% / 85.8% / <b>7.5 m</b>. The shipped product lane (warm where
+        evidence exists, cold otherwise) is <b>98.7% ≤500 m, 93.0% ≤250 m, 85.2% ≤100 m, 7.9 m median</b>; where two
+        independent confirmations exist, <b>100%</b> ≤500 m at <b>6.1 m</b> median (n=96). Paired against cold:
+        +0.1397 [0.0938, 0.1888] on ≤500 m and −236 m median — <i>resolved</i>. On the locked S-Eval read the
+        product lane is <b>76% ≤500 m / 202.2 m median</b> across all 100, and on the 31 addresses that actually had
+        evidence at the cut, <b>96.8% ≤500 m, 83.9% ≤100 m, 12.4 m median</b>.
+      </div></div>
+      <div class="row"><div class="k">Inference</div><div class="v">
+        <span class="tag t-inf">Design consequence</span>
+        The product is a <b>two-regime system</b>, and the honest slide says so. Cold answers are capped and must be
+        published with a granularity, a tier and a measured radius; warm answers are a 6–12 m asset that must be
+        protected from contamination (see F6). Operationally: <b>spend the first visit on capture quality, because
+        every later visit inherits it</b>.
+      </div></div>
+      <div class="row"><div class="k">Why it matters</div><div class="v">
+        <span class="tag t-why">Stakes</span>
+        This is the finding that turns the project from “a geocoder” into “a geocoder that learns”. It is also the
+        one most likely to be attacked, so it is deliberately reported on a holdout that is not a replay: the
+        circular warm lane (Experiment D §6.5, 0.0 m median) is labelled <i>circular — never a decision input</i>
+        and is never the number we quote.
+      </div></div>
+      <div class="row"><div class="k">Feeds</div><div class="v"><div class="feeds">
+        <span>Slide 1 · headline result</span><span>Slide 10 · Evidence &amp; memory</span>
+        <span>Slide 12 · Results</span><span>Slide 13 · Validation</span><span>Slide 14 · Roadmap</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- F5 -->
+  <div class="kf">
+    <div class="hd"><span class="badge">F5</span>
+      <h3>Memory beats re-deriving — by an order of magnitude, and it raises yield too</h3>
+      <span class="metric">24.0 m vs 380.3 m · 56.0% warm vs 24.5% cold</span></div>
+    <div class="bd">
+      <div class="row"><div class="k">Data used</div><div class="v">
+        <code>PROJECT_DATA_AUDIT/PS3_UPDATED_BUSINESS_DATA_FLOW.md</code> §6, built from
+        <code>field_visits.csv</code> (5,578), <code>accounts.csv</code> (2,400) and <code>splits.csv</code>.
+        The 2026-05-15 cut test: 1,383 post-cut visits to addresses confirmed before the cut vs 1,343 to addresses
+        never confirmed. Corrected on 2026-10-07 — an earlier draft compared 56.0% against the <i>overall</i>
+        post-cut rate of 40.5%; the true cold rate is 24.5%.
+      </div></div>
+      <div class="row"><div class="k">What it means</div><div class="v">
+        <span class="tag t-mean">Reading</span>
+        Where a met-someone visit exists, its check-in sits a median <b>24.0 m</b> from surveyed truth versus
+        <b>380.3 m</b> for the vendor pin (on the honest non-training subset, 21.1 m vs 383.7 m; memory better in
+        <b>80%</b> of cases). And the operational payoff is measurable: post-cut visits to previously-confirmed
+        addresses are met <b>56.0%</b> of the time versus <b>24.5%</b> for never-confirmed addresses
+        (<b>56.7% vs 25.1%</b> on val+test accounts only). Note this is a <i>yield</i> figure, not an accuracy
+        figure — it is the business-facing half of F4.
+      </div></div>
+      <div class="row"><div class="k">Inference</div><div class="v">
+        <span class="tag t-inf">Design consequence</span>
+        A confirmed place must <b>never be re-derived from scratch</b>. That single rule is the product: memory is
+        keyed to the <i>place</i>, not the account (81 co-located clusters over 191 addresses exist today, every pair
+        a different account), so two borrowers in one building share one learned coordinate. And it justifies the
+        capture template: ~20 seconds of taps that make today's visit tomorrow's knowledge.
+      </div></div>
+      <div class="row"><div class="k">Why it matters</div><div class="v">
+        <span class="tag t-why">Stakes</span>
+        This is where the waste lives: <b>4,101 visits (73.5%)</b> go to an address already visited at least once and
+        currently start again from the same bad pin; <b>577 addresses absorb 1,650 visits (29.6%)</b> and never
+        confirm. Nothing here proposes fewer visits — every line makes a visit that is already happening worth more.
+      </div></div>
+      <div class="row"><div class="k">Feeds</div><div class="v"><div class="feeds">
+        <span>Slide 6 · Where the waste is</span><span>Slide 10 · Evidence &amp; memory</span>
+        <span>Slide 12 · Results</span><span>Slide 14 · Roadmap &amp; capture template</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- F6 -->
+  <div class="kf">
+    <div class="hd"><span class="badge">F6</span>
+      <h3>“Memory” that re-wraps the vendor pin is worse than no memory</h3>
+      <span class="metric">7 of 10 warm failures · +1.37 pp [+0.34, +2.80]</span></div>
+    <div class="bd">
+      <div class="row"><div class="k">Data used</div><div class="v">
+        <code>evidence_memory_policy_report.md</code> (312 s; policy <code>emp-v1</code>, sha256
+        <code>a110f089…</code>), over the 292-row supervision pool with temporal cuts at 2026-05-01 and 2026-05-15,
+        plus <code>final_evidence_memory_policy.json</code>.
+      </div></div>
+      <div class="row"><div class="k">What it means</div><div class="v">
+        <span class="tag t-mean">Reading</span>
+        Of the 10 warm failures in the pool, <b>7</b> were a memory candidate sitting within <b>5 m of the vendor
+        pin</b> — the system had remembered a pin, relabelled it “learned place memory”, and let it outrank the real
+        field evidence. The cleanest proof is a controlled one: materialising the prior without the emit rule
+        (<code>P5</code>) collapses temporal &lt;100 m from <b>0.8903 → 0.6498</b>. Pin-derived memory is not merely
+        useless; it is <b>harmful</b>.
+      </div></div>
+      <div class="row"><div class="k">Inference</div><div class="v">
+        <span class="tag t-inf">Design consequence</span>
+        Frozen emit rule: <b>memory is emitted only when the prior is evidence-derived</b> (it comes from
+        accumulated field observations, not from re-wrapping a static arm). Effect: pool &lt;500 m
+        0.9658 → 0.9795, &lt;100 m 0.8801 → 0.9212, paired <b>+0.0137 [+0.0034, +0.0280]</b> — a small,
+        <i>resolved</i> improvement whose real value is that it removes a whole class of silent failure.
+        Everything else that was tried (quality tiering of single check-ins, caps at ≤2/≤1 singles, GPS accuracy
+        gates, weight-ordered tie-breaks) was <i>identical</i> or a <b>regression</b>, and is recorded as such.
+      </div></div>
+      <div class="row"><div class="k">Why it matters</div><div class="v">
+        <span class="tag t-why">Stakes</span>
+        This is the finding that keeps the headline honest. Without it, the warm numbers in F4 would partly be the
+        vendor pin wearing a disguise, and any “we learn from the field” claim would be unfalsifiable. It also
+        demonstrates the governance habit: a defect found <i>after</i> it was shipped, disclosed with its root
+        cause rather than smoothed over.
+      </div></div>
+      <div class="row"><div class="k">Feeds</div><div class="v"><div class="feeds">
+        <span>Slide 10 · Evidence &amp; memory</span><span>Slide 12 · Results</span>
+        <span>Slide 13 · Validation discipline</span><span>Slide 14 · Limitations</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- F7 -->
+  <div class="kf">
+    <div class="hd"><span class="badge">F7</span>
+      <h3>A visit is a track, not a dot — and cheap text work beats clever text work</h3>
+      <span class="metric">28.7 m → 7.6 m · B1–B4 identical, 1.0 → 15.5 ms</span></div>
+    <div class="bd">
+      <div class="row"><div class="k">Data used</div><div class="v">
+        <code>precision_optimization_report.md</code> §5b (coordinate estimator, over <code>visit_gps_points.csv</code>,
+        160,406 points, median 26 fixes per visit) and <code>experiment_b_report.md</code> (124 s, four preprocessing
+        rungs B1–B4) — plus the retrieval-v2 comparison in <code>precision_optimization_report.md</code> §1.
+      </div></div>
+      <div class="row"><div class="k">What it means</div><div class="v">
+        <span class="tag t-mean">Reading</span>
+        <b>Coordinates:</b> the official trail table was never used for coordinates. Taking the component-wise median
+        of the <b>last three fixes</b> instead of the single check-in sample moves the holdout from
+        <b>28.7 m → 7.6 m</b> median and &lt;100 m from 0.764 → 0.863, with a label-shift control of 13.7 m and an
+        unchanged cold lane (0.8459 either way) — so the gain is the estimator's, not a moved goalpost.
+        <b>Text:</b> preprocessing rungs B1→B4 (NFKC, abbreviation table, TF-IDF/SVD residue matching, edit-tolerant
+        parser) produce <i>identical</i> recall and oracle (184.7 m, 0.8986) while latency goes 0.98 → 15.5 ms per
+        address. The only rung that matters is B2, which lifts abbreviation round-trip from 0.486 → 1.0 on the
+        1,602 texts that carry an abbreviation. <b>Retrieval:</b> the v1 locality rule (“share any token”, pincode can
+        outvote the text) picked the wrong locality on <b>118 of 292</b> rows; v2 (all tokens present, the rarest
+        token always, no pincode outvoting) cuts locality-candidate median error <b>811.9 m → 319.6 m</b> and lifts
+        the oracle ceiling 0.8767 → 0.9144.
+      </div></div>
+      <div class="row"><div class="k">Inference</div><div class="v">
+        <span class="tag t-inf">Design consequence</span>
+        <b>Ship the cheap deterministic ring; spend nothing on embeddings, LLMs or cross-encoders.</b>
+        Coordinates come from the track tail with the check-in kept as provenance and fallback. Retrieval quality is
+        bought with a <i>matching rule</i>, not a model. The rejected list is recorded with its measurement
+        (near-duplicate address-book: rescues 1 frozen miss while losing 66; script lexicon: resolves but does not
+        move the rows; archetype router: identical series — the router <i>is</i> the rule).
+      </div></div>
+      <div class="row"><div class="k">Why it matters</div><div class="v">
+        <span class="tag t-why">Stakes</span>
+        Two independent wins that cost nothing at inference time — and a guard against the most common way this kind
+        of project fails, which is spending four days on a parser that moves no metric. It also keeps the system
+        inside an offline, CPU-only, auditable envelope, which a collections vendor actually needs.
+      </div></div>
+      <div class="row"><div class="k">Feeds</div><div class="v"><div class="feeds">
+        <span>Slide 8 · Candidate generation</span><span>Slide 9 · Why the rule ships</span>
+        <span>Slide 10 · Evidence &amp; memory</span><span>Slide 11 · Uncertainty</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- F8 -->
+  <div class="kf">
+    <div class="hd"><span class="badge">F8</span>
+      <h3>The leakage in this problem is spatial, not textual</h3>
+      <span class="metric">66/100 truths on train accounts · 36.0% within 30 m</span></div>
+    <div class="bd">
+      <div class="row"><div class="k">Data used</div><div class="v">
+        Re-audit measurements <code>[S94]</code> in <code>PS3_FINAL_REPORT.md</code> (Addendum, Amendment A1) and the
+        artefacts <code>ps3_place_blocks.csv</code>, <code>supervision_firewall.csv</code>,
+        <code>supervision_manifest.csv</code>, <code>split_receipt.json</code>, <code>acceptance_report.json</code>.
+      </div></div>
+      <div class="row"><div class="k">What it means</div><div class="v">
+        <span class="tag t-mean">Reading</span>
+        <b>66 of the 100 surveyed truths sit on train-split accounts</b>, and <b>124 of 344 (36.0%)</b> met test
+        addresses lie within 30 m of a met check-in belonging to a <i>training</i> address. The signal in this
+        problem lives in <i>places</i>, not rows — so a random or account-level split leaks through geography even
+        when it looks clean on paper. A borrower's two addresses, for contrast, sit a median <b>3,011.6 m</b> apart,
+        which is why place identity is evidence-keyed and never merged by account.
+      </div></div>
+      <div class="row"><div class="k">Inference</div><div class="v">
+        <span class="tag t-inf">Design consequence</span>
+        Three populations for every claim (all 100 surveyed · validation+test · leave-block-out) with a
+        <b>place-block ledger</b> as the outer fold and the account as the inner fold; <b>145 addresses firewalled</b>
+        out of every fit; the 100 surveyed records form S-Eval and are <b>never trained on</b>; every read of that
+        truth increments a <b>test-look counter</b> which is published with the result (currently 8 reads, each
+        logged with a timestamp). Findings are stated as <i>resolved</i> or <i>not resolved by this dataset</i> —
+        a difference inside the bootstrap interval is never reported as a win.
+      </div></div>
+      <div class="row"><div class="k">Why it matters</div><div class="v">
+        <span class="tag t-why">Stakes</span>
+        If the warm numbers in F4 had been measured on a row-level split they would be partly the model recognising
+        a place it had already seen. The place-block protocol is what lets us say “98.7%” in front of a judge
+        without flinching — and it is the reason we can also say exactly which numbers we refuse to publish.
+      </div></div>
+      <div class="row"><div class="k">Feeds</div><div class="v"><div class="feeds">
+        <span>Slide 3 · Scope &amp; governance</span><span>Slide 13 · Validation &amp; leakage</span>
+        <span>Slide 12 · Results (all three populations)</span><span>Slide 14 · Claims we refuse</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- F9 -->
+  <div class="kf">
+    <div class="hd"><span class="badge">F9</span>
+      <h3>The integrity anomaly is media, not GPS — so weight evidence, don't accuse anyone</h3>
+      <span class="metric">FA009: 156/610 = 25.6% vs ≤0.33% for every other agent</span></div>
+    <div class="bd">
+      <div class="row"><div class="k">Data used</div><div class="v">
+        <code>field_visits.csv</code> photo hashes grouped by agent (recomputed this session) and
+        <code>visit_gps_points.csv</code> (160,406 points) as profiled in <code>eda_report.txt</code> and
+        <code>PS3_DATA_AUDIT.md</code>.
+      </div></div>
+      <div class="row"><div class="k">What it means</div><div class="v">
+        <span class="tag t-mean">Reading</span>
+        Agent <b>FA009</b> carries <b>156 duplicate photo hashes across 610 visits (25.6%)</b>; the worst other agent
+        is at <b>0.33%</b>. But FA009's <i>GPS is pristine</i> — across the whole trail table the maximum implied
+        speed is 32.2 km/h with no teleports, check-in accuracy is a median 10 m, every check-in lies within
+        <b>90.8 m</b> of the agent's own walked path, and only <b>34 axis-artefact points</b> (0.021%) were flagged
+        and excluded. (An earlier “645 check-ins &gt;500 m from trail” figure was <b>retracted</b> on 2026-10-07.)
+        So: one agent's photos are suspicious, nobody's GPS is.
+      </div></div>
+      <div class="row"><div class="k">Inference</div><div class="v">
+        <span class="tag t-inf">Design consequence</span>
+        Integrity is a <b>weight with a reason code</b>, never an accusation and never a deletion. Each visit gets
+        <code>w_place</code> × <code>w_person</code> composed from outcome dimension × dwell band × trail agreement ×
+        media integrity × accuracy class × rolling agent baseline × recency. No single signal can zero a visit;
+        absence of usable evidence is a recorded state, not a suspicion. Promotion to a new coordinate needs
+        <b>two independent confirmations</b> (different visit, different day, not traceable to the same media hash
+        or agent-day cluster).
+      </div></div>
+      <div class="row"><div class="k">Why it matters</div><div class="v">
+        <span class="tag t-why">Stakes</span>
+        Accusing a field agent of fraud on 25.6% duplicate photos is an HR incident; down-weighting the same
+        evidence is a control. The design keeps the system safe from bad evidence and keeps the workforce
+        deployable — and it means the false-positive rate on <i>clean</i> visits is published alongside every flag.
+      </div></div>
+      <div class="row"><div class="k">Feeds</div><div class="v"><div class="feeds">
+        <span>Slide 4 · EDA</span><span>Slide 10 · Evidence &amp; memory</span>
+        <span>Slide 13 · Validation</span><span>Slide 14 · Red team &amp; claims we refuse</span></div></div></div>
+    </div>
+  </div>
+
+  <!-- ===================== IMPORTANCE / CROSS-SLIDE ===================== -->
+  <h2 class="sec">Why these nine matter together <small>— the argument the deck is making</small></h2>
+  <p class="lede">
+    Slide 1 is not a list of nine interesting facts; it is one argument in three beats, and if any beat is missing
+    the rest of the deck has nothing to stand on.
+  </p>
+
+  <table>
+    <thead><tr><th style="width:19%">Beat</th><th style="width:29%">Findings</th><th>What it establishes — and what collapses without it</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>1. The problem is real and it is measured</b></td>
+        <td>F1 · F5 · F9</td>
+        <td>The vendor pin is 376 m off, 7.6% of the book has no pin, 73.5% of visits repeat work the system should
+          have remembered, and 25.1% of visits end in a failure that is <i>our</i> error mis-recorded as the
+          borrower's. <b>Without this, SUTRA is a solution looking for a problem</b>, and slide 6 (waste) and slide 2
+          (problem) have no numbers.</td>
+      </tr>
+      <tr>
+        <td><b>2. The naive approach provably fails</b></td>
+        <td>F2 · F3 · F8</td>
+        <td>“Just train a geocoder” fails three ways at once: the cold ceiling is 88% no matter how good the chooser
+          (F3), the obvious label — the last check-in — is wrong 1.6 km on the most common failure outcome (F2),
+          and the obvious split leaks through geography at 36% contamination (F8).
+          <b>Without this, the architecture on slide 7 looks over-engineered</b>, and every design choice on slides
+          8–11 looks like taste instead of evidence.</td>
+      </tr>
+      <tr>
+        <td><b>3. The thing we built is where the value is</b></td>
+        <td>F4 · F5 · F6 · F7</td>
+        <td>Reuse beats re-derivation: 24 m vs 380 m, 56.0% vs 24.5% yield, 7.9 m median in the warm regime —
+          but only because memory is evidence-derived (F6) and coordinates come from the track, not the dot (F7).
+          <b>Without this the deck has diagnosis and no treatment</b>, and the demo on slide 14 is a UI with no claim
+          behind it.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <h4>The one sentence slide 1 has to earn</h4>
+    The vendor pin is wrong by a street-block; the field has already walked to the right door 5,578 times and we
+    threw it away; and once you keep it — with weighted evidence, place-keyed memory and a measured radius — the
+    same pipeline goes from <b>71%</b> to <b>96.8%</b> within 500 m on the addresses that have history.
+  </div>
+
+  <div class="callout red">
+    <h4>Three attacks this slide must survive (each has a slide that answers it)</h4>
+    <b>“Your warm numbers are circular.”</b> → They are not: the headline comes from a non-circular temporal holdout
+    (F4) and the circular replay is published separately and labelled <i>never a decision input</i> (slide 13).<br>
+    <b>“88% ceiling means a better model would fix cold start.”</b> → 88% is what a <i>perfect chooser</i> over the
+    official candidates reaches; the rule already picks the best available candidate on 55.1% of addresses and
+    three learned challengers were rejected on measurement (F3, slide 9).<br>
+    <b>“You claimed improvement on data you trained on.”</b> → 66 of 100 truths are on train accounts, which is
+    exactly why place-block folds, a 145-address firewall and a published test-look counter exist (F8, slide 13).
+  </div>
+
+  <!-- ===================== DECK OUTLINE ===================== -->
+  <h2 class="sec">Proposed deck outline <small>— slides 2–14, with the findings each one carries</small></h2>
+  <p class="lede">
+    Derived from the document set in <code>PS3_SUTRA/</code>. Each row names the question the slide answers, the one
+    artefact to put on it, and which of the nine findings it is discharging. Total speaking time at ~75 s/slide is
+    about 17 minutes, leaving time for the demo.
+  </p>
+
+  <table class="deck">
+    <thead><tr><th style="width:6%">#</th><th style="width:24%">Slide</th><th style="width:38%">The question it answers</th><th style="width:18%">Artefact to show</th><th>Findings</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Key findings (this slide)</td><td>Why does this problem deserve 15 more minutes?</td><td>This slide</td><td>all nine</td></tr>
+      <tr><td>2</td><td>The problem, in the data</td><td>What exactly breaks today, and for whom?</td><td>Stratum error table + the 237 no-pin records</td><td>F1</td></tr>
+      <tr><td>3</td><td>Data scope &amp; governance</td><td>What are we allowed to use, and how do we prove it?</td><td>12 tables / 177,190 rows / 0 external calls</td><td>F8</td></tr>
+      <tr><td>4</td><td>EDA — how the book is written</td><td>Why is this not a text-normalisation problem?</td><td>24.9% no comma, 8.4% mixed script, 67 chars median</td><td>F1 · F9</td></tr>
+      <tr><td>5</td><td>What a visit really means <b>(pivot)</b></td><td>Why the obvious label is the wrong label</td><td>29.3 m vs 1,603.2 m, dwell 9.7 vs 1.3 min</td><td>F2</td></tr>
+      <tr><td>6</td><td>Where the waste is</td><td>What does this cost the business today?</td><td>4,101 repeat visits · 1,650 never-confirm · 56.0% vs 24.5%</td><td>F5 · F1</td></tr>
+      <tr><td>7</td><td>Architecture</td><td>What did we actually build?</td><td>S0→S13 block diagram, build-now / research-only split</td><td>F2 · F4 · F6</td></tr>
+      <tr><td>8</td><td>Candidates &amp; the cold ceiling</td><td>How good can a cold answer possibly be?</td><td>Union ladder: 376 m → 255.8 m oracle, 0.71 → 0.88</td><td>F3 · F7</td></tr>
+      <tr><td>9</td><td>Why the rule ships</td><td>Did you try a model? What happened?</td><td>RULE vs LambdaMART vs shuffled control; headroom table</td><td>F3 · F7</td></tr>
+      <tr><td>10</td><td>Field evidence &amp; place memory</td><td>How does a visit become knowledge, safely?</td><td>Evidence weights, the memory-rewraps-pin defect, emp-v1</td><td>F2 · F6 · F9</td></tr>
+      <tr><td>11</td><td>Uncertainty &amp; the answer contract</td><td>What does the system say when it is not sure?</td><td>granularity + tier + radius, SERVE / VERIFY_FIRST / REFUSE</td><td>F1 · F7</td></tr>
+      <tr><td>12</td><td>Results — cold vs warm</td><td>Is it better, and where is it not?</td><td>One table: cold 71% ↔ warm 96.8%; per-stratum with n-guard</td><td>F1 · F3 · F4 · F5</td></tr>
+      <tr><td>13</td><td>Validation discipline</td><td>How do we know the numbers aren't leaking?</td><td>Place blocks, 145 firewalled, test-look counter, negative controls</td><td>F8 · F4 · F6</td></tr>
+      <tr><td>14</td><td>Limits, claims we refuse, roadmap</td><td>What would prove this wrong?</td><td>Four falsification criteria + the capture template</td><td>F3 · F6 · F8 · F9</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout green">
+    <h4>Claims discipline — carry this wording onto every slide</h4>
+    Say: <i>“a field-visit-learned address memory with measured uncertainty and integrity weighting.”</i><br>
+    Never say: <i>“we built a geocoder”</i> · <i>“we detect spoofing”</i> · <i>“India-scale”</i> · any accuracy computed
+    on check-ins or pins · any radius without measured coverage · any improvement claim without the exploration
+    slice and the exposure-weighted reading beside the unweighted one.
+  </div>
+
+  <!-- ===================== VERIFICATION ===================== -->
+  <h2 class="sec">Appendix — verification run <small>the headline numbers recomputed from the frozen CSVs</small></h2>
+  <p class="lede">
+    Produced by <code>PS3_SUTRA/tools/verify_slide1_numbers.py</code> (read-only over
+    <code>data/official_ps3/</code>). It reproduces the published figures to the decimal.
+  </p>
+  <pre>
+[F1] The book and the vendor pin
+  addresses                 n = 3117          address_text length   median = 67 chars
+  no comma at all           777 (24.9%)       no digit at all       9
+  town_id = 'OUT'           237               baseline_geocodes     n = 2880
+  addresses WITHOUT a pin   237 (7.6%)
+    locality   2052 (71.2%)   street 504 (17.5%)   pincode 274 (9.5%)   rooftop 50 (1.7%)
+
+[F2] Vendor pin vs surveyed truth (the only ground truth, n=100)
+  median error 376.4 m   p90 839.2 m   within 100 m 9.0%   within 500 m 71.0%
+    rooftop    n=  1  median    25.6 m   <-- below n>=15 guard, indicative only
+    street     n= 16  median   108.6 m
+    locality   n= 73  median   385.9 m
+    pincode    n= 10  median  1375.8 m   <-- below n>=15 guard, indicative only
+
+[F3] What a field visit actually means (surveyed subset)
+  met_borrower           n= 60  med->truth    34.3 m  med->pin 412.0 m  closer-to-pin  3.3%  dwell 16.6 min
+  address_not_traceable  n= 53  med->truth  1603.2 m  med->pin 253.4 m  closer-to-pin 84.9%  dwell  1.3 min
+  locked_premises        n= 45  med->truth    20.2 m  med->pin 400.8 m  closer-to-pin 11.1%  dwell  2.8 min
+  met_family             n= 30  med->truth    15.9 m  med->pin 381.2 m  closer-to-pin  3.3%  dwell  5.7 min
+  --> success visits (n=93): median  29.3 m from truth
+  --> not_traceable (n=53): median 1603.2 m from truth, median 253.4 m from the PIN
+
+[F4] Exposure and integrity
+  field_visits n = 5578   addresses visited 1477 (47.4% of the book)   visits under 60 s 443
+    address_not_traceable 1400 (25.1%)   locked_premises 1249 (22.4%)   met_borrower 1114 (20.0%)
+    met_family 1062 (19.0%)   neighbour_says_shifted 455 (8.2%)   no_such_person 206 (3.7%)   cash_collected 92 (1.6%)
+  duplicate photo-hash rate: FA009 156/610 = 25.6%   every other agent max 0.33%
+</pre>
+
+  <p class="small">
+    Sources for the system-level figures: <code>experiment_A_report.json</code>,
+    <code>experiment_b_report.md</code>, <code>experiment_c_report.md</code>, <code>experiment_d_report.md</code>,
+    <code>precision_optimization_report.md</code>, <code>evidence_memory_policy_report.md</code>,
+    <code>final_precision_config.json</code>, <code>acceptance_report.json</code>,
+    <code>PROJECT_DATA_AUDIT/PS3_UPDATED_BUSINESS_DATA_FLOW.md</code>, and <code>PS3_FINAL_REPORT.md</code> (§A–R).
+  </p>
+
+  </div><!-- /notes -->
+</div>
+</body>
+</html>
